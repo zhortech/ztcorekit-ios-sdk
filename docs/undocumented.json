@@ -1,0 +1,1118 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/DFUService/ZTButtonlessDfuCharacteristic.swift",
+      "line": 12,
+      "symbol": "ZTButtonlessDfuCharacteristic",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/DFUService/ZTButtonlessDfuCharacteristic.swift",
+      "line": 13,
+      "symbol": "ZTButtonlessDfuCharacteristic.uuid",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/DFUService/ZTButtonlessDfuCharacteristic.swift",
+      "line": 14,
+      "symbol": "ZTButtonlessDfuCharacteristic.data",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/InformationService/ZTFirmwareCharacteristic.swift",
+      "line": 11,
+      "symbol": "ZTFirmwareCharacteristic",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/InformationService/ZTFirmwareCharacteristic.swift",
+      "line": 12,
+      "symbol": "ZTFirmwareCharacteristic.uuid",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/InformationService/ZTFirmwareCharacteristic.swift",
+      "line": 14,
+      "symbol": "ZTFirmwareCharacteristic.data",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/InformationService/ZTHardwareCharacteristic.swift",
+      "line": 11,
+      "symbol": "ZTHardwareCharacteristic",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/InformationService/ZTHardwareCharacteristic.swift",
+      "line": 12,
+      "symbol": "ZTHardwareCharacteristic.uuid",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/InformationService/ZTHardwareCharacteristic.swift",
+      "line": 14,
+      "symbol": "ZTHardwareCharacteristic.data",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/InformationService/ZTInformationService.swift",
+      "line": 23,
+      "symbol": "ZTInformationService.manufacturerName",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/InformationService/ZTInformationService.swift",
+      "line": 24,
+      "symbol": "ZTInformationService.modelNumber",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/InformationService/ZTInformationService.swift",
+      "line": 25,
+      "symbol": "ZTInformationService.serialNumber",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/InformationService/ZTInformationService.swift",
+      "line": 26,
+      "symbol": "ZTInformationService.firmwareRevision",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/InformationService/ZTInformationService.swift",
+      "line": 27,
+      "symbol": "ZTInformationService.hardwareRevision",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/InformationService/ZTManufacturerName.swift",
+      "line": 11,
+      "symbol": "ZTManufacturerNameCharacteristic",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/InformationService/ZTManufacturerName.swift",
+      "line": 12,
+      "symbol": "ZTManufacturerNameCharacteristic.uuid",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/InformationService/ZTManufacturerName.swift",
+      "line": 14,
+      "symbol": "ZTManufacturerNameCharacteristic.data",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/InformationService/ZTModelNumberCharacteristic.swift",
+      "line": 11,
+      "symbol": "ZTModelNumberCharacteristic",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/InformationService/ZTModelNumberCharacteristic.swift",
+      "line": 12,
+      "symbol": "ZTModelNumberCharacteristic.uuid",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/InformationService/ZTModelNumberCharacteristic.swift",
+      "line": 14,
+      "symbol": "ZTModelNumberCharacteristic.data",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/InformationService/ZTSerialNumberCharacteristic.swift",
+      "line": 11,
+      "symbol": "ZTSerialNumberCharacteristic",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/InformationService/ZTSerialNumberCharacteristic.swift",
+      "line": 12,
+      "symbol": "ZTSerialNumberCharacteristic.uuid",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/InformationService/ZTSerialNumberCharacteristic.swift",
+      "line": 14,
+      "symbol": "ZTSerialNumberCharacteristic.data",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/PrimaryService/Data/ZTMessageGeneralState.swift",
+      "line": 11,
+      "symbol": "ZTMessageGeneralState",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/PrimaryService/Data/ZTMessageGeneralState.swift",
+      "line": 14,
+      "symbol": "ZTMessageGeneralState.byte0",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/PrimaryService/Data/ZTMessageGeneralState.swift",
+      "line": 20,
+      "symbol": "ZTMessageGeneralState.byte1",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/PrimaryService/Data/ZTMessageGeneralState.swift",
+      "line": 26,
+      "symbol": "ZTMessageGeneralState.byte2",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/PrimaryService/Data/ZTMessageGeneralState.swift",
+      "line": 32,
+      "symbol": "ZTMessageGeneralState.byte3",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/PrimaryService/Data/ZTPairedDevice.swift",
+      "line": 11,
+      "symbol": "ZTPairedDevice",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/PrimaryService/Data/ZTPairedDevice.swift",
+      "line": 14,
+      "symbol": "ZTPairedDevice.macAddress",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/PrimaryService/ZTBatteryCharacteristic.swift",
+      "line": 12,
+      "symbol": "ZTBatteryCharacteristic",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/PrimaryService/ZTBatteryCharacteristic.swift",
+      "line": 13,
+      "symbol": "ZTBatteryCharacteristic.uuid",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/PrimaryService/ZTBatteryCharacteristic.swift",
+      "line": 16,
+      "symbol": "ZTBatteryCharacteristic.batteryLevel",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/PrimaryService/ZTCommandsCharacteristic.swift",
+      "line": 17,
+      "symbol": "ZTCommandsCharacteristic.uuid",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/PrimaryService/ZTIndicateCharacteristic.swift",
+      "line": 12,
+      "symbol": "ZTIndicateCharacteristic",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/PrimaryService/ZTIndicateCharacteristic.swift",
+      "line": 13,
+      "symbol": "ZTIndicateCharacteristic.uuid",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/PrimaryService/ZTNotifyCharacteristic.swift",
+      "line": 12,
+      "symbol": "ZTNotifyCharacteristic",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/PrimaryService/ZTNotifyCharacteristic.swift",
+      "line": 13,
+      "symbol": "ZTNotifyCharacteristic.uuid",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/PrimaryService/ZTPairedSolesCharacteristic.swift",
+      "line": 12,
+      "symbol": "ZTPairedSolesCharacteristic",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/PrimaryService/ZTPairedSolesCharacteristic.swift",
+      "line": 13,
+      "symbol": "ZTPairedSolesCharacteristic.uuid",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/PrimaryService/ZTPairedSolesCharacteristic.swift",
+      "line": 15,
+      "symbol": "ZTPairedSolesCharacteristic.data",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/ZTCommandEnum.swift",
+      "line": 17,
+      "symbol": "ZTCommand.startNewActivity",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/ZTCommandEnum.swift",
+      "line": 18,
+      "symbol": "ZTCommand.stopNewActivity",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/ZTCommandEnum.swift",
+      "line": 23,
+      "symbol": "ZTCommand.selectCyclingAlgorithms",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/ZTCommandEnum.swift",
+      "line": 24,
+      "symbol": "ZTCommand.disableHeating",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/ZTDevice.swift",
+      "line": 52,
+      "symbol": "ZTDevice.batterylevel",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/ZTDeviceInfo.swift",
+      "line": 46,
+      "symbol": "ZTDeviceInfo.macAddressRight",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/ZTDeviceInfo.swift",
+      "line": 47,
+      "symbol": "ZTDeviceInfo.macAddressLeft",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/ZTDeviceInfo.swift",
+      "line": 94,
+      "symbol": "ZTDeviceInfo.size",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/ZTDeviceInfo.swift",
+      "line": 97,
+      "symbol": "ZTDeviceInfo.gender",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/ZTDeviceInfoEnums.swift",
+      "line": 12,
+      "symbol": "ZTProductType.Sports",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/ZTDeviceInfoEnums.swift",
+      "line": 13,
+      "symbol": "ZTProductType.Warm",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/ZTDeviceInfoEnums.swift",
+      "line": 14,
+      "symbol": "ZTProductType.Safety",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/ZTDeviceInfoEnums.swift",
+      "line": 15,
+      "symbol": "ZTProductType.PodoSmart",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/ZTDeviceInfoEnums.swift",
+      "line": 19,
+      "symbol": "ZTProjectCodeType.zt1",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/ZTDeviceInfoEnums.swift",
+      "line": 20,
+      "symbol": "ZTProjectCodeType.zt2",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/ZTDeviceInfoEnums.swift",
+      "line": 21,
+      "symbol": "ZTProjectCodeType.zt3",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/ZTDeviceInfoEnums.swift",
+      "line": 36,
+      "symbol": "ZTProductCodeType.ws",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/ZTDeviceInfoEnums.swift",
+      "line": 37,
+      "symbol": "ZTProductCodeType.sp",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/ZTDeviceInfoEnums.swift",
+      "line": 38,
+      "symbol": "ZTProductCodeType.sf",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/ZTDeviceInfoEnums.swift",
+      "line": 39,
+      "symbol": "ZTProductCodeType.ps",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/ZTDeviceInfoEnums.swift",
+      "line": 56,
+      "symbol": "ZTManufacturerCodeType.a",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/ZTDeviceInfoEnums.swift",
+      "line": 57,
+      "symbol": "ZTManufacturerCodeType.b",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/ZTDeviceInfoEnums.swift",
+      "line": 58,
+      "symbol": "ZTManufacturerCodeType.c",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/ZTDeviceInfoEnums.swift",
+      "line": 59,
+      "symbol": "ZTManufacturerCodeType.d",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/ZTDeviceInfoEnums.swift",
+      "line": 60,
+      "symbol": "ZTManufacturerCodeType.e",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/ZTDeviceInfoEnums.swift",
+      "line": 61,
+      "symbol": "ZTManufacturerCodeType.f",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/ZTDeviceInfoEnums.swift",
+      "line": 62,
+      "symbol": "ZTManufacturerCodeType.z",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/ZTDeviceInfoEnums.swift",
+      "line": 85,
+      "symbol": "ZTProductTypeCode.ix",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/ZTDeviceInfoEnums.swift",
+      "line": 86,
+      "symbol": "ZTProductTypeCode.sx",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/ZTDeviceInfoEnums.swift",
+      "line": 87,
+      "symbol": "ZTProductTypeCode.xx",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/ZTDeviceInfoEnums.swift",
+      "line": 102,
+      "symbol": "ZTGenderCodeType.man",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/ZTDeviceInfoEnums.swift",
+      "line": 103,
+      "symbol": "ZTGenderCodeType.woman",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/ZTDeviceInfoEnums.swift",
+      "line": 107,
+      "symbol": "ZTGenderSizeCodeType.a",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/ZTDeviceInfoEnums.swift",
+      "line": 108,
+      "symbol": "ZTGenderSizeCodeType.b",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/ZTDeviceInfoEnums.swift",
+      "line": 109,
+      "symbol": "ZTGenderSizeCodeType.c",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/ZTDeviceInfoEnums.swift",
+      "line": 110,
+      "symbol": "ZTGenderSizeCodeType.d",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/ZTDeviceInfoEnums.swift",
+      "line": 111,
+      "symbol": "ZTGenderSizeCodeType.e",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/ZTDeviceInfoEnums.swift",
+      "line": 112,
+      "symbol": "ZTGenderSizeCodeType.f",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/ZTDeviceInfoEnums.swift",
+      "line": 113,
+      "symbol": "ZTGenderSizeCodeType.g",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/ZTDeviceInfoEnums.swift",
+      "line": 114,
+      "symbol": "ZTGenderSizeCodeType.h",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/ZTDeviceInfoEnums.swift",
+      "line": 115,
+      "symbol": "ZTGenderSizeCodeType.i",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/ZTDeviceInfoEnums.swift",
+      "line": 116,
+      "symbol": "ZTGenderSizeCodeType.j",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/ZTDeviceInfoEnums.swift",
+      "line": 118,
+      "symbol": "ZTGenderSizeCodeType.n",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/ZTDeviceInfoEnums.swift",
+      "line": 119,
+      "symbol": "ZTGenderSizeCodeType.o",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/ZTDeviceInfoEnums.swift",
+      "line": 120,
+      "symbol": "ZTGenderSizeCodeType.p",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/ZTDeviceInfoEnums.swift",
+      "line": 121,
+      "symbol": "ZTGenderSizeCodeType.q",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/ZTDeviceInfoEnums.swift",
+      "line": 122,
+      "symbol": "ZTGenderSizeCodeType.r",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/ZTDeviceInfoEnums.swift",
+      "line": 123,
+      "symbol": "ZTGenderSizeCodeType.s",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/ZTDeviceInfoEnums.swift",
+      "line": 124,
+      "symbol": "ZTGenderSizeCodeType.t",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/ZTDeviceInfoEnums.swift",
+      "line": 125,
+      "symbol": "ZTGenderSizeCodeType.u",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/ZTDeviceInfoEnums.swift",
+      "line": 180,
+      "symbol": "ZTUnitSizeCodeType.a",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/ZTDeviceInfoEnums.swift",
+      "line": 181,
+      "symbol": "ZTUnitSizeCodeType.b",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/ZTDeviceInfoEnums.swift",
+      "line": 182,
+      "symbol": "ZTUnitSizeCodeType.c",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/ZTDeviceInfoEnums.swift",
+      "line": 183,
+      "symbol": "ZTUnitSizeCodeType.d",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/ZTDeviceInfoEnums.swift",
+      "line": 184,
+      "symbol": "ZTUnitSizeCodeType.e",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/ZTDeviceInfoEnums.swift",
+      "line": 185,
+      "symbol": "ZTUnitSizeCodeType.f",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/ZTDeviceInfoEnums.swift",
+      "line": 187,
+      "symbol": "ZTUnitSizeCodeType.n",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/ZTDeviceInfoEnums.swift",
+      "line": 188,
+      "symbol": "ZTUnitSizeCodeType.o",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/ZTDeviceInfoEnums.swift",
+      "line": 189,
+      "symbol": "ZTUnitSizeCodeType.p",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/ZTDeviceInfoEnums.swift",
+      "line": 190,
+      "symbol": "ZTUnitSizeCodeType.q",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/ZTFirmwareRevision.swift",
+      "line": 11,
+      "symbol": "ZTFirmwareRevision",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/ZTFirmwareRevision.swift",
+      "line": 12,
+      "symbol": "ZTFirmwareRevision.build",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/ZTFirmwareRevision.swift",
+      "line": 13,
+      "symbol": "ZTFirmwareRevision.product",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/ZTFirmwareRevision.swift",
+      "line": 14,
+      "symbol": "ZTFirmwareRevision.codeVersion",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/ZTFirmwareRevision.swift",
+      "line": 15,
+      "symbol": "ZTFirmwareRevision.date",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/ZTNotifyDataEnum.swift",
+      "line": 16,
+      "symbol": "ZTNotifyData.GroupList.common",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/ZTNotifyDataEnum.swift",
+      "line": 17,
+      "symbol": "ZTNotifyData.GroupList.warm",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/ZTNotifyDataEnum.swift",
+      "line": 18,
+      "symbol": "ZTNotifyData.GroupList.running",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/ZTNotifyDataEnum.swift",
+      "line": 19,
+      "symbol": "ZTNotifyData.GroupList.cycling",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/ZTNotifyDataEnum.swift",
+      "line": 20,
+      "symbol": "ZTNotifyData.GroupList.safety",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/ZTNotifyDataEnum.swift",
+      "line": 26,
+      "symbol": "ZTNotifyData.CommonMessageId.MSG_GENERAL_STATES",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/ZTNotifyDataEnum.swift",
+      "line": 27,
+      "symbol": "ZTNotifyData.CommonMessageId.MSG_BATTERY_LEVEL",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/ZTNotifyDataEnum.swift",
+      "line": 28,
+      "symbol": "ZTNotifyData.CommonMessageId.MSG_MEMS",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/ZTNotifyDataEnum.swift",
+      "line": 29,
+      "symbol": "ZTNotifyData.CommonMessageId.MSG_FLASH",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/ZTNotifyDataEnum.swift",
+      "line": 30,
+      "symbol": "ZTNotifyData.CommonMessageId.MSG_TIME",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/ZTNotifyDataEnum.swift",
+      "line": 31,
+      "symbol": "ZTNotifyData.CommonMessageId.MSG_HARDWARE",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/ZTNotifyDataEnum.swift",
+      "line": 32,
+      "symbol": "ZTNotifyData.CommonMessageId.MSG_SOFTWARE",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/ZTNotifyDataEnum.swift",
+      "line": 38,
+      "symbol": "ZTNotifyData.WarmMessageId",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/ZTNotifyDataEnum.swift",
+      "line": 40,
+      "symbol": "ZTNotifyData.WarmMessageId.MSG_HEATING_TEMP_1",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/ZTNotifyDataEnum.swift",
+      "line": 41,
+      "symbol": "ZTNotifyData.WarmMessageId.MSG_HEATING_TEMP_2",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/ZTNotifyDataEnum.swift",
+      "line": 42,
+      "symbol": "ZTNotifyData.WarmMessageId.MSG_HEATING_STEP_R_CNT",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/ZTNotifyDataEnum.swift",
+      "line": 43,
+      "symbol": "ZTNotifyData.WarmMessageId.MSG_HEATING_STEP_L_CNT",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/ZTNotifyDataEnum.swift",
+      "line": 44,
+      "symbol": "ZTNotifyData.WarmMessageId.MSG_HEATING_SETPOINT_R",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/ZTNotifyDataEnum.swift",
+      "line": 45,
+      "symbol": "ZTNotifyData.WarmMessageId.MSG_HEATING_SETPOINT_L",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/ZTNotifyDataEnum.swift",
+      "line": 46,
+      "symbol": "ZTNotifyData.WarmMessageId.MSG_GET_HEAT_TIMER",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/ZTNotifyDataEnum.swift",
+      "line": 47,
+      "symbol": "ZTNotifyData.WarmMessageId.MSG_HEATING_DEBUG_R",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/ZTNotifyDataEnum.swift",
+      "line": 48,
+      "symbol": "ZTNotifyData.WarmMessageId.MSG_HEATING_DEBUG_L",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/ZTNotifyDataEnum.swift",
+      "line": 54,
+      "symbol": "ZTNotifyData.RunningMessageId",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/ZTNotifyDataEnum.swift",
+      "line": 56,
+      "symbol": "ZTNotifyData.RunningMessageId.UNKNOWN",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/ZTNotifyDataEnum.swift",
+      "line": 62,
+      "symbol": "ZTNotifyData.CyclingMessageId",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/ZTNotifyDataEnum.swift",
+      "line": 64,
+      "symbol": "ZTNotifyData.CyclingMessageId.MSG_CADENCE",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/ZTServiceEnum.swift",
+      "line": 17,
+      "symbol": "ZTServices.Primary",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/ZTServiceEnum.swift",
+      "line": 18,
+      "symbol": "ZTServices.Primary.uid",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/ZTServiceEnum.swift",
+      "line": 19,
+      "symbol": "ZTServices.Primary.uuid",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/ZTServiceEnum.swift",
+      "line": 21,
+      "symbol": "ZTServices.Primary.Characteristic",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/ZTServiceEnum.swift",
+      "line": 24,
+      "symbol": "ZTServices.Primary.Characteristic.commands",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/ZTServiceEnum.swift",
+      "line": 25,
+      "symbol": "ZTServices.Primary.Characteristic.notifyData",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/ZTServiceEnum.swift",
+      "line": 26,
+      "symbol": "ZTServices.Primary.Characteristic.indicateData",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/ZTServiceEnum.swift",
+      "line": 27,
+      "symbol": "ZTServices.Primary.Characteristic.batteryLevel",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/ZTServiceEnum.swift",
+      "line": 28,
+      "symbol": "ZTServices.Primary.Characteristic.pairedSoles",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/ZTServiceEnum.swift",
+      "line": 30,
+      "symbol": "ZTServices.Primary.Characteristic.uid",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/ZTServiceEnum.swift",
+      "line": 47,
+      "symbol": "ZTServices.DeviceInformation",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/ZTServiceEnum.swift",
+      "line": 48,
+      "symbol": "ZTServices.DeviceInformation.uid",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/ZTServiceEnum.swift",
+      "line": 49,
+      "symbol": "ZTServices.DeviceInformation.uuid",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/ZTServiceEnum.swift",
+      "line": 51,
+      "symbol": "ZTServices.DeviceInformation.Characteristic",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/ZTServiceEnum.swift",
+      "line": 54,
+      "symbol": "ZTServices.DeviceInformation.Characteristic.manufacturerName",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/ZTServiceEnum.swift",
+      "line": 55,
+      "symbol": "ZTServices.DeviceInformation.Characteristic.modelNumber",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/ZTServiceEnum.swift",
+      "line": 56,
+      "symbol": "ZTServices.DeviceInformation.Characteristic.serialNumber",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/ZTServiceEnum.swift",
+      "line": 57,
+      "symbol": "ZTServices.DeviceInformation.Characteristic.firmwareRevision",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/ZTServiceEnum.swift",
+      "line": 58,
+      "symbol": "ZTServices.DeviceInformation.Characteristic.hardwareRevision",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/ZTServiceEnum.swift",
+      "line": 60,
+      "symbol": "ZTServices.DeviceInformation.Characteristic.uid",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/ZTServiceEnum.swift",
+      "line": 77,
+      "symbol": "ZTServices.DeviceDFU",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/ZTServiceEnum.swift",
+      "line": 78,
+      "symbol": "ZTServices.DeviceDFU.uid",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/ZTServiceEnum.swift",
+      "line": 79,
+      "symbol": "ZTServices.DeviceDFU.uuid",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/ZTServiceEnum.swift",
+      "line": 81,
+      "symbol": "ZTServices.DeviceDFU.Characteristic",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/ZTServiceEnum.swift",
+      "line": 84,
+      "symbol": "ZTServices.DeviceDFU.Characteristic.dfu",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/Models/ZTServiceEnum.swift",
+      "line": 86,
+      "symbol": "ZTServices.DeviceDFU.Characteristic.uid",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit/Sources/ZTCoreKit.swift",
+      "line": 18,
+      "symbol": "ZTCoreKit",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/paul/Documents/Work/Zhortech/Framework/iOS/ZTCoreKit"
+}

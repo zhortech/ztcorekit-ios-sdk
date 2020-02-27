@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>ZTDevice Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/ZTDevice" class="dashAnchor"></a>
+    <a title="ZTDevice Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">ZTCoreKit Docs</a> (51% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">ZTCoreKit Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        ZTDevice Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/ZTBatteryCharacteristic.html">ZTBatteryCharacteristic</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ZTBleManager.html">ZTBleManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ZTButtonlessDfuCharacteristic.html">ZTButtonlessDfuCharacteristic</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ZTCharacteristic.html">ZTCharacteristic</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ZTCommandsCharacteristic.html">ZTCommandsCharacteristic</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ZTCoreKit.html">ZTCoreKit</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ZTDevice.html">ZTDevice</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ZTDeviceInfo.html">ZTDeviceInfo</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ZTDfuService.html">ZTDfuService</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ZTFirmwareCharacteristic.html">ZTFirmwareCharacteristic</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ZTFirmwareRevision.html">ZTFirmwareRevision</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ZTHardwareCharacteristic.html">ZTHardwareCharacteristic</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ZTIndicateCharacteristic.html">ZTIndicateCharacteristic</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ZTInformationService.html">ZTInformationService</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ZTManufacturerNameCharacteristic.html">ZTManufacturerNameCharacteristic</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ZTModelNumberCharacteristic.html">ZTModelNumberCharacteristic</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ZTNotifyCharacteristic.html">ZTNotifyCharacteristic</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ZTPairedSolesCharacteristic.html">ZTPairedSolesCharacteristic</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ZTPrimaryService.html">ZTPrimaryService</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ZTSerialNumberCharacteristic.html">ZTSerialNumberCharacteristic</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ZTService.html">ZTService</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes.html#/s:9ZTCoreKit10ZTSettingsC">ZTSettings</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ZTTextCharacteristic.html">ZTTextCharacteristic</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/ZTBleManagerState.html">ZTBleManagerState</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ZTCommand.html">ZTCommand</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ZTGenderCodeType.html">ZTGenderCodeType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ZTGenderSizeCodeType.html">ZTGenderSizeCodeType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ZTLogCategory.html">ZTLogCategory</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ZTLogLevel.html">ZTLogLevel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ZTManufacturerCodeType.html">ZTManufacturerCodeType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ZTNotifyData.html">ZTNotifyData</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ZTNotifyData/GroupList.html">– GroupList</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ZTNotifyData/CommonMessageId.html">– CommonMessageId</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ZTNotifyData/WarmMessageId.html">– WarmMessageId</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ZTNotifyData/RunningMessageId.html">– RunningMessageId</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ZTNotifyData/CyclingMessageId.html">– CyclingMessageId</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ZTProductCodeType.html">ZTProductCodeType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ZTProductType.html">ZTProductType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ZTProductTypeCode.html">ZTProductTypeCode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ZTProjectCodeType.html">ZTProjectCodeType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ZTScannerResult.html">ZTScannerResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ZTServices.html">ZTServices</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ZTServices/Primary.html">– Primary</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ZTServices/DeviceInformation.html">– DeviceInformation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ZTServices/DeviceDFU.html">– DeviceDFU</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ZTUnitSizeCodeType.html">ZTUnitSizeCodeType</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/ZTError.html">ZTError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/ZTError.html#/Enums">– Enums</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/ZTServiceProtocol.html">ZTServiceProtocol</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/ZTBatteryLevel.html">ZTBatteryLevel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ZTMessageGeneralState.html">ZTMessageGeneralState</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ZTPairedDevice.html">ZTPairedDevice</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Typealiases.html">Type Aliases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:9ZTCoreKit14CallbackResulta">CallbackResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:9ZTCoreKit18ConnectResultBlocka">ConnectResultBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:9ZTCoreKit20ZTScannerResultBlocka">ZTScannerResultBlock</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>ZTDevice</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">ZTDevice</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+<pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">ZTDevice</span><span class="p">:</span> <span class="kt">CBPeripheralDelegate</span></code></pre>
+
+                </div>
+              </div>
+            <p>Instance of peripheral device</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9ZTCoreKit8ZTDeviceC2idSSvp"></a>
+                    <a name="//apple_ref/swift/Property/id" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ZTCoreKit8ZTDeviceC2idSSvp">id</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Device identifier</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">id</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9ZTCoreKit8ZTDeviceC4nameSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/name" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ZTCoreKit8ZTDeviceC4nameSSSgvp">name</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Device name (optional)</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9ZTCoreKit8ZTDeviceC4rssiSivp"></a>
+                    <a name="//apple_ref/swift/Property/rssi" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ZTCoreKit8ZTDeviceC4rssiSivp">rssi</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Most recent RSSI value</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">internal(set)</span> <span class="k">var</span> <span class="nv">rssi</span><span class="p">:</span> <span class="kt">Int</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9ZTCoreKit8ZTDeviceC3mtuSivp"></a>
+                    <a name="//apple_ref/swift/Property/mtu" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ZTCoreKit8ZTDeviceC3mtuSivp">mtu</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Maximum Transmission Unit for this device.
+When device is not connected default value is 23.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">private(set)</span> <span class="k">var</span> <span class="nv">mtu</span><span class="p">:</span> <span class="kt">Int</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9ZTCoreKit8ZTDeviceC12manufacturerSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/manufacturer" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ZTCoreKit8ZTDeviceC12manufacturerSSSgvp">manufacturer</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Device manufacturer data</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">internal(set)</span> <span class="k">var</span> <span class="nv">manufacturer</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9ZTCoreKit8ZTDeviceC16hardwareRevisionSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/hardwareRevision" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ZTCoreKit8ZTDeviceC16hardwareRevisionSSSgvp">hardwareRevision</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Device hardware revision</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">internal(set)</span> <span class="k">var</span> <span class="nv">hardwareRevision</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9ZTCoreKit8ZTDeviceC16firmwareRevisionAA010ZTFirmwareE0CSgvp"></a>
+                    <a name="//apple_ref/swift/Property/firmwareRevision" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ZTCoreKit8ZTDeviceC16firmwareRevisionAA010ZTFirmwareE0CSgvp">firmwareRevision</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Device firmware revision</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">internal(set)</span> <span class="k">var</span> <span class="nv">firmwareRevision</span><span class="p">:</span> <span class="kt"><a href="../Classes/ZTFirmwareRevision.html">ZTFirmwareRevision</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9ZTCoreKit8ZTDeviceC10powerLevelSfSgvp"></a>
+                    <a name="//apple_ref/swift/Property/powerLevel" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ZTCoreKit8ZTDeviceC10powerLevelSfSgvp">powerLevel</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Device transmission power level</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">internal(set)</span> <span class="k">var</span> <span class="nv">powerLevel</span><span class="p">:</span> <span class="kt">Float</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9ZTCoreKit8ZTDeviceC11isConnectedSbvp"></a>
+                    <a name="//apple_ref/swift/Property/isConnected" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ZTCoreKit8ZTDeviceC11isConnectedSbvp">isConnected</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Is device connected</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">internal(set)</span> <span class="k">var</span> <span class="nv">isConnected</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9ZTCoreKit8ZTDeviceC4infoAA0C4InfoCSgvp"></a>
+                    <a name="//apple_ref/swift/Property/info" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ZTCoreKit8ZTDeviceC4infoAA0C4InfoCSgvp">info</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Device information</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">private(set)</span> <span class="k">var</span> <span class="nv">info</span><span class="p">:</span> <span class="kt"><a href="../Classes/ZTDeviceInfo.html">ZTDeviceInfo</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9ZTCoreKit8ZTDeviceC10peripheralSo12CBPeripheralCvp"></a>
+                    <a name="//apple_ref/swift/Property/peripheral" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ZTCoreKit8ZTDeviceC10peripheralSo12CBPeripheralCvp">peripheral</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p><code>ZTPeripheral</code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">private(set)</span> <span class="k">var</span> <span class="nv">peripheral</span><span class="p">:</span> <span class="kt">CBPeripheral</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9ZTCoreKit8ZTDeviceC12batterylevelAA14ZTBatteryLevelVSgvp"></a>
+                    <a name="//apple_ref/swift/Property/batterylevel" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ZTCoreKit8ZTDeviceC12batterylevelAA14ZTBatteryLevelVSgvp">batterylevel</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">internal(set)</span> <span class="k">var</span> <span class="nv">batterylevel</span><span class="p">:</span> <span class="kt"><a href="../Structs/ZTBatteryLevel.html">ZTBatteryLevel</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9ZTCoreKit8ZTDeviceC12lastActivitySdvp"></a>
+                    <a name="//apple_ref/swift/Property/lastActivity" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ZTCoreKit8ZTDeviceC12lastActivitySdvp">lastActivity</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Last time of Device activity</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">fileprivate</span><span class="p">(</span><span class="k">set</span><span class="p">)</span> <span class="k">var</span> <span class="nv">lastActivity</span><span class="p">:</span> <span class="kt">TimeInterval</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9ZTCoreKit8ZTDeviceC8servicesSDySSAA9ZTServiceCGvp"></a>
+                    <a name="//apple_ref/swift/Property/services" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ZTCoreKit8ZTDeviceC8servicesSDySSAA9ZTServiceCGvp">services</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Discovered Services</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">fileprivate</span><span class="p">(</span><span class="k">set</span><span class="p">)</span> <span class="k">var</span> <span class="nv">services</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt"><a href="../Classes/ZTService.html">ZTService</a></span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9ZTCoreKit8ZTDeviceC14onStateChangedAA8ZTSignalCyACGvp"></a>
+                    <a name="//apple_ref/swift/Property/onStateChanged" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ZTCoreKit8ZTDeviceC14onStateChangedAA8ZTSignalCyACGvp">onStateChanged</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>State Changed</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">onStateChanged</span><span class="p">:</span> <span class="kt">ZTSignal</span><span class="o">&lt;</span><span class="kt">ZTDevice</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9ZTCoreKit8ZTDeviceC13onRSSIChangedAA8ZTSignalCyAC_SitGvp"></a>
+                    <a name="//apple_ref/swift/Property/onRSSIChanged" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ZTCoreKit8ZTDeviceC13onRSSIChangedAA8ZTSignalCyAC_SitGvp">onRSSIChanged</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>RSSI change observed</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">onRSSIChanged</span><span class="p">:</span> <span class="kt">ZTSignal</span><span class="o">&lt;</span><span class="p">(</span><span class="kt">ZTDevice</span><span class="p">,</span> <span class="kt">Int</span><span class="p">)</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9ZTCoreKit8ZTDeviceC19onServiceDiscoveredAA8ZTSignalCyAC_AA9ZTServiceCtGvp"></a>
+                    <a name="//apple_ref/swift/Property/onServiceDiscovered" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ZTCoreKit8ZTDeviceC19onServiceDiscoveredAA8ZTSignalCyAC_AA9ZTServiceCtGvp">onServiceDiscovered</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Service discovered observer</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">onServiceDiscovered</span><span class="p">:</span> <span class="kt">ZTSignal</span><span class="o">&lt;</span><span class="p">(</span><span class="kt">ZTDevice</span><span class="p">,</span> <span class="kt"><a href="../Classes/ZTService.html">ZTService</a></span><span class="p">)</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9ZTCoreKit8ZTDeviceC27onServiceFeaturesIdentifiedAA8ZTSignalCyAC_AA9ZTServiceCtGvp"></a>
+                    <a name="//apple_ref/swift/Property/onServiceFeaturesIdentified" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ZTCoreKit8ZTDeviceC27onServiceFeaturesIdentifiedAA8ZTSignalCyAC_AA9ZTServiceCtGvp">onServiceFeaturesIdentified</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Service features identified observer</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">onServiceFeaturesIdentified</span><span class="p">:</span> <span class="kt">ZTSignal</span><span class="o">&lt;</span><span class="p">(</span><span class="kt">ZTDevice</span><span class="p">,</span> <span class="kt"><a href="../Classes/ZTService.html">ZTService</a></span><span class="p">)</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9ZTCoreKit8ZTDeviceC26onCharacteristicDiscoveredAA8ZTSignalCyAC_AA16ZTCharacteristicCtGvp"></a>
+                    <a name="//apple_ref/swift/Property/onCharacteristicDiscovered" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ZTCoreKit8ZTDeviceC26onCharacteristicDiscoveredAA8ZTSignalCyAC_AA16ZTCharacteristicCtGvp">onCharacteristicDiscovered</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Characteristic discover observer</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">onCharacteristicDiscovered</span><span class="p">:</span> <span class="kt">ZTSignal</span><span class="o">&lt;</span><span class="p">(</span><span class="kt">ZTDevice</span><span class="p">,</span> <span class="kt"><a href="../Classes/ZTCharacteristic.html">ZTCharacteristic</a></span><span class="p">)</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9ZTCoreKit8ZTDeviceC28onCharacteristicValueUpdatedAA8ZTSignalCyAC_AA16ZTCharacteristicCtGvp"></a>
+                    <a name="//apple_ref/swift/Property/onCharacteristicValueUpdated" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ZTCoreKit8ZTDeviceC28onCharacteristicValueUpdatedAA8ZTSignalCyAC_AA16ZTCharacteristicCtGvp">onCharacteristicValueUpdated</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Characteristic value updated observer</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">onCharacteristicValueUpdated</span><span class="p">:</span> <span class="kt">ZTSignal</span><span class="o">&lt;</span><span class="p">(</span><span class="kt">ZTDevice</span><span class="p">,</span> <span class="kt"><a href="../Classes/ZTCharacteristic.html">ZTCharacteristic</a></span><span class="p">)</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9ZTCoreKit8ZTDeviceC28onCharacteristicValueWrittenAA8ZTSignalCyAC_AA16ZTCharacteristicCtGvp"></a>
+                    <a name="//apple_ref/swift/Property/onCharacteristicValueWritten" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ZTCoreKit8ZTDeviceC28onCharacteristicValueWrittenAA8ZTSignalCyAC_AA16ZTCharacteristicCtGvp">onCharacteristicValueWritten</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Characteristic value written observer</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">onCharacteristicValueWritten</span><span class="p">:</span> <span class="kt">ZTSignal</span><span class="o">&lt;</span><span class="p">(</span><span class="kt">ZTDevice</span><span class="p">,</span> <span class="kt"><a href="../Classes/ZTCharacteristic.html">ZTCharacteristic</a></span><span class="p">)</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9ZTCoreKit8ZTDeviceC10peripheralACSo12CBPeripheralC_tcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(peripheral:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ZTCoreKit8ZTDeviceC10peripheralACSo12CBPeripheralC_tcfc">init(peripheral:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Initializer for <code>ZTDevice</code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">required</span> <span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">peripheral</span><span class="p">:</span> <span class="kt">CBPeripheral</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>peripheral</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p><code>CBPeripheral</code></p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>manager</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p><code><a href="../Classes/ZTBleManager.html">ZTBleManager</a></code></p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9ZTCoreKit8ZTDeviceC10disconnectyyF"></a>
+                    <a name="//apple_ref/swift/Method/disconnect()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ZTCoreKit8ZTDeviceC10disconnectyyF">disconnect()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Disconnect device</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">disconnect</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9ZTCoreKit8ZTDeviceC7serviceyxSgSSSgAA9ZTServiceCRbzlF"></a>
+                    <a name="//apple_ref/swift/Method/service(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ZTCoreKit8ZTDeviceC7serviceyxSgSSSgAA9ZTServiceCRbzlF">service(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Get setvice by type or UUID</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">service</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">uuid</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">T</span><span class="p">?</span> <span class="k">where</span> <span class="kt">T</span> <span class="p">:</span> <span class="kt"><a href="../Classes/ZTService.html">ZTService</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>uuid</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>uuid of service</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2020 <a class="link" href="https://zhortech.com/" target="_blank" rel="external">Pavel Shpak</a>. All rights reserved. (Last updated: 2020-02-27)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.1</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

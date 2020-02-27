@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>ZTBatteryLevel Structure Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Struct/ZTBatteryLevel" class="dashAnchor"></a>
+    <a title="ZTBatteryLevel Structure Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">ZTCoreKit Docs</a> (51% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">ZTCoreKit Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        ZTBatteryLevel Structure Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/ZTBatteryCharacteristic.html">ZTBatteryCharacteristic</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ZTBleManager.html">ZTBleManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ZTButtonlessDfuCharacteristic.html">ZTButtonlessDfuCharacteristic</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ZTCharacteristic.html">ZTCharacteristic</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ZTCommandsCharacteristic.html">ZTCommandsCharacteristic</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ZTCoreKit.html">ZTCoreKit</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ZTDevice.html">ZTDevice</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ZTDeviceInfo.html">ZTDeviceInfo</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ZTDfuService.html">ZTDfuService</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ZTFirmwareCharacteristic.html">ZTFirmwareCharacteristic</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ZTFirmwareRevision.html">ZTFirmwareRevision</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ZTHardwareCharacteristic.html">ZTHardwareCharacteristic</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ZTIndicateCharacteristic.html">ZTIndicateCharacteristic</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ZTInformationService.html">ZTInformationService</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ZTManufacturerNameCharacteristic.html">ZTManufacturerNameCharacteristic</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ZTModelNumberCharacteristic.html">ZTModelNumberCharacteristic</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ZTNotifyCharacteristic.html">ZTNotifyCharacteristic</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ZTPairedSolesCharacteristic.html">ZTPairedSolesCharacteristic</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ZTPrimaryService.html">ZTPrimaryService</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ZTSerialNumberCharacteristic.html">ZTSerialNumberCharacteristic</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ZTService.html">ZTService</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes.html#/s:9ZTCoreKit10ZTSettingsC">ZTSettings</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ZTTextCharacteristic.html">ZTTextCharacteristic</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/ZTBleManagerState.html">ZTBleManagerState</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ZTCommand.html">ZTCommand</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ZTGenderCodeType.html">ZTGenderCodeType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ZTGenderSizeCodeType.html">ZTGenderSizeCodeType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ZTLogCategory.html">ZTLogCategory</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ZTLogLevel.html">ZTLogLevel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ZTManufacturerCodeType.html">ZTManufacturerCodeType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ZTNotifyData.html">ZTNotifyData</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ZTNotifyData/GroupList.html">– GroupList</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ZTNotifyData/CommonMessageId.html">– CommonMessageId</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ZTNotifyData/WarmMessageId.html">– WarmMessageId</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ZTNotifyData/RunningMessageId.html">– RunningMessageId</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ZTNotifyData/CyclingMessageId.html">– CyclingMessageId</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ZTProductCodeType.html">ZTProductCodeType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ZTProductType.html">ZTProductType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ZTProductTypeCode.html">ZTProductTypeCode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ZTProjectCodeType.html">ZTProjectCodeType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ZTScannerResult.html">ZTScannerResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ZTServices.html">ZTServices</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ZTServices/Primary.html">– Primary</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ZTServices/DeviceInformation.html">– DeviceInformation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ZTServices/DeviceDFU.html">– DeviceDFU</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ZTUnitSizeCodeType.html">ZTUnitSizeCodeType</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/ZTError.html">ZTError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/ZTError.html#/Enums">– Enums</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/ZTServiceProtocol.html">ZTServiceProtocol</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/ZTBatteryLevel.html">ZTBatteryLevel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ZTMessageGeneralState.html">ZTMessageGeneralState</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ZTPairedDevice.html">ZTPairedDevice</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Typealiases.html">Type Aliases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:9ZTCoreKit14CallbackResulta">CallbackResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:9ZTCoreKit18ConnectResultBlocka">ConnectResultBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:9ZTCoreKit20ZTScannerResultBlocka">ZTScannerResultBlock</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>ZTBatteryLevel</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ZTBatteryLevel</span> <span class="p">:</span> <span class="kt">CustomStringConvertible</span><span class="p">,</span> <span class="kt">Codable</span></code></pre>
+
+                </div>
+              </div>
+            <p>Status is a holder of the current scanner state with additional parameters</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9ZTCoreKit14ZTBatteryLevelV5rights5UInt8Vvp"></a>
+                    <a name="//apple_ref/swift/Property/right" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ZTCoreKit14ZTBatteryLevelV5rights5UInt8Vvp">right</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Right insole battery level</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">right</span><span class="p">:</span> <span class="kt">UInt8</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9ZTCoreKit14ZTBatteryLevelV4lefts5UInt8Vvp"></a>
+                    <a name="//apple_ref/swift/Property/left" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ZTCoreKit14ZTBatteryLevelV4lefts5UInt8Vvp">left</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Left insole battery level</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">left</span><span class="p">:</span> <span class="kt">UInt8</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9ZTCoreKit14ZTBatteryLevelV11descriptionSSvp"></a>
+                    <a name="//apple_ref/swift/Property/description" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ZTCoreKit14ZTBatteryLevelV11descriptionSSvp">description</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Customized description</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">description</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2020 <a class="link" href="https://zhortech.com/" target="_blank" rel="external">Pavel Shpak</a>. All rights reserved. (Last updated: 2020-02-27)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.1</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
