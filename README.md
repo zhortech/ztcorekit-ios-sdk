@@ -29,7 +29,7 @@ The ZTCoreKit for iOS provides a library and documentation for developers to bui
 
 ## INSTALLATION
 
-To get started with the ZTCoreKit SDK for iOS, check out the [Developer Guide for iOS](https://gitlab.com/zhor-tech/sdk/ios/ztcorekit/-/blob/dev/README.md). You can set up the SDK and start building a new project, or you integrate the SDK in an existing project. You can also run the samples to get a sense of how the SDK works.
+To get started with the ZTCoreKit SDK for iOS, check out the [Developer Guide for iOS](https://github.com/zhortech/ztcorekit-ios-sdk/-/blob/dev/README.md). You can set up the SDK and start building a new project, or you integrate the SDK in an existing project. You can also run the samples to get a sense of how the SDK works.
 
 To use the ZTCoreKit SDK for iOS, you will need the following installed on your development machine:
 
@@ -66,7 +66,7 @@ You should use ONE and only one of these ways to import the ZTCoreKit Mobile SDK
 3. Edit the podfile to include the pods you want to integrate into your project.  For example, ZTCoreKit is `a must` framework and is required to connect to shoes. `ZTSafetyKit` is used when working with `Safety` products. As a result, your podfile might look something like this:
 ```
 target 'YourTarget' do
-    pod 'ZTCoreKit', :git => 'https://gitlab.com/zhor-tech/sdk/ios/ztcorekit.git', :branch => 'master'
+    pod 'ZTCoreKit', :git => 'https://github.com/zhortech/ztcorekit-ios-sdk.git', :branch => 'master'
 end
 ```
 
@@ -99,7 +99,7 @@ xcrun swift -version
 
 Follow the official Apple SPM guide [instructions](https://developer.apple.com/documentation/xcode/adding_package_dependencies_to_your_app) for more details.\n  
 
-2. To use Swift Package Manager, in Xcode add the https://gitlab.com/zhor-tech/sdk/ios/ztcorekit dependency and choose the `Exact` version.
+2. To use Swift Package Manager, in Xcode add the https://github.com/zhortech/ztcorekit-ios-sdk dependency and choose the `Exact` version.
 <p align="center">
 <img src="readme-images/ZTCoreKit_SPM_1.jpg" width="70%">
 </p>
@@ -118,7 +118,7 @@ Follow the official Apple SPM guide [instructions](https://developer.apple.com/d
 
 ### Frameworks
 
-1. Download the [latest SDK](https://https://gitlab.com/zhor-tech/sdk/ios/ztcorekit/latest/ztsafetykit-sdk.zip).
+1. Download the [latest SDK](https://https://github.com/zhortech/ztcorekit-ios-sdk/latest/ztsafetykit-sdk.zip).
 
 2. With your project open in Xcode, select your **Target**. Under **General** tab, find **Embedded Binaries** and then click the **+** button.
 
@@ -284,15 +284,15 @@ The following logging level options are available:
 We recommend setting the log level to `.error` before publishing to the Apple App Store.
 
 ## DOCUMENTATION
-Jazzy doc is available [here](https://gitlab.com/zhor-tech/sdk/ios/documentation/index.html)
+Jazzy doc is available [here](https://github.com/zhortech/ztcorekit-ios-sdk/docs/index.html)
 
 ## SAMPLE APPLICATION
-A sample application can be download [here](https://gitlab.com/zhor-tech/sdk/ios/ztexample). 
+A sample application can be download [here](https://github.com/zhortech/ztcorekit-ios-sdk/ztexample). 
 
 
 ## Talk to Us
 
-Visit Gitlab [Issues](https://gitlab.com/zhor-tech/sdk/ios/ztcorekit/-/issues) to leave feedback or create any issue.
+Visit Gitlab [Issues](https://github.com/zhortech/ztcorekit-ios-sdk/-/issues) to leave feedback or create any issue.
 
 ## Author
 
