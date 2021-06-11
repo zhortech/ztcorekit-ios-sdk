@@ -29,7 +29,7 @@ The ZTCoreKit for iOS provides a library and documentation for developers to bui
 
 ## INSTALLATION
 
-To get started with the ZTCoreKit SDK for iOS, check out the [Developer Guide for iOS](https://github.com/zhortech/ztcorekit-ios-sdk/-/blob/dev/README.md). You can set up the SDK and start building a new project, or you integrate the SDK in an existing project. You can also run the samples to get a sense of how the SDK works.
+To get started with the ZTCoreKit SDK for iOS, check out the [Developer Guide for iOS](https://github.com/zhortech/ztcorekit-ios-sdk/blob/master/README.md). You can set up the SDK and start building a new project, or you integrate the SDK in an existing project. You can also run the samples to get a sense of how the SDK works.
 
 To use the ZTCoreKit SDK for iOS, you will need the following installed on your development machine:
 
@@ -38,7 +38,7 @@ To use the ZTCoreKit SDK for iOS, you will need the following installed on your 
 
 ## Include the SDK for iOS in an Existing Application
 
-There is example project [example](https://gitlab.com/zhor-tech/sdk/ios/ztexample) applications which showcase how to use the ZTCoreKit SDK for iOS.  Please note that the code in these sample applications is not of production quality.
+There is example project [example](https://github.com/zhortech/ztexample-ios) applications which showcase how to use the ZTCoreKit SDK for iOS.  Please note that the code in these sample applications is not of production quality.
 
 There are several ways to integrate the ZTCoreKit Mobile SDK for iOS into your own project:
 
@@ -118,7 +118,7 @@ Follow the official Apple SPM guide [instructions](https://developer.apple.com/d
 
 ### Frameworks
 
-1. Download the [latest SDK](https://https://github.com/zhortech/ztcorekit-ios-sdk/latest/ztsafetykit-sdk.zip).
+1. Download the [latest SDK](https://github.com/zhortech/ztcorekit-ios-sdk/latest/ztsafetykit-sdk.zip).
 
 2. With your project open in Xcode, select your **Target**. Under **General** tab, find **Embedded Binaries** and then click the **+** button.
 
