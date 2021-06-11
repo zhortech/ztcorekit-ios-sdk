@@ -8,12 +8,21 @@
     <script src="js/jquery.min.js" defer></script>
     <script src="js/jazzy.js" defer></script>
     
+    <script src="js/lunr.min.js" defer></script>
+    <script src="js/typeahead.jquery.js" defer></script>
+    <script src="js/jazzy.search.js" defer></script>
   </head>
   <body>
     <a title="ZTCoreKit  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html">ZTCoreKit Docs</a> (51% documented)</p>
+        <p><a href="index.html">ZTCoreKit 1.0.55 Docs</a></p>
+        <p class="header-right"><a href="https://github.com/zhortech/ztcorekit-ios-sdk"><img src="img/gh.png"/>View on GitHub</a></p>
+        <p class="header-right">
+          <form role="search" action="search.json">
+            <input type="text" placeholder="Search documentation" data-typeahead>
+          </form>
+        </p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -27,73 +36,118 @@
       <nav class="sidebar">
         <ul class="nav-groups">
           <li class="nav-group-name">
-            <a href="Classes.html">Classes</a>
+            <a href="Common.html">Common</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Classes/ZTBatteryCharacteristic.html">ZTBatteryCharacteristic</a>
+                <a href="Classes/ZTCore.html">ZTCore</a>
               </li>
               <li class="nav-group-task">
-                <a href="Classes/ZTBleManager.html">ZTBleManager</a>
+                <a href="Classes/ZTApi.html">ZTApi</a>
               </li>
               <li class="nav-group-task">
-                <a href="Classes/ZTButtonlessDfuCharacteristic.html">ZTButtonlessDfuCharacteristic</a>
+                <a href="Classes/ZTSettings.html">ZTSettings</a>
               </li>
-              <li class="nav-group-task">
-                <a href="Classes/ZTCharacteristic.html">ZTCharacteristic</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Classes/ZTCommandsCharacteristic.html">ZTCommandsCharacteristic</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Classes/ZTCoreKit.html">ZTCoreKit</a>
-              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Models.html">Models</a>
+            <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="Classes/ZTDevice.html">ZTDevice</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Classes/ZTDeviceInfo.html">ZTDeviceInfo</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Classes/ZTDfuService.html">ZTDfuService</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Classes/ZTFirmwareCharacteristic.html">ZTFirmwareCharacteristic</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Classes/ZTFirmwareRevision.html">ZTFirmwareRevision</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Classes/ZTHardwareCharacteristic.html">ZTHardwareCharacteristic</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Classes/ZTIndicateCharacteristic.html">ZTIndicateCharacteristic</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Classes/ZTInformationService.html">ZTInformationService</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Classes/ZTManufacturerNameCharacteristic.html">ZTManufacturerNameCharacteristic</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Classes/ZTModelNumberCharacteristic.html">ZTModelNumberCharacteristic</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Classes/ZTNotifyCharacteristic.html">ZTNotifyCharacteristic</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Classes/ZTPairedSolesCharacteristic.html">ZTPairedSolesCharacteristic</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Classes/ZTPrimaryService.html">ZTPrimaryService</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Classes/ZTSerialNumberCharacteristic.html">ZTSerialNumberCharacteristic</a>
               </li>
               <li class="nav-group-task">
                 <a href="Classes/ZTService.html">ZTService</a>
               </li>
               <li class="nav-group-task">
-                <a href="Classes.html#/s:9ZTCoreKit10ZTSettingsC">ZTSettings</a>
+                <a href="Classes/ZTCharacteristic.html">ZTCharacteristic</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="ZTDevice.html">ZTDevice</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Classes/ZTDeviceInfo.html">ZTDeviceInfo</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/ZTProductType.html">ZTProductType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="ZTDevice.html#/s:9ZTCoreKit17ZTProjectCodeTypeO">ZTProjectCodeType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/ZTProductCodeType.html">ZTProductCodeType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="ZTDevice.html#/s:9ZTCoreKit22ZTManufacturerCodeTypeO">ZTManufacturerCodeType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="ZTDevice.html#/s:9ZTCoreKit17ZTProductTypeCodeO">ZTProductTypeCode</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="ZTService.html">ZTService</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Classes/ZTPrimaryService.html">ZTPrimaryService</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="ZTCharacteristic.html">ZTCharacteristic</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Classes/ZTCommandsCharacteristic.html">ZTCommandsCharacteristic</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Enums.html">Enums</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Enums/ZTBleManagerState.html">ZTBleManagerState</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/ZTError.html">ZTError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/ZTLogLevel.html">ZTLogLevel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/ZTScannerResult.html">ZTScannerResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums.html#/s:9ZTCoreKit20ZTGenderSizeCodeTypeO">ZTGenderSizeCodeType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums.html#/s:9ZTCoreKit18ZTUnitSizeCodeTypeO">ZTUnitSizeCodeType</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Other%20Classes.html">Other Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Classes/ZTBleManager.html">ZTBleManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/ZTDfuService.html">ZTDfuService</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/ZTInformationService.html">ZTInformationService</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/ZTPrimaryOldService.html">ZTPrimaryOldService</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/ZTSegmentData.html">ZTSegmentData</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/ZTSignal.html">ZTSignal</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/ZTSignalSubscription.html">ZTSignalSubscription</a>
               </li>
               <li class="nav-group-task">
                 <a href="Classes/ZTTextCharacteristic.html">ZTTextCharacteristic</a>
@@ -101,123 +155,95 @@
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="Enums.html">Enumerations</a>
+            <a href="Other%20Enums.html">Other Enumerations</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Enums/ZTBleManagerState.html">ZTBleManagerState</a>
+                <a href="Other%20Enums.html#/s:9ZTCoreKit14ZTActivityModeO">ZTActivityMode</a>
               </li>
               <li class="nav-group-task">
                 <a href="Enums/ZTCommand.html">ZTCommand</a>
               </li>
               <li class="nav-group-task">
-                <a href="Enums/ZTGenderCodeType.html">ZTGenderCodeType</a>
+                <a href="Other%20Enums.html#/s:9ZTCoreKit15ZTCommandStatusO">ZTCommandStatus</a>
               </li>
               <li class="nav-group-task">
-                <a href="Enums/ZTGenderSizeCodeType.html">ZTGenderSizeCodeType</a>
+                <a href="Other%20Enums.html#/s:9ZTCoreKit19ZTDeviceActualStateO">ZTDeviceActualState</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Other%20Enums.html#/s:9ZTCoreKit16ZTGenderCodeTypeO">ZTGenderCodeType</a>
               </li>
               <li class="nav-group-task">
                 <a href="Enums/ZTLogCategory.html">ZTLogCategory</a>
               </li>
               <li class="nav-group-task">
-                <a href="Enums/ZTLogLevel.html">ZTLogLevel</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Enums/ZTManufacturerCodeType.html">ZTManufacturerCodeType</a>
-              </li>
-              <li class="nav-group-task">
                 <a href="Enums/ZTNotifyData.html">ZTNotifyData</a>
               </li>
               <li class="nav-group-task">
-                <a href="Enums/ZTNotifyData/GroupList.html">– GroupList</a>
+                <a href="Enums/ZTNotifyData.html#/s:9ZTCoreKit12ZTNotifyDataO7GroupIDO">– GroupID</a>
               </li>
               <li class="nav-group-task">
-                <a href="Enums/ZTNotifyData/CommonMessageId.html">– CommonMessageId</a>
+                <a href="Enums/ZTNotifyData.html#/s:9ZTCoreKit12ZTNotifyDataO15CommonMessageIdO">– CommonMessageId</a>
               </li>
               <li class="nav-group-task">
-                <a href="Enums/ZTNotifyData/WarmMessageId.html">– WarmMessageId</a>
+                <a href="Other%20Enums.html#/s:9ZTCoreKit8ZTPeriodO">ZTPeriod</a>
               </li>
               <li class="nav-group-task">
-                <a href="Enums/ZTNotifyData/RunningMessageId.html">– RunningMessageId</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Enums/ZTNotifyData/CyclingMessageId.html">– CyclingMessageId</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Enums/ZTProductCodeType.html">ZTProductCodeType</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Enums/ZTProductType.html">ZTProductType</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Enums/ZTProductTypeCode.html">ZTProductTypeCode</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Enums/ZTProjectCodeType.html">ZTProjectCodeType</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Enums/ZTScannerResult.html">ZTScannerResult</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Enums/ZTServices.html">ZTServices</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Enums/ZTServices/Primary.html">– Primary</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Enums/ZTServices/DeviceInformation.html">– DeviceInformation</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Enums/ZTServices/DeviceDFU.html">– DeviceDFU</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Enums/ZTUnitSizeCodeType.html">ZTUnitSizeCodeType</a>
+                <a href="Other%20Enums.html#/s:9ZTCoreKit10ZTServicesO">ZTServices</a>
               </li>
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="Extensions.html">Extensions</a>
+            <a href="Other%20Extensions.html">Other Extensions</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Extensions/ZTError.html">ZTError</a>
+                <a href="Extensions/CBCharacteristic.html">CBCharacteristic</a>
               </li>
               <li class="nav-group-task">
-                <a href="Extensions/ZTError.html#/Enums">– Enums</a>
+                <a href="Extensions/Data.html">Data</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/DataRequest.html">DataRequest</a>
               </li>
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="Protocols.html">Protocols</a>
+            <a href="Other%20Functions.html">Other Functions</a>
             <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Other%20Functions.html#/s:9ZTCoreKit2egoiyyAA8ZTSignalCyxG_xtlF">=&gt;(_:_:)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Other%20Protocols.html">Other Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Other%20Protocols.html#/s:9ZTCoreKit13ZTDfuDelegateP">ZTDfuDelegate</a>
+              </li>
               <li class="nav-group-task">
                 <a href="Protocols/ZTServiceProtocol.html">ZTServiceProtocol</a>
               </li>
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="Structs.html">Structures</a>
+            <a href="Other%20Structs.html">Other Structures</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a href="Structs/ZTArrayEncoding.html">ZTArrayEncoding</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Structs/ZTBatteryLevel.html">ZTBatteryLevel</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Structs/ZTMessageGeneralState.html">ZTMessageGeneralState</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Structs/ZTPairedDevice.html">ZTPairedDevice</a>
               </li>
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="Typealiases.html">Type Aliases</a>
+            <a href="Other%20Typealiases.html">Other Type Aliases</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Typealiases.html#/s:9ZTCoreKit14CallbackResulta">CallbackResult</a>
+                <a href="Other%20Typealiases.html#/s:9ZTCoreKit18ConnectResultBlocka">ConnectResultBlock</a>
               </li>
               <li class="nav-group-task">
-                <a href="Typealiases.html#/s:9ZTCoreKit18ConnectResultBlocka">ConnectResultBlock</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Typealiases.html#/s:9ZTCoreKit20ZTScannerResultBlocka">ZTScannerResultBlock</a>
+                <a href="Other%20Typealiases.html#/s:9ZTCoreKit20ZTScannerResultBlocka">ZTScannerResultBlock</a>
               </li>
             </ul>
           </li>
@@ -227,167 +253,355 @@
         <section>
           <section class="section">
             
-            <h1 id='ztcorekit' class='heading'>ZTCoreKit</h1>
+            <h1 id='ztcorekit-sdk-for-ios' class='heading'>ZTCoreKit SDK for iOS</h1>
 
-<p><a href="https://cocoapods.org/pods/ZTCoreKit"><img src="https://img.shields.io/cocoapods/p/ZTCoreKit.svg" alt="Platforms"></a>
-<a href="https://raw.githubusercontent.com/zhortech/ZTCoreKit/master/LICENSE"><img src="https://img.shields.io/cocoapods/l/ZTCoreKit.svg" alt="License"></a></p>
+<p><a href="https://swift.org"><img src="https://img.shields.io/badge/Swift-5.2-orange.svg?style=for-the-badge" alt="Swift Version"></a>
+[<img src="https://img.shields.io/cocoapods/p/ZTCoreKit.svg" alt="Platform">]
+<a href="https://github.com/zhortech/ztcorekit-ios-sdk"><img src="https://img.shields.io/cocoapods/v/ZTCoreKit.svg" alt="CocoaPods"></a>
+<a href="https://swift.org/package-manager/"><img src="https://rawgit.com/jlyonsmith/artwork/master/SwiftPackageManager/swiftpackagemanager-compatible.svg" alt="Swift Package Manager"></a>
+<a href="https://github.com/zhortech/ztcorekit-ios-sdk/blob/master/LICENSE"><img src="https://img.shields.io/cocoapods/l/ZTCoreKit.svg?style=flat" alt="License"></a></p>
 
-<p><a href="https://github.com/apple/swift-package-manager"><img src="https://img.shields.io/badge/Swift%20Package%20Manager-compatible-brightgreen.svg" alt="Swift Package Manager"></a>
-<a href="https://github.com/Carthage/Carthage"><img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat" alt="Carthage compatible"></a>
-<a href="https://cocoapods.org/pods/ZTCoreKit"><img src="https://img.shields.io/cocoapods/v/ZTCoreKit.svg" alt="CocoaPods compatible"></a></p>
+<p>The ZTCoreKit for iOS provides a library and documentation for developers to build connected mobile applications using Zhortech services and modules.</p>
+<h2 id='toc' class='heading'>TOC</h2>
 
-<p><a href="https://travis-ci.org/zhortech/ZTCoreKit/branches"><img src="https://img.shields.io/travis/zhortech/zhortech-ios-sdk/master.svg" alt="Travis"></a></p>
+<p><a href="#installation">Installation</a></p>
 
-<ul>
-<li><a href="#requirements">Requirements</a></li>
-<li><a href="#installation">Installation</a></li>
-<li><a href="#usage">Usage</a></li>
-<li><a href="#license">License</a></li>
-</ul>
-<h2 id='requirements' class='heading'>Requirements</h2>
+<p><a href="#how-to-use-it">How to use it</a></p>
 
 <ul>
-<li>iOS 8.0+</li>
-<li>Xcode 10.0+</li>
+<li><a href="#setup">Setup</a></li>
+<li><a href="#scan">Scan</a></li>
+<li><a href="#connect">Connect</a></li>
+<li><a href="#listen">Listen</a></li>
+<li><a href="#disconnection">Disconnection</a></li>
+<li><a href="#observers">Observers</a></li>
+<li><a href="#Autoconnection">Autoconnection</a></li>
 </ul>
-<h2 id='installation' class='heading'>Installation</h2>
-<h3 id='dependency-managers' class='heading'>Dependency Managers</h3>
 
-<details>
-  <summary><strong>CocoaPods</strong></summary>
+<p><a href="#documentation">Documentation</a></p>
 
-[CocoaPods](http://cocoapods.org) is a dependency manager for Cocoa projects. You can install it with the following command:
+<p><a href="#sample-application">Sample application</a></p>
 
-&ldquo;`bash
-$ gem install cocoapods
-&rdquo;`
+<p><a href="#license">License</a></p>
+<h2 id='installation' class='heading'>INSTALLATION</h2>
 
-To integrate ZTCoreKit into your Xcode project using CocoaPods, specify it in your `Podfile`:
+<p>To get started with the ZTCoreKit SDK for iOS, check out the <a href="https://gitlab.com/zhor-tech/sdk/ios/ztcorekit/-/blob/dev/README.md">Developer Guide for iOS</a>. You can set up the SDK and start building a new project, or you integrate the SDK in an existing project. You can also run the samples to get a sense of how the SDK works.</p>
 
-&ldquo;`ruby
-source &lsquo;https://github.com/CocoaPods/Specs.git&rsquo;
-platform :ios, &lsquo;8.0&rsquo;
-use_frameworks!
+<p>To use the ZTCoreKit SDK for iOS, you will need the following installed on your development machine:</p>
 
-pod &lsquo;ZTCoreKit&rsquo;, &lsquo;~> 0.0.1&rsquo;
-&rdquo;`
+<ul>
+<li>Xcode 11.0 or later</li>
+<li>iOS 13 or later</li>
+</ul>
+<h2 id='include-the-sdk-for-ios-in-an-existing-application' class='heading'>Include the SDK for iOS in an Existing Application</h2>
 
-Then, run the following command:
+<p>There is example project <a href="https://gitlab.com/zhor-tech/sdk/ios/ztexample">example</a> applications which showcase how to use the ZTCoreKit SDK for iOS.  Please note that the code in these sample applications is not of production quality.</p>
 
-&ldquo;`bash
-$ pod install
-&rdquo;`
+<p>There are several ways to integrate the ZTCoreKit Mobile SDK for iOS into your own project:</p>
 
-</details>
+<ul>
+<li><a href="https://cocoapods.org/">CocoaPods</a></li>
+<li><a href="https://swift.org/package-manager/">Swift Package Manager</a>
+&lt;!&ndash; * <a href="https://github.com/Carthage/Carthage">Carthage</a> &ndash;&gt;</li>
+</ul>
 
-<details>
-  <summary><strong>Carthage</strong></summary>
+<p>You should use ONE and only one of these ways to import the ZTCoreKit Mobile SDK. Importing the SDK in multiple ways loads duplicate copies of the SDK into the project and causes compiler/linker errors.</p>
+<h3 id='cocoapods' class='heading'>CocoaPods</h3>
 
-[Carthage](https://github.com/Carthage/Carthage) is a decentralized dependency manager that automates the process of adding frameworks to your Cocoa application.
+<ol>
+<li><p>The ZTCoreKit Mobile SDK for iOS is available through <a href="http://cocoapods.org">CocoaPods</a>. If you have not installed CocoaPods, install CocoaPods by running the command:</p>
+<pre class="highlight plaintext"><code>$ gem install cocoapods
+$ pod setup
+</code></pre>
 
-You can install Carthage with [Homebrew](http://brew.sh/) using the following command:
+<p>Depending on your system settings, you may have to use <code>sudo</code> for installing <code>cocoapods</code> as follows:</p>
+<pre class="highlight plaintext"><code>$ sudo gem install cocoapods
+$ pod setup
+</code></pre></li>
+<li><p>In your project directory (the directory where your <code>*.xcodeproj</code> file is), run the following to create a <code>Podfile</code> in your project.</p>
+<pre class="highlight plaintext"><code>$ pod init
+</code></pre></li>
+<li><p>Edit the podfile to include the pods you want to integrate into your project.  For example, ZTCoreKit is <code>a must</code> framework and is required to connect to shoes. <code>ZTSafetyKit</code> is used when working with <code>Safety</code> products. As a result, your podfile might look something like this:</p>
+<pre class="highlight plaintext"><code>target 'YourTarget' do
+pod 'ZTCoreKit', :git =&gt; 'https://gitlab.com/zhor-tech/sdk/ios/ztcorekit.git', :branch =&gt; 'master'
+end
+</code></pre></li>
+</ol>
 
-&ldquo;`bash
-$ brew update
-$ brew install carthage
-&rdquo;`
+<p>For a complete list of our pods, check out the .podspec files in the root directory of this project.</p>
 
-To integrate ZTCoreKit into your Xcode project using Carthage, specify it in your `Cartfile`:
+<ol>
+<li><p>Then run the following command:</p>
+<pre class="highlight plaintext"><code>$ pod install --repo-update
+</code></pre></li>
+<li><p>To open your project, open the newly generated <code>*.xcworkspace</code> file in your project&rsquo;s directory with XCode. </p>
 
-&ldquo;`ogdl
-github &quot;zhortech/ZTCoreKit&rdquo; ~> 0.0.1
-&ldquo;`
+<p><strong>Note</strong>: Do <strong>NOT</strong> use <code>*.xcodeproj</code>. If you open up a project file instead of a workspace, you may receive the following error:</p>
+<pre class="highlight plaintext"><code>ld: library not found for -lPods-ZTCoreKit
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+</code></pre></li>
+</ol>
 
-</details>
+<!-- ### Carthage
 
-<details>
-  <summary><strong>Swift Package Manager</strong></summary>
+1. Install the latest version of [Carthage](https://github.com/Carthage/Carthage#installing-carthage).
 
-To use ZTCoreKit as a [Swift Package Manager](https://swift.org/package-manager/) package just add the following in your Package.swift file.
+2. Add the following to your `Cartfile`:
 
-&rdquo;` swift
-// swift-tools-version:4.2
+        git "https://gitlab.com/zhor-tech/sdk/ios/ztcorekit.git"
 
-import PackageDescription
+3. Then run the following command:
+    
+        $ carthage update --platform iOS
 
-let package = Package(
-    name: &ldquo;ZTCoreKit&rdquo;,
-    dependencies: [
-        .package(url: &ldquo;https://github.com/zhortech/ZTCoreKit.git&rdquo;, .upToNextMajor(from: &ldquo;0.0.1&rdquo;))
-    ],
-    targets: [
-        .target(name: &ldquo;ZTCoreKit&rdquo;, dependencies: [&ldquo;ZTCoreKit&rdquo;])
-    ]
-)
-&ldquo;`
-</details>
-<h3 id='manually' class='heading'>Manually</h3>
+4. With your project open in Xcode, select your **Target**. Under **General** tab, find **Frameworks, Libraries, and Embedded Content** and then click the **+** button.
 
-<p>If you prefer not to use either of the aforementioned dependency managers, you can integrate ZTCoreKit into your project manually.</p>
+5. Click the **Add Other...** button, then "Add Files..." in the popup menu, then navigate to the `ZTCoreKit.framework` files under `Carthage` > `Build` > `iOS` and select them. Do not check the **Destination: Copy items if needed** checkbox if prompted.  Add the frameworks that you need for you specific use case.  For example, if you are using ZTSafetyKit, you will want to add the following frameworks:
 
-<details>
-  <summary><strong>Git Submodules</strong></summary><p>
+    * `ZTCore.framework`
+    * `ZTSafety.framework`
+    
+6. Under the **Build Phases** tab in your **Target**, click the **+** button on the top left and then select **New Run Script Phase**. Then setup the build phase as follows. Make sure this phase is below the `Embed Frameworks` phase.
 
-- Open up Terminal, `cd` into your top-level project directory, and run the following command &quot;if&rdquo; your project is not initialized as a git repository:
+        Shell /bin/sh
+        
+        bash &ldquo;${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/ZTCore.framework/strip-frameworks.sh&rdquo;
+        
+        Show environment variables in build log: Checked
+        Run script only when installing: Not checked
+        
+        Input Files: Empty
+        Output Files: Empty
 
-&ldquo;`bash
-$ git init
-&rdquo;`
+> Note: Currently, the ZTCoreKit SDK for iOS builds the Carthage binaries using Xcode 11.2.1. To consume the pre-built binaries your Xcode version needs to be the same, else you have to build the frameworks on your machine by passing `&ndash;no-use-binaries` flag to `carthage update` command.
+&ndash;>
+<h3 id='swift-package-manager' class='heading'>Swift Package Manager</h3>
 
-- Add ZTCoreKit as a git [submodule](http://git-scm.com/docs/git-submodule) by running the following command:
+<ol>
+<li>The <a href="https://swift.org/package-manager/">Swift Package Manager</a> is a tool for automating the distribution of Swift code and is integrated into the <code>swift</code> compiler.
+Xcode with Swift tools version of 5.3 is required for ZTCoreKit. Earlier Xcode versions don&rsquo;t support Swift packages with resources.
+To check your current Swift tools version run in your terminal:</li>
+</ol>
+<pre class="highlight ruby"><code><span class="n">xcrun</span> <span class="n">swift</span> <span class="o">-</span><span class="n">version</span>
+</code></pre>
 
-&ldquo;`bash
-$ git submodule add https://github.com/zhortech/ZTCoreKit.git
-$ git submodule update &ndash;init &ndash;recursive
-&rdquo;`
+<blockquote>
+<p>NOTE: In some cases you can have multiple Swift tools versions installed.</p>
+</blockquote>
 
-- Open the new `ZTCoreKit` folder, and drag the `ZTCoreKit.xcodeproj` into the Project Navigator of your application&rsquo;s Xcode project.
+<p>Follow the official Apple SPM guide <a href="https://developer.apple.com/documentation/xcode/adding_package_dependencies_to_your_app">instructions</a> for more details.\n  </p>
 
-    > It should appear nested underneath your application&rsquo;s blue project icon. Whether it is above or below all the other Xcode groups does not matter.
+<ol>
+<li><p>To use Swift Package Manager, in Xcode add the <a href="https://gitlab.com/zhor-tech/sdk/ios/ztcorekit">https://gitlab.com/zhor-tech/sdk/ios/ztcorekit</a> dependency and choose the <code>Exact</code> version.</p>
 
-- Select the `ZTCoreKit.xcodeproj` in the Project Navigator and verify the deployment target matches that of your application target.
-- Next, select your application project in the Project Navigator (blue project icon) to navigate to the target configuration window and select the application target under the &ldquo;Targets&rdquo; heading in the sidebar.
-- In the tab bar at the top of that window, open the &ldquo;General&rdquo; panel.
-- Click on the `+` button under the &ldquo;Embedded Binaries&rdquo; section.
-- You will see two different `ZTCoreKit.xcodeproj` folders each with two different versions of the `ZTCoreKit.framework` nested inside a `Products` folder.
+<p align="center">
+<img src="readme-images/ZTCoreKit_SPM_1.jpg" width="70%">
+</p></li>
+<li><p>Set your project Target if not preselected :</p></li>
+</ol>
 
-    > It does not matter which `Products` folder you choose from.
+<p align="center">
+<img src="readme-images/ZTCoreKit_SPM_2.jpg" width="70%">
+</p>
 
-- Select the `ZTCoreKit.framework`.
+<ol>
+<li>Select your target and note that <code>ZTCoreKit</code> is automatically linked as a framework to your project target. Done!</li>
+</ol>
 
-- And that&rsquo;s it!
+<p align="center">
+<img src="readme-images/ZTCoreKit_SPM_3.jpg" width="70%">
+</p>
+<h3 id='frameworks' class='heading'>Frameworks</h3>
 
-> The `ZTCoreKit.framework` is automagically added as a target dependency, linked framework and embedded framework in a copy files build phase which is all you need to build on the simulator and a device.
+<ol>
+<li><p>Download the <a href="https://https://gitlab.com/zhor-tech/sdk/ios/ztcorekit/latest/ztsafetykit-sdk.zip">latest SDK</a>.</p></li>
+<li><p>With your project open in Xcode, select your <strong>Target</strong>. Under <strong>General</strong> tab, find <strong>Embedded Binaries</strong> and then click the <strong>+</strong> button.</p></li>
+<li><p>Click the <strong>Add Other&hellip;</strong> button, navigate to the <code>ZTCoreKit.framework</code> file and select it. Check the <strong>Destination: Copy items if needed</strong> checkbox when prompted.  Add the frameworks that you need for you specific use case.  For example, if you are using ZTCoreKit, you will want to add the following framework:</p></li>
+</ol>
+<pre class="highlight plaintext"><code>* `ZTCoreKit.framework`
+</code></pre>
 
-</p></details>
+<ol>
+<li><p>Under the <strong>Build Phases</strong> tab in your <strong>Target</strong>, click the <strong>+</strong> button on the top left and then select <strong>New Run Script Phase</strong>. Then setup the build phase as follows. Make sure this phase is below the <code>Embed Frameworks</code> phase.</p>
+<pre class="highlight plaintext"><code>Shell /bin/sh
 
-<details>
-  <summary><strong>Embedded Binaries</strong></summary><p>
+bash "${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/ZTCoreKit.framework/strip-frameworks.sh"
 
-- Download the latest release from https://github.com/zhortech/ZTCoreKit/releases
-- Next, select your application project in the Project Navigator (blue project icon) to navigate to the target configuration window and select the application target under the &ldquo;Targets&rdquo; heading in the sidebar.
-- In the tab bar at the top of that window, open the &ldquo;General&rdquo; panel.
-- Click on the `+` button under the &ldquo;Embedded Binaries&rdquo; section.
-- Add the downloaded `ZTCoreKit.framework`.
-- And that&rsquo;s it!
+Show environment variables in build log: Checked
+Run script only when installing: Not checked
 
-</p></details>
-<h2 id='usage' class='heading'>Usage</h2>
-<h2 id='contributing' class='heading'>Contributing</h2>
+Input Files: Empty
+Output Files: Empty
+</code></pre></li>
+</ol>
+<h2 id='update-the-sdk-to-a-newer-version' class='heading'>Update the SDK to a Newer Version</h2>
 
-<p>Issues and pull requests are welcome!</p>
+<p>When we release a new version of the SDK, you can pick up the changes as described below.</p>
+<h3 id='cocoapods' class='heading'>CocoaPods</h3>
+
+<ol>
+<li><p>Run the following command in your project directory. CocoaPods automatically picks up the new changes.</p>
+<pre class="highlight plaintext"><code>$ pod update
+</code></pre>
+
+<p><strong>Note</strong>: If your pod is having an issue, you can delete <code>Podfile.lock</code> and <code>Pods/</code> then run <code>pod install</code> to cleanly install the SDK.</p>
+
+<p><img src="readme-images/cocoapods.png?raw=true" alt="image">
+&lt;!&ndash;</p>
+<h3 id='carthage' class='heading'>Carthage</h3></li>
+<li><p>Run the following command in your project directory. Carthage automatically picks up the new changes.</p>
+<pre class="highlight plaintext"><code>$ carthage update
+</code></pre>
+
+<p>&ndash;&gt;</p></li>
+</ol>
+<h3 id='swift-package-manager' class='heading'>Swift Package Manager</h3>
+
+<ol>
+<li>You can update to the latest version of any packages you depend on at any time by selecting File ▸ Swift Packages ▸ Update to Latest Package Versions.</li>
+</ol>
+<h3 id='frameworks' class='heading'>Frameworks</h3>
+
+<ol>
+<li>In Xcode&rsquo;s <strong>Project Navigator</strong>, type &ldquo;ZT&rdquo; to find the ZT frameworks that were manually added to your project.  Manually select all of the ZT frameworks and hit <strong>delete</strong> on your keyboard. Then select <strong>Move to Trash</strong>.  If you were following the example from above which uses ZTSafetyKit, you would remove:</li>
+</ol>
+<pre class="highlight plaintext"><code>* `ZTCoreKit.framework`
+* `ZTSafetyKit.framework`
+</code></pre>
+
+<ol>
+<li>Follow the installation process above to include the new version of the SDK.</li>
+</ol>
+<h2 id='how-to-use-it' class='heading'>HOW TO USE IT</h2>
+<h3 id='getting-started' class='heading'>Getting Started</h3>
+
+<ol>
+<li><p>Import the ZTCoreKit header in the application delegate.</p>
+<pre class="highlight swift"><code><span class="kd">import</span> <span class="kt">ZTCoreKit</span>
+</code></pre></li>
+<li><p>Create a default service configuration by adding the following code snippet in the <code>application:didFinishLaunchingWithOptions:</code> application delegate method.</p>
+<pre class="highlight swift"><code>    <span class="kt">ZTSettings</span><span class="o">.</span><span class="n">shared</span><span class="o">.</span><span class="n">environment</span> <span class="o">=</span> <span class="o">.</span><span class="n">dev</span> <span class="c1">//should be changed according to your environment (.dev / .staging / .production / )</span>
+    <span class="kt">ZTCore</span><span class="o">.</span><span class="n">shared</span><span class="o">.</span><span class="nf">setup</span><span class="p">(</span><span class="nv">apiKey</span><span class="p">:</span> <span class="err">'</span><span class="kt">YOUR_KEY</span><span class="err">'</span><span class="p">,</span>
+                    <span class="nv">secret</span><span class="p">:</span> <span class="err">'</span><span class="kt">YOUR_SECRET</span><span class="err">'</span><span class="p">,</span>
+                    <span class="nv">appId</span><span class="p">:</span> <span class="err">'</span><span class="kt">YOUR_APPLICATION_ID</span><span class="err">'</span><span class="p">)</span>
+</code></pre></li>
+<li><p>User identification.
+Application has to identify user using method -
+<code>ZTApi.shared.linkUser(userId: String, attributes: [String: Any]])</code></p></li>
+</ol>
+
+<p>It will create user object in portal for new user or associate user with current session to allows viewing activities in future.</p>
+
+<p><strong>Note</strong>: Most of the service client classes have a singleton method to get a default instance. The naming convention is <code>.shared</code> (e.g. <code>ZTCore.shared</code> in the above code snippet). This singleton method creates a service client with <code><a href="Classes/ZTSettings.html">ZTSettings</a></code>, which you set up in step 2, and maintains a strong reference to the client.</p>
+<h3 id='scan' class='heading'>Scan</h3>
+
+<p>You can scan for certain product type <code><a href="Enums/ZTProductType.html">ZTProductType</a></code>. 
+New peripheral is returned in callback <code><a href="Other%20Typealiases.html#/s:9ZTCoreKit18ConnectResultBlocka">ConnectResultBlock</a></code> when it is discovered:</p>
+<pre class="highlight swift"><code>        <span class="kt">ZTCore</span><span class="o">.</span><span class="n">shared</span><span class="o">.</span><span class="nf">scan</span><span class="p">(</span><span class="nv">for</span><span class="p">:</span> <span class="o">.</span><span class="n">safety</span><span class="p">)</span> <span class="p">{</span> <span class="p">(</span><span class="n">device</span><span class="p">,</span> <span class="n">error</span><span class="p">)</span> <span class="k">in</span>
+            <span class="nf">debugPrint</span><span class="p">(</span><span class="s">"new device discovered:</span><span class="se">\(</span><span class="kt">String</span><span class="p">(</span><span class="nv">describing</span><span class="p">:</span> <span class="n">device</span><span class="p">)</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
+        <span class="p">}</span>
+</code></pre>
+
+<p>The scan process is automatically stopped once you start the connection command. To stop scanning call <code>stopScan</code>:</p>
+<pre class="highlight swift"><code>        <span class="kt">ZTCore</span><span class="o">.</span><span class="n">shared</span><span class="o">.</span><span class="nf">stopScan</span><span class="p">()</span>
+</code></pre>
+<h3 id='connect' class='heading'>Connect</h3>
+
+<p>There are 2 ways to connect to peripheral.</p>
+
+<p>You can connect using QR code or data matrix code with or without a timeout set, after a timeout you receive a <code>.timeout</code> error. </p>
+<pre class="highlight swift"><code>        <span class="kt">ZTCore</span><span class="o">.</span><span class="n">shared</span><span class="o">.</span><span class="nf">connectWithCode</span><span class="p">(</span><span class="n">code</span><span class="p">,</span> <span class="nv">timeout</span><span class="p">:</span> <span class="mi">15</span><span class="p">)</span> <span class="p">{</span> <span class="p">[</span><span class="k">weak</span> <span class="k">self</span><span class="p">]</span> <span class="p">(</span><span class="n">device</span><span class="p">,</span> <span class="n">error</span><span class="p">)</span> <span class="k">in</span>
+            <span class="k">if</span> <span class="n">error</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
+                <span class="nf">debugPrint</span><span class="p">(</span><span class="kt">String</span><span class="p">(</span><span class="nv">describing</span><span class="p">:</span> <span class="n">error</span><span class="p">))</span>
+            <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+                <span class="nf">debugPrint</span><span class="p">(</span><span class="kt">String</span><span class="p">(</span><span class="nv">describing</span><span class="p">:</span> <span class="n">device</span><span class="p">))</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+</code></pre>
+
+<p>You can connect using <code><a href="Classes/ZTDevice.html">ZTDevice</a></code> instance obtained during scanning. You will receive error if there is timeout, issue with BLE connection or device has activity running.</p>
+<pre class="highlight swift"><code>        <span class="kt">ZTCore</span><span class="o">.</span><span class="n">shared</span><span class="o">.</span><span class="nf">connectWithDevice</span><span class="p">(</span><span class="n">device</span><span class="p">,</span> <span class="nv">timeout</span><span class="p">:</span> <span class="mi">10</span><span class="p">)</span> <span class="p">{</span> <span class="p">[</span><span class="k">weak</span> <span class="k">self</span><span class="p">]</span> <span class="p">(</span><span class="n">device</span><span class="p">,</span> <span class="n">error</span><span class="p">)</span> <span class="k">in</span>
+            <span class="k">if</span> <span class="n">error</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
+                <span class="nf">debugPrint</span><span class="p">(</span><span class="kt">String</span><span class="p">(</span><span class="nv">describing</span><span class="p">:</span> <span class="n">error</span><span class="p">))</span>
+            <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+                <span class="nf">debugPrint</span><span class="p">(</span><span class="kt">String</span><span class="p">(</span><span class="nv">describing</span><span class="p">:</span> <span class="n">device</span><span class="p">))</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+</code></pre>
+<h3 id='disconnection' class='heading'>Disconnection</h3>
+
+<p>Disconnection can be explicit or unexpected.
+If you need to disconnect from peripheral, use this method:</p>
+<pre class="highlight swift"><code> <span class="n">device</span><span class="o">.</span><span class="nf">disconnect</span><span class="p">()</span>
+</code></pre>
+
+<p>Unexpected can be due for different reasons: device out of range, low battery, device reset etc</p>
+<h2 id='observers' class='heading'>Observers</h2>
+<h3 id='connection-observer' class='heading'>Connection observer</h3>
+
+<p><em>Connection event observer</em>:
+The <code>ZTCore.shared.bleManager.onDeviceStateChange</code> informs you about change in a device connection state.</p>
+
+<p>A connection event is defined by different states:</p>
+
+<ul>
+<li>a peripheral was connected after a <code>connect</code> command or after automatic reconnection</li>
+<li>when there is error occurred during a connection</li>
+<li>when a peripheral was disconnected</li>
+</ul>
+<h3 id='ble-observer' class='heading'>BLE observer</h3>
+
+<p><em>Bluetooth state event observer</em>:
+The <code>ZTCore.shared.bleManager.onBluetoothStateChange</code> informs you about change in a device connection state.</p>
+
+<p><em>Bluetooth device discovery observer</em>:
+The <code>ZTCore.shared.bleManager.onDeviceDiscovered</code> informs you about discovering new ZTDevice.</p>
+<h3 id='autoconnection' class='heading'>Autoconnection</h3>
+
+<p>The autoconnection is managed by the <code>ZTSettings.shared.autoConnect</code> configuration.</p>
+
+<p>Autoconnection may not work if application has no Bluetooth permission to run in background.</p>
+<h3 id='logging' class='heading'>Logging</h3>
+
+<p>As of version 0.0.30 of this SDK, logging can be controlled by setting approriate logging level. It allows to see network requests and additional information from ZTCoreKit.</p>
+<h3 id='changing-log-levels' class='heading'>Changing Log Levels</h3>
+
+<p><strong>Swift</strong></p>
+<pre class="highlight swift"><code><span class="kt">ZTSettings</span><span class="o">.</span><span class="n">shared</span><span class="o">.</span><span class="n">logLevel</span> <span class="o">=</span> <span class="o">.</span><span class="n">info</span>
+</code></pre>
+
+<p>The following logging level options are available:</p>
+
+<ul>
+<li><code>.all</code></li>
+<li><code>.debug</code></li>
+<li><code>.info</code></li>
+<li><code>.error</code></li>
+<li><code>.fatal</code></li>
+</ul>
+
+<p>We recommend setting the log level to <code>.error</code> before publishing to the Apple App Store.</p>
+<h2 id='documentation' class='heading'>DOCUMENTATION</h2>
+
+<p>Jazzy doc is available <a href="https://gitlab.com/zhor-tech/sdk/ios/documentation/index.html">here</a></p>
+<h2 id='sample-application' class='heading'>SAMPLE APPLICATION</h2>
+
+<p>A sample application can be download <a href="https://gitlab.com/zhor-tech/sdk/ios/ztexample">here</a>. </p>
+<h2 id='talk-to-us' class='heading'>Talk to Us</h2>
+
+<p>Visit Gitlab <a href="https://gitlab.com/zhor-tech/sdk/ios/ztcorekit/-/issues">Issues</a> to leave feedback or create any issue.</p>
 <h2 id='author' class='heading'>Author</h2>
 
-<p>ZhorTech <a href="https://twitter.com/zhortech">@zhortech</a></p>
+<p>Zhortech</p>
 <h2 id='license' class='heading'>License</h2>
 
-<p>ZTCoreKit is released under the MIT license. See <a href="https://github.com/zhortech/ZTCoreKit/blob/master/LICENSE">LICENSE</a> for details.</p>
+<p>See the <strong>LICENSE</strong> file for more info.</p>
 
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2020 <a class="link" href="https://zhortech.com/" target="_blank" rel="external">Pavel Shpak</a>. All rights reserved. (Last updated: 2020-02-27)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.1</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2021 <a class="link" href="https://zhortech.com" target="_blank" rel="external">Zhortech</a>. All rights reserved. (Last updated: 2021-06-10)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.7</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>

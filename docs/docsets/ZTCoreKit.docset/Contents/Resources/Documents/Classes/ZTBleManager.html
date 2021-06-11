@@ -8,13 +8,22 @@
     <script src="../js/jquery.min.js" defer></script>
     <script src="../js/jazzy.js" defer></script>
     
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
   </head>
   <body>
     <a name="//apple_ref/swift/Class/ZTBleManager" class="dashAnchor"></a>
     <a title="ZTBleManager Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">ZTCoreKit Docs</a> (51% documented)</p>
+        <p><a href="../index.html">ZTCoreKit 1.0.55 Docs</a></p>
+        <p class="header-right"><a href="https://github.com/zhortech/ztcorekit-ios-sdk"><img src="../img/gh.png"/>View on GitHub</a></p>
+        <p class="header-right">
+          <form role="search" action="../search.json">
+            <input type="text" placeholder="Search documentation" data-typeahead>
+          </form>
+        </p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -28,73 +37,118 @@
       <nav class="sidebar">
         <ul class="nav-groups">
           <li class="nav-group-name">
-            <a href="../Classes.html">Classes</a>
+            <a href="../Common.html">Common</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Classes/ZTBatteryCharacteristic.html">ZTBatteryCharacteristic</a>
+                <a href="../Classes/ZTCore.html">ZTCore</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Classes/ZTBleManager.html">ZTBleManager</a>
+                <a href="../Classes/ZTApi.html">ZTApi</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Classes/ZTButtonlessDfuCharacteristic.html">ZTButtonlessDfuCharacteristic</a>
+                <a href="../Classes/ZTSettings.html">ZTSettings</a>
               </li>
-              <li class="nav-group-task">
-                <a href="../Classes/ZTCharacteristic.html">ZTCharacteristic</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Classes/ZTCommandsCharacteristic.html">ZTCommandsCharacteristic</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Classes/ZTCoreKit.html">ZTCoreKit</a>
-              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Models.html">Models</a>
+            <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="../Classes/ZTDevice.html">ZTDevice</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Classes/ZTDeviceInfo.html">ZTDeviceInfo</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Classes/ZTDfuService.html">ZTDfuService</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Classes/ZTFirmwareCharacteristic.html">ZTFirmwareCharacteristic</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Classes/ZTFirmwareRevision.html">ZTFirmwareRevision</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Classes/ZTHardwareCharacteristic.html">ZTHardwareCharacteristic</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Classes/ZTIndicateCharacteristic.html">ZTIndicateCharacteristic</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Classes/ZTInformationService.html">ZTInformationService</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Classes/ZTManufacturerNameCharacteristic.html">ZTManufacturerNameCharacteristic</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Classes/ZTModelNumberCharacteristic.html">ZTModelNumberCharacteristic</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Classes/ZTNotifyCharacteristic.html">ZTNotifyCharacteristic</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Classes/ZTPairedSolesCharacteristic.html">ZTPairedSolesCharacteristic</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Classes/ZTPrimaryService.html">ZTPrimaryService</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Classes/ZTSerialNumberCharacteristic.html">ZTSerialNumberCharacteristic</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/ZTService.html">ZTService</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Classes.html#/s:9ZTCoreKit10ZTSettingsC">ZTSettings</a>
+                <a href="../Classes/ZTCharacteristic.html">ZTCharacteristic</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../ZTDevice.html">ZTDevice</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/ZTDeviceInfo.html">ZTDeviceInfo</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ZTProductType.html">ZTProductType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../ZTDevice.html#/s:9ZTCoreKit17ZTProjectCodeTypeO">ZTProjectCodeType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ZTProductCodeType.html">ZTProductCodeType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../ZTDevice.html#/s:9ZTCoreKit22ZTManufacturerCodeTypeO">ZTManufacturerCodeType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../ZTDevice.html#/s:9ZTCoreKit17ZTProductTypeCodeO">ZTProductTypeCode</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../ZTService.html">ZTService</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/ZTPrimaryService.html">ZTPrimaryService</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../ZTCharacteristic.html">ZTCharacteristic</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/ZTCommandsCharacteristic.html">ZTCommandsCharacteristic</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enums</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/ZTBleManagerState.html">ZTBleManagerState</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ZTError.html">ZTError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ZTLogLevel.html">ZTLogLevel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ZTScannerResult.html">ZTScannerResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums.html#/s:9ZTCoreKit20ZTGenderSizeCodeTypeO">ZTGenderSizeCodeType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums.html#/s:9ZTCoreKit18ZTUnitSizeCodeTypeO">ZTUnitSizeCodeType</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Other%20Classes.html">Other Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/ZTBleManager.html">ZTBleManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ZTDfuService.html">ZTDfuService</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ZTInformationService.html">ZTInformationService</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ZTPrimaryOldService.html">ZTPrimaryOldService</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ZTSegmentData.html">ZTSegmentData</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ZTSignal.html">ZTSignal</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ZTSignalSubscription.html">ZTSignalSubscription</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/ZTTextCharacteristic.html">ZTTextCharacteristic</a>
@@ -102,123 +156,95 @@
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="../Enums.html">Enumerations</a>
+            <a href="../Other%20Enums.html">Other Enumerations</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Enums/ZTBleManagerState.html">ZTBleManagerState</a>
+                <a href="../Other%20Enums.html#/s:9ZTCoreKit14ZTActivityModeO">ZTActivityMode</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Enums/ZTCommand.html">ZTCommand</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Enums/ZTGenderCodeType.html">ZTGenderCodeType</a>
+                <a href="../Other%20Enums.html#/s:9ZTCoreKit15ZTCommandStatusO">ZTCommandStatus</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Enums/ZTGenderSizeCodeType.html">ZTGenderSizeCodeType</a>
+                <a href="../Other%20Enums.html#/s:9ZTCoreKit19ZTDeviceActualStateO">ZTDeviceActualState</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Other%20Enums.html#/s:9ZTCoreKit16ZTGenderCodeTypeO">ZTGenderCodeType</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Enums/ZTLogCategory.html">ZTLogCategory</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Enums/ZTLogLevel.html">ZTLogLevel</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Enums/ZTManufacturerCodeType.html">ZTManufacturerCodeType</a>
-              </li>
-              <li class="nav-group-task">
                 <a href="../Enums/ZTNotifyData.html">ZTNotifyData</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Enums/ZTNotifyData/GroupList.html">– GroupList</a>
+                <a href="../Enums/ZTNotifyData.html#/s:9ZTCoreKit12ZTNotifyDataO7GroupIDO">– GroupID</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Enums/ZTNotifyData/CommonMessageId.html">– CommonMessageId</a>
+                <a href="../Enums/ZTNotifyData.html#/s:9ZTCoreKit12ZTNotifyDataO15CommonMessageIdO">– CommonMessageId</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Enums/ZTNotifyData/WarmMessageId.html">– WarmMessageId</a>
+                <a href="../Other%20Enums.html#/s:9ZTCoreKit8ZTPeriodO">ZTPeriod</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Enums/ZTNotifyData/RunningMessageId.html">– RunningMessageId</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Enums/ZTNotifyData/CyclingMessageId.html">– CyclingMessageId</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Enums/ZTProductCodeType.html">ZTProductCodeType</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Enums/ZTProductType.html">ZTProductType</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Enums/ZTProductTypeCode.html">ZTProductTypeCode</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Enums/ZTProjectCodeType.html">ZTProjectCodeType</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Enums/ZTScannerResult.html">ZTScannerResult</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Enums/ZTServices.html">ZTServices</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Enums/ZTServices/Primary.html">– Primary</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Enums/ZTServices/DeviceInformation.html">– DeviceInformation</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Enums/ZTServices/DeviceDFU.html">– DeviceDFU</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Enums/ZTUnitSizeCodeType.html">ZTUnitSizeCodeType</a>
+                <a href="../Other%20Enums.html#/s:9ZTCoreKit10ZTServicesO">ZTServices</a>
               </li>
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="../Extensions.html">Extensions</a>
+            <a href="../Other%20Extensions.html">Other Extensions</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Extensions/ZTError.html">ZTError</a>
+                <a href="../Extensions/CBCharacteristic.html">CBCharacteristic</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Extensions/ZTError.html#/Enums">– Enums</a>
+                <a href="../Extensions/Data.html">Data</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/DataRequest.html">DataRequest</a>
               </li>
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="../Protocols.html">Protocols</a>
+            <a href="../Other%20Functions.html">Other Functions</a>
             <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Other%20Functions.html#/s:9ZTCoreKit2egoiyyAA8ZTSignalCyxG_xtlF">=&gt;(_:_:)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Other%20Protocols.html">Other Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Other%20Protocols.html#/s:9ZTCoreKit13ZTDfuDelegateP">ZTDfuDelegate</a>
+              </li>
               <li class="nav-group-task">
                 <a href="../Protocols/ZTServiceProtocol.html">ZTServiceProtocol</a>
               </li>
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="../Structs.html">Structures</a>
+            <a href="../Other%20Structs.html">Other Structures</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a href="../Structs/ZTArrayEncoding.html">ZTArrayEncoding</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Structs/ZTBatteryLevel.html">ZTBatteryLevel</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Structs/ZTMessageGeneralState.html">ZTMessageGeneralState</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Structs/ZTPairedDevice.html">ZTPairedDevice</a>
               </li>
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="../Typealiases.html">Type Aliases</a>
+            <a href="../Other%20Typealiases.html">Other Type Aliases</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Typealiases.html#/s:9ZTCoreKit14CallbackResulta">CallbackResult</a>
+                <a href="../Other%20Typealiases.html#/s:9ZTCoreKit18ConnectResultBlocka">ConnectResultBlock</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Typealiases.html#/s:9ZTCoreKit18ConnectResultBlocka">ConnectResultBlock</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Typealiases.html#/s:9ZTCoreKit20ZTScannerResultBlocka">ZTScannerResultBlock</a>
+                <a href="../Other%20Typealiases.html#/s:9ZTCoreKit20ZTScannerResultBlocka">ZTScannerResultBlock</a>
               </li>
             </ul>
           </li>
@@ -230,7 +256,8 @@
             <h1>ZTBleManager</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">class</span> <span class="kt">ZTBleManager</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+                  
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">ZTBleManager</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
 <pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">ZTBleManager</span><span class="p">:</span> <span class="kt">CBCentralManagerDelegate</span></code></pre>
 
                 </div>
@@ -240,10 +267,13 @@
 <ul>
 <li>onBluetoothStateChange (Bluetooth state changed)</li>
 <li>onDeviceDiscovered (Device discovered)</li>
-<li>onDeviceConnected (Device connected)</li>
+<li>onDeviceStateChange (Device connected / disconnected)</li>
 <li>onDeviceConnectionFailed ()</li>
 </ul>
 
+              <div class="slightly-smaller">
+                <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTBleManager.swift#L17-L339">Show on GitHub</a>
+              </div>
           </section>
           <section class="section task-group-section">
             <div class="task-group">
@@ -272,6 +302,9 @@
 
                         </div>
                       </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTBleManager.swift#L19">Show on GitHub</a>
+                      </div>
                     </section>
                   </div>
                 </li>
@@ -298,6 +331,9 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">managerState</span><span class="p">:</span> <span class="kt"><a href="../Enums/ZTBleManagerState.html">ZTBleManagerState</a></span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
 
                         </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTBleManager.swift#L22-L28">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -326,6 +362,9 @@
 
                         </div>
                       </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTBleManager.swift#L30-L35">Show on GitHub</a>
+                      </div>
                     </section>
                   </div>
                 </li>
@@ -349,9 +388,12 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">fileprivate</span><span class="p">(</span><span class="k">set</span><span class="p">)</span> <span class="k">var</span> <span class="nv">centralManager</span><span class="p">:</span> <span class="kt">CBCentralManager</span><span class="o">!</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">fileprivate</span><span class="p">(</span><span class="k">set</span><span class="p">)</span> <span class="k">var</span> <span class="nv">centralManager</span><span class="p">:</span> <span class="kt">CBCentralManager</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTBleManager.swift#L38">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -376,9 +418,12 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">macAddress</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">macAddress</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTBleManager.swift#L41-L43">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -386,9 +431,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:9ZTCoreKit12ZTBleManagerC15connectedDeviceAA8ZTDeviceCSgvp"></a>
-                    <a name="//apple_ref/swift/Property/connectedDevice" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9ZTCoreKit12ZTBleManagerC15connectedDeviceAA8ZTDeviceCSgvp">connectedDevice</a>
+                    <a name="/s:9ZTCoreKit12ZTBleManagerC10deviceInfoAA08ZTDeviceF0CSgvp"></a>
+                    <a name="//apple_ref/swift/Property/deviceInfo" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ZTCoreKit12ZTBleManagerC10deviceInfoAA08ZTDeviceF0CSgvp">deviceInfo</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -396,97 +441,19 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Connected device</p>
+                        <p>ZTDeviceInfo</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">private(set)</span> <span class="kd">open</span> <span class="k">var</span> <span class="nv">connectedDevice</span><span class="p">:</span> <span class="kt"><a href="../Classes/ZTDevice.html">ZTDevice</a></span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">deviceInfo</span><span class="p">:</span> <span class="kt"><a href="../Classes/ZTDeviceInfo.html">ZTDeviceInfo</a></span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:9ZTCoreKit12ZTBleManagerC16foundPeripheralsSaySo12CBPeripheralCGSgvp"></a>
-                    <a name="//apple_ref/swift/Property/foundPeripherals" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9ZTCoreKit12ZTBleManagerC16foundPeripheralsSaySo12CBPeripheralCGSgvp">foundPeripherals</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Found CBPeripheral</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">private(set)</span> <span class="kd">open</span> <span class="k">var</span> <span class="nv">foundPeripherals</span><span class="p">:</span> <span class="p">[</span><span class="kt">CBPeripheral</span><span class="p">]</span><span class="o">!</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:9ZTCoreKit12ZTBleManagerC8scanningSbvp"></a>
-                    <a name="//apple_ref/swift/Property/scanning" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9ZTCoreKit12ZTBleManagerC8scanningSbvp">scanning</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Indicates if scanning is in progress</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">private(set)</span> <span class="kd">open</span> <span class="k">var</span> <span class="nv">scanning</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:9ZTCoreKit12ZTBleManagerC7productAA13ZTProductTypeOSgvp"></a>
-                    <a name="//apple_ref/swift/Property/product" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9ZTCoreKit12ZTBleManagerC7productAA13ZTProductTypeOSgvp">product</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Connect to certain product type</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">private(set)</span> <span class="kd">open</span> <span class="k">var</span> <span class="nv">product</span><span class="p">:</span> <span class="kt"><a href="../Enums/ZTProductType.html">ZTProductType</a></span><span class="p">?</span></code></pre>
-
-                        </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTBleManager.swift#L46">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -511,9 +478,12 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">private(set)</span> <span class="k">var</span> <span class="nv">serviceTypes</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt"><a href="../Classes/ZTService.html">ZTService</a></span><span class="o">.</span><span class="k">Type</span><span class="p">]</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">private(set)</span> <span class="k">var</span> <span class="nv">serviceTypes</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt"><a href="../Classes/ZTService.html">ZTService</a></span><span class="o">.</span><span class="k">Type</span><span class="p">]</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTBleManager.swift#L49">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -521,9 +491,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:9ZTCoreKit12ZTBleManagerC22onBluetoothStateChangeAA8ZTSignalCySo09CBCentraldG0VGvp"></a>
-                    <a name="//apple_ref/swift/Property/onBluetoothStateChange" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9ZTCoreKit12ZTBleManagerC22onBluetoothStateChangeAA8ZTSignalCySo09CBCentraldG0VGvp">onBluetoothStateChange</a>
+                    <a name="/s:9ZTCoreKit12ZTBleManagerC7productAA13ZTProductTypeOSgvp"></a>
+                    <a name="//apple_ref/swift/Property/product" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ZTCoreKit12ZTBleManagerC7productAA13ZTProductTypeOSgvp">product</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -531,16 +501,182 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Bluetooth changed state. Using <code>CBCentralManagerState</code> to support iOS below 10.0</p>
+                        <p>Connect to certain product type</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">onBluetoothStateChange</span><span class="p">:</span> <span class="kt">ZTSignal</span><span class="o">&lt;</span><span class="kt">CBCentralManagerState</span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">product</span><span class="p">:</span> <span class="kt"><a href="../Enums/ZTProductType.html">ZTProductType</a></span><span class="p">?</span></code></pre>
 
                         </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTBleManager.swift#L52">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9ZTCoreKit12ZTBleManagerC15connectedDeviceAA8ZTDeviceCSgvp"></a>
+                    <a name="//apple_ref/swift/Property/connectedDevice" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ZTCoreKit12ZTBleManagerC15connectedDeviceAA8ZTDeviceCSgvp">connectedDevice</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Connected device</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">private(set)</span> <span class="kd">public</span> <span class="k">var</span> <span class="nv">connectedDevice</span><span class="p">:</span> <span class="kt"><a href="../Classes/ZTDevice.html">ZTDevice</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTBleManager.swift#L55">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9ZTCoreKit12ZTBleManagerC16foundPeripheralsSaySo12CBPeripheralCGSgvp"></a>
+                    <a name="//apple_ref/swift/Property/foundPeripherals" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ZTCoreKit12ZTBleManagerC16foundPeripheralsSaySo12CBPeripheralCGSgvp">foundPeripherals</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Found CBPeripheral</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">private(set)</span> <span class="kd">public</span> <span class="k">var</span> <span class="nv">foundPeripherals</span><span class="p">:</span> <span class="p">[</span><span class="kt">CBPeripheral</span><span class="p">]</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTBleManager.swift#L57">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9ZTCoreKit12ZTBleManagerC8scanningSbvp"></a>
+                    <a name="//apple_ref/swift/Property/scanning" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ZTCoreKit12ZTBleManagerC8scanningSbvp">scanning</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Indicates if scanning is in progress</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">private(set)</span> <span class="kd">public</span> <span class="k">var</span> <span class="nv">scanning</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTBleManager.swift#L59">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Events"></a>
+                <a name="//apple_ref/swift/Section/Events" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Events"></a>
+                  <h3 class="section-name"><p>Events</p>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9ZTCoreKit12ZTBleManagerC22onBluetoothStateChangeAA8ZTSignalCySo09CBManagerG0VGvp"></a>
+                    <a name="//apple_ref/swift/Property/onBluetoothStateChange" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ZTCoreKit12ZTBleManagerC22onBluetoothStateChangeAA8ZTSignalCySo09CBManagerG0VGvp">onBluetoothStateChange</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Bluetooth changed state event</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">onBluetoothStateChange</span><span class="p">:</span> <span class="kt"><a href="../Classes/ZTSignal.html">ZTSignal</a></span><span class="o">&lt;</span><span class="kt">CBManagerState</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTBleManager.swift#L81">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9ZTCoreKit12ZTBleManagerC19onDeviceStateChangeAA8ZTSignalCyAA8ZTDeviceCSg_s5Error_pSgtGvp"></a>
+                    <a name="//apple_ref/swift/Property/onDeviceStateChange" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ZTCoreKit12ZTBleManagerC19onDeviceStateChangeAA8ZTSignalCyAA8ZTDeviceCSg_s5Error_pSgtGvp">onDeviceStateChange</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Device connection state change event</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">onDeviceStateChange</span><span class="p">:</span> <span class="kt"><a href="../Classes/ZTSignal.html">ZTSignal</a></span><span class="o">&lt;</span><span class="p">(</span><span class="kt"><a href="../Classes/ZTDevice.html">ZTDevice</a></span><span class="p">?,</span> <span class="kt">Error</span><span class="p">?)</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTBleManager.swift#L84">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -558,16 +694,19 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Device discovered</p>
+                        <p>Device discovered event</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">onDeviceDiscovered</span><span class="p">:</span> <span class="kt">ZTSignal</span><span class="o">&lt;</span><span class="kt"><a href="../Classes/ZTDevice.html">ZTDevice</a></span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">onDeviceDiscovered</span><span class="p">:</span> <span class="kt"><a href="../Classes/ZTSignal.html">ZTSignal</a></span><span class="o">&lt;</span><span class="kt"><a href="../Classes/ZTDevice.html">ZTDevice</a></span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTBleManager.swift#L87">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -575,36 +714,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:9ZTCoreKit12ZTBleManagerC17onDeviceConnectedAA8ZTSignalCyAA8ZTDeviceCGvp"></a>
-                    <a name="//apple_ref/swift/Property/onDeviceConnected" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9ZTCoreKit12ZTBleManagerC17onDeviceConnectedAA8ZTSignalCyAA8ZTDeviceCGvp">onDeviceConnected</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Device connected</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">onDeviceConnected</span><span class="p">:</span> <span class="kt">ZTSignal</span><span class="o">&lt;</span><span class="kt"><a href="../Classes/ZTDevice.html">ZTDevice</a></span><span class="o">&gt;</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:9ZTCoreKit12ZTBleManagerC24onDeviceConnectionFailedAA8ZTSignalCyAA8ZTDeviceC_s5Error_pSgtGvp"></a>
+                    <a name="/s:9ZTCoreKit12ZTBleManagerC24onDeviceConnectionFailedAA8ZTSignalCyAA8ZTDeviceCSg_s5Error_pSgtGvp"></a>
                     <a name="//apple_ref/swift/Property/onDeviceConnectionFailed" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9ZTCoreKit12ZTBleManagerC24onDeviceConnectionFailedAA8ZTSignalCyAA8ZTDeviceC_s5Error_pSgtGvp">onDeviceConnectionFailed</a>
+                    <a class="token" href="#/s:9ZTCoreKit12ZTBleManagerC24onDeviceConnectionFailedAA8ZTSignalCyAA8ZTDeviceCSg_s5Error_pSgtGvp">onDeviceConnectionFailed</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -612,16 +724,19 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Device connection failed</p>
+                        <p>Device connection failed event</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">onDeviceConnectionFailed</span><span class="p">:</span> <span class="kt">ZTSignal</span><span class="o">&lt;</span><span class="p">(</span><span class="kt"><a href="../Classes/ZTDevice.html">ZTDevice</a></span><span class="p">,</span> <span class="kt">Error</span><span class="p">?)</span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">onDeviceConnectionFailed</span><span class="p">:</span> <span class="kt"><a href="../Classes/ZTSignal.html">ZTSignal</a></span><span class="o">&lt;</span><span class="p">(</span><span class="kt"><a href="../Classes/ZTDevice.html">ZTDevice</a></span><span class="p">?,</span> <span class="kt">Error</span><span class="p">?)</span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTBleManager.swift#L90">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -629,9 +744,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:9ZTCoreKit12ZTBleManagerC20onDeviceDisconnectedAA8ZTSignalCyAA8ZTDeviceC_s5Error_pSgtGvp"></a>
-                    <a name="//apple_ref/swift/Property/onDeviceDisconnected" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9ZTCoreKit12ZTBleManagerC20onDeviceDisconnectedAA8ZTSignalCyAA8ZTDeviceC_s5Error_pSgtGvp">onDeviceDisconnected</a>
+                    <a name="/s:9ZTCoreKit12ZTBleManagerC17onReconnectFailedAA8ZTSignalCys5Error_pSgGvp"></a>
+                    <a name="//apple_ref/swift/Property/onReconnectFailed" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ZTCoreKit12ZTBleManagerC17onReconnectFailedAA8ZTSignalCys5Error_pSgGvp">onReconnectFailed</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -639,327 +754,19 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Device disconnected</p>
+                        <p>Device reconnection failed event</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">onDeviceDisconnected</span><span class="p">:</span> <span class="kt">ZTSignal</span><span class="o">&lt;</span><span class="p">(</span><span class="kt"><a href="../Classes/ZTDevice.html">ZTDevice</a></span><span class="p">,</span> <span class="kt">Error</span><span class="p">?)</span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">onReconnectFailed</span><span class="p">:</span> <span class="kt"><a href="../Classes/ZTSignal.html">ZTSignal</a></span><span class="o">&lt;</span><span class="p">(</span><span class="kt">Error</span><span class="p">?)</span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <div class="task-name-container">
-                <a name="/Initializers"></a>
-                <a name="//apple_ref/swift/Section/Initializers" class="dashAnchor"></a>
-                <div class="section-name-container">
-                  <a class="section-name-link" href="#/Initializers"></a>
-                  <h3 class="section-name"><p>Initializers</p>
-</h3>
-                </div>
-              </div>
-              <ul>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:9ZTCoreKit12ZTBleManagerC10backgroundACSb_tcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(background:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9ZTCoreKit12ZTBleManagerC10backgroundACSb_tcfc">init(background:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Constructor. BleManager manages the scanning, connection and disconnection of <code><a href="../Classes/ZTDevice.html">ZTDevice</a></code> objects</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">background</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span><span class="p">)</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>background</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>to use <code>CBCentralManagerOptionRestoreIdentifierKey</code></p>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <div class="task-name-container">
-                <a name="/Public%20functions"></a>
-                <a name="//apple_ref/swift/Section/Public functions" class="dashAnchor"></a>
-                <div class="section-name-container">
-                  <a class="section-name-link" href="#/Public%20functions"></a>
-                  <h3 class="section-name"><p>Public functions</p>
-</h3>
-                </div>
-              </div>
-              <ul>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:9ZTCoreKit12ZTBleManagerC7connectyyAA8ZTDeviceCF"></a>
-                    <a name="//apple_ref/swift/Method/connect(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9ZTCoreKit12ZTBleManagerC7connectyyAA8ZTDeviceCF">connect(_:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Connect to a device.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">func</span> <span class="nf">connect</span><span class="p">(</span><span class="n">_</span> <span class="nv">device</span><span class="p">:</span> <span class="kt"><a href="../Classes/ZTDevice.html">ZTDevice</a></span><span class="p">)</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>device</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>device to connect with.</p>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:9ZTCoreKit12ZTBleManagerC7connect7productyAA13ZTProductTypeO_tF"></a>
-                    <a name="//apple_ref/swift/Method/connect(product:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9ZTCoreKit12ZTBleManagerC7connect7productyAA13ZTProductTypeO_tF">connect(product:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Connect to certain product.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">func</span> <span class="nf">connect</span><span class="p">(</span><span class="nv">product</span><span class="p">:</span> <span class="kt"><a href="../Enums/ZTProductType.html">ZTProductType</a></span><span class="p">)</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>product</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p><code><a href="../Enums/ZTProductType.html">ZTProductType</a></code></p>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:9ZTCoreKit12ZTBleManagerC10disconnectyyAA8ZTDeviceCF"></a>
-                    <a name="//apple_ref/swift/Method/disconnect(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9ZTCoreKit12ZTBleManagerC10disconnectyyAA8ZTDeviceCF">disconnect(_:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Disconnect from the connected device.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">func</span> <span class="nf">disconnect</span><span class="p">(</span><span class="n">_</span> <span class="nv">device</span><span class="p">:</span> <span class="kt"><a href="../Classes/ZTDevice.html">ZTDevice</a></span><span class="p">)</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>device</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>device to disconnect.</p>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:9ZTCoreKit12ZTBleManagerC19startScanForDevicesyyF"></a>
-                    <a name="//apple_ref/swift/Method/startScanForDevices()" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9ZTCoreKit12ZTBleManagerC19startScanForDevicesyyF">startScanForDevices()</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Start scanning for devices
-Devices found are returned in the foundDevices array.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">func</span> <span class="nf">startScanForDevices</span><span class="p">()</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:9ZTCoreKit12ZTBleManagerC15addServiceTypesyySayAA17ZTServiceProtocol_pXpGF"></a>
-                    <a name="//apple_ref/swift/Method/addServiceTypes(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9ZTCoreKit12ZTBleManagerC15addServiceTypesyySayAA17ZTServiceProtocol_pXpGF">addServiceTypes(_:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Add service type for creation after it is discovered</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">addServiceTypes</span><span class="p">(</span><span class="n">_</span> <span class="nv">serviceTypes</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Protocols/ZTServiceProtocol.html">ZTServiceProtocol</a></span><span class="o">.</span><span class="k">Type</span><span class="p">])</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>serviceTypes</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>ZTService type array</p>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:9ZTCoreKit12ZTBleManagerC18stopScanForDevicesyyF"></a>
-                    <a name="//apple_ref/swift/Method/stopScanForDevices()" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9ZTCoreKit12ZTBleManagerC18stopScanForDevicesyyF">stopScanForDevices()</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Stop scanning for devices.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">func</span> <span class="nf">stopScanForDevices</span><span class="p">()</span></code></pre>
-
-                        </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTBleManager.swift#L93">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -969,8 +776,8 @@ Devices found are returned in the foundDevices array.</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2020 <a class="link" href="https://zhortech.com/" target="_blank" rel="external">Pavel Shpak</a>. All rights reserved. (Last updated: 2020-02-27)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.1</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2021 <a class="link" href="https://zhortech.com" target="_blank" rel="external">Zhortech</a>. All rights reserved. (Last updated: 2021-06-10)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.7</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>

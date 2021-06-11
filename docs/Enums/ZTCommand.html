@@ -8,13 +8,22 @@
     <script src="../js/jquery.min.js" defer></script>
     <script src="../js/jazzy.js" defer></script>
     
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
   </head>
   <body>
     <a name="//apple_ref/swift/Enum/ZTCommand" class="dashAnchor"></a>
     <a title="ZTCommand Enumeration Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">ZTCoreKit Docs</a> (51% documented)</p>
+        <p><a href="../index.html">ZTCoreKit 1.0.55 Docs</a></p>
+        <p class="header-right"><a href="https://github.com/zhortech/ztcorekit-ios-sdk"><img src="../img/gh.png"/>View on GitHub</a></p>
+        <p class="header-right">
+          <form role="search" action="../search.json">
+            <input type="text" placeholder="Search documentation" data-typeahead>
+          </form>
+        </p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -28,73 +37,118 @@
       <nav class="sidebar">
         <ul class="nav-groups">
           <li class="nav-group-name">
-            <a href="../Classes.html">Classes</a>
+            <a href="../Common.html">Common</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Classes/ZTBatteryCharacteristic.html">ZTBatteryCharacteristic</a>
+                <a href="../Classes/ZTCore.html">ZTCore</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Classes/ZTBleManager.html">ZTBleManager</a>
+                <a href="../Classes/ZTApi.html">ZTApi</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Classes/ZTButtonlessDfuCharacteristic.html">ZTButtonlessDfuCharacteristic</a>
+                <a href="../Classes/ZTSettings.html">ZTSettings</a>
               </li>
-              <li class="nav-group-task">
-                <a href="../Classes/ZTCharacteristic.html">ZTCharacteristic</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Classes/ZTCommandsCharacteristic.html">ZTCommandsCharacteristic</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Classes/ZTCoreKit.html">ZTCoreKit</a>
-              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Models.html">Models</a>
+            <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="../Classes/ZTDevice.html">ZTDevice</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Classes/ZTDeviceInfo.html">ZTDeviceInfo</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Classes/ZTDfuService.html">ZTDfuService</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Classes/ZTFirmwareCharacteristic.html">ZTFirmwareCharacteristic</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Classes/ZTFirmwareRevision.html">ZTFirmwareRevision</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Classes/ZTHardwareCharacteristic.html">ZTHardwareCharacteristic</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Classes/ZTIndicateCharacteristic.html">ZTIndicateCharacteristic</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Classes/ZTInformationService.html">ZTInformationService</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Classes/ZTManufacturerNameCharacteristic.html">ZTManufacturerNameCharacteristic</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Classes/ZTModelNumberCharacteristic.html">ZTModelNumberCharacteristic</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Classes/ZTNotifyCharacteristic.html">ZTNotifyCharacteristic</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Classes/ZTPairedSolesCharacteristic.html">ZTPairedSolesCharacteristic</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Classes/ZTPrimaryService.html">ZTPrimaryService</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Classes/ZTSerialNumberCharacteristic.html">ZTSerialNumberCharacteristic</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/ZTService.html">ZTService</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Classes.html#/s:9ZTCoreKit10ZTSettingsC">ZTSettings</a>
+                <a href="../Classes/ZTCharacteristic.html">ZTCharacteristic</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../ZTDevice.html">ZTDevice</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/ZTDeviceInfo.html">ZTDeviceInfo</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ZTProductType.html">ZTProductType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../ZTDevice.html#/s:9ZTCoreKit17ZTProjectCodeTypeO">ZTProjectCodeType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ZTProductCodeType.html">ZTProductCodeType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../ZTDevice.html#/s:9ZTCoreKit22ZTManufacturerCodeTypeO">ZTManufacturerCodeType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../ZTDevice.html#/s:9ZTCoreKit17ZTProductTypeCodeO">ZTProductTypeCode</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../ZTService.html">ZTService</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/ZTPrimaryService.html">ZTPrimaryService</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../ZTCharacteristic.html">ZTCharacteristic</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/ZTCommandsCharacteristic.html">ZTCommandsCharacteristic</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enums</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/ZTBleManagerState.html">ZTBleManagerState</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ZTError.html">ZTError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ZTLogLevel.html">ZTLogLevel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ZTScannerResult.html">ZTScannerResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums.html#/s:9ZTCoreKit20ZTGenderSizeCodeTypeO">ZTGenderSizeCodeType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums.html#/s:9ZTCoreKit18ZTUnitSizeCodeTypeO">ZTUnitSizeCodeType</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Other%20Classes.html">Other Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/ZTBleManager.html">ZTBleManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ZTDfuService.html">ZTDfuService</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ZTInformationService.html">ZTInformationService</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ZTPrimaryOldService.html">ZTPrimaryOldService</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ZTSegmentData.html">ZTSegmentData</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ZTSignal.html">ZTSignal</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ZTSignalSubscription.html">ZTSignalSubscription</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/ZTTextCharacteristic.html">ZTTextCharacteristic</a>
@@ -102,123 +156,95 @@
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="../Enums.html">Enumerations</a>
+            <a href="../Other%20Enums.html">Other Enumerations</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Enums/ZTBleManagerState.html">ZTBleManagerState</a>
+                <a href="../Other%20Enums.html#/s:9ZTCoreKit14ZTActivityModeO">ZTActivityMode</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Enums/ZTCommand.html">ZTCommand</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Enums/ZTGenderCodeType.html">ZTGenderCodeType</a>
+                <a href="../Other%20Enums.html#/s:9ZTCoreKit15ZTCommandStatusO">ZTCommandStatus</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Enums/ZTGenderSizeCodeType.html">ZTGenderSizeCodeType</a>
+                <a href="../Other%20Enums.html#/s:9ZTCoreKit19ZTDeviceActualStateO">ZTDeviceActualState</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Other%20Enums.html#/s:9ZTCoreKit16ZTGenderCodeTypeO">ZTGenderCodeType</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Enums/ZTLogCategory.html">ZTLogCategory</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Enums/ZTLogLevel.html">ZTLogLevel</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Enums/ZTManufacturerCodeType.html">ZTManufacturerCodeType</a>
-              </li>
-              <li class="nav-group-task">
                 <a href="../Enums/ZTNotifyData.html">ZTNotifyData</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Enums/ZTNotifyData/GroupList.html">– GroupList</a>
+                <a href="../Enums/ZTNotifyData.html#/s:9ZTCoreKit12ZTNotifyDataO7GroupIDO">– GroupID</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Enums/ZTNotifyData/CommonMessageId.html">– CommonMessageId</a>
+                <a href="../Enums/ZTNotifyData.html#/s:9ZTCoreKit12ZTNotifyDataO15CommonMessageIdO">– CommonMessageId</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Enums/ZTNotifyData/WarmMessageId.html">– WarmMessageId</a>
+                <a href="../Other%20Enums.html#/s:9ZTCoreKit8ZTPeriodO">ZTPeriod</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Enums/ZTNotifyData/RunningMessageId.html">– RunningMessageId</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Enums/ZTNotifyData/CyclingMessageId.html">– CyclingMessageId</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Enums/ZTProductCodeType.html">ZTProductCodeType</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Enums/ZTProductType.html">ZTProductType</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Enums/ZTProductTypeCode.html">ZTProductTypeCode</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Enums/ZTProjectCodeType.html">ZTProjectCodeType</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Enums/ZTScannerResult.html">ZTScannerResult</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Enums/ZTServices.html">ZTServices</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Enums/ZTServices/Primary.html">– Primary</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Enums/ZTServices/DeviceInformation.html">– DeviceInformation</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Enums/ZTServices/DeviceDFU.html">– DeviceDFU</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Enums/ZTUnitSizeCodeType.html">ZTUnitSizeCodeType</a>
+                <a href="../Other%20Enums.html#/s:9ZTCoreKit10ZTServicesO">ZTServices</a>
               </li>
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="../Extensions.html">Extensions</a>
+            <a href="../Other%20Extensions.html">Other Extensions</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Extensions/ZTError.html">ZTError</a>
+                <a href="../Extensions/CBCharacteristic.html">CBCharacteristic</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Extensions/ZTError.html#/Enums">– Enums</a>
+                <a href="../Extensions/Data.html">Data</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/DataRequest.html">DataRequest</a>
               </li>
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="../Protocols.html">Protocols</a>
+            <a href="../Other%20Functions.html">Other Functions</a>
             <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Other%20Functions.html#/s:9ZTCoreKit2egoiyyAA8ZTSignalCyxG_xtlF">=&gt;(_:_:)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Other%20Protocols.html">Other Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Other%20Protocols.html#/s:9ZTCoreKit13ZTDfuDelegateP">ZTDfuDelegate</a>
+              </li>
               <li class="nav-group-task">
                 <a href="../Protocols/ZTServiceProtocol.html">ZTServiceProtocol</a>
               </li>
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="../Structs.html">Structures</a>
+            <a href="../Other%20Structs.html">Other Structures</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a href="../Structs/ZTArrayEncoding.html">ZTArrayEncoding</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Structs/ZTBatteryLevel.html">ZTBatteryLevel</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Structs/ZTMessageGeneralState.html">ZTMessageGeneralState</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Structs/ZTPairedDevice.html">ZTPairedDevice</a>
               </li>
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="../Typealiases.html">Type Aliases</a>
+            <a href="../Other%20Typealiases.html">Other Type Aliases</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Typealiases.html#/s:9ZTCoreKit14CallbackResulta">CallbackResult</a>
+                <a href="../Other%20Typealiases.html#/s:9ZTCoreKit18ConnectResultBlocka">ConnectResultBlock</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Typealiases.html#/s:9ZTCoreKit18ConnectResultBlocka">ConnectResultBlock</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Typealiases.html#/s:9ZTCoreKit20ZTScannerResultBlocka">ZTScannerResultBlock</a>
+                <a href="../Other%20Typealiases.html#/s:9ZTCoreKit20ZTScannerResultBlocka">ZTScannerResultBlock</a>
               </li>
             </ul>
           </li>
@@ -230,6 +256,7 @@
             <h1>ZTCommand</h1>
               <div class="declaration">
                 <div class="language">
+                  
                   <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">ZTCommand</span> <span class="p">:</span> <span class="kt">UInt8</span></code></pre>
 
                 </div>
@@ -237,6 +264,9 @@
             <p>Characteristic ZT_COMMANDS
 Note: Values must be sent LSB first (Little endian)</p>
 
+              <div class="slightly-smaller">
+                <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/Models/ZTCommandEnum.swift#L13-L68">Show on GitHub</a>
+              </div>
           </section>
           <section class="section task-group-section">
             <div class="task-group">
@@ -265,59 +295,8 @@ Note: Values must be sent LSB first (Little endian)</p>
 
                         </div>
                       </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:9ZTCoreKit9ZTCommandO16startNewActivityyA2CmF"></a>
-                    <a name="//apple_ref/swift/Element/startNewActivity" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9ZTCoreKit9ZTCommandO16startNewActivityyA2CmF">startNewActivity</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">startNewActivity</span> <span class="o">=</span> <span class="mh">0x01</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:9ZTCoreKit9ZTCommandO15stopNewActivityyA2CmF"></a>
-                    <a name="//apple_ref/swift/Element/stopNewActivity" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9ZTCoreKit9ZTCommandO15stopNewActivityyA2CmF">stopNewActivity</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">stopNewActivity</span> <span class="o">=</span> <span class="mh">0x02</span></code></pre>
-
-                        </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/Models/ZTCommandEnum.swift#L15">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -346,32 +325,8 @@ Note: Values must be sent LSB first (Little endian)</p>
 
                         </div>
                       </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:9ZTCoreKit9ZTCommandO23selectRunningAlgorithmsyA2CmF"></a>
-                    <a name="//apple_ref/swift/Element/selectRunningAlgorithms" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9ZTCoreKit9ZTCommandO23selectRunningAlgorithmsyA2CmF">selectRunningAlgorithms</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Only possible when there is no activity in progress</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">selectRunningAlgorithms</span> <span class="o">=</span> <span class="mh">0x20</span></code></pre>
-
-                        </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/Models/ZTCommandEnum.swift#L20">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -379,9 +334,9 @@ Note: Values must be sent LSB first (Little endian)</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:9ZTCoreKit9ZTCommandO23selectCyclingAlgorithmsyA2CmF"></a>
-                    <a name="//apple_ref/swift/Element/selectCyclingAlgorithms" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9ZTCoreKit9ZTCommandO23selectCyclingAlgorithmsyA2CmF">selectCyclingAlgorithms</a>
+                    <a name="/s:9ZTCoreKit9ZTCommandO15detailedBatteryyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/detailedBattery" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ZTCoreKit9ZTCommandO15detailedBatteryyA2CmF">detailedBattery</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -389,16 +344,139 @@ Note: Values must be sent LSB first (Little endian)</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Get detailed battery information</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">selectCyclingAlgorithms</span> <span class="o">=</span> <span class="mh">0x21</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">detailedBattery</span> <span class="o">=</span> <span class="mh">0x0D</span></code></pre>
 
                         </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/Models/ZTCommandEnum.swift#L22">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9ZTCoreKit9ZTCommandO19firmwareInformationyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/firmwareInformation" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ZTCoreKit9ZTCommandO19firmwareInformationyA2CmF">firmwareInformation</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Get R &amp; L side firmware information</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">firmwareInformation</span> <span class="o">=</span> <span class="mh">0x15</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/Models/ZTCommandEnum.swift#L25">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9ZTCoreKit9ZTCommandO17bootloaderVersionyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/bootloaderVersion" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ZTCoreKit9ZTCommandO17bootloaderVersionyA2CmF">bootloaderVersion</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Get Bootloader version</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">bootloaderVersion</span> <span class="o">=</span> <span class="mh">0x16</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/Models/ZTCommandEnum.swift#L27">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9ZTCoreKit9ZTCommandO21selectActivitySegmentyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/selectActivitySegment" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ZTCoreKit9ZTCommandO21selectActivitySegmentyA2CmF">selectActivitySegment</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Send heating target temp and enable heating <TR> <TL></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">selectActivitySegment</span> <span class="o">=</span> <span class="mh">0x22</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/Models/ZTCommandEnum.swift#L34">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9ZTCoreKit9ZTCommandO15selectAlgorithmyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/selectAlgorithm" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ZTCoreKit9ZTCommandO15selectAlgorithmyA2CmF">selectAlgorithm</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Selects algorithms to execute value of chosen algorithms</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">selectAlgorithm</span> <span class="o">=</span> <span class="mh">0x24</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/Models/ZTCommandEnum.swift#L37">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -416,7 +494,7 @@ Note: Values must be sent LSB first (Little endian)</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Disable heating</p>
 
                       </div>
                       <div class="declaration">
@@ -426,6 +504,9 @@ Note: Values must be sent LSB first (Little endian)</p>
                           <pre class="highlight swift"><code><span class="k">case</span> <span class="n">disableHeating</span> <span class="o">=</span> <span class="mh">0x30</span></code></pre>
 
                         </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/Models/ZTCommandEnum.swift#L40">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -456,6 +537,9 @@ Note: Values must be sent LSB first (Little endian)</p>
 
                         </div>
                       </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/Models/ZTCommandEnum.swift#L44">Show on GitHub</a>
+                      </div>
                     </section>
                   </div>
                 </li>
@@ -485,6 +569,9 @@ Note: Values must be sent LSB first (Little endian)</p>
 
                         </div>
                       </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/Models/ZTCommandEnum.swift#L48">Show on GitHub</a>
+                      </div>
                     </section>
                   </div>
                 </li>
@@ -511,6 +598,9 @@ Note: Values must be sent LSB first (Little endian)</p>
                           <pre class="highlight swift"><code><span class="k">case</span> <span class="n">getConsigne</span> <span class="o">=</span> <span class="mh">0x33</span></code></pre>
 
                         </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/Models/ZTCommandEnum.swift#L50">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -539,32 +629,8 @@ Note: Values must be sent LSB first (Little endian)</p>
 
                         </div>
                       </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:9ZTCoreKit9ZTCommandO23startStandupCalibrationyA2CmF"></a>
-                    <a name="//apple_ref/swift/Element/startStandupCalibration" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9ZTCoreKit9ZTCommandO23startStandupCalibrationyA2CmF">startStandupCalibration</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Start posture calibration – standing up (safety app)</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">startStandupCalibration</span> <span class="o">=</span> <span class="mh">0x40</span></code></pre>
-
-                        </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/Models/ZTCommandEnum.swift#L52">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -572,9 +638,9 @@ Note: Values must be sent LSB first (Little endian)</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:9ZTCoreKit9ZTCommandO22startTipToeCalibrationyA2CmF"></a>
-                    <a name="//apple_ref/swift/Element/startTipToeCalibration" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9ZTCoreKit9ZTCommandO22startTipToeCalibrationyA2CmF">startTipToeCalibration</a>
+                    <a name="/s:9ZTCoreKit9ZTCommandO23startPostureCalibrationyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/startPostureCalibration" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ZTCoreKit9ZTCommandO23startPostureCalibrationyA2CmF">startPostureCalibration</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -582,16 +648,49 @@ Note: Values must be sent LSB first (Little endian)</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Start posture calibration – tiptoes (safety app)</p>
+                        <p>Start posture calibration</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">startTipToeCalibration</span> <span class="o">=</span> <span class="mh">0x41</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">startPostureCalibration</span> <span class="o">=</span> <span class="mh">0x40</span></code></pre>
 
                         </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/Models/ZTCommandEnum.swift#L55">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9ZTCoreKit9ZTCommandO16resetCalibrationyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/resetCalibration" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ZTCoreKit9ZTCommandO16resetCalibrationyA2CmF">resetCalibration</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Reset calibration info</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">resetCalibration</span> <span class="o">=</span> <span class="mh">0x49</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/Models/ZTCommandEnum.swift#L57">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -620,32 +719,8 @@ Note: Values must be sent LSB first (Little endian)</p>
 
                         </div>
                       </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:9ZTCoreKit9ZTCommandO28startMagnetometerCalibrationyA2CmF"></a>
-                    <a name="//apple_ref/swift/Element/startMagnetometerCalibration" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9ZTCoreKit9ZTCommandO28startMagnetometerCalibrationyA2CmF">startMagnetometerCalibration</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Start Magnetometer calibration</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">startMagnetometerCalibration</span> <span class="o">=</span> <span class="mh">0x0E</span></code></pre>
-
-                        </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/Models/ZTCommandEnum.swift#L59">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -653,9 +728,9 @@ Note: Values must be sent LSB first (Little endian)</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:9ZTCoreKit9ZTCommandO15startDFUForLeftyA2CmF"></a>
-                    <a name="//apple_ref/swift/Element/startDFUForLeft" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9ZTCoreKit9ZTCommandO15startDFUForLeftyA2CmF">startDFUForLeft</a>
+                    <a name="/s:9ZTCoreKit9ZTCommandO17setUserParametersyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/setUserParameters" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ZTCoreKit9ZTCommandO17setUserParametersyA2CmF">setUserParameters</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -663,16 +738,79 @@ Note: Values must be sent LSB first (Little endian)</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Start DFU on Left module</p>
+                        <p>Set user parameters  0x46 <P><V></p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">startDFUForLeft</span> <span class="o">=</span> <span class="mh">0xFD</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">setUserParameters</span> <span class="o">=</span> <span class="mh">0x46</span></code></pre>
 
                         </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/Models/ZTCommandEnum.swift#L61">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9ZTCoreKit9ZTCommandO10disconnectyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/disconnect" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ZTCoreKit9ZTCommandO10disconnectyA2CmF">disconnect</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Disconnect</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">disconnect</span> <span class="o">=</span> <span class="mh">0x0C</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/Models/ZTCommandEnum.swift#L64">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9ZTCoreKit9ZTCommandO12startDFULeftyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/startDFULeft" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ZTCoreKit9ZTCommandO12startDFULeftyA2CmF">startDFULeft</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Start DFU on left module</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">startDFULeft</span> <span class="o">=</span> <span class="mh">0xFD</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/Models/ZTCommandEnum.swift#L67">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -682,8 +820,8 @@ Note: Values must be sent LSB first (Little endian)</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2020 <a class="link" href="https://zhortech.com/" target="_blank" rel="external">Pavel Shpak</a>. All rights reserved. (Last updated: 2020-02-27)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.1</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2021 <a class="link" href="https://zhortech.com" target="_blank" rel="external">Zhortech</a>. All rights reserved. (Last updated: 2021-06-10)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.7</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>
