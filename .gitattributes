@@ -1,0 +1,5 @@
+*.h linguist-detectable=false
+*.swift linguist-detectable=true
+*.html linguist-detectable=false
+*.htm inguist-detectable=false
+docs/* linguist-documentation

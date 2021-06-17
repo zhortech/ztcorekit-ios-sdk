@@ -5,12 +5,12 @@ import Alamofire
 import CoreBluetooth
 import CoreTelephony
 import Foundation
-import NordicDFU
 import ObjectMapper
 import ObjectiveC
 import Swift
 import SystemConfiguration
 import UIKit
+import iOSDFULibrary
 import os.log
 import os
 extension Data {
@@ -406,6 +406,9 @@ public struct ZTMessageBootloaderInfo : Swift.CustomStringConvertible, Swift.Cod
     get
   }
   public var byte2: Swift.UInt8? {
+    get
+  }
+  public var byte3: Swift.UInt8? {
     get
   }
   public init(bytes: [Swift.UInt8])
@@ -1328,8 +1331,8 @@ open class ZTActivity : Swift.Codable {
   public var activityIdentifier: Swift.String
   public var appId: Swift.String?
   public var activityType: Swift.String
-  public var endDate: Foundation.Date?
   public var startDate: Foundation.Date?
+  public var endDate: Foundation.Date?
   public var tz: Swift.String?
   public var status: Swift.String?
   public var state: ZTCoreKit.ZTDeviceActualState {
@@ -1705,12 +1708,12 @@ extension ZTBleManager : CoreBluetooth.CBCentralManagerDelegate {
   @objc final public func centralManager(_ central: CoreBluetooth.CBCentralManager, didDisconnectPeripheral peripheral: CoreBluetooth.CBPeripheral, error: Swift.Error?)
   @objc final public func centralManagerDidUpdateState(_ central: CoreBluetooth.CBCentralManager)
 }
-extension ZTCore : NordicDFU.DFUServiceDelegate, NordicDFU.DFUProgressDelegate, NordicDFU.LoggerDelegate {
+extension ZTCore : iOSDFULibrary.DFUServiceDelegate, iOSDFULibrary.DFUProgressDelegate, iOSDFULibrary.LoggerDelegate {
   final public func updateFirmware()
-  @objc final public func dfuStateDidChange(to state: NordicDFU.DFUState)
-  @objc final public func dfuError(_ error: NordicDFU.DFUError, didOccurWithMessage message: Swift.String)
+  @objc final public func dfuStateDidChange(to state: iOSDFULibrary.DFUState)
+  @objc final public func dfuError(_ error: iOSDFULibrary.DFUError, didOccurWithMessage message: Swift.String)
   @objc final public func dfuProgressDidChange(for part: Swift.Int, outOf totalParts: Swift.Int, to progress: Swift.Int, currentSpeedBytesPerSecond: Swift.Double, avgSpeedBytesPerSecond: Swift.Double)
-  @objc final public func logWith(_ level: NordicDFU.LogLevel, message: Swift.String)
+  @objc final public func logWith(_ level: iOSDFULibrary.LogLevel, message: Swift.String)
 }
 public typealias ConnectResultBlock = (ZTCoreKit.ZTDevice?, Swift.Error?) -> Swift.Void
 @_hasMissingDesignatedInitializers final public class ZTCore {
