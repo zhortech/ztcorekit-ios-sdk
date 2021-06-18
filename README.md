@@ -64,10 +64,22 @@ You should use ONE and only one of these ways to import the ZTCoreKit Mobile SDK
         $ pod init
 
 3. Edit the podfile to include the pods you want to integrate into your project.  For example, ZTCoreKit is `a must` framework and is required to connect to shoes. `ZTSafetyKit` is used when working with `Safety` products. As a result, your podfile might look something like this:
+
 ```
 target 'YourTarget' do
     pod 'ZTCoreKit', :git => 'https://github.com/zhortech/ztcorekit-ios-sdk.git', :branch => 'master'
 end
+```
+Please add post install script at the end of `Podfile` if there is problem to use  library:
+
+```ruby
+post_install do |installer|
+    installer.pods_project.targets.each do |target|
+      target.build_configurations.each do |config|
+        config.build_settings['BUILD_LIBRARY_FOR_DISTRIBUTION'] = 'YES'
+      end
+    end
+  end
 ```
 
 For a complete list of our pods, check out the .podspec files in the root directory of this project.
