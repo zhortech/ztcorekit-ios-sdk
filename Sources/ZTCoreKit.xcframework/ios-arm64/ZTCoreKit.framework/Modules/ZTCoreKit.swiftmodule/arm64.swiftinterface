@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.4 (swiftlang-1205.0.26.9 clang-1205.0.19.55)
+// swift-compiler-version: Apple Swift version 5.4.2 (swiftlang-1205.0.28.2 clang-1205.0.19.57)
 // swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name ZTCoreKit
 import Alamofire
 import CoreBluetooth
@@ -1624,7 +1624,7 @@ public typealias ZTResultArray<T> = ([T]?, Swift.Error?) -> ()
     get
   }
   final public var isNetworkReachable: Swift.Bool
-  final public func linkUser(userId: Swift.String, attributes: [Swift.String : Any], completion: @escaping ZTCoreKit.ZTBaseResult)
+  final public func linkUser(userId: Swift.String, attributes: [Swift.String : Any], completion: @escaping ((Swift.String?, Swift.Error?) -> Swift.Void))
   final public func getUserShoes(completion: @escaping (ZTCoreKit.ZTResultArray<ZTCoreKit.ZTUserShoe>))
   final public func uploadProfileImage(_ image: Foundation.Data, completion: (ZTCoreKit.ZTBaseResult)? = nil)
   final public func getActivities<T>(code: Swift.String?, start: Foundation.Date, end: Foundation.Date, fields: [Swift.String] = [], include: [Swift.String]? = nil, completion: (([T]?, Swift.Error?) -> ())? = nil) where T : ObjectMapper.Mappable
