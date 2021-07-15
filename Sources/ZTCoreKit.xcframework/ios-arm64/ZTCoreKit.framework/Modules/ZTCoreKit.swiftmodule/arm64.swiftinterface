@@ -910,7 +910,7 @@ public enum ZTUnitSizeCodeType : Swift.String {
     get
   }
 }
-public enum ZTError {
+public enum ZTError : Swift.Equatable {
   case scanning(type: ZTCoreKit.ZTError.Enums.ScanningError)
   case ble(type: ZTCoreKit.ZTError.Enums.BleError)
   case network(type: ZTCoreKit.ZTError.Enums.NetworkError)
@@ -922,6 +922,7 @@ public enum ZTError {
   @_hasMissingDesignatedInitializers public class Enums {
     @objc deinit
   }
+  public static func == (lhs: ZTCoreKit.ZTError, rhs: ZTCoreKit.ZTError) -> Swift.Bool
 }
 extension ZTError : Foundation.LocalizedError {
   public var errorDescription: Swift.String? {

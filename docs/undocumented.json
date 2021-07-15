@@ -1017,49 +1017,49 @@
     },
     {
       "file": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztcorekit/Sources/ZTCoreKit/Models/ZTError.swift",
-      "line": 44,
+      "line": 49,
       "symbol": "ZTError.Enums.ScanningError",
       "symbol_kind": "source.lang.swift.decl.enum",
       "warning": "undocumented"
     },
     {
       "file": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztcorekit/Sources/ZTCoreKit/Models/ZTError.swift",
-      "line": 68,
+      "line": 73,
       "symbol": "ZTError.Enums.BleError",
       "symbol_kind": "source.lang.swift.decl.enum",
       "warning": "undocumented"
     },
     {
       "file": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztcorekit/Sources/ZTCoreKit/Models/ZTError.swift",
-      "line": 113,
+      "line": 118,
       "symbol": "ZTError.Enums.DfuError",
       "symbol_kind": "source.lang.swift.decl.enum",
       "warning": "undocumented"
     },
     {
       "file": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztcorekit/Sources/ZTCoreKit/Models/ZTError.swift",
-      "line": 149,
+      "line": 154,
       "symbol": "ZTError.Enums.StoreError",
       "symbol_kind": "source.lang.swift.decl.enum",
       "warning": "undocumented"
     },
     {
       "file": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztcorekit/Sources/ZTCoreKit/Models/ZTError.swift",
-      "line": 176,
+      "line": 181,
       "symbol": "ZTError.Enums.ActivityError",
       "symbol_kind": "source.lang.swift.decl.enum",
       "warning": "undocumented"
     },
     {
       "file": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztcorekit/Sources/ZTCoreKit/Models/ZTError.swift",
-      "line": 213,
+      "line": 218,
       "symbol": "ZTError.Enums.NetworkError",
       "symbol_kind": "source.lang.swift.decl.enum",
       "warning": "undocumented"
     },
     {
       "file": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztcorekit/Sources/ZTCoreKit/Models/ZTError.swift",
-      "line": 273,
+      "line": 278,
       "symbol": "ZTError.Enums.DecodableError",
       "symbol_kind": "source.lang.swift.decl.enum",
       "warning": "undocumented"
@@ -1752,7 +1752,7 @@
     },
     {
       "file": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztcorekit/Sources/ZTCoreKit/ZTApi.swift",
-      "line": 558,
+      "line": 556,
       "symbol": "ZTApi.complianceTestRetry(timeout:attempts:statusCode:completion:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
