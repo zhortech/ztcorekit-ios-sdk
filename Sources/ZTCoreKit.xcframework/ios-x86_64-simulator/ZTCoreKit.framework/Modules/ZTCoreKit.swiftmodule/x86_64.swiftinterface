@@ -1618,13 +1618,11 @@ public typealias ZTResultObject<T> = (T?, Swift.Error?) -> ()
 public typealias ZTResultArray<T> = ([T]?, Swift.Error?) -> ()
 @_hasMissingDesignatedInitializers final public class ZTApi {
   public static let shared: ZTCoreKit.ZTApi
-  final public let onInternetConnectionChanged: ZTCoreKit.ZTSignal<(Swift.Bool)>
   final public let onSavedRequestSent: ZTCoreKit.ZTSignal<(Swift.String?)>
   final public let onActivityStopRequestSent: ZTCoreKit.ZTSignal<(Swift.Error?)>
   final public var appAttributes: [Swift.String : Any]? {
     get
   }
-  final public var isNetworkReachable: Swift.Bool
   final public func linkUser(userId: Swift.String, attributes: [Swift.String : Any], completion: @escaping ((Swift.String?, Swift.Error?) -> Swift.Void))
   final public func getUserShoes(completion: @escaping (ZTCoreKit.ZTResultArray<ZTCoreKit.ZTUserShoe>))
   final public func uploadProfileImage(_ image: Foundation.Data, completion: (ZTCoreKit.ZTBaseResult)? = nil)
