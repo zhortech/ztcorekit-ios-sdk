@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = 'ZTCoreKit'
-  s.version = '1.0.57'
+  s.version = '1.1.0'
   s.license = { :type => "MIT", :file => "LICENSE" }
   s.summary = 'Official Zhortech ZTCoreKit SDK for iOS to access core features.'
   s.homepage = 'https://zhortech.com/'
@@ -18,12 +18,8 @@ Pod::Spec.new do |s|
   s.source = { :git => 'https://github.com/zhortech/ztcorekit-ios-sdk.git', :tag => s.version.to_s }
   s.vendored_frameworks = 'Sources/ZTCoreKit.xcframework'
 
-  s.dependency 'Alamofire', '~> 5.4.0'
-  s.dependency 'ObjectMapper', '~> 4.2'
-  s.dependency 'iOSDFULibrary', '~> 4.8.0'
-
   s.ios.deployment_target   = '13.0'
-  s.ios.weak_frameworks = 'CoreBluetooth', 'Security', 'UIKit', 'Foundation'
+  s.ios.weak_frameworks = 'CoreBluetooth', 'Security', 'UIKit', 'Foundation', 'CFNetwork'
   
   s.exclude_files = 'readme-images/', 'docs/'
 end
