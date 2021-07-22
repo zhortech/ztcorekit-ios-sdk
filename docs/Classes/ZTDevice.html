@@ -17,7 +17,7 @@
     <a title="ZTDevice Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">ZTCoreKit 1.1.0 Docs</a></p>
+        <p><a href="../index.html">ZTCoreKit 1.1.2 Docs</a></p>
         <p class="header-right"><a href="https://github.com/zhortech/ztcorekit-ios-sdk"><img src="../img/gh.png"/>View on GitHub</a></p>
         <p class="header-right">
           <form role="search" action="../search.json">
@@ -193,6 +193,9 @@
                 <a href="../Classes/ZTHardwareCharacteristic.html">ZTHardwareCharacteristic</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Other%20Classes.html#/s:9ZTCoreKit8ZTLoggerC">ZTLogger</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/ZTManufacturerNameCharacteristic.html">ZTManufacturerNameCharacteristic</a>
               </li>
               <li class="nav-group-task">
@@ -331,7 +334,7 @@
             <p>Instance of peripheral device</p>
 
               <div class="slightly-smaller">
-                <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/Models/ZTDevice.swift#L13-L445">Show on GitHub</a>
+                <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/Models/ZTDevice.swift#L13-L472">Show on GitHub</a>
               </div>
           </section>
           <section class="section task-group-section">
@@ -1631,9 +1634,9 @@ General state of device is updated after it is called</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:9ZTCoreKit8ZTDeviceC12onCommandAckAA8ZTSignalCyAA15ZTCommandStatusOSgGvp"></a>
+                    <a name="/s:9ZTCoreKit8ZTDeviceC12onCommandAckAA8ZTSignalCyAA17ZTCommandResponseCSgGvp"></a>
                     <a name="//apple_ref/swift/Property/onCommandAck" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9ZTCoreKit8ZTDeviceC12onCommandAckAA8ZTSignalCyAA15ZTCommandStatusOSgGvp">onCommandAck</a>
+                    <a class="token" href="#/s:9ZTCoreKit8ZTDeviceC12onCommandAckAA8ZTSignalCyAA17ZTCommandResponseCSgGvp">onCommandAck</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1641,14 +1644,14 @@ General state of device is updated after it is called</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>ZT_NOTIFY command value parsed</p>
+                        <p>ZT_NOTIFY command acknowledged response observer</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">onCommandAck</span><span class="p">:</span> <span class="kt"><a href="../Classes/ZTSignal.html">ZTSignal</a></span><span class="o">&lt;</span><span class="p">(</span><span class="kt"><a href="../Other%20Enums.html#/s:9ZTCoreKit15ZTCommandStatusO">ZTCommandStatus</a></span><span class="p">?)</span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">onCommandAck</span><span class="p">:</span> <span class="kt"><a href="../Classes/ZTSignal.html">ZTSignal</a></span><span class="o">&lt;</span><span class="p">(</span><span class="kt">ZTCommandResponse</span><span class="p">?)</span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
@@ -1722,7 +1725,7 @@ General state of device is updated after it is called</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/Models/ZTDevice.swift#L291-L306">Show on GitHub</a>
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/Models/ZTDevice.swift#L294-L309">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1752,7 +1755,7 @@ General state of device is updated after it is called</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/Models/ZTDevice.swift#L309-L311">Show on GitHub</a>
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/Models/ZTDevice.swift#L312-L314">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1782,7 +1785,7 @@ General state of device is updated after it is called</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/Models/ZTDevice.swift#L314-L316">Show on GitHub</a>
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/Models/ZTDevice.swift#L317-L319">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1831,7 +1834,7 @@ General state of device is updated after it is called</p>
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/Models/ZTDevice.swift#L345-L355">Show on GitHub</a>
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/Models/ZTDevice.swift#L348-L358">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1904,7 +1907,7 @@ General state of device is updated after it is called</p>
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/Models/ZTDevice.swift#L413-L423">Show on GitHub</a>
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/Models/ZTDevice.swift#L416-L426">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1934,7 +1937,7 @@ General state of device is updated after it is called</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/Models/ZTDevice.swift#L427-L444">Show on GitHub</a>
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/Models/ZTDevice.swift#L430-L447">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1983,7 +1986,80 @@ General state of device is updated after it is called</p>
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/Models/ZTDevice+CoreBluetooth.swift#L377-L417">Show on GitHub</a>
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/Models/ZTDevice+CoreBluetooth.swift#L382-L422">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9ZTCoreKit8ZTDeviceC18sendCommandWithAck7command10parameters10completionyAA9ZTCommandO_Says5UInt8VGSgys5Error_pSgctF"></a>
+                    <a name="//apple_ref/swift/Method/sendCommandWithAck(command:parameters:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ZTCoreKit8ZTDeviceC18sendCommandWithAck7command10parameters10completionyAA9ZTCommandO_Says5UInt8VGSgys5Error_pSgctF">sendCommandWithAck(command:<wbr>parameters:<wbr>completion:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Send command to ZT_COMMANDS chracteristic with aknowledge</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">sendCommandWithAck</span><span class="p">(</span><span class="nv">command</span><span class="p">:</span> <span class="kt"><a href="../Enums/ZTCommand.html">ZTCommand</a></span><span class="p">,</span> <span class="nv">parameters</span><span class="p">:</span> <span class="p">[</span><span class="kt">UInt8</span><span class="p">]?,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">ZTBaseResult</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>command</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p><code><a href="../Enums/ZTCommand.html">ZTCommand</a></code></p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>parameters</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>optional parameters for command</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p><code>ZTBaseResult</code></p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/Models/ZTDevice+CoreBluetooth.swift#L429-L450">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1993,7 +2069,7 @@ General state of device is updated after it is called</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2021 <a class="link" href="https://zhortech.com" target="_blank" rel="external">Zhortech</a>. All rights reserved. (Last updated: 2021-07-20)</p>
+          <p>&copy; 2021 <a class="link" href="https://zhortech.com" target="_blank" rel="external">Zhortech</a>. All rights reserved. (Last updated: 2021-07-22)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.7</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

@@ -31,10 +31,15 @@ import os
 }
 extension Data {
   public func macAddress() -> Swift.String?
+  public var bytes: [Swift.UInt8] {
+    get
+  }
   public var hexDescription: Swift.String {
     get
   }
   public init?(hex: Swift.String)
+  public func subdata<R>(in range: R) -> Foundation.Data where R : Swift.RangeExpression, R.Bound == Foundation.Data.Index
+  public func object<T>(at offset: Swift.Int) -> T
   public func getUInt(offset: Swift.Int) -> Swift.UInt16
   public func getUInt32(offset: Swift.Int) -> Swift.UInt32
   public func getFloat(offset: Swift.Int) -> Swift.Float
@@ -900,6 +905,9 @@ public enum ZTCommand : Swift.UInt8 {
   case setUserParameters
   case disconnect
   case startDFULeft
+  public var description: Swift.String {
+    get
+  }
   public init?(rawValue: Swift.UInt8)
   public typealias RawValue = Swift.UInt8
   public var rawValue: Swift.UInt8 {
@@ -942,6 +950,9 @@ public enum ZTCommandStatus : Swift.UInt8 {
   case unknownCommand
   case commandInProgress
   case noPeerresponse
+  public var description: Swift.String {
+    get
+  }
   public init?(rawValue: Swift.UInt8)
   public typealias RawValue = Swift.UInt8
   public var rawValue: Swift.UInt8 {
@@ -970,6 +981,7 @@ extension ZTDevice : CoreBluetooth.CBPeripheralDelegate {
   @objc dynamic public func peripheral(_ peripheral: CoreBluetooth.CBPeripheral, didUpdateNotificationStateFor characteristic: CoreBluetooth.CBCharacteristic, error: Swift.Error?)
   @objc dynamic public func peripheral(_ peripheral: CoreBluetooth.CBPeripheral, didReadRSSI RSSI: Foundation.NSNumber, error: Swift.Error?)
   public func sendCommand(_ command: ZTCoreKit.ZTCommand, parameters: [Swift.UInt8]? = nil)
+  public func sendCommandWithAck(command: ZTCoreKit.ZTCommand, parameters: [Swift.UInt8]?, completion: @escaping ZTCoreKit.ZTBaseResult)
 }
 @objc public class ZTDevice : ObjectiveC.NSObject {
   public var id: Swift.String
@@ -1060,7 +1072,7 @@ extension ZTDevice : CoreBluetooth.CBPeripheralDelegate {
   final public let onNotifyCyclingGroupUpdated: ZTCoreKit.ZTSignal<(ZTCoreKit.ZTNotifyData.CyclingMessageId, [Swift.UInt8]?)>
   final public let onNotifySafetyGroupUpdated: ZTCoreKit.ZTSignal<(ZTCoreKit.ZTNotifyData.SafetyMessageId, [Swift.UInt8]?)>
   final public let onCommandUpdated: ZTCoreKit.ZTSignal<(ZTCoreKit.ZTCommandResponse?)>
-  final public let onCommandAck: ZTCoreKit.ZTSignal<(ZTCoreKit.ZTCommandStatus?)>
+  final public let onCommandAck: ZTCoreKit.ZTSignal<(ZTCoreKit.ZTCommandResponse?)>
   final public let onIndicateValueUpdated: ZTCoreKit.ZTSignal<(Foundation.Data?)>
   required public init(peripheral: CoreBluetooth.CBPeripheral)
   public func connect()
@@ -1362,6 +1374,7 @@ extension ZTError.Enums {
     case modeNotSetActivityIsRunning
     case previousNotStopped
     case previousRestoring
+    case noUserParametersSet
     public static func == (a: ZTCoreKit.ZTError.Enums.ActivityError, b: ZTCoreKit.ZTError.Enums.ActivityError) -> Swift.Bool
     public func hash(into hasher: inout Swift.Hasher)
     public var hashValue: Swift.Int {
@@ -1473,6 +1486,17 @@ public func <<- <T>(left: inout T, right: ZTCoreKit.ZTMap) where T : Swift.Signe
 public func <<- <T>(left: inout T?, right: ZTCoreKit.ZTMap) where T : Swift.SignedInteger
 public func <<- <T>(left: inout T, right: ZTCoreKit.ZTMap) where T : Swift.UnsignedInteger
 public func <<- <T>(left: inout T?, right: ZTCoreKit.ZTMap) where T : Swift.UnsignedInteger
+@_hasMissingDesignatedInitializers public class ZTLogger {
+  public static let shared: ZTCoreKit.ZTLogger
+  @objc deinit
+}
+extension ZTLogger {
+  public func debug(_ message: Swift.StaticString, _ args: Swift.CVarArg...)
+  public func info(_ message: Swift.StaticString, _ args: Swift.CVarArg...)
+  public func error(_ message: Swift.StaticString, _ args: Swift.CVarArg...)
+  public func fatal(_ message: Swift.StaticString, _ args: Swift.CVarArg...)
+  public func print(_ value: @autoclosure () -> Any)
+}
 @_hasMissingDesignatedInitializers open class ZTNetworkReachabilityManager {
   open var isReachable: Swift.Bool {
     get
@@ -1495,6 +1519,9 @@ public enum ZTNotifyData {
     case running
     case cycling
     case safety
+    public var description: Swift.String {
+      get
+    }
     public init?(rawValue: Swift.UInt8)
     public typealias RawValue = Swift.UInt8
     public var rawValue: Swift.UInt8 {
@@ -1512,6 +1539,9 @@ public enum ZTNotifyData {
     case MSG_ACTIVITY_INFO
     case MSG_BTLOADER_INFO
     case MSG_DEBUG
+    public var description: Swift.String {
+      get
+    }
     public init?(rawValue: Swift.UInt8)
     public typealias RawValue = Swift.UInt8
     public var rawValue: Swift.UInt8 {
@@ -1867,9 +1897,6 @@ open class ZTSegmentData : Swift.Codable {
   public var duration: Swift.Int?
   public var rawData: Foundation.Data?
   public var status: ZTCoreKit.ZTSegmentData.Status
-  public var isEvent: Swift.Bool {
-    get
-  }
   public enum Status : Swift.Int8, Swift.Decodable {
     case new
     case sent
