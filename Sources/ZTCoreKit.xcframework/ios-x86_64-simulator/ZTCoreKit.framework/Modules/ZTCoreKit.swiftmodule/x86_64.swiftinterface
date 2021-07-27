@@ -193,6 +193,9 @@ extension UInt8 {
     get
   }
 }
+extension UInt16 {
+  public func toByteArray(size: Swift.Int = 2) -> [Swift.UInt8]
+}
 extension Double {
   public var milliseconds: Swift.Int64 {
     get
@@ -239,7 +242,7 @@ public enum ZTEnvironment {
     get
   }
 }
-public enum ZTModuleSide : Swift.String {
+public enum ZTModuleSide : Swift.String, Swift.Codable {
   case left
   case right
   public init?(rawValue: Swift.String)
@@ -348,6 +351,11 @@ infix operator => : AssignmentPrecedence
 public func => <T>(signal: ZTCoreKit.ZTSignal<T>, data: T)
 extension ZTArchive {
   final public var data: Foundation.Data? {
+    get
+  }
+}
+extension Data {
+  public var hexString: Swift.String {
     get
   }
 }
@@ -632,15 +640,18 @@ public func ->> <T>(left: [Swift.String : T]?, right: ZTCoreKit.ZTMap) where T :
   }
   @objc deinit
 }
-public struct ZTBatteryLevel : Swift.CustomStringConvertible, Swift.Codable {
-  public let right: Swift.UInt8
-  public let left: Swift.UInt8
+public struct ZTBatteryLevel : ZTCoreKit.ZTNotifyDataMessage {
+  public var rawData: Foundation.Data?
+  public var right: Swift.UInt8
+  public var left: Swift.UInt8
   public var min: Swift.UInt8 {
     get
   }
   public var description: Swift.String {
     get
   }
+  public init()
+  public init(data: Foundation.Data)
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
 }
@@ -871,6 +882,9 @@ extension Data {
   required public init(device: ZTCoreKit.ZTDevice, service: CoreBluetooth.CBService)
   @objc deinit
 }
+public protocol ZTNotifyDataMessage : Swift.Decodable, Swift.Encodable {
+  var rawData: Foundation.Data? { get set }
+}
 public enum ZTBleManagerState {
   case off
   case idle
@@ -897,7 +911,7 @@ public enum ZTCommand : Swift.UInt8 {
   case disableHeating
   case setHeating
   case setTimer
-  case getConsigne
+  case getTemperature
   case getTimer
   case startPostureCalibration
   case resetCalibration
@@ -947,6 +961,8 @@ public enum ZTCommandStatus : Swift.UInt8 {
   case busy
   case invalidParam
   case invalidState
+  case forbidden
+  case notSupported
   case unknownCommand
   case commandInProgress
   case noPeerresponse
@@ -981,7 +997,7 @@ extension ZTDevice : CoreBluetooth.CBPeripheralDelegate {
   @objc dynamic public func peripheral(_ peripheral: CoreBluetooth.CBPeripheral, didUpdateNotificationStateFor characteristic: CoreBluetooth.CBCharacteristic, error: Swift.Error?)
   @objc dynamic public func peripheral(_ peripheral: CoreBluetooth.CBPeripheral, didReadRSSI RSSI: Foundation.NSNumber, error: Swift.Error?)
   public func sendCommand(_ command: ZTCoreKit.ZTCommand, parameters: [Swift.UInt8]? = nil)
-  public func sendCommandWithAck(command: ZTCoreKit.ZTCommand, parameters: [Swift.UInt8]?, completion: @escaping ZTCoreKit.ZTBaseResult)
+  public func sendCommandWithAck(command: ZTCoreKit.ZTCommand, parameters: [Swift.UInt8]? = nil, completion: @escaping ZTCoreKit.ZTBaseResult)
 }
 @objc public class ZTDevice : ObjectiveC.NSObject {
   public var id: Swift.String
@@ -1067,7 +1083,7 @@ extension ZTDevice : CoreBluetooth.CBPeripheralDelegate {
   final public let onSoftwareUpdated: ZTCoreKit.ZTSignal<(ZTCoreKit.ZTMessageSoftware?)>
   final public let onInactivityTimeoutUpdated: ZTCoreKit.ZTSignal<(ZTCoreKit.ZTMessageInactivityTimeout?)>
   final public let onNotifyCommonGroupUpdated: ZTCoreKit.ZTSignal<(ZTCoreKit.ZTNotifyData.CommonMessageId, [Swift.UInt8]?)>
-  final public let onNotifyWarmGroupUpdated: ZTCoreKit.ZTSignal<(ZTCoreKit.ZTNotifyData.WarmMessageId, [Swift.UInt8]?)>
+  final public let onNotifyWarmGroupUpdated: ZTCoreKit.ZTSignal<(ZTCoreKit.ZTNotifyData.WarmMessageId, Foundation.Data?)>
   final public let onNotifyRunningGroupUpdated: ZTCoreKit.ZTSignal<(ZTCoreKit.ZTNotifyData.RunningMessageId, [Swift.UInt8]?)>
   final public let onNotifyCyclingGroupUpdated: ZTCoreKit.ZTSignal<(ZTCoreKit.ZTNotifyData.CyclingMessageId, [Swift.UInt8]?)>
   final public let onNotifySafetyGroupUpdated: ZTCoreKit.ZTSignal<(ZTCoreKit.ZTNotifyData.SafetyMessageId, [Swift.UInt8]?)>
@@ -1487,7 +1503,7 @@ public func <<- <T>(left: inout T?, right: ZTCoreKit.ZTMap) where T : Swift.Sign
 public func <<- <T>(left: inout T, right: ZTCoreKit.ZTMap) where T : Swift.UnsignedInteger
 public func <<- <T>(left: inout T?, right: ZTCoreKit.ZTMap) where T : Swift.UnsignedInteger
 @_hasMissingDesignatedInitializers public class ZTLogger {
-  public static let shared: ZTCoreKit.ZTLogger
+  public static let instance: ZTCoreKit.ZTLogger
   @objc deinit
 }
 extension ZTLogger {
@@ -1890,13 +1906,16 @@ public class ZTActivityComment : ZTCoreKit.ZTMappable {
   public func mapping(map: ZTCoreKit.ZTMap)
   @objc deinit
 }
-open class ZTSegmentData : Swift.Codable {
+open class ZTSegmentData : ZTCoreKit.ZTNotifyDataMessage {
+  public var rawData: Foundation.Data?
   public var id: Swift.UInt16
   public var activityId: Swift.String?
   public var timestamp: Swift.Int64?
   public var duration: Swift.Int?
-  public var rawData: Foundation.Data?
   public var status: ZTCoreKit.ZTSegmentData.Status
+  public var rawDescription: Swift.String {
+    get
+  }
   public enum Status : Swift.Int8, Swift.Decodable {
     case new
     case sent

@@ -1,5 +1,10 @@
 # Changelog
 
+## [v1.1.3](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.3) (2021-07-27)
+
+- Added support for Warm product
+- Added commands for Warm product
+
 ## [1.1.2](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.2) (2021-07-22)
 
 - Improved logging for `.debug` `logLevel`

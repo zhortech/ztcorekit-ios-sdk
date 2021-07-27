@@ -1139,8 +1139,6 @@ SWIFT_CLASS("_TtC9ZTCoreKit25SecureDFUServiceInitiator")
 
 
 
-
-
 /// BLE Manager responsible for finding and connecting to peripherals. It can be subscribed to be notified about
 /// <ul>
 ///   <li>
