@@ -1010,6 +1010,7 @@ extension ZTDevice : CoreBluetooth.CBPeripheralDelegate {
   public var rssi: Swift.Int {
     get
   }
+  public var macAddressRight: Swift.String?
   public var manufacturer: Swift.String? {
     get
   }
@@ -2647,14 +2648,14 @@ public typealias ConnectResultBlock = (ZTCoreKit.ZTDevice?, Swift.Error?) -> Swi
   }
   weak final public var dfuDelegate: ZTCoreKit.ZTDfuDelegate?
   final public let bleManager: ZTCoreKit.ZTBleManager
-  final public func scan(for product: ZTCoreKit.ZTProductType? = nil, completion: ZTCoreKit.ConnectResultBlock? = nil)
+  final public func setup(apiKey: Swift.String, secret: Swift.String, appId: Swift.String, completion: ((Swift.Error?) -> Swift.Void)? = nil)
+  final public func updateOrganization(code: Swift.String? = nil, appType: Swift.String? = nil)
+  final public func scan(for product: ZTCoreKit.ZTProductType? = nil, timeout: Swift.Double? = 15, completion: ZTCoreKit.ConnectResultBlock? = nil)
   final public func stopScan()
   final public func connectWithDevice(_ device: ZTCoreKit.ZTDevice?, timeout: Swift.Double? = 5, completion: ZTCoreKit.ConnectResultBlock? = nil)
   final public func connectWithCode(_ code: Swift.String, timeout: Swift.Double? = 20, completion: ZTCoreKit.ConnectResultBlock? = nil)
   final public func tryReconnect()
   final public func checkConnectedDevice(completion: ZTCoreKit.ConnectResultBlock? = nil)
-  final public func setup(apiKey: Swift.String, secret: Swift.String, appId: Swift.String, completion: ((Swift.Error?) -> Swift.Void)? = nil)
-  final public func updateOrganization(code: Swift.String? = nil, appType: Swift.String? = nil)
   @objc deinit
 }
 public protocol ZTDfuDelegate : AnyObject {

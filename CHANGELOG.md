@@ -1,5 +1,10 @@
 # Changelog
 
+## [v1.1.4](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.4) (2021-08-02)
+
+- Added support for timeout to `scan` method - `scan(for:timeout:completion:)`
+- Added mac address for right module which is obtained from Adverrtisement Data to ZTDevice  as `macAddressRight`
+
 ## [v1.1.3](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.3) (2021-07-27)
 
 - Added support for Warm product

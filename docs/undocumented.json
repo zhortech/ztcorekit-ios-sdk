@@ -520,49 +520,28 @@
     },
     {
       "file": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztcorekit/Sources/ZTCoreKit/Models/ZTDevice.swift",
-      "line": 17,
-      "symbol": "ZTDevice.serialNumber",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztcorekit/Sources/ZTCoreKit/Models/ZTDevice.swift",
-      "line": 480,
+      "line": 484,
       "symbol": "ZTDevice.isLowBattery",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztcorekit/Sources/ZTCoreKit/Models/ZTDeviceInfo.swift",
-      "line": 52,
-      "symbol": "ZTDeviceInfo.macAddressRight",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztcorekit/Sources/ZTCoreKit/Models/ZTDeviceInfo.swift",
-      "line": 53,
-      "symbol": "ZTDeviceInfo.macAddressLeft",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztcorekit/Sources/ZTCoreKit/Models/ZTDeviceInfo.swift",
-      "line": 55,
+      "line": 57,
       "symbol": "ZTDeviceInfo.code",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztcorekit/Sources/ZTCoreKit/Models/ZTDeviceInfo.swift",
-      "line": 141,
+      "line": 143,
       "symbol": "ZTDeviceInfo.size",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztcorekit/Sources/ZTCoreKit/Models/ZTDeviceInfo.swift",
-      "line": 144,
+      "line": 146,
       "symbol": "ZTDeviceInfo.gender",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
