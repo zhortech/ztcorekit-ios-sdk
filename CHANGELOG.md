@@ -1,5 +1,10 @@
 # Changelog
 
+## [v1.1.5](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/v1.1.5) (2021-08-05)
+
+- Added support `ZT_NOTIFY_DATA` characteristic to support `Generic` group id
+- Added `onNotifyGenericGroupUpdated` value observer for `ZTDevice` to notify about new data for `Generic` group id
+
 ## [v1.1.4](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.4) (2021-08-02)
 
 - Added support for timeout to `scan` method - `scan(for:timeout:completion:)`

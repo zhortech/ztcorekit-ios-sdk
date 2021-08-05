@@ -1088,6 +1088,7 @@ extension ZTDevice : CoreBluetooth.CBPeripheralDelegate {
   final public let onNotifyRunningGroupUpdated: ZTCoreKit.ZTSignal<(ZTCoreKit.ZTNotifyData.RunningMessageId, [Swift.UInt8]?)>
   final public let onNotifyCyclingGroupUpdated: ZTCoreKit.ZTSignal<(ZTCoreKit.ZTNotifyData.CyclingMessageId, [Swift.UInt8]?)>
   final public let onNotifySafetyGroupUpdated: ZTCoreKit.ZTSignal<(ZTCoreKit.ZTNotifyData.SafetyMessageId, [Swift.UInt8]?)>
+  final public let onNotifyGenericGroupUpdated: ZTCoreKit.ZTSignal<(ZTCoreKit.ZTNotifyData.SafetyMessageId, [Swift.UInt8]?)>
   final public let onCommandUpdated: ZTCoreKit.ZTSignal<(ZTCoreKit.ZTCommandResponse?)>
   final public let onCommandAck: ZTCoreKit.ZTSignal<(ZTCoreKit.ZTCommandResponse?)>
   final public let onIndicateValueUpdated: ZTCoreKit.ZTSignal<(Foundation.Data?)>
@@ -1536,6 +1537,7 @@ public enum ZTNotifyData {
     case running
     case cycling
     case safety
+    case generic
     public var description: Swift.String {
       get
     }
