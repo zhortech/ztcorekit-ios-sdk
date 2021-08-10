@@ -1,16 +1,20 @@
 # Changelog
 
-## [v1.1.5](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/v1.1.5) (2021-08-05)
+## [1.1.6](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.6) (2021-08-10)
+
+- Increased exponential backoff for ZCloud requests to retry in 500ms, then 1000ms, 2000ms, 4000ms, 8000ms 
+
+## [1.1.5](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.5) (2021-08-05)
 
 - Added support `ZT_NOTIFY_DATA` characteristic to support `Generic` group id
 - Added `onNotifyGenericGroupUpdated` value observer for `ZTDevice` to notify about new data for `Generic` group id
 
-## [v1.1.4](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.4) (2021-08-02)
+## [1.1.4](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.4) (2021-08-02)
 
 - Added support for timeout to `scan` method - `scan(for:timeout:completion:)`
 - Added mac address for right module which is obtained from Adverrtisement Data to ZTDevice  as `macAddressRight`
 
-## [v1.1.3](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.3) (2021-07-27)
+## [1.1.3](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.3) (2021-07-27)
 
 - Added support for Warm product
 - Added commands for Warm product
