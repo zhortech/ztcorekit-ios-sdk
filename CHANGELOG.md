@@ -1,4 +1,8 @@
 # Changelog
+## [1.1.7](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.7) (2021-08-31)
+
+- `ZTDevice` stores advertisement data in it when scanning
+- Simplified observers for `ZTDevice`
 
 ## [1.1.6](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.6) (2021-08-10)
 

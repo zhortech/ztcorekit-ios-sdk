@@ -425,6 +425,9 @@ open class ZTCharacteristic {
   public var valueWrittenTimeInterval: Swift.Double? {
     get
   }
+  public var isNotifying: Swift.Bool {
+    get
+  }
   final public let onValueUpdated: ZTCoreKit.ZTSignal<ZTCoreKit.ZTCharacteristic>
   final public let onValueWritten: ZTCoreKit.ZTSignal<(ZTCoreKit.ZTCharacteristic, Swift.Bool)>
   final public let onNotificationUpdated: ZTCoreKit.ZTSignal<ZTCoreKit.ZTCharacteristic>
@@ -906,7 +909,8 @@ public enum ZTCommand : Swift.UInt8 {
   case firmwareInformation
   case bootloaderVersion
   case setInactivityTimeout
-  case selectActivitySegment
+  case setChunkMinutesInterval
+  case setChunkSecondsInterval
   case selectAlgorithm
   case disableHeating
   case setHeating
@@ -1011,6 +1015,7 @@ extension ZTDevice : CoreBluetooth.CBPeripheralDelegate {
     get
   }
   public var macAddressRight: Swift.String?
+  public var advertisementData: [Swift.String : Any]?
   public var manufacturer: Swift.String? {
     get
   }
@@ -1071,11 +1076,11 @@ extension ZTDevice : CoreBluetooth.CBPeripheralDelegate {
   final public let onRSSIChanged: ZTCoreKit.ZTSignal<(ZTCoreKit.ZTDevice, Swift.Int)>
   final public let onServiceDiscovered: ZTCoreKit.ZTSignal<(ZTCoreKit.ZTDevice, ZTCoreKit.ZTService)>
   final public let onServiceFeaturesIdentified: ZTCoreKit.ZTSignal<(ZTCoreKit.ZTDevice, ZTCoreKit.ZTService)>
-  final public let onCharacteristicDiscovered: ZTCoreKit.ZTSignal<(ZTCoreKit.ZTDevice, ZTCoreKit.ZTCharacteristic)>
+  final public let onCharacteristicDiscovered: ZTCoreKit.ZTSignal<(ZTCoreKit.ZTCharacteristic?)>
   final public let onAllCharacteristicsDiscovered: ZTCoreKit.ZTSignal<()>
-  final public let onCharacteristicValueUpdated: ZTCoreKit.ZTSignal<(ZTCoreKit.ZTDevice, ZTCoreKit.ZTCharacteristic)>
-  final public let onCharacteristicValueWritten: ZTCoreKit.ZTSignal<(ZTCoreKit.ZTDevice, ZTCoreKit.ZTCharacteristic)>
-  final public let onCommandCharacteristicDiscovered: ZTCoreKit.ZTSignal<(ZTCoreKit.ZTDevice, ZTCoreKit.ZTCharacteristic)>
+  final public let onCharacteristicValueUpdated: ZTCoreKit.ZTSignal<(ZTCoreKit.ZTCharacteristic?)>
+  final public let onCharacteristicValueWritten: ZTCoreKit.ZTSignal<(ZTCoreKit.ZTCharacteristic?)>
+  final public let onCommandCharacteristicDiscovered: ZTCoreKit.ZTSignal<(ZTCoreKit.ZTCharacteristic?)>
   final public let onNotifyValueUpdated: ZTCoreKit.ZTSignal<(ZTCoreKit.ZTNotifyData.GroupID, Swift.UInt8, [Swift.UInt8]?)>
   final public let onBatteryValueUpdated: ZTCoreKit.ZTSignal<()>
   final public let onDeviceInformationValueUpdated: ZTCoreKit.ZTSignal<()>
@@ -1861,7 +1866,7 @@ public class ZTAchievement : ZTCoreKit.ZTMappable {
   public func mapping(map: ZTCoreKit.ZTMap)
   @objc deinit
 }
-open class ZTActivity : Swift.Codable {
+open class ZTActivity : Swift.Codable, Foundation.NSCopying {
   public var id: Swift.String {
     get
     set
@@ -1870,6 +1875,7 @@ open class ZTActivity : Swift.Codable {
   public var appId: Swift.String?
   public var activityType: Swift.String
   public var startDate: Foundation.Date?
+  public var startTimestamp: Swift.Double?
   public var endDate: Foundation.Date?
   public var tz: Swift.String?
   public var status: Swift.String?
@@ -1877,7 +1883,11 @@ open class ZTActivity : Swift.Codable {
     get
     set
   }
+  public var isAutomatic: Swift.Bool
+  public var firstChunkId: Swift.UInt16?
+  public var lastChunkId: Swift.UInt16?
   public init()
+  @objc public func copy(with zone: ObjectiveC.NSZone? = nil) -> Any
   open func save()
   @objc deinit
   open func encode(to encoder: Swift.Encoder) throws
@@ -1916,6 +1926,8 @@ open class ZTSegmentData : ZTCoreKit.ZTNotifyDataMessage {
   public var timestamp: Swift.Int64?
   public var duration: Swift.Int?
   public var status: ZTCoreKit.ZTSegmentData.Status
+  public var timestampType: ZTCoreKit.ZTSegmentData.ChunkType
+  public var originalTimestamp: Swift.UInt32
   public var rawDescription: Swift.String {
     get
   }
@@ -1930,16 +1942,34 @@ open class ZTSegmentData : ZTCoreKit.ZTNotifyDataMessage {
       get
     }
   }
+  public enum ChunkType : Swift.UInt8, Swift.Decodable {
+    case unknown
+    case start
+    case stop
+    case pause
+    case resume
+    public var description: Swift.String {
+      get
+    }
+    public init?(rawValue: Swift.UInt8)
+    public typealias RawValue = Swift.UInt8
+    public var rawValue: Swift.UInt8 {
+      get
+    }
+  }
   public init(data: Foundation.Data)
   public init(data: Foundation.Data, activityId: Swift.String)
   required public init(from decoder: Swift.Decoder) throws
   public func encode(to encoder: Swift.Encoder) throws
   public func save()
+  public func saveWithResult() -> Swift.Bool
   public static func lastSegmentId(activityId: Swift.String) -> Swift.Int
   public static func segmentsCount(activityId: Swift.String) -> Swift.Int
   public static func loadUnsent(activityId: Swift.String) -> [ZTCoreKit.ZTSegmentData]
+  public static func loadAll(activityId: Swift.String) -> [ZTCoreKit.ZTSegmentData]
   public static func clear(activityId: Swift.String?)
   public static func checkMissedChunks(activityId: Swift.String) -> Swift.Bool
+  public static func getMaxMissedChunk(activityId: Swift.String, chunkId: Swift.UInt16) -> Swift.UInt16?
   @objc deinit
 }
 public enum ZTActivitySummaryStatus : Swift.String {
@@ -2818,6 +2848,9 @@ extension ZTCoreKit.LogLevel : Swift.RawRepresentable {}
 extension ZTCoreKit.ZTSegmentData.Status : Swift.Equatable {}
 extension ZTCoreKit.ZTSegmentData.Status : Swift.Hashable {}
 extension ZTCoreKit.ZTSegmentData.Status : Swift.RawRepresentable {}
+extension ZTCoreKit.ZTSegmentData.ChunkType : Swift.Equatable {}
+extension ZTCoreKit.ZTSegmentData.ChunkType : Swift.Hashable {}
+extension ZTCoreKit.ZTSegmentData.ChunkType : Swift.RawRepresentable {}
 extension ZTCoreKit.ZTActivitySummaryStatus : Swift.Equatable {}
 extension ZTCoreKit.ZTActivitySummaryStatus : Swift.Hashable {}
 extension ZTCoreKit.ZTActivitySummaryStatus : Swift.RawRepresentable {}

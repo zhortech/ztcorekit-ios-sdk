@@ -17,7 +17,7 @@
     <a title="ZTCommand Enumeration Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">ZTCoreKit 1.1.6 Docs</a></p>
+        <p><a href="../index.html">ZTCoreKit 1.1.7 Docs</a></p>
         <p class="header-right"><a href="https://github.com/zhortech/ztcorekit-ios-sdk"><img src="../img/gh.png"/>View on GitHub</a></p>
         <p class="header-right">
           <form role="search" action="../search.json">
@@ -79,6 +79,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/ZTSegmentData.html#/s:9ZTCoreKit13ZTSegmentDataC6StatusO">– Status</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ZTSegmentData.html#/s:9ZTCoreKit13ZTSegmentDataC9ChunkTypeO">– ChunkType</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/ZTService.html">ZTService</a>
@@ -334,7 +337,7 @@
 Note: Values must be sent LSB first (Little endian)</p>
 
               <div class="slightly-smaller">
-                <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/Models/ZTCommandEnum.swift#L13-L108">Show on GitHub</a>
+                <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/Models/ZTCommandEnum.swift#L13-L114">Show on GitHub</a>
               </div>
           </section>
           <section class="section task-group-section">
@@ -583,9 +586,9 @@ Note: Values must be sent LSB first (Little endian)</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:9ZTCoreKit9ZTCommandO21selectActivitySegmentyA2CmF"></a>
-                    <a name="//apple_ref/swift/Element/selectActivitySegment" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9ZTCoreKit9ZTCommandO21selectActivitySegmentyA2CmF">selectActivitySegment</a>
+                    <a name="/s:9ZTCoreKit9ZTCommandO23setChunkMinutesIntervalyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/setChunkMinutesInterval" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ZTCoreKit9ZTCommandO23setChunkMinutesIntervalyA2CmF">setChunkMinutesInterval</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -593,19 +596,51 @@ Note: Values must be sent LSB first (Little endian)</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Select segment duration for chunk</p>
+                        <p>Select duration for chunk in minutes
+Valid range [1:15]</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">selectActivitySegment</span> <span class="o">=</span> <span class="mh">0x22</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">setChunkMinutesInterval</span> <span class="o">=</span> <span class="mh">0x22</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/Models/ZTCommandEnum.swift#L31">Show on GitHub</a>
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/Models/ZTCommandEnum.swift#L32">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9ZTCoreKit9ZTCommandO23setChunkSecondsIntervalyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/setChunkSecondsInterval" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ZTCoreKit9ZTCommandO23setChunkSecondsIntervalyA2CmF">setChunkSecondsInterval</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Select duration for chunk in seconds
+Valid range [1:900]</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">setChunkSecondsInterval</span> <span class="o">=</span> <span class="mh">0x23</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/Models/ZTCommandEnum.swift#L35">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -636,7 +671,7 @@ Only possible when there is no activity in progress</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/Models/ZTCommandEnum.swift#L34">Show on GitHub</a>
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/Models/ZTCommandEnum.swift#L38">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -666,7 +701,7 @@ Only possible when there is no activity in progress</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/Models/ZTCommandEnum.swift#L36">Show on GitHub</a>
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/Models/ZTCommandEnum.swift#L40">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -698,7 +733,7 @@ Only possible when there is no activity in progress</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/Models/ZTCommandEnum.swift#L40">Show on GitHub</a>
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/Models/ZTCommandEnum.swift#L44">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -730,7 +765,7 @@ Only possible when there is no activity in progress</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/Models/ZTCommandEnum.swift#L44">Show on GitHub</a>
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/Models/ZTCommandEnum.swift#L48">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -760,7 +795,7 @@ Only possible when there is no activity in progress</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/Models/ZTCommandEnum.swift#L46">Show on GitHub</a>
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/Models/ZTCommandEnum.swift#L50">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -790,7 +825,7 @@ Only possible when there is no activity in progress</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/Models/ZTCommandEnum.swift#L48">Show on GitHub</a>
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/Models/ZTCommandEnum.swift#L52">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -820,7 +855,7 @@ Only possible when there is no activity in progress</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/Models/ZTCommandEnum.swift#L50">Show on GitHub</a>
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/Models/ZTCommandEnum.swift#L54">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -850,7 +885,7 @@ Only possible when there is no activity in progress</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/Models/ZTCommandEnum.swift#L52">Show on GitHub</a>
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/Models/ZTCommandEnum.swift#L56">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -880,7 +915,7 @@ Only possible when there is no activity in progress</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/Models/ZTCommandEnum.swift#L54">Show on GitHub</a>
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/Models/ZTCommandEnum.swift#L58">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -910,7 +945,7 @@ Only possible when there is no activity in progress</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/Models/ZTCommandEnum.swift#L56">Show on GitHub</a>
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/Models/ZTCommandEnum.swift#L60">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -940,7 +975,7 @@ Only possible when there is no activity in progress</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/Models/ZTCommandEnum.swift#L58">Show on GitHub</a>
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/Models/ZTCommandEnum.swift#L62">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -970,7 +1005,7 @@ Only possible when there is no activity in progress</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/Models/ZTCommandEnum.swift#L60">Show on GitHub</a>
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/Models/ZTCommandEnum.swift#L64">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -980,7 +1015,7 @@ Only possible when there is no activity in progress</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2021 <a class="link" href="https://zhortech.com" target="_blank" rel="external">Zhortech</a>. All rights reserved. (Last updated: 2021-08-10)</p>
+          <p>&copy; 2021 <a class="link" href="https://zhortech.com" target="_blank" rel="external">Zhortech</a>. All rights reserved. (Last updated: 2021-08-31)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.7</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
