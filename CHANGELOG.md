@@ -1,4 +1,11 @@
 # Changelog
+
+## [1.1.8](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.8) (2021-09-17)
+
+- changed `onActivityInfoUpdated` observer to send full `ZTMessageActivity`
+- changed `ZTActivity` to support automatic activity and activity events
+
+
 ## [1.1.7](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.7) (2021-08-31)
 
 - `ZTDevice` stores advertisement data in it when scanning

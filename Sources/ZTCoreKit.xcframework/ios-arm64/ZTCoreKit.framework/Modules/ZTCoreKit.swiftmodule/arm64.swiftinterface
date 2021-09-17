@@ -1085,7 +1085,7 @@ extension ZTDevice : CoreBluetooth.CBPeripheralDelegate {
   final public let onBatteryValueUpdated: ZTCoreKit.ZTSignal<()>
   final public let onDeviceInformationValueUpdated: ZTCoreKit.ZTSignal<()>
   final public let onGeneralStateUpdated: ZTCoreKit.ZTSignal<(ZTCoreKit.ZTDeviceActualState)>
-  final public let onActivityInfoUpdated: ZTCoreKit.ZTSignal<(ZTCoreKit.ZTActivityMode?)>
+  final public let onActivityInfoUpdated: ZTCoreKit.ZTSignal<(ZTCoreKit.ZTMessageActivity?)>
   final public let onSoftwareUpdated: ZTCoreKit.ZTSignal<(ZTCoreKit.ZTMessageSoftware?)>
   final public let onInactivityTimeoutUpdated: ZTCoreKit.ZTSignal<(ZTCoreKit.ZTMessageInactivityTimeout?)>
   final public let onNotifyCommonGroupUpdated: ZTCoreKit.ZTSignal<(ZTCoreKit.ZTNotifyData.CommonMessageId, [Swift.UInt8]?)>
@@ -1866,7 +1866,7 @@ public class ZTAchievement : ZTCoreKit.ZTMappable {
   public func mapping(map: ZTCoreKit.ZTMap)
   @objc deinit
 }
-open class ZTActivity : Swift.Codable, Foundation.NSCopying {
+open class ZTActivity : Swift.Codable {
   public var id: Swift.String {
     get
     set
@@ -1875,8 +1875,8 @@ open class ZTActivity : Swift.Codable, Foundation.NSCopying {
   public var appId: Swift.String?
   public var activityType: Swift.String
   public var startDate: Foundation.Date?
-  public var startTimestamp: Swift.Double?
   public var endDate: Foundation.Date?
+  public var startTimestamp: Swift.Int64?
   public var tz: Swift.String?
   public var status: Swift.String?
   public var state: ZTCoreKit.ZTDeviceActualState {
@@ -1884,10 +1884,10 @@ open class ZTActivity : Swift.Codable, Foundation.NSCopying {
     set
   }
   public var isAutomatic: Swift.Bool
+  public var forceStop: Swift.Bool
   public var firstChunkId: Swift.UInt16?
   public var lastChunkId: Swift.UInt16?
   public init()
-  @objc public func copy(with zone: ObjectiveC.NSZone? = nil) -> Any
   open func save()
   @objc deinit
   open func encode(to encoder: Swift.Encoder) throws
@@ -1927,7 +1927,7 @@ open class ZTSegmentData : ZTCoreKit.ZTNotifyDataMessage {
   public var duration: Swift.Int?
   public var status: ZTCoreKit.ZTSegmentData.Status
   public var timestampType: ZTCoreKit.ZTSegmentData.ChunkType
-  public var originalTimestamp: Swift.UInt32
+  public var originalTimestamp: Swift.Int64
   public var rawDescription: Swift.String {
     get
   }
@@ -1962,13 +1962,17 @@ open class ZTSegmentData : ZTCoreKit.ZTNotifyDataMessage {
   required public init(from decoder: Swift.Decoder) throws
   public func encode(to encoder: Swift.Encoder) throws
   public func save()
-  public func saveWithResult() -> Swift.Bool
+  public func saveWithResult(_ allowOverwrite: Swift.Bool = false) -> Swift.Bool
   public static func lastSegmentId(activityId: Swift.String) -> Swift.Int
   public static func segmentsCount(activityId: Swift.String) -> Swift.Int
   public static func loadUnsent(activityId: Swift.String) -> [ZTCoreKit.ZTSegmentData]
   public static func loadAll(activityId: Swift.String) -> [ZTCoreKit.ZTSegmentData]
+  public static func loadAll(activityId: Swift.String, lastChunkId: Swift.UInt16?) -> [ZTCoreKit.ZTSegmentData]
+  public static func loadAll(activityId: Swift.String, firstChunkId: Swift.UInt16?, lastChunkId: Swift.UInt16?) -> [ZTCoreKit.ZTSegmentData]
   public static func clear(activityId: Swift.String?)
+  public static func move(from: Swift.String?, to: Swift.String?, lastChunkId: Swift.UInt16?)
   public static func checkMissedChunks(activityId: Swift.String) -> Swift.Bool
+  public static func hasMissedChunks(activityId: Swift.String, startIndex: Swift.UInt16?, endIndex: Swift.UInt16?) -> Swift.Bool
   public static func getMaxMissedChunk(activityId: Swift.String, chunkId: Swift.UInt16) -> Swift.UInt16?
   @objc deinit
 }
@@ -2566,7 +2570,7 @@ extension Set where Element : ZTCoreKit.ZTBaseMappable {
   final public func addActivitySegments(activityId: Swift.String, duration: Swift.Int? = nil, segments: [ZTCoreKit.ZTSegmentData]?, completion: ZTCoreKit.ZTBaseResult? = nil)
   final public func deleteActivity(id: Swift.String, completion: ZTCoreKit.ZTBaseResult? = nil)
   final public func stopActivity<T>(id: Swift.String, duration: Swift.Int? = nil, data: [Swift.String]?, completion: ((T?, Swift.Error?) -> ())? = nil) where T : ZTCoreKit.ZTMappable
-  final public func stopActivity<T>(id: Swift.String, duration: Swift.Int? = nil, segments: [ZTCoreKit.ZTSegmentData]?, completion: ((T?, Swift.Error?) -> ())? = nil) where T : ZTCoreKit.ZTMappable
+  final public func stopActivity<T>(id: Swift.String, duration: Swift.Int? = nil, timestamp: Swift.Int64? = nil, segments: [ZTCoreKit.ZTSegmentData]?, completion: ((T?, Swift.Error?) -> ())? = nil) where T : ZTCoreKit.ZTMappable
   final public func getData<T>(path: Swift.String, parameters: [Swift.String : Any]? = nil, completion: ((T?, Swift.Error?) -> ())? = nil) where T : ZTCoreKit.ZTMappable
   final public func getData(path: Swift.String, parameters: [Swift.String : Any]? = nil, completion: @escaping (([Swift.String : Any]?, Foundation.Data?, Swift.Error?) -> ()))
   final public func getAppAttributes(completion: @escaping ([Swift.String : Any]?, Swift.Error?) -> Swift.Void)
