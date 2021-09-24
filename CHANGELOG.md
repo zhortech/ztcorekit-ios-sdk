@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.1.9](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.9) (2021-09-24)
+
+- updated DFU flow to use new `ZTDFU` name on peripheral (in addition to DfuTarg)
+
 ## [1.1.8](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.8) (2021-09-17)
 
 - changed `onActivityInfoUpdated` observer to send full `ZTMessageActivity`

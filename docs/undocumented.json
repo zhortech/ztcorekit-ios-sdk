@@ -590,343 +590,350 @@
     },
     {
       "file": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztcorekit/Sources/ZTCoreKit/Models/ZTDeviceInfoEnums.swift",
-      "line": 36,
-      "symbol": "ZTProjectCodeType.zt1",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztcorekit/Sources/ZTCoreKit/Models/ZTDeviceInfoEnums.swift",
-      "line": 37,
-      "symbol": "ZTProjectCodeType.zt2",
+      "line": 17,
+      "symbol": "ZTProductType.ztDfu",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztcorekit/Sources/ZTCoreKit/Models/ZTDeviceInfoEnums.swift",
       "line": 38,
-      "symbol": "ZTProjectCodeType.zt3",
+      "symbol": "ZTProjectCodeType.zt1",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztcorekit/Sources/ZTCoreKit/Models/ZTDeviceInfoEnums.swift",
       "line": 39,
+      "symbol": "ZTProjectCodeType.zt2",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztcorekit/Sources/ZTCoreKit/Models/ZTDeviceInfoEnums.swift",
+      "line": 40,
+      "symbol": "ZTProjectCodeType.zt3",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztcorekit/Sources/ZTCoreKit/Models/ZTDeviceInfoEnums.swift",
+      "line": 41,
       "symbol": "ZTProjectCodeType.zt4",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztcorekit/Sources/ZTCoreKit/Models/ZTDeviceInfoEnums.swift",
-      "line": 56,
+      "line": 58,
       "symbol": "ZTProductCodeType.WS",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztcorekit/Sources/ZTCoreKit/Models/ZTDeviceInfoEnums.swift",
-      "line": 57,
+      "line": 59,
       "symbol": "ZTProductCodeType.SP",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztcorekit/Sources/ZTCoreKit/Models/ZTDeviceInfoEnums.swift",
-      "line": 58,
+      "line": 60,
       "symbol": "ZTProductCodeType.SF",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztcorekit/Sources/ZTCoreKit/Models/ZTDeviceInfoEnums.swift",
-      "line": 59,
+      "line": 61,
       "symbol": "ZTProductCodeType.PS",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztcorekit/Sources/ZTCoreKit/Models/ZTDeviceInfoEnums.swift",
-      "line": 60,
+      "line": 62,
       "symbol": "ZTProductCodeType.SI",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztcorekit/Sources/ZTCoreKit/Models/ZTDeviceInfoEnums.swift",
-      "line": 110,
+      "line": 112,
       "symbol": "ZTManufacturerCodeType.a",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztcorekit/Sources/ZTCoreKit/Models/ZTDeviceInfoEnums.swift",
-      "line": 111,
+      "line": 113,
       "symbol": "ZTManufacturerCodeType.b",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztcorekit/Sources/ZTCoreKit/Models/ZTDeviceInfoEnums.swift",
-      "line": 112,
+      "line": 114,
       "symbol": "ZTManufacturerCodeType.c",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztcorekit/Sources/ZTCoreKit/Models/ZTDeviceInfoEnums.swift",
-      "line": 113,
+      "line": 115,
       "symbol": "ZTManufacturerCodeType.d",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztcorekit/Sources/ZTCoreKit/Models/ZTDeviceInfoEnums.swift",
-      "line": 114,
+      "line": 116,
       "symbol": "ZTManufacturerCodeType.e",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztcorekit/Sources/ZTCoreKit/Models/ZTDeviceInfoEnums.swift",
-      "line": 115,
+      "line": 117,
       "symbol": "ZTManufacturerCodeType.f",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztcorekit/Sources/ZTCoreKit/Models/ZTDeviceInfoEnums.swift",
-      "line": 116,
+      "line": 118,
       "symbol": "ZTManufacturerCodeType.z",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztcorekit/Sources/ZTCoreKit/Models/ZTDeviceInfoEnums.swift",
-      "line": 139,
+      "line": 141,
       "symbol": "ZTProductTypeCode.ix",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztcorekit/Sources/ZTCoreKit/Models/ZTDeviceInfoEnums.swift",
-      "line": 140,
+      "line": 142,
       "symbol": "ZTProductTypeCode.sx",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztcorekit/Sources/ZTCoreKit/Models/ZTDeviceInfoEnums.swift",
-      "line": 141,
+      "line": 143,
       "symbol": "ZTProductTypeCode.xx",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztcorekit/Sources/ZTCoreKit/Models/ZTDeviceInfoEnums.swift",
-      "line": 156,
+      "line": 158,
       "symbol": "ZTGenderCodeType.man",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztcorekit/Sources/ZTCoreKit/Models/ZTDeviceInfoEnums.swift",
-      "line": 157,
+      "line": 159,
       "symbol": "ZTGenderCodeType.woman",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztcorekit/Sources/ZTCoreKit/Models/ZTDeviceInfoEnums.swift",
-      "line": 161,
+      "line": 163,
       "symbol": "ZTGenderSizeCodeType.a",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztcorekit/Sources/ZTCoreKit/Models/ZTDeviceInfoEnums.swift",
-      "line": 162,
+      "line": 164,
       "symbol": "ZTGenderSizeCodeType.b",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztcorekit/Sources/ZTCoreKit/Models/ZTDeviceInfoEnums.swift",
-      "line": 163,
+      "line": 165,
       "symbol": "ZTGenderSizeCodeType.c",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztcorekit/Sources/ZTCoreKit/Models/ZTDeviceInfoEnums.swift",
-      "line": 164,
+      "line": 166,
       "symbol": "ZTGenderSizeCodeType.d",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztcorekit/Sources/ZTCoreKit/Models/ZTDeviceInfoEnums.swift",
-      "line": 165,
+      "line": 167,
       "symbol": "ZTGenderSizeCodeType.e",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztcorekit/Sources/ZTCoreKit/Models/ZTDeviceInfoEnums.swift",
-      "line": 166,
+      "line": 168,
       "symbol": "ZTGenderSizeCodeType.f",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztcorekit/Sources/ZTCoreKit/Models/ZTDeviceInfoEnums.swift",
-      "line": 167,
+      "line": 169,
       "symbol": "ZTGenderSizeCodeType.g",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztcorekit/Sources/ZTCoreKit/Models/ZTDeviceInfoEnums.swift",
-      "line": 168,
+      "line": 170,
       "symbol": "ZTGenderSizeCodeType.h",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztcorekit/Sources/ZTCoreKit/Models/ZTDeviceInfoEnums.swift",
-      "line": 169,
+      "line": 171,
       "symbol": "ZTGenderSizeCodeType.i",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztcorekit/Sources/ZTCoreKit/Models/ZTDeviceInfoEnums.swift",
-      "line": 170,
+      "line": 172,
       "symbol": "ZTGenderSizeCodeType.j",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztcorekit/Sources/ZTCoreKit/Models/ZTDeviceInfoEnums.swift",
-      "line": 172,
+      "line": 174,
       "symbol": "ZTGenderSizeCodeType.n",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztcorekit/Sources/ZTCoreKit/Models/ZTDeviceInfoEnums.swift",
-      "line": 173,
+      "line": 175,
       "symbol": "ZTGenderSizeCodeType.o",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztcorekit/Sources/ZTCoreKit/Models/ZTDeviceInfoEnums.swift",
-      "line": 174,
+      "line": 176,
       "symbol": "ZTGenderSizeCodeType.p",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztcorekit/Sources/ZTCoreKit/Models/ZTDeviceInfoEnums.swift",
-      "line": 175,
+      "line": 177,
       "symbol": "ZTGenderSizeCodeType.q",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztcorekit/Sources/ZTCoreKit/Models/ZTDeviceInfoEnums.swift",
-      "line": 176,
+      "line": 178,
       "symbol": "ZTGenderSizeCodeType.r",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztcorekit/Sources/ZTCoreKit/Models/ZTDeviceInfoEnums.swift",
-      "line": 177,
+      "line": 179,
       "symbol": "ZTGenderSizeCodeType.s",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztcorekit/Sources/ZTCoreKit/Models/ZTDeviceInfoEnums.swift",
-      "line": 178,
+      "line": 180,
       "symbol": "ZTGenderSizeCodeType.t",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztcorekit/Sources/ZTCoreKit/Models/ZTDeviceInfoEnums.swift",
-      "line": 179,
+      "line": 181,
       "symbol": "ZTGenderSizeCodeType.u",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztcorekit/Sources/ZTCoreKit/Models/ZTDeviceInfoEnums.swift",
-      "line": 234,
+      "line": 236,
       "symbol": "ZTUnitSizeCodeType.a",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztcorekit/Sources/ZTCoreKit/Models/ZTDeviceInfoEnums.swift",
-      "line": 235,
+      "line": 237,
       "symbol": "ZTUnitSizeCodeType.b",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztcorekit/Sources/ZTCoreKit/Models/ZTDeviceInfoEnums.swift",
-      "line": 236,
+      "line": 238,
       "symbol": "ZTUnitSizeCodeType.c",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztcorekit/Sources/ZTCoreKit/Models/ZTDeviceInfoEnums.swift",
-      "line": 237,
+      "line": 239,
       "symbol": "ZTUnitSizeCodeType.d",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztcorekit/Sources/ZTCoreKit/Models/ZTDeviceInfoEnums.swift",
-      "line": 238,
+      "line": 240,
       "symbol": "ZTUnitSizeCodeType.e",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztcorekit/Sources/ZTCoreKit/Models/ZTDeviceInfoEnums.swift",
-      "line": 239,
+      "line": 241,
       "symbol": "ZTUnitSizeCodeType.f",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztcorekit/Sources/ZTCoreKit/Models/ZTDeviceInfoEnums.swift",
-      "line": 241,
+      "line": 243,
       "symbol": "ZTUnitSizeCodeType.n",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztcorekit/Sources/ZTCoreKit/Models/ZTDeviceInfoEnums.swift",
-      "line": 242,
+      "line": 244,
       "symbol": "ZTUnitSizeCodeType.o",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztcorekit/Sources/ZTCoreKit/Models/ZTDeviceInfoEnums.swift",
-      "line": 243,
+      "line": 245,
       "symbol": "ZTUnitSizeCodeType.p",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztcorekit/Sources/ZTCoreKit/Models/ZTDeviceInfoEnums.swift",
-      "line": 244,
+      "line": 246,
       "symbol": "ZTUnitSizeCodeType.q",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
