@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = 'ZTCoreKit'
-  s.version = '1.1.9'
+  s.version = '1.1.10'
   s.license = { :type => "MIT", :file => "LICENSE" }
   s.summary = 'Official Zhortech ZTCoreKit SDK for iOS to access core features.'
   s.homepage = 'https://zhortech.com/'

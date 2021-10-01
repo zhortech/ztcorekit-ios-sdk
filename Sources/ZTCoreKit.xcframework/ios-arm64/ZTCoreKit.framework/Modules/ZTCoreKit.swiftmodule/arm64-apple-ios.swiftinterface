@@ -1034,6 +1034,7 @@ extension ZTDevice : CoreBluetooth.CBPeripheralDelegate {
   public var isActivityRunning: Swift.Bool {
     get
   }
+  public var isDeviceReady: Swift.Bool
   public var info: ZTCoreKit.ZTDeviceInfo? {
     get
     set
@@ -1078,12 +1079,12 @@ extension ZTDevice : CoreBluetooth.CBPeripheralDelegate {
   final public let onServiceFeaturesIdentified: ZTCoreKit.ZTSignal<(ZTCoreKit.ZTDevice, ZTCoreKit.ZTService)>
   final public let onCharacteristicDiscovered: ZTCoreKit.ZTSignal<(ZTCoreKit.ZTCharacteristic?)>
   final public let onAllCharacteristicsDiscovered: ZTCoreKit.ZTSignal<()>
+  final public let onAllCharacteristicsRead: ZTCoreKit.ZTSignal<()>
   final public let onCharacteristicValueUpdated: ZTCoreKit.ZTSignal<(ZTCoreKit.ZTCharacteristic?)>
   final public let onCharacteristicValueWritten: ZTCoreKit.ZTSignal<(ZTCoreKit.ZTCharacteristic?)>
   final public let onCommandCharacteristicDiscovered: ZTCoreKit.ZTSignal<(ZTCoreKit.ZTCharacteristic?)>
   final public let onNotifyValueUpdated: ZTCoreKit.ZTSignal<(ZTCoreKit.ZTNotifyData.GroupID, Swift.UInt8, [Swift.UInt8]?)>
   final public let onBatteryValueUpdated: ZTCoreKit.ZTSignal<()>
-  final public let onDeviceInformationValueUpdated: ZTCoreKit.ZTSignal<()>
   final public let onGeneralStateUpdated: ZTCoreKit.ZTSignal<(ZTCoreKit.ZTDeviceActualState)>
   final public let onActivityInfoUpdated: ZTCoreKit.ZTSignal<(ZTCoreKit.ZTMessageActivity?)>
   final public let onSoftwareUpdated: ZTCoreKit.ZTSignal<(ZTCoreKit.ZTMessageSoftware?)>
@@ -1413,6 +1414,7 @@ extension ZTError.Enums.ActivityError : Foundation.LocalizedError {
 }
 extension ZTError.Enums {
   public enum NetworkError {
+    case userLinkError
     case inaccessible
     case urlError(Foundation.URLError)
     case generalError(Swift.Error)
@@ -2584,7 +2586,7 @@ extension Set where Element : ZTCoreKit.ZTBaseMappable {
   final public func updateActivityAttributes(activityId: Swift.String, attributes: [Swift.String : Any], completion: @escaping ZTCoreKit.ZTBaseResult)
   final public func updatePushNotificationToken(_ token: Swift.String, completion: ZTCoreKit.ZTBaseResult? = nil)
   final public func deleteUser(completion: @escaping ZTCoreKit.ZTBaseResult)
-  final public func existUser(attribute: Swift.String, value: Swift.String, completion: @escaping (Swift.Bool) -> Swift.Void)
+  final public func existUser(attribute: Swift.String, value: Swift.String, completion: @escaping (Swift.Error?, Swift.Bool?) -> Swift.Void)
   final public func suborgExist(code: Swift.String, completion: @escaping (Swift.Bool) -> Swift.Void)
   final public func trackEvent(name: Swift.String, data: Swift.String? = nil, attributes: [Swift.String : Any]? = nil)
   final public func log(severity: ZTCoreKit.ZTLoggerSeverity = ZTLoggerSeverity.debug, component: ZTCoreKit.ZTLoggerComponent = ZTLoggerComponent.sdk, message: Swift.String)
@@ -2729,6 +2731,10 @@ public protocol ZTDfuDelegate : AnyObject {
   final public var environment: ZTCoreKit.ZTEnvironment
   final public var autoConnect: Swift.Bool
   final public var enableEventLogging: Swift.Bool
+  final public var chunkDuration: Swift.Int? {
+    get
+    set
+  }
   final public func clear()
   @objc deinit
 }

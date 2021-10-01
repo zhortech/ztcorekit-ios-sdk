@@ -527,7 +527,7 @@
     },
     {
       "file": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztcorekit/Sources/ZTCoreKit/Models/ZTDevice.swift",
-      "line": 489,
+      "line": 490,
       "symbol": "ZTDevice.isLowBattery",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
@@ -1031,14 +1031,7 @@
     },
     {
       "file": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztcorekit/Sources/ZTCoreKit/Models/ZTError.swift",
-      "line": 221,
-      "symbol": "ZTError.Enums.NetworkError",
-      "symbol_kind": "source.lang.swift.decl.enum",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztcorekit/Sources/ZTCoreKit/Models/ZTError.swift",
-      "line": 281,
+      "line": 285,
       "symbol": "ZTError.Enums.DecodableError",
       "symbol_kind": "source.lang.swift.decl.enum",
       "warning": "undocumented"
@@ -1815,7 +1808,7 @@
     },
     {
       "file": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztcorekit/Sources/ZTCoreKit/ZTApi.swift",
-      "line": 647,
+      "line": 657,
       "symbol": "ZTApi.complianceTestRetry(timeout:attempts:statusCode:completion:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"

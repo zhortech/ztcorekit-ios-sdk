@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.10](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.10) (2021-10-01)
+
+- fixed `userExist` to return error if ZCloud returns error. App shouldn't go further if error is returned
+- added `chunkDuration` property into ZTSettings. It is used to set custom chunk duration in seconds for activity
+- added `isReady` property to `ZTDevice` which is updated when all characteristics are read during connection
+- added `onAllCharacteristicsRead` observer for `ZTDevice` to notify when all characteristics were read so `ZTDevice` can accept command and has characteristics values from `DeviceInformation` service
+
 ## [1.1.9](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.9) (2021-09-24)
 
 - updated DFU flow to use new `ZTDFU` name on peripheral (in addition to DfuTarg)
