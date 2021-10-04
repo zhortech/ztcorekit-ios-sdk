@@ -17,7 +17,7 @@
     <a title="ZTApi Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">ZTCoreKit 1.1.10 Docs</a></p>
+        <p><a href="../index.html">ZTCoreKit 1.1.11 Docs</a></p>
         <p class="header-right"><a href="https://github.com/zhortech/ztcorekit-ios-sdk"><img src="../img/gh.png"/>View on GitHub</a></p>
         <p class="header-right">
           <form role="search" action="../search.json">
@@ -336,7 +336,7 @@
             <p>This object provides an API for application user</p>
 
               <div class="slightly-smaller">
-                <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L12-L662">Show on GitHub</a>
+                <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L12-L674">Show on GitHub</a>
               </div>
           </section>
           <section class="section task-group-section">
@@ -516,7 +516,7 @@
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L50-L54">Show on GitHub</a>
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L50-L58">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -555,7 +555,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L60-L64">Show on GitHub</a>
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L64-L68">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -603,7 +603,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L74-L83">Show on GitHub</a>
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L78-L87">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -611,9 +611,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:9ZTCoreKit5ZTApiC13getActivities4code6offset5limit6fields7include10completionySSSg_S2iSaySSGALSgySayxGSg_s5Error_pSgtcSgtAA10ZTMappableRzlF"></a>
-                    <a name="//apple_ref/swift/Method/getActivities(code:offset:limit:fields:include:completion:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9ZTCoreKit5ZTApiC13getActivities4code6offset5limit6fields7include10completionySSSg_S2iSaySSGALSgySayxGSg_s5Error_pSgtcSgtAA10ZTMappableRzlF">getActivities(code:<wbr>offset:<wbr>limit:<wbr>fields:<wbr>include:<wbr>completion:<wbr>)</a>
+                    <a name="/s:9ZTCoreKit5ZTApiC13getActivities4code6offset5limit6fields7include12whereOptions8duration5start3end10completionySSSg_S2iSaySSGAPSgSDySSypGSgAS10Foundation4DateVSgAWySayxGSg_s5Error_pSgtcSgtAA10ZTMappableRzlF"></a>
+                    <a name="//apple_ref/swift/Method/getActivities(code:offset:limit:fields:include:whereOptions:duration:start:end:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ZTCoreKit5ZTApiC13getActivities4code6offset5limit6fields7include12whereOptions8duration5start3end10completionySSSg_S2iSaySSGAPSgSDySSypGSgAS10Foundation4DateVSgAWySayxGSg_s5Error_pSgtcSgtAA10ZTMappableRzlF">getActivities(code:<wbr>offset:<wbr>limit:<wbr>fields:<wbr>include:<wbr>whereOptions:<wbr>duration:<wbr>start:<wbr>end:<wbr>completion:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -646,12 +646,16 @@
                                        <span class="nv">limit</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span>
                                        <span class="nv">fields</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]</span> <span class="o">=</span> <span class="p">[],</span>
                                        <span class="nv">include</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+                                       <span class="nv">whereOptions</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span> <span class="kt">Any</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+                                       <span class="nv">duration</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span> <span class="kt">Any</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+                                       <span class="nv">start</span><span class="p">:</span> <span class="kt">Date</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+                                       <span class="nv">end</span><span class="p">:</span> <span class="kt">Date</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
                                        <span class="nv">completion</span><span class="p">:</span>  <span class="p">(([</span><span class="kt">T</span><span class="p">]?,</span> <span class="kt">Error</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="p">())?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L93-L102">Show on GitHub</a>
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L97-L110">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -659,9 +663,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:9ZTCoreKit5ZTApiC11getActivity2id6fields7include10completionySS_SaySSGAISgyxSg_s5Error_pSgtcSgtAA10ZTMappableRzlF"></a>
-                    <a name="//apple_ref/swift/Method/getActivity(id:fields:include:completion:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9ZTCoreKit5ZTApiC11getActivity2id6fields7include10completionySS_SaySSGAISgyxSg_s5Error_pSgtcSgtAA10ZTMappableRzlF">getActivity(id:<wbr>fields:<wbr>include:<wbr>completion:<wbr>)</a>
+                    <a name="/s:9ZTCoreKit5ZTApiC11getActivity2id6fields7include12whereOptions8duration5start3end10completionySS_SaySSGAMSgSDySSypGSgAP10Foundation4DateVSgATyxSg_s5Error_pSgtcSgtAA10ZTMappableRzlF"></a>
+                    <a name="//apple_ref/swift/Method/getActivity(id:fields:include:whereOptions:duration:start:end:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ZTCoreKit5ZTApiC11getActivity2id6fields7include12whereOptions8duration5start3end10completionySS_SaySSGAMSgSDySSypGSgAP10Foundation4DateVSgATyxSg_s5Error_pSgtcSgtAA10ZTMappableRzlF">getActivity(id:<wbr>fields:<wbr>include:<wbr>whereOptions:<wbr>duration:<wbr>start:<wbr>end:<wbr>completion:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -688,12 +692,16 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">getActivity</span><span class="o">&lt;</span><span class="kt">T</span><span class="p">:</span> <span class="kt">ZTMappable</span><span class="o">&gt;</span><span class="p">(</span><span class="nv">id</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
                                      <span class="nv">fields</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]</span> <span class="o">=</span> <span class="p">[],</span>
                                      <span class="nv">include</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+                                     <span class="nv">whereOptions</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span> <span class="kt">Any</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+                                     <span class="nv">duration</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span> <span class="kt">Any</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+                                     <span class="nv">start</span><span class="p">:</span> <span class="kt">Date</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+                                     <span class="nv">end</span><span class="p">:</span> <span class="kt">Date</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
                                      <span class="nv">completion</span><span class="p">:</span>  <span class="p">((</span><span class="kt">T</span><span class="p">?,</span> <span class="kt">Error</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="p">())?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L108-L115">Show on GitHub</a>
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L116-L127">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -737,7 +745,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L122-L130">Show on GitHub</a>
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L134-L142">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -780,7 +788,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L137-L148">Show on GitHub</a>
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L149-L160">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -819,7 +827,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L154-L158">Show on GitHub</a>
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L166-L170">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -863,7 +871,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L166-L180">Show on GitHub</a>
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L178-L192">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -908,7 +916,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L188-L208">Show on GitHub</a>
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L200-L220">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -947,7 +955,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L215-L219">Show on GitHub</a>
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L227-L231">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -986,7 +994,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L226-L230">Show on GitHub</a>
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L238-L242">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1024,7 +1032,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L235-L239">Show on GitHub</a>
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L247-L251">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1074,7 +1082,7 @@ Check for new firmware</p>
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L244-L264">Show on GitHub</a>
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L256-L276">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1113,7 +1121,7 @@ Check for new firmware</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L271-L275">Show on GitHub</a>
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L283-L287">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1152,7 +1160,7 @@ Check for new firmware</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L282-L286">Show on GitHub</a>
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L294-L298">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1193,7 +1201,7 @@ Check for new firmware</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L294-L296">Show on GitHub</a>
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L306-L308">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1233,7 +1241,7 @@ Check for new firmware</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L303-L322">Show on GitHub</a>
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L315-L334">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1273,7 +1281,7 @@ Check for new firmware</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L349-L353">Show on GitHub</a>
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L361-L365">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1312,7 +1320,7 @@ Check for new firmware</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L359-L363">Show on GitHub</a>
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L371-L375">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1350,7 +1358,7 @@ Check for new firmware</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L515-L519">Show on GitHub</a>
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L527-L531">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1390,7 +1398,7 @@ Check for new firmware</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L526-L530">Show on GitHub</a>
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L538-L542">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1429,7 +1437,7 @@ Check for new firmware</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L536-L540">Show on GitHub</a>
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L548-L552">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1469,7 +1477,7 @@ Check for new firmware</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L547-L549">Show on GitHub</a>
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L559-L561">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1509,7 +1517,7 @@ Check for new firmware</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L556-L561">Show on GitHub</a>
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L568-L573">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1550,7 +1558,7 @@ Check for new firmware</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L569-L573">Show on GitHub</a>
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L581-L585">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1590,7 +1598,7 @@ Check for new firmware</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L580-L584">Show on GitHub</a>
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L592-L596">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1629,7 +1637,7 @@ Check for new firmware</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L590-L594">Show on GitHub</a>
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L602-L606">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1668,7 +1676,7 @@ Check for new firmware</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L600-L604">Show on GitHub</a>
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L612-L616">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1708,7 +1716,7 @@ Check for new firmware</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L611-L615">Show on GitHub</a>
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L623-L627">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1748,7 +1756,7 @@ Check for new firmware</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L622-L626">Show on GitHub</a>
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L634-L638">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1787,7 +1795,7 @@ Check for new firmware</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L632-L636">Show on GitHub</a>
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L644-L648">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1826,7 +1834,7 @@ Check for new firmware</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L642-L646">Show on GitHub</a>
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L654-L658">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1864,7 +1872,7 @@ Check for new firmware</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L651-L655">Show on GitHub</a>
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L663-L667">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1874,7 +1882,7 @@ Check for new firmware</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2021 <a class="link" href="https://zhortech.com" target="_blank" rel="external">Zhortech</a>. All rights reserved. (Last updated: 2021-10-01)</p>
+          <p>&copy; 2021 <a class="link" href="https://zhortech.com" target="_blank" rel="external">Zhortech</a>. All rights reserved. (Last updated: 2021-10-04)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.7</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

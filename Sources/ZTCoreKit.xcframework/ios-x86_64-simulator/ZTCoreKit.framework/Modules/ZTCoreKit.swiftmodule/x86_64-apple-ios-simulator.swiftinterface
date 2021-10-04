@@ -2567,8 +2567,8 @@ extension Set where Element : ZTCoreKit.ZTBaseMappable {
   final public func getUserShoes(completion: @escaping (ZTCoreKit.ZTResultArray<ZTCoreKit.ZTUserShoe>))
   final public func uploadProfileImage(_ image: Foundation.Data, completion: (ZTCoreKit.ZTBaseResult)? = nil)
   final public func getActivities<T>(code: Swift.String?, start: Foundation.Date, end: Foundation.Date, fields: [Swift.String] = [], include: [Swift.String]? = nil, completion: (([T]?, Swift.Error?) -> ())? = nil) where T : ZTCoreKit.ZTMappable
-  final public func getActivities<T>(code: Swift.String?, offset: Swift.Int, limit: Swift.Int, fields: [Swift.String] = [], include: [Swift.String]? = nil, completion: (([T]?, Swift.Error?) -> ())? = nil) where T : ZTCoreKit.ZTMappable
-  final public func getActivity<T>(id: Swift.String, fields: [Swift.String] = [], include: [Swift.String]? = nil, completion: ((T?, Swift.Error?) -> ())? = nil) where T : ZTCoreKit.ZTMappable
+  final public func getActivities<T>(code: Swift.String?, offset: Swift.Int, limit: Swift.Int, fields: [Swift.String] = [], include: [Swift.String]? = nil, whereOptions: [Swift.String : Any]? = nil, duration: [Swift.String : Any]? = nil, start: Foundation.Date? = nil, end: Foundation.Date? = nil, completion: (([T]?, Swift.Error?) -> ())? = nil) where T : ZTCoreKit.ZTMappable
+  final public func getActivity<T>(id: Swift.String, fields: [Swift.String] = [], include: [Swift.String]? = nil, whereOptions: [Swift.String : Any]? = nil, duration: [Swift.String : Any]? = nil, start: Foundation.Date? = nil, end: Foundation.Date? = nil, completion: ((T?, Swift.Error?) -> ())? = nil) where T : ZTCoreKit.ZTMappable
   final public func startActivity(id: Swift.String, code: Swift.String, startTime: Swift.Int64 = Date().timestamp, attributes: [Swift.String : Any]? = nil, completion: ((Swift.String?, Swift.Error?) -> ())?)
   final public func addActivitySegments(activityId: Swift.String, duration: Swift.Int? = nil, segments: [ZTCoreKit.ZTSegmentData]?, completion: ZTCoreKit.ZTBaseResult? = nil)
   final public func deleteActivity(id: Swift.String, completion: ZTCoreKit.ZTBaseResult? = nil)

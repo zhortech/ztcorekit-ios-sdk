@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.1.11](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.11) (2021-10-04)
+
+- added additional parameters into `ZTApi` `getActivities` and `getActivity` methods 
+
 ## [1.1.10](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.10) (2021-10-01)
 
 - fixed `userExist` to return error if ZCloud returns error. App shouldn't go further if error is returned
