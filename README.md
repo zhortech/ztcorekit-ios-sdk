@@ -13,6 +13,7 @@ The ZTCoreKit for iOS provides a library and documentation for developers to bui
 [How to use it](#how-to-use-it)
 
 * [Setup](#setup)
+* [User](#user)
 * [Scan](#scan)
 * [Connect](#connect)
 * [Listen](#listen)
@@ -196,14 +197,26 @@ When we release a new version of the SDK, you can pick up the changes as describ
                         appId: 'YOUR_APPLICATION_ID')
     ```
 
-3. User identification.
-Application has to identify user before using core feature. Usually it is done after signup or signin so unique userId can be passed to backend together with user attributes (like name, email or other attributes)
-`ZTApi.shared.linkUser(userId: String, attributes: [String: Any]])`
+3. Associated application's user with portal user or create new user in portal.
+*It is important point*.
+
+```swift
+ZTApi.shared.linkUser(userId: applicationUser.id, attributes: applicationUser.asDictionary()])
+```
+
+**Note**: Most of the service client classes have a singleton method to get a default instance. The naming convention is `.shared` (e.g. `ZTCore.shared` in the above code snippet). This singleton method creates a service client with `ZTCore`, which you set up in step 2 and maintains a strong reference to the client.
+
+### User
+
+ZTCoreSDK creates and stores shoes data for device under a unique id called the `appUserId`. 
+Application has to identify user before using core features.  
+Usually it is done after signup or signin so unique user id can be passed to backend together with user attributes (like name, email or other attributes).  
+
+```swift
+ZTApi.shared.linkUser(userId: String, attributes: [String: Any]])
+```
 
 It will create user object in portal for new user or associate user with current session to allows viewing activities in future.
-        
-**Note**: Most of the service client classes have a singleton method to get a default instance. The naming convention is `.shared` (e.g. `ZTCore.shared` in the above code snippet). This singleton method creates a service client with `ZTSettings`, which you set up in step 2, and maintains a strong reference to the client.
-
 
 ### Scan
 You can scan for certain product type `ZTProductType`. 
