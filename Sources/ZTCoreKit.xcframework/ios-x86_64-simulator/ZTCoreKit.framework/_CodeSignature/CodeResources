@@ -6,35 +6,35 @@
 	<dict>
 		<key>Headers/ZTCoreKit-Swift.h</key>
 		<data>
-		ZhCUshxrwieKnRGDYt9uA3wb1Ng=
+		aiPciBWu2MmakQn/5Sl9IbsjIIg=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		g1TErVgNTAt8bWDyrBe1gi+07Ok=
+		n+r7Su7ojVO9yaweqBIYo9VrmNA=
 		</data>
 		<key>Modules/ZTCoreKit.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		GUP4s/LkI5VdKWvmtZJGKVbtlfc=
+		DEIYdV+ihiuuc2Wp2jI8HLfQXno=
 		</data>
 		<key>Modules/ZTCoreKit.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		L6cNJ3SLUcwWkV9ejPe3kH6dkTo=
+		J4CE06rjnxJZPFPYqXPu1A9jFVU=
 		</data>
 		<key>Modules/ZTCoreKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		bMi169B+7MKlzVC+VZ6YnWPLD/Y=
+		qKcrKOrXttZCtjQBvBbhCVhqE7M=
 		</data>
 		<key>Modules/ZTCoreKit.swiftmodule/x86_64.swiftdoc</key>
 		<data>
-		GUP4s/LkI5VdKWvmtZJGKVbtlfc=
+		DEIYdV+ihiuuc2Wp2jI8HLfQXno=
 		</data>
 		<key>Modules/ZTCoreKit.swiftmodule/x86_64.swiftinterface</key>
 		<data>
-		L6cNJ3SLUcwWkV9ejPe3kH6dkTo=
+		J4CE06rjnxJZPFPYqXPu1A9jFVU=
 		</data>
 		<key>Modules/ZTCoreKit.swiftmodule/x86_64.swiftmodule</key>
 		<data>
-		bMi169B+7MKlzVC+VZ6YnWPLD/Y=
+		qKcrKOrXttZCtjQBvBbhCVhqE7M=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -43,49 +43,49 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			7CTAEezXwsj9xbiObOV6sU5nXQ9GMNk6cGx1DFjRi/M=
+			k+WL6DxiQplrC/8BAZ0EYju8V20LvVzvZpTEUySWQTo=
 			</data>
 		</dict>
 		<key>Modules/ZTCoreKit.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			/lzDv0yLRq6Cof46sU6gvHHvtVeNVj7skIa96ScD+rw=
+			nauF6xEgDmwCJCfzr5ku163DuFs7n0cXJQI49Mb5Cik=
 			</data>
 		</dict>
 		<key>Modules/ZTCoreKit.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			AesQP1jxUd5/Y9pA/xYvlaL6oIXJUQ9xqbE9nWe27pU=
+			gm2XkiWrS2HqQ8qRVqJYVyhA8+ii5bEqBkGLhpoBtPk=
 			</data>
 		</dict>
 		<key>Modules/ZTCoreKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			xKHY9zgzdpRgycAiRijCVrGCvI1JzHuK0vbwq9POBjw=
+			gvZMMkf6JZW3193blvbkCdCAsB7A/3Nst0iNToBmN5M=
 			</data>
 		</dict>
 		<key>Modules/ZTCoreKit.swiftmodule/x86_64.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			/lzDv0yLRq6Cof46sU6gvHHvtVeNVj7skIa96ScD+rw=
+			nauF6xEgDmwCJCfzr5ku163DuFs7n0cXJQI49Mb5Cik=
 			</data>
 		</dict>
 		<key>Modules/ZTCoreKit.swiftmodule/x86_64.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			AesQP1jxUd5/Y9pA/xYvlaL6oIXJUQ9xqbE9nWe27pU=
+			gm2XkiWrS2HqQ8qRVqJYVyhA8+ii5bEqBkGLhpoBtPk=
 			</data>
 		</dict>
 		<key>Modules/ZTCoreKit.swiftmodule/x86_64.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			xKHY9zgzdpRgycAiRijCVrGCvI1JzHuK0vbwq9POBjw=
+			gvZMMkf6JZW3193blvbkCdCAsB7A/3Nst0iNToBmN5M=
 			</data>
 		</dict>
 	</dict>
