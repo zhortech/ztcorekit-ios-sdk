@@ -1873,7 +1873,7 @@ open class ZTActivity : Swift.Codable {
   public var activityType: Swift.String
   public var startDate: Foundation.Date?
   public var endDate: Foundation.Date?
-  public var startTimestamp: Swift.Int64?
+  public var startTimestamp: Swift.Int?
   public var tz: Swift.String?
   public var status: Swift.String?
   public var state: ZTCoreKit.ZTDeviceActualState {
@@ -1920,11 +1920,11 @@ open class ZTSegmentData : ZTCoreKit.ZTNotifyDataMessage {
   public var rawData: Foundation.Data?
   public var id: Swift.UInt16
   public var activityId: Swift.String?
-  public var timestamp: Swift.Int64?
+  public var timestamp: Swift.Int?
   public var duration: Swift.Int?
   public var status: ZTCoreKit.ZTSegmentData.Status
   public var timestampType: ZTCoreKit.ZTSegmentData.ChunkType
-  public var originalTimestamp: Swift.Int64
+  public var originalTimestamp: Swift.Int
   public var rawDescription: Swift.String {
     get
   }

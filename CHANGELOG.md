@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.1.13](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.13) (2021-10-21)
+
+- refactoring for automatic activity
+
 ## [1.1.12](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.12) (2021-10-05)
 
 - support for XCode 13, Swift 5.5 and iOS 15
