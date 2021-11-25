@@ -1,7 +1,8 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.5 (swiftlang-1300.0.31.1 clang-1300.0.29.1)
+// swift-compiler-version: Apple Swift version 5.5.1 (swiftlang-1300.0.31.4 clang-1300.0.29.6)
 // swift-module-flags: -target x86_64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name ZTCoreKit
 import Combine
+import CommonCrypto
 import Compression
 import CoreBluetooth
 import CoreFoundation
@@ -9,6 +10,7 @@ import CoreTelephony
 import Dispatch
 import Foundation
 import MobileCoreServices
+import Network
 import ObjectiveC
 import Security
 import Swift
@@ -17,6 +19,7 @@ import UIKit
 import _Concurrency
 import os.log
 import os
+import zlib
 @_hasMissingDesignatedInitializers @objc open class DFUFirmwareSize : ObjectiveC.NSObject {
   @objc open var softdevice: Swift.UInt32 {
     get
@@ -235,6 +238,9 @@ public enum ZTEnvironment {
   case dev
   case staging
   case production
+  case zcdev
+  case zcstaging
+  case zcproduction
   public static func == (a: ZTCoreKit.ZTEnvironment, b: ZTCoreKit.ZTEnvironment) -> Swift.Bool
   public func hash(into hasher: inout Swift.Hasher)
   public var hashValue: Swift.Int {
@@ -1174,6 +1180,7 @@ public enum ZTProductType : Swift.String {
   case podoSmart
   case dfu
   case ztDfu
+  case baliston
   public var activityType: Swift.String {
     get
   }
@@ -1200,6 +1207,7 @@ public enum ZTProductCodeType : Swift.String {
   case SF
   case PS
   case SI
+  case BA
   public var activityType: Swift.String {
     get
   }
@@ -1738,6 +1746,10 @@ public enum ZTActivityMode : Swift.UInt8 {
   case walking
   case running
   case cycling
+  case mobility
+  public var name: Swift.String {
+    get
+  }
   public init?(rawValue: Swift.UInt8)
   public typealias RawValue = Swift.UInt8
   public var rawValue: Swift.UInt8 {
@@ -1863,6 +1875,9 @@ public class ZTAchievement : ZTCoreKit.ZTMappable {
   public func mapping(map: ZTCoreKit.ZTMap)
   @objc deinit
 }
+@_hasMissingDesignatedInitializers open class ZTWebSocket {
+  @objc deinit
+}
 open class ZTActivity : Swift.Codable {
   public var id: Swift.String {
     get
@@ -1873,7 +1888,7 @@ open class ZTActivity : Swift.Codable {
   public var activityType: Swift.String
   public var startDate: Foundation.Date?
   public var endDate: Foundation.Date?
-  public var startTimestamp: Swift.Int?
+  public var startTimestamp: Swift.Int64?
   public var tz: Swift.String?
   public var status: Swift.String?
   public var state: ZTCoreKit.ZTDeviceActualState {
@@ -1920,11 +1935,13 @@ open class ZTSegmentData : ZTCoreKit.ZTNotifyDataMessage {
   public var rawData: Foundation.Data?
   public var id: Swift.UInt16
   public var activityId: Swift.String?
-  public var timestamp: Swift.Int?
+  public var activityType: ZTCoreKit.ZTActivityMode?
+  public var timestamp: Swift.Int64?
   public var duration: Swift.Int?
   public var status: ZTCoreKit.ZTSegmentData.Status
   public var timestampType: ZTCoreKit.ZTSegmentData.ChunkType
-  public var originalTimestamp: Swift.Int
+  public var packetType: ZTCoreKit.ZTSegmentData.PacketType
+  public var originalTimestamp: Swift.Int64
   public var rawDescription: Swift.String {
     get
   }
@@ -1945,6 +1962,29 @@ open class ZTSegmentData : ZTCoreKit.ZTNotifyDataMessage {
     case stop
     case pause
     case resume
+    case reboot
+    public var description: Swift.String {
+      get
+    }
+    public var name: Swift.String {
+      get
+    }
+    public init?(rawValue: Swift.UInt8)
+    public typealias RawValue = Swift.UInt8
+    public var rawValue: Swift.UInt8 {
+      get
+    }
+  }
+  public enum PacketType : Swift.UInt8, Swift.Decodable {
+    case unknown
+    case quantification
+    case walkAnalysis
+    case runAnalysis
+    case stairs
+    case cycling
+    case jump
+    case staticActivity
+    case debug
     public var description: Swift.String {
       get
     }
@@ -2557,6 +2597,8 @@ extension Swift.Set where Element : ZTCoreKit.ZTBaseMappable {
   public static let shared: ZTCoreKit.ZTApi
   final public let onSavedRequestSent: ZTCoreKit.ZTSignal<(Swift.String?)>
   final public let onActivityStopRequestSent: ZTCoreKit.ZTSignal<(Swift.Error?)>
+  final public let onSocketDataReceived: ZTCoreKit.ZTSignal<(Foundation.Data?)>
+  final public let onSocketTextReceived: ZTCoreKit.ZTSignal<(Swift.String?)>
   final public var appAttributes: [Swift.String : Any]? {
     get
   }
@@ -2568,6 +2610,8 @@ extension Swift.Set where Element : ZTCoreKit.ZTBaseMappable {
   final public func getActivity<T>(id: Swift.String, fields: [Swift.String] = [], include: [Swift.String]? = nil, whereOptions: [Swift.String : Any]? = nil, duration: [Swift.String : Any]? = nil, start: Foundation.Date? = nil, end: Foundation.Date? = nil, completion: ((T?, Swift.Error?) -> ())? = nil) where T : ZTCoreKit.ZTMappable
   final public func startActivity(id: Swift.String, code: Swift.String, startTime: Swift.Int64 = Date().timestamp, attributes: [Swift.String : Any]? = nil, completion: ((Swift.String?, Swift.Error?) -> ())?)
   final public func addActivitySegments(activityId: Swift.String, duration: Swift.Int? = nil, segments: [ZTCoreKit.ZTSegmentData]?, completion: ZTCoreKit.ZTBaseResult? = nil)
+  final public func addChunk(code: Swift.String, chunk: ZTCoreKit.ZTSegmentData, attributes: [Swift.String : Any]? = nil, completion: ZTCoreKit.ZTBaseResult? = nil)
+  final public func addActivityChunks(code: Swift.String, chunks: [ZTCoreKit.ZTSegmentData], attributes: [Swift.String : Any]? = nil, completion: ZTCoreKit.ZTBaseResult? = nil)
   final public func deleteActivity(id: Swift.String, completion: ZTCoreKit.ZTBaseResult? = nil)
   final public func stopActivity<T>(id: Swift.String, duration: Swift.Int? = nil, data: [Swift.String]?, completion: ((T?, Swift.Error?) -> ())? = nil) where T : ZTCoreKit.ZTMappable
   final public func stopActivity<T>(id: Swift.String, duration: Swift.Int? = nil, timestamp: Swift.Int64? = nil, segments: [ZTCoreKit.ZTSegmentData]?, completion: ((T?, Swift.Error?) -> ())? = nil) where T : ZTCoreKit.ZTMappable
@@ -2577,15 +2621,13 @@ extension Swift.Set where Element : ZTCoreKit.ZTBaseMappable {
   final public func checkFirmwareUpdate(completion: @escaping ((_ updatable: Swift.Bool, _ error: Swift.Error?) -> ()))
   final public func postData(path: Swift.String, parameters: [Swift.String : Any], completion: @escaping (ZTCoreKit.ZTBaseResult))
   final public func postData<T>(path: Swift.String, parameters: [Swift.String : Any]? = nil, completion: @escaping (ZTCoreKit.ZTResultObject<T>)) where T : ZTCoreKit.ZTMappable
-  @available(*, deprecated, renamed: "addActivityData", message: "The parameter type for 'data' have changed to Any")
-  final public func addActivityData(activityId: Swift.String, timestamp: Foundation.TimeInterval, data: [Swift.String : Any], completion: @escaping (ZTCoreKit.ZTBaseResult))
   final public func addActivityData(activityId: Swift.String, timestamp: Foundation.TimeInterval, data: [Any], completion: @escaping (ZTCoreKit.ZTBaseResult))
   final public func updateActivityAttributes(activityId: Swift.String, attributes: [Swift.String : Any], completion: @escaping ZTCoreKit.ZTBaseResult)
   final public func updatePushNotificationToken(_ token: Swift.String, completion: ZTCoreKit.ZTBaseResult? = nil)
   final public func deleteUser(completion: @escaping ZTCoreKit.ZTBaseResult)
   final public func existUser(attribute: Swift.String, value: Swift.String, completion: @escaping (_ error: Swift.Error?, _ exist: Swift.Bool?) -> Swift.Void)
   final public func suborgExist(code: Swift.String, completion: @escaping (_ exist: Swift.Bool) -> Swift.Void)
-  final public func trackEvent(name: Swift.String, data: Swift.String? = nil, attributes: [Swift.String : Any]? = nil)
+  final public func trackEvent(name: Swift.String, data: [Swift.String : Any]? = nil, timestamp: Swift.Int64? = nil, attributes: [Swift.String : Any]? = nil)
   final public func log(severity: ZTCoreKit.ZTLoggerSeverity = ZTLoggerSeverity.debug, component: ZTCoreKit.ZTLoggerComponent = ZTLoggerComponent.sdk, message: Swift.String)
   final public func addActivityComment(activityId: Swift.String, text: Swift.String, mediaFileTemplates: [ZTCoreKit.ZTMediaFileTemplate]?, completion: @escaping ZTCoreKit.ZTResultObject<ZTCoreKit.ZTActivityComment>)
   final public func saveActivityComment(commentId: Swift.String, text: Swift.String, completion: @escaping ZTCoreKit.ZTBaseResult)
@@ -2597,6 +2639,15 @@ extension Swift.Set where Element : ZTCoreKit.ZTBaseMappable {
   final public func deleteMediaFile(mediaFileId: Swift.String, completion: @escaping ZTCoreKit.ZTBaseResult)
   final public func getAchievements(completion: @escaping ZTCoreKit.ZTResultArray<ZTCoreKit.ZTAchievement>)
   final public func complianceTestRetry(timeout: Swift.Int, attempts: Swift.Int, statusCode: Swift.Int, completion: @escaping ((Foundation.Data?, Swift.Error?) -> Swift.Void))
+  final public func sendDirectMessage(message: [Swift.String : Any], completion: @escaping ZTCoreKit.ZTBaseResult)
+  final public func getDirectMessages(completion: @escaping (([[Swift.String : Any]]?, Swift.Error?) -> Swift.Void))
+  final public func deleteDirectMessage(id: Swift.String, completion: @escaping ZTCoreKit.ZTBaseResult)
+  final public func sendCannedMessage(message: [Swift.String : Any], completion: @escaping (([Swift.String : Any]?, Swift.Error?) -> Swift.Void))
+  final public func getCannedMessages(parameters: [Swift.String : Any], completion: @escaping (([[Swift.String : Any]]?, Swift.Error?) -> Swift.Void))
+  final public func getTileMessage(name: Swift.String, parameters: [Swift.String : Any], completion: @escaping (([Swift.String : Any]?, Swift.Error?) -> Swift.Void))
+  final public func getMobilityMessage(name: Swift.String, enqueue: Swift.Bool = true, completion: @escaping (([Swift.String : Any]?, Swift.Error?) -> Swift.Void))
+  final public func startListenMessages(onMessageReceived: @escaping ((Swift.String?) -> Swift.Void), onDataReceived: @escaping ((Foundation.Data?) -> Swift.Void))
+  final public func stopListenMessages()
   @objc deinit
 }
 @_inheritsConvenienceInitializers @objc public class SecureDFUServiceInitiator : ZTCoreKit.DFUServiceInitiator {
@@ -2689,6 +2740,7 @@ public typealias ConnectResultBlock = (ZTCoreKit.ZTDevice?, Swift.Error?) -> Swi
   final public func stopScan()
   final public func connectWithDevice(_ device: ZTCoreKit.ZTDevice?, timeout: Swift.Double? = 5, completion: ZTCoreKit.ConnectResultBlock? = nil)
   final public func connectWithCode(_ code: Swift.String, timeout: Swift.Double? = 20, completion: ZTCoreKit.ConnectResultBlock? = nil)
+  final public func getDeviceInfo(code: Swift.String, completion: @escaping (ZTCoreKit.ZTDeviceInfo?, Swift.Error?) -> Swift.Void)
   final public func tryReconnect()
   final public func checkConnectedDevice(completion: ZTCoreKit.ConnectResultBlock? = nil)
   @objc deinit
@@ -2858,6 +2910,9 @@ extension ZTCoreKit.ZTSegmentData.Status : Swift.RawRepresentable {}
 extension ZTCoreKit.ZTSegmentData.ChunkType : Swift.Equatable {}
 extension ZTCoreKit.ZTSegmentData.ChunkType : Swift.Hashable {}
 extension ZTCoreKit.ZTSegmentData.ChunkType : Swift.RawRepresentable {}
+extension ZTCoreKit.ZTSegmentData.PacketType : Swift.Equatable {}
+extension ZTCoreKit.ZTSegmentData.PacketType : Swift.Hashable {}
+extension ZTCoreKit.ZTSegmentData.PacketType : Swift.RawRepresentable {}
 extension ZTCoreKit.ZTActivitySummaryStatus : Swift.Equatable {}
 extension ZTCoreKit.ZTActivitySummaryStatus : Swift.Hashable {}
 extension ZTCoreKit.ZTActivitySummaryStatus : Swift.RawRepresentable {}

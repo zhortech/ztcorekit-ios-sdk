@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.1.14](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.14) (2021-11-25)
+
+- support for ZCloud V2
+- websocket connection to new ZCloud V2
+- new ZTApi methods added: `sendDirectMessage(message:completion:)`, `getDirectMessages(completion:)`, `deleteDirectMessage(id: completion:)`, `sendCannedMessage(message:completion:)`, `getCannedMessages(message:completion:)`
+- support for Baliston & Univesral firmwares
+- added method `getDeviceInfo(code:completion:)` to register device on ZCloud and get device information
+
 ## [1.1.13](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.13) (2021-10-21)
 
 - refactoring for automatic activity

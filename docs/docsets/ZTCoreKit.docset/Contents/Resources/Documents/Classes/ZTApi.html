@@ -17,7 +17,7 @@
     <a title="ZTApi Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">ZTCoreKit 1.1.11 Docs</a></p>
+        <p><a href="../index.html">ZTCoreKit 1.1.14 Docs</a></p>
         <p class="header-right"><a href="https://github.com/zhortech/ztcorekit-ios-sdk"><img src="../img/gh.png"/>View on GitHub</a></p>
         <p class="header-right">
           <form role="search" action="../search.json">
@@ -82,6 +82,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/ZTSegmentData.html#/s:9ZTCoreKit13ZTSegmentDataC9ChunkTypeO">– ChunkType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ZTSegmentData.html#/s:9ZTCoreKit13ZTSegmentDataC10PacketTypeO">– PacketType</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/ZTService.html">ZTService</a>
@@ -222,7 +225,7 @@
             <a href="../Other%20Enums.html">Other Enumerations</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Other%20Enums.html#/s:9ZTCoreKit14ZTActivityModeO">ZTActivityMode</a>
+                <a href="../Enums/ZTActivityMode.html">ZTActivityMode</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Enums/ZTCommand.html">ZTCommand</a>
@@ -238,6 +241,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Enums/ZTLogCategory.html">ZTLogCategory</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Other%20Enums.html#/s:9ZTCoreKit12ZTModuleSideO">ZTModuleSide</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Enums/ZTNotifyData.html">ZTNotifyData</a>
@@ -336,7 +342,7 @@
             <p>This object provides an API for application user</p>
 
               <div class="slightly-smaller">
-                <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L12-L674">Show on GitHub</a>
+                <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L12-L703">Show on GitHub</a>
               </div>
           </section>
           <section class="section task-group-section">
@@ -405,6 +411,66 @@
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:9ZTCoreKit5ZTApiC20onSocketDataReceivedAA8ZTSignalCy10Foundation0F0VSgGvp"></a>
+                    <a name="//apple_ref/swift/Property/onSocketDataReceived" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ZTCoreKit5ZTApiC20onSocketDataReceivedAA8ZTSignalCy10Foundation0F0VSgGvp">onSocketDataReceived</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Event to subscribe notifiing about data received in webscoket</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">onSocketDataReceived</span><span class="p">:</span> <span class="kt"><a href="../Classes/ZTSignal.html">ZTSignal</a></span><span class="o">&lt;</span><span class="p">(</span><span class="kt">Data</span><span class="p">?)</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L21">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9ZTCoreKit5ZTApiC20onSocketTextReceivedAA8ZTSignalCySSSgGvp"></a>
+                    <a name="//apple_ref/swift/Property/onSocketTextReceived" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ZTCoreKit5ZTApiC20onSocketTextReceivedAA8ZTSignalCySSSgGvp">onSocketTextReceived</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Event to subscribe notifiing about message received in webscoket</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">onSocketTextReceived</span><span class="p">:</span> <span class="kt"><a href="../Classes/ZTSignal.html">ZTSignal</a></span><span class="o">&lt;</span><span class="p">(</span><span class="kt">String</span><span class="p">?)</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L23">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:9ZTCoreKit5ZTApiC13appAttributesSDySSypGSgvp"></a>
                     <a name="//apple_ref/swift/Property/appAttributes" class="dashAnchor"></a>
                     <a class="token" href="#/s:9ZTCoreKit5ZTApiC13appAttributesSDySSypGSgvp">appAttributes</a>
@@ -427,7 +493,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L22-L24">Show on GitHub</a>
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L26-L28">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -447,16 +513,6 @@
                       <div class="abstract">
                         <p>Associate an application user with unique ID and record traits about it. This method should be called after each signup / signin.</p>
 
-<ul>
-<li>ZTParameters:
-
-<ul>
-<li>userId: Unique identifier for the user in application</li>
-<li>attributes: user&rsquo;s attributes</li>
-<li>completion: <code>(appUserId?, Error?)</code></li>
-</ul></li>
-</ul>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -466,8 +522,51 @@
 
                         </div>
                       </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>userId</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Unique identifier for the user in application</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>attributes</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>user&rsquo;s attributes</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p><code>(appUserId?, Error?)</code></p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L34-L46">Show on GitHub</a>
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L45-L57">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -516,7 +615,7 @@
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L50-L58">Show on GitHub</a>
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L61-L69">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -536,15 +635,6 @@
                       <div class="abstract">
                         <p>Upload user profile image</p>
 
-<ul>
-<li>ZTParameters:
-
-<ul>
-<li>image: Data (image should be resized to take less size)</li>
-<li>completion: <code>ZTBaseResult</code></li>
-</ul></li>
-</ul>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -554,8 +644,39 @@
 
                         </div>
                       </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>image</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Data (image should be resized to take less size)</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p><code>ZTBaseResult</code></p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L64-L68">Show on GitHub</a>
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L75-L79">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -575,19 +696,6 @@
                       <div class="abstract">
                         <p>Retrieve activities between a start date and an end date.</p>
 
-<ul>
-<li>ZTParameters:
-
-<ul>
-<li>code: device code</li>
-<li>start: start <code>Date</code></li>
-<li>end: end <code>Date</code></li>
-<li>fields: Array of <code>ZTRunningActivity.Field</code> to include in response</li>
-<li>include: addtitional information to include, e.g. &ldquo;supplimentalData.geoThumbnail&rdquo; , &ldquo;attributes.goalType&rdquo;, &ldquo;attributes.goalValue&rdquo;</li>
-<li>completion: completion handler</li>
-</ul></li>
-</ul>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -602,8 +710,87 @@
 
                         </div>
                       </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>code</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>device code</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>start</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>start <code>Date</code></p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>end</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>end <code>Date</code></p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>fields</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Array of <code>ZTRunningActivity.Field</code> to include in response</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>include</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>addtitional information to include, e.g. &ldquo;supplimentalData.geoThumbnail&rdquo; , &ldquo;attributes.goalType&rdquo;, &ldquo;attributes.goalValue&rdquo;</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>completion handler</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L78-L87">Show on GitHub</a>
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L89-L98">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -623,19 +810,6 @@
                       <div class="abstract">
                         <p>Retrieve activities between a start date and an end date.</p>
 
-<ul>
-<li>ZTParameters:
-
-<ul>
-<li>code: device code</li>
-<li>offset: starting index of the activities</li>
-<li>limit: number of objects to return</li>
-<li>fields: Array of <code>ZTRunningActivity.Field</code> to include in response</li>
-<li>include: addtitional information to include, e.g. &ldquo;supplimentalData.geoThumbnail&rdquo; , &ldquo;attributes.goalType&rdquo;, &ldquo;attributes.goalValue&rdquo;</li>
-<li>completion: completion handler</li>
-</ul></li>
-</ul>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -654,8 +828,87 @@
 
                         </div>
                       </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>code</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>device code</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>offset</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>starting index of the activities</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>limit</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>number of objects to return</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>fields</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Array of <code>ZTRunningActivity.Field</code> to include in response</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>include</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>addtitional information to include, e.g. &ldquo;supplimentalData.geoThumbnail&rdquo; , &ldquo;attributes.goalType&rdquo;, &ldquo;attributes.goalValue&rdquo;</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>completion handler</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L97-L110">Show on GitHub</a>
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L108-L121">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -675,15 +928,6 @@
                       <div class="abstract">
                         <p>Retrieve activity summary</p>
 
-<ul>
-<li>ZTParameters:
-
-<ul>
-<li>id: activity ID</li>
-<li>completion: completion handler</li>
-</ul></li>
-</ul>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -700,8 +944,39 @@
 
                         </div>
                       </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>id</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>activity ID</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>completion handler</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L116-L127">Show on GitHub</a>
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L127-L138">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -721,16 +996,6 @@
                       <div class="abstract">
                         <p>Start activity is used to notify ZCloud API about started activity</p>
 
-<ul>
-<li>ZTParameters:
-
-<ul>
-<li>activityType: <code><a href="../Enums/ZTProductType.html">ZTProductType</a></code>&lsquo;s activityType</li>
-<li>code: device serial number</li>
-<li>completion: (<code><a href="../Classes/ZTActivity.html">ZTActivity</a></code> inherited object, <code>Error</code>)</li>
-</ul></li>
-</ul>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -744,8 +1009,51 @@
 
                         </div>
                       </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>activityType</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p><code><a href="../Enums/ZTProductType.html">ZTProductType</a></code>&lsquo;s activityType</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>code</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>device serial number</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>(<code><a href="../Classes/ZTActivity.html">ZTActivity</a></code> inherited object, <code>Error</code>)</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L134-L142">Show on GitHub</a>
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L145-L153">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -765,16 +1073,6 @@
                       <div class="abstract">
                         <p>Add segments for activity</p>
 
-<ul>
-<li>ZTParameters:
-
-<ul>
-<li>activityId: activity ID</li>
-<li>segments: array of <code>ZTSegment</code></li>
-<li>completion: (<code><a href="../Classes/ZTActivity.html">ZTActivity</a></code> inherited object, <code>Error</code>)</li>
-</ul></li>
-</ul>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -787,8 +1085,215 @@
 
                         </div>
                       </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>activityId</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>activity ID</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>segments</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>array of <code>ZTSegment</code></p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>(<code><a href="../Classes/ZTActivity.html">ZTActivity</a></code> inherited object, <code>Error</code>)</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L149-L160">Show on GitHub</a>
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L160-L171">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9ZTCoreKit5ZTApiC8addChunk4code5chunk10attributes10completionySS_AA13ZTSegmentDataCSDySSypGSgys5Error_pSgcSgtF"></a>
+                    <a name="//apple_ref/swift/Method/addChunk(code:chunk:attributes:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ZTCoreKit5ZTApiC8addChunk4code5chunk10attributes10completionySS_AA13ZTSegmentDataCSDySSypGSgys5Error_pSgcSgtF">addChunk(code:<wbr>chunk:<wbr>attributes:<wbr>completion:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Add chunk for activity</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">addChunk</span><span class="p">(</span><span class="nv">code</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
+                     <span class="nv">chunk</span><span class="p">:</span> <span class="kt"><a href="../Classes/ZTSegmentData.html">ZTSegmentData</a></span><span class="p">,</span>
+                     <span class="nv">attributes</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span> <span class="kt">Any</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+                     <span class="nv">completion</span><span class="p">:</span> <span class="kt">ZTBaseResult</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>code</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>shoes serial</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>chunk</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p><code>ZTSegment</code></p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>attributes</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>optional attributes for chunk</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>(<code><a href="../Classes/ZTActivity.html">ZTActivity</a></code> inherited object, <code>Error</code>)</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L179-L186">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9ZTCoreKit5ZTApiC17addActivityChunks4code6chunks10attributes10completionySS_SayAA13ZTSegmentDataCGSDySSypGSgys5Error_pSgcSgtF"></a>
+                    <a name="//apple_ref/swift/Method/addActivityChunks(code:chunks:attributes:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ZTCoreKit5ZTApiC17addActivityChunks4code6chunks10attributes10completionySS_SayAA13ZTSegmentDataCGSDySSypGSgys5Error_pSgcSgtF">addActivityChunks(code:<wbr>chunks:<wbr>attributes:<wbr>completion:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Add chunks for activity</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">addActivityChunks</span><span class="p">(</span><span class="nv">code</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
+                              <span class="nv">chunks</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Classes/ZTSegmentData.html">ZTSegmentData</a></span><span class="p">],</span>
+                              <span class="nv">attributes</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span> <span class="kt">Any</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+                              <span class="nv">completion</span><span class="p">:</span> <span class="kt">ZTBaseResult</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>code</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>shoes serial</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>chunks</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>array of <code>ZTSegment</code></p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>(<code><a href="../Classes/ZTActivity.html">ZTActivity</a></code> inherited object, <code>Error</code>)</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L193-L200">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -808,15 +1313,6 @@
                       <div class="abstract">
                         <p>Delete activity</p>
 
-<ul>
-<li>ZTParameters:
-
-<ul>
-<li>activityId: activity ID</li>
-<li>completion: (<code>Error</code> optional)</li>
-</ul></li>
-</ul>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -826,8 +1322,39 @@
 
                         </div>
                       </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>activityId</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>activity ID</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>(<code>Error</code> optional)</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L166-L170">Show on GitHub</a>
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L205-L209">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -847,17 +1374,6 @@
                       <div class="abstract">
                         <p>Stop activity is used to notify ZCloud API about activity stop</p>
 
-<ul>
-<li>ZTParameters:
-
-<ul>
-<li>id: activity ID</li>
-<li>duration: the duration of the segment in <code>milliseconds</code></li>
-<li>data: segments data as base64 string array</li>
-<li>completion: (<code>Error</code> optional)</li>
-</ul></li>
-</ul>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -870,8 +1386,63 @@
 
                         </div>
                       </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>id</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>activity ID</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>duration</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>the duration of the segment in <code>milliseconds</code></p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>data</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>segments data as base64 string array</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>(<code>Error</code> optional)</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L178-L192">Show on GitHub</a>
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L217-L231">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -891,17 +1462,6 @@
                       <div class="abstract">
                         <p>Stop activity is used to notify ZCloud API about activity stop</p>
 
-<ul>
-<li>ZTParameters:
-
-<ul>
-<li>id: activity ID</li>
-<li>duration: the duration of the segment in <code>milliseconds</code></li>
-<li>segments: <code>[ZTSegmentData]</code> - segments array</li>
-<li>completion: (<code>Error</code> optional)</li>
-</ul></li>
-</ul>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -915,8 +1475,63 @@
 
                         </div>
                       </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>id</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>activity ID</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>duration</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>the duration of the segment in <code>milliseconds</code></p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>segments</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p><code>[ZTSegmentData]</code> - segments array</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>(<code>Error</code> optional)</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L200-L220">Show on GitHub</a>
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L239-L259">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -936,15 +1551,6 @@
                       <div class="abstract">
                         <p>Retrieve generic data</p>
 
-<ul>
-<li>ZTParameters:
-
-<ul>
-<li>path: ZCloud API relative path</li>
-<li>completion: The completion closure (<code>T</code>, <code>Error</code>)</li>
-</ul></li>
-</ul>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -954,8 +1560,51 @@
 
                         </div>
                       </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>path</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>ZCloud API relative path</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>parameters</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>request parameters. <code>nil</code> by default.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The completion closure (<code>T</code>, <code>Error</code>)</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L227-L231">Show on GitHub</a>
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L266-L270">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -975,15 +1624,6 @@
                       <div class="abstract">
                         <p>Retrieve raw data from ZCloud API</p>
 
-<ul>
-<li>ZTParameters:
-
-<ul>
-<li>path: route for API</li>
-<li>completion: The completion closure with optional dictioanry, optional data and optional error</li>
-</ul></li>
-</ul>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -993,8 +1633,51 @@
 
                         </div>
                       </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>path</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>route for API</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>parameters</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>request parameters. <code>nil</code> by default.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The completion closure with optional dictioanry, optional data and optional error</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L238-L242">Show on GitHub</a>
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L277-L281">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1014,14 +1697,6 @@
                       <div class="abstract">
                         <p>Get application attributes</p>
 
-<ul>
-<li>ZTParameters:
-
-<ul>
-<li>completion: (<code>[String: Any]?</code>, <code>Error?</code>)</li>
-</ul></li>
-</ul>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1031,8 +1706,27 @@
 
                         </div>
                       </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>(<code>[String: Any]?</code>, <code>Error?</code>)</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L247-L251">Show on GitHub</a>
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L286-L290">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1082,7 +1776,7 @@ Check for new firmware</p>
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L256-L276">Show on GitHub</a>
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L295-L315">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1102,15 +1796,6 @@ Check for new firmware</p>
                       <div class="abstract">
                         <p>Post raw data to ZCloud API</p>
 
-<ul>
-<li>ZTParameters:
-
-<ul>
-<li>path: route for API</li>
-<li>completion: The completion closure with optional error</li>
-</ul></li>
-</ul>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1120,8 +1805,51 @@ Check for new firmware</p>
 
                         </div>
                       </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>path</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>route for API</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>parameters</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The parameters. <code>nil</code> by default.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The completion closure with optional error</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L283-L287">Show on GitHub</a>
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L322-L326">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1141,15 +1869,6 @@ Check for new firmware</p>
                       <div class="abstract">
                         <p>Post raw data to ZCloud API</p>
 
-<ul>
-<li>ZTParameters:
-
-<ul>
-<li>path: route for API</li>
-<li>completion: The completion closure with optional error</li>
-</ul></li>
-</ul>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1159,49 +1878,51 @@ Check for new firmware</p>
 
                         </div>
                       </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>path</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>route for API</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>parameters</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The parameters. <code>nil</code> by default.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The completion closure with optional error</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L294-L298">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:9ZTCoreKit5ZTApiC15addActivityData10activityId9timestamp4data10completionySS_SdSDySSypGys5Error_pSgctF"></a>
-                    <a name="//apple_ref/swift/Method/addActivityData(activityId:timestamp:data:completion:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9ZTCoreKit5ZTApiC15addActivityData10activityId9timestamp4data10completionySS_SdSDySSypGys5Error_pSgctF">addActivityData(activityId:<wbr>timestamp:<wbr>data:<wbr>completion:<wbr>)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Save Activity AppData to be sent on activity stop</p>
-
-<ul>
-<li>ZTParameters:
-
-<ul>
-<li>activityId: Activity Id</li>
-<li>timestamp: Timestamp of AppData</li>
-<li>data: <code>[String: Any]</code> - app data represented with dictionary</li>
-</ul></li>
-</ul>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">@available(*, deprecated, renamed: "addActivityData", message: "The parameter type for 'data' have changed to Any")</span>
-<span class="kd">public</span> <span class="kd">func</span> <span class="nf">addActivityData</span><span class="p">(</span><span class="nv">activityId</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">timestamp</span><span class="p">:</span> <span class="kt">TimeInterval</span><span class="p">,</span> <span class="nv">data</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">Any</span><span class="p">],</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">ZTBaseResult</span><span class="p">))</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L306-L308">Show on GitHub</a>
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L333-L337">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1221,16 +1942,6 @@ Check for new firmware</p>
                       <div class="abstract">
                         <p>Save Activity AppData. This data is sent when activity is stopped</p>
 
-<ul>
-<li>ZTParameters:
-
-<ul>
-<li>activityId: Activity Id</li>
-<li>timestamp: Timestamp of AppData</li>
-<li>data: <code>[String: Any]</code> - app data represented with dictionary</li>
-</ul></li>
-</ul>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1240,8 +1951,51 @@ Check for new firmware</p>
 
                         </div>
                       </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>activityId</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Activity Id</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>timestamp</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Timestamp of AppData</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>data</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p><code>[String: Any]</code> - app data represented with dictionary</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L315-L334">Show on GitHub</a>
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L354-L373">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1261,16 +2015,6 @@ Check for new firmware</p>
                       <div class="abstract">
                         <p>Update attributes for activity</p>
 
-<ul>
-<li>ZTParameters:
-
-<ul>
-<li>activityId: activity id</li>
-<li>attributes: <code>[String: String]</code></li>
-<li>completion: <code>ZTBaseResult</code></li>
-</ul></li>
-</ul>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1280,8 +2024,51 @@ Check for new firmware</p>
 
                         </div>
                       </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>activityId</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>activity id</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>attributes</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p><code>[String: String]</code></p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p><code>ZTBaseResult</code></p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L361-L365">Show on GitHub</a>
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L400-L404">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1301,15 +2088,6 @@ Check for new firmware</p>
                       <div class="abstract">
                         <p>Update push notifications</p>
 
-<ul>
-<li>ZTParameters:
-
-<ul>
-<li>token: token</li>
-<li>completion: <code>ZTBaseResult</code></li>
-</ul></li>
-</ul>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1319,8 +2097,39 @@ Check for new firmware</p>
 
                         </div>
                       </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>token</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>token</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p><code>ZTBaseResult</code></p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L371-L375">Show on GitHub</a>
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L410-L414">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1340,14 +2149,6 @@ Check for new firmware</p>
                       <div class="abstract">
                         <p>Delete user and user&rsquo;s data</p>
 
-<ul>
-<li>ZTParameters:
-
-<ul>
-<li>completion: (<code>Error</code> optional)</li>
-</ul></li>
-</ul>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1357,8 +2158,27 @@ Check for new firmware</p>
 
                         </div>
                       </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>(<code>Error</code> optional)</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L527-L531">Show on GitHub</a>
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L457-L462">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1378,16 +2198,6 @@ Check for new firmware</p>
                       <div class="abstract">
                         <p>Check if user exists in ZCloud</p>
 
-<ul>
-<li>ZTParameters:
-
-<ul>
-<li>name: event name</li>
-<li>data: event data</li>
-<li>completion: (<code>Bool</code>)</li>
-</ul></li>
-</ul>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1397,8 +2207,51 @@ Check for new firmware</p>
 
                         </div>
                       </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>name</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>event name</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>data</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>event data</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>(<code>Bool</code>)</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L538-L542">Show on GitHub</a>
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L469-L473">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1418,15 +2271,6 @@ Check for new firmware</p>
                       <div class="abstract">
                         <p>Check if sub organization exists in ZCloud</p>
 
-<ul>
-<li>ZTParameters:
-
-<ul>
-<li>code: sub organization code</li>
-<li>completion: (<code>Bool</code>)</li>
-</ul></li>
-</ul>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1436,8 +2280,39 @@ Check for new firmware</p>
 
                         </div>
                       </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>code</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>sub organization code</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>(<code>Bool</code>)</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L548-L552">Show on GitHub</a>
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L479-L483">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1445,9 +2320,9 @@ Check for new firmware</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:9ZTCoreKit5ZTApiC10trackEvent4name4data10attributesySS_SSSgSDySSypGSgtF"></a>
-                    <a name="//apple_ref/swift/Method/trackEvent(name:data:attributes:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9ZTCoreKit5ZTApiC10trackEvent4name4data10attributesySS_SSSgSDySSypGSgtF">trackEvent(name:<wbr>data:<wbr>attributes:<wbr>)</a>
+                    <a name="/s:9ZTCoreKit5ZTApiC10trackEvent4name4data9timestamp10attributesySS_SDySSypGSgs5Int64VSgAJtF"></a>
+                    <a name="//apple_ref/swift/Method/trackEvent(name:data:timestamp:attributes:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ZTCoreKit5ZTApiC10trackEvent4name4data9timestamp10attributesySS_SDySSypGSgs5Int64VSgAJtF">trackEvent(name:<wbr>data:<wbr>timestamp:<wbr>attributes:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1457,27 +2332,60 @@ Check for new firmware</p>
                       <div class="abstract">
                         <p>Save event to ZCloud API</p>
 
-<ul>
-<li>ZTParameters:
-
-<ul>
-<li>name: event name</li>
-<li>data: event data</li>
-<li>attributes: attributes dictionary</li>
-</ul></li>
-</ul>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">trackEvent</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">data</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">attributes</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">Any</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">trackEvent</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">data</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">Any</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">timestamp</span><span class="p">:</span> <span class="kt">Int64</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">attributes</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">Any</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>name</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>event name</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>data</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>event data</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>attributes</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>attributes dictionary</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L559-L561">Show on GitHub</a>
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L490-L492">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1497,16 +2405,6 @@ Check for new firmware</p>
                       <div class="abstract">
                         <p>Send log to ZCloud API only with debug logLevel</p>
 
-<ul>
-<li>ZTParameters:
-
-<ul>
-<li>severity: <code>ZTLoggerSeverity</code></li>
-<li>component: <code>ZTLoggerComponent</code></li>
-<li>message: <code>String</code></li>
-</ul></li>
-</ul>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1516,8 +2414,51 @@ Check for new firmware</p>
 
                         </div>
                       </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>severity</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p><code>ZTLoggerSeverity</code></p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>component</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p><code>ZTLoggerComponent</code></p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>message</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p><code>String</code></p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L568-L573">Show on GitHub</a>
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L499-L504">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1537,17 +2478,6 @@ Check for new firmware</p>
                       <div class="abstract">
                         <p>Add new comment for activity</p>
 
-<ul>
-<li>ZTParameters:
-
-<ul>
-<li>activityId: activity id</li>
-<li>text: text of comment</li>
-<li>mediaFileTemplates: [<code><a href="../Classes/ZTMediaFileTemplate.html">ZTMediaFileTemplate</a></code>]?</li>
-<li>completion: <code>ZTBaseResult</code></li>
-</ul></li>
-</ul>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1557,8 +2487,63 @@ Check for new firmware</p>
 
                         </div>
                       </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>activityId</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>activity id</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>text</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>text of comment</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>mediaFileTemplates</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>[<code><a href="../Classes/ZTMediaFileTemplate.html">ZTMediaFileTemplate</a></code>]?</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p><code>ZTBaseResult</code></p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L581-L585">Show on GitHub</a>
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L512-L516">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1578,16 +2563,6 @@ Check for new firmware</p>
                       <div class="abstract">
                         <p>Save activity comment</p>
 
-<ul>
-<li>ZTParameters:
-
-<ul>
-<li>commentId: comment id</li>
-<li>text: text of comment</li>
-<li>completion: <code>ZTBaseResult</code></li>
-</ul></li>
-</ul>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1597,8 +2572,51 @@ Check for new firmware</p>
 
                         </div>
                       </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>commentId</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>comment id</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>text</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>text of comment</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p><code>ZTBaseResult</code></p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L592-L596">Show on GitHub</a>
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L523-L527">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1618,15 +2636,6 @@ Check for new firmware</p>
                       <div class="abstract">
                         <p>Get activity comment</p>
 
-<ul>
-<li>ZTParameters:
-
-<ul>
-<li>activityId: activity id</li>
-<li>completion: ([<code><a href="../Classes/ZTActivityComment.html">ZTActivityComment</a></code>]?, <code>Error</code>?)</li>
-</ul></li>
-</ul>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1636,8 +2645,39 @@ Check for new firmware</p>
 
                         </div>
                       </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>activityId</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>activity id</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>([<code><a href="../Classes/ZTActivityComment.html">ZTActivityComment</a></code>]?, <code>Error</code>?)</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L602-L606">Show on GitHub</a>
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L533-L537">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1657,15 +2697,6 @@ Check for new firmware</p>
                       <div class="abstract">
                         <p>Get activity comment by id</p>
 
-<ul>
-<li>ZTParameters:
-
-<ul>
-<li>commentId: comment id</li>
-<li>completion: (<code><a href="../Classes/ZTActivityComment.html">ZTActivityComment</a></code>?, <code>Error</code>?)</li>
-</ul></li>
-</ul>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1675,8 +2706,39 @@ Check for new firmware</p>
 
                         </div>
                       </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>commentId</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>comment id</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>(<code><a href="../Classes/ZTActivityComment.html">ZTActivityComment</a></code>?, <code>Error</code>?)</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L612-L616">Show on GitHub</a>
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L543-L547">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1696,16 +2758,6 @@ Check for new firmware</p>
                       <div class="abstract">
                         <p>Get activity realtime data</p>
 
-<ul>
-<li>ZTParameters:
-
-<ul>
-<li>activityId: activity id</li>
-<li>fields: <code>[String]</code></li>
-<li>completion: ([<code><a href="../Classes/ZTActivityComment.html">ZTActivityComment</a></code>]?, <code>Error</code>?)</li>
-</ul></li>
-</ul>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1715,8 +2767,51 @@ Check for new firmware</p>
 
                         </div>
                       </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>activityId</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>activity id</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>fields</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p><code>[String]</code></p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>([<code><a href="../Classes/ZTActivityComment.html">ZTActivityComment</a></code>]?, <code>Error</code>?)</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L623-L627">Show on GitHub</a>
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L554-L558">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1736,16 +2831,6 @@ Check for new firmware</p>
                       <div class="abstract">
                         <p>Add media file template</p>
 
-<ul>
-<li>ZTParameters:
-
-<ul>
-<li>commentId: comment id</li>
-<li>mediaFileTemplate: <code><a href="../Classes/ZTMediaFileTemplate.html">ZTMediaFileTemplate</a></code> - media file template</li>
-<li>completion: <code>ZTBaseResult</code></li>
-</ul></li>
-</ul>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1755,8 +2840,51 @@ Check for new firmware</p>
 
                         </div>
                       </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>commentId</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>comment id</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>mediaFileTemplate</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p><code><a href="../Classes/ZTMediaFileTemplate.html">ZTMediaFileTemplate</a></code> - media file template</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p><code>ZTBaseResult</code></p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L634-L638">Show on GitHub</a>
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L565-L569">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1776,15 +2904,6 @@ Check for new firmware</p>
                       <div class="abstract">
                         <p>Delete activity comment</p>
 
-<ul>
-<li>ZTParameters:
-
-<ul>
-<li>commentId: comment id</li>
-<li>completion: <code>ZTBaseResult</code></li>
-</ul></li>
-</ul>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1794,8 +2913,39 @@ Check for new firmware</p>
 
                         </div>
                       </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>commentId</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>comment id</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p><code>ZTBaseResult</code></p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L644-L648">Show on GitHub</a>
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L575-L579">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1815,15 +2965,6 @@ Check for new firmware</p>
                       <div class="abstract">
                         <p>Delete media file by id</p>
 
-<ul>
-<li>ZTParameters:
-
-<ul>
-<li>mediaFileId: media file id</li>
-<li>completion: <code>ZTBaseResult</code></li>
-</ul></li>
-</ul>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1833,8 +2974,39 @@ Check for new firmware</p>
 
                         </div>
                       </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>mediaFileId</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>media file id</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p><code>ZTBaseResult</code></p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L654-L658">Show on GitHub</a>
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L585-L589">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1854,14 +3026,6 @@ Check for new firmware</p>
                       <div class="abstract">
                         <p>Get achievements</p>
 
-<ul>
-<li>ZTParameters:
-
-<ul>
-<li>completion: ([<code><a href="../Classes/ZTActivityComment.html">ZTActivityComment</a></code>]?, <code>Error</code>?)</li>
-</ul></li>
-</ul>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1871,8 +3035,582 @@ Check for new firmware</p>
 
                         </div>
                       </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>([<code><a href="../Classes/ZTActivityComment.html">ZTActivityComment</a></code>]?, <code>Error</code>?)</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L663-L667">Show on GitHub</a>
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L594-L598">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9ZTCoreKit5ZTApiC19complianceTestRetry7timeout8attempts10statusCode10completionySi_S2iy10Foundation4DataVSg_s5Error_pSgtctF"></a>
+                    <a name="//apple_ref/swift/Method/complianceTestRetry(timeout:attempts:statusCode:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ZTCoreKit5ZTApiC19complianceTestRetry7timeout8attempts10statusCode10completionySi_S2iy10Foundation4DataVSg_s5Error_pSgtctF">complianceTestRetry(timeout:<wbr>attempts:<wbr>statusCode:<wbr>completion:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Method related to compliance</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">complianceTestRetry</span><span class="p">(</span><span class="nv">timeout</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">attempts</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">statusCode</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">((</span><span class="kt">Data</span><span class="p">?,</span> <span class="kt">Error</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">))</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>timeout</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>timeout in seconds</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>attempts</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>number of attempts</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>statusCode</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>status code to receive</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p><code>(Data?, Error?)</code></p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L606-L610">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Messages"></a>
+                <a name="//apple_ref/swift/Section/Messages" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Messages"></a>
+                  <h3 class="section-name"><p>Messages</p>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9ZTCoreKit5ZTApiC17sendDirectMessage7message10completionySDySSypG_ys5Error_pSgctF"></a>
+                    <a name="//apple_ref/swift/Method/sendDirectMessage(message:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ZTCoreKit5ZTApiC17sendDirectMessage7message10completionySDySSypG_ys5Error_pSgctF">sendDirectMessage(message:<wbr>completion:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Send direct message</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">sendDirectMessage</span><span class="p">(</span><span class="nv">message</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">Any</span><span class="p">],</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">ZTBaseResult</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>message</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>[String: Any]</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p><code>(Error?)</code></p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L618-L622">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9ZTCoreKit5ZTApiC17getDirectMessages10completionyySaySDySSypGGSg_s5Error_pSgtc_tF"></a>
+                    <a name="//apple_ref/swift/Method/getDirectMessages(completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ZTCoreKit5ZTApiC17getDirectMessages10completionyySaySDySSypGGSg_s5Error_pSgtc_tF">getDirectMessages(completion:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Get direct messages</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getDirectMessages</span><span class="p">(</span><span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(([[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">Any</span><span class="p">]]?,</span> <span class="kt">Error</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">))</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L626-L630">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9ZTCoreKit5ZTApiC19deleteDirectMessage2id10completionySS_ys5Error_pSgctF"></a>
+                    <a name="//apple_ref/swift/Method/deleteDirectMessage(id:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ZTCoreKit5ZTApiC19deleteDirectMessage2id10completionySS_ys5Error_pSgctF">deleteDirectMessage(id:<wbr>completion:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Delete direct message</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">deleteDirectMessage</span><span class="p">(</span><span class="nv">id</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">ZTBaseResult</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>id</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>message id</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p><code>(Error?)</code></p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L636-L640">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9ZTCoreKit5ZTApiC17sendCannedMessage7message10completionySDySSypG_yAGSg_s5Error_pSgtctF"></a>
+                    <a name="//apple_ref/swift/Method/sendCannedMessage(message:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ZTCoreKit5ZTApiC17sendCannedMessage7message10completionySDySSypG_yAGSg_s5Error_pSgtctF">sendCannedMessage(message:<wbr>completion:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Send canned message</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">sendCannedMessage</span><span class="p">(</span><span class="nv">message</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">Any</span><span class="p">],</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(([</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">Any</span><span class="p">]?,</span> <span class="kt">Error</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">))</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>message</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>[String: Any]</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p><code>([String: Any]?, Error?)</code></p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L646-L650">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9ZTCoreKit5ZTApiC17getCannedMessages10parameters10completionySDySSypG_ySayAGGSg_s5Error_pSgtctF"></a>
+                    <a name="//apple_ref/swift/Method/getCannedMessages(parameters:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ZTCoreKit5ZTApiC17getCannedMessages10parameters10completionySDySSypG_ySayAGGSg_s5Error_pSgtctF">getCannedMessages(parameters:<wbr>completion:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Send canned message</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getCannedMessages</span><span class="p">(</span><span class="nv">parameters</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">Any</span><span class="p">],</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(([[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">Any</span><span class="p">]]?,</span> <span class="kt">Error</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">))</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>parameters</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>[String: Any] - parameters to get certain messages</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p><code>([[String: Any]]?, Error?)</code></p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L656-L660">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9ZTCoreKit5ZTApiC14getTileMessage4name10parameters10completionySS_SDySSypGyAHSg_s5Error_pSgtctF"></a>
+                    <a name="//apple_ref/swift/Method/getTileMessage(name:parameters:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ZTCoreKit5ZTApiC14getTileMessage4name10parameters10completionySS_SDySSypGyAHSg_s5Error_pSgtctF">getTileMessage(name:<wbr>parameters:<wbr>completion:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Get tile message</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getTileMessage</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">parameters</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">Any</span><span class="p">],</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(([</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">Any</span><span class="p">]?,</span> <span class="kt">Error</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">))</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>name</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>analysis function name</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p><code>(Error?)</code></p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L666-L671">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9ZTCoreKit5ZTApiC18getMobilityMessage4name7enqueue10completionySS_SbySDySSypGSg_s5Error_pSgtctF"></a>
+                    <a name="//apple_ref/swift/Method/getMobilityMessage(name:enqueue:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ZTCoreKit5ZTApiC18getMobilityMessage4name7enqueue10completionySS_SbySDySSypGSg_s5Error_pSgtctF">getMobilityMessage(name:<wbr>enqueue:<wbr>completion:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Get mobility message</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getMobilityMessage</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">enqueue</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">true</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(([</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">Any</span><span class="p">]?,</span> <span class="kt">Error</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">))</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>name</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>mobility message type. Currently only <code>mostRecent</code> is available.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p><code>(Error?)</code></p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L678-L684">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9ZTCoreKit5ZTApiC19startListenMessages17onMessageReceived0g4DataI0yySSSgc_y10Foundation0J0VSgctF"></a>
+                    <a name="//apple_ref/swift/Method/startListenMessages(onMessageReceived:onDataReceived:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ZTCoreKit5ZTApiC19startListenMessages17onMessageReceived0g4DataI0yySSSgc_y10Foundation0J0VSgctF">startListenMessages(onMessageReceived:<wbr>onDataReceived:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Initiate websocket manager
+Subscribe to <code>onMessageReceived</code> to receive data with message</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">startListenMessages</span><span class="p">(</span><span class="nv">onMessageReceived</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">((</span><span class="kt">String</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">),</span> <span class="nv">onDataReceived</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">((</span><span class="kt">Data</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">))</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L688-L697">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9ZTCoreKit5ZTApiC18stopListenMessagesyyF"></a>
+                    <a name="//apple_ref/swift/Method/stopListenMessages()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ZTCoreKit5ZTApiC18stopListenMessagesyyF">stopListenMessages()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Disconnect websocket manager</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">stopListenMessages</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTApi.swift#L700-L702">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1882,7 +3620,7 @@ Check for new firmware</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2021 <a class="link" href="https://zhortech.com" target="_blank" rel="external">Zhortech</a>. All rights reserved. (Last updated: 2021-10-04)</p>
+          <p>&copy; 2021 <a class="link" href="https://zhortech.com" target="_blank" rel="external">Zhortech</a>. All rights reserved. (Last updated: 2021-11-25)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.7</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
