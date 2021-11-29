@@ -1994,6 +1994,29 @@ open class ZTSegmentData : ZTCoreKit.ZTNotifyDataMessage {
       get
     }
   }
+  public enum CodingKeys : Swift.CodingKey {
+    case id
+    case activityId
+    case rawData
+    case timestamp
+    case duration
+    case status
+    case timestampType
+    case originalTimestamp
+    public static func == (a: ZTCoreKit.ZTSegmentData.CodingKeys, b: ZTCoreKit.ZTSegmentData.CodingKeys) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public init?(stringValue: Swift.String)
+    public init?(intValue: Swift.Int)
+    public var hashValue: Swift.Int {
+      get
+    }
+    public var intValue: Swift.Int? {
+      get
+    }
+    public var stringValue: Swift.String {
+      get
+    }
+  }
   public init(data: Foundation.Data)
   public init(data: Foundation.Data, activityId: Swift.String)
   required public init(from decoder: Swift.Decoder) throws
@@ -2005,10 +2028,11 @@ open class ZTSegmentData : ZTCoreKit.ZTNotifyDataMessage {
   public static func loadUnsent(activityId: Swift.String) -> [ZTCoreKit.ZTSegmentData]
   public static func loadAll(activityId: Swift.String) -> [ZTCoreKit.ZTSegmentData]
   public static func loadAll(activityId: Swift.String, lastChunkId: Swift.UInt16?) -> [ZTCoreKit.ZTSegmentData]
-  public static func loadAll(activityId: Swift.String, firstChunkId: Swift.UInt16?, lastChunkId: Swift.UInt16?) -> [ZTCoreKit.ZTSegmentData]
+  public static func loadAll(activityId: Swift.String, firstChunkId: Swift.UInt16?, lastChunkId: Swift.UInt16? = nil) -> [ZTCoreKit.ZTSegmentData]
   public static func clear(activityId: Swift.String?)
   public static func move(from: Swift.String?, to: Swift.String?, lastChunkId: Swift.UInt16?)
   public static func checkMissedChunks(activityId: Swift.String) -> Swift.Bool
+  public static func getMissedChunk(activity: ZTCoreKit.ZTActivity?) -> Swift.UInt16?
   public static func hasMissedChunks(activityId: Swift.String, startIndex: Swift.UInt16?, endIndex: Swift.UInt16?) -> Swift.Bool
   public static func getMaxMissedChunk(activityId: Swift.String, chunkId: Swift.UInt16) -> Swift.UInt16?
   @objc deinit
@@ -2913,6 +2937,8 @@ extension ZTCoreKit.ZTSegmentData.ChunkType : Swift.RawRepresentable {}
 extension ZTCoreKit.ZTSegmentData.PacketType : Swift.Equatable {}
 extension ZTCoreKit.ZTSegmentData.PacketType : Swift.Hashable {}
 extension ZTCoreKit.ZTSegmentData.PacketType : Swift.RawRepresentable {}
+extension ZTCoreKit.ZTSegmentData.CodingKeys : Swift.Equatable {}
+extension ZTCoreKit.ZTSegmentData.CodingKeys : Swift.Hashable {}
 extension ZTCoreKit.ZTActivitySummaryStatus : Swift.Equatable {}
 extension ZTCoreKit.ZTActivitySummaryStatus : Swift.Hashable {}
 extension ZTCoreKit.ZTActivitySummaryStatus : Swift.RawRepresentable {}
