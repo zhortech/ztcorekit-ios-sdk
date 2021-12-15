@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.1.15](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.15) (2021-12-14)
+
+- support for Universal firmware
+- support for raw data upload endpoint
+- support for new command in Universal firmware
+
 ## [1.1.14](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.14) (2021-11-25)
 
 - support for ZCloud V2

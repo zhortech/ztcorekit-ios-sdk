@@ -17,7 +17,7 @@
     <a title="ZTCommand Enumeration Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">ZTCoreKit 1.1.14 Docs</a></p>
+        <p><a href="../index.html">ZTCoreKit 1.1.15 Docs</a></p>
         <p class="header-right"><a href="https://github.com/zhortech/ztcorekit-ios-sdk"><img src="../img/gh.png"/>View on GitHub</a></p>
         <p class="header-right">
           <form role="search" action="../search.json">
@@ -85,6 +85,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/ZTSegmentData.html#/s:9ZTCoreKit13ZTSegmentDataC10PacketTypeO">– PacketType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ZTSegmentData.html#/s:9ZTCoreKit13ZTSegmentDataC10CodingKeysO">– CodingKeys</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/ZTService.html">ZTService</a>
@@ -343,7 +346,7 @@
 Note: Values must be sent LSB first (Little endian)</p>
 
               <div class="slightly-smaller">
-                <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/Models/ZTCommandEnum.swift#L13-L114">Show on GitHub</a>
+                <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/Models/ZTCommandEnum.swift#L13-L140">Show on GitHub</a>
               </div>
           </section>
           <section class="section task-group-section">
@@ -685,6 +688,66 @@ Only possible when there is no activity in progress</p>
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:9ZTCoreKit9ZTCommandO11eraseChunksyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/eraseChunks" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ZTCoreKit9ZTCommandO11eraseChunksyA2CmF">eraseChunks</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Erase all chunks stored in persistent memory</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">eraseChunks</span> <span class="o">=</span> <span class="mh">0x26</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/Models/ZTCommandEnum.swift#L40">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9ZTCoreKit9ZTCommandO12getTimestampyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/getTimestamp" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ZTCoreKit9ZTCommandO12getTimestampyA2CmF">getTimestamp</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Get timestamp</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">getTimestamp</span> <span class="o">=</span> <span class="mh">0x27</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/Models/ZTCommandEnum.swift#L42">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:9ZTCoreKit9ZTCommandO14disableHeatingyA2CmF"></a>
                     <a name="//apple_ref/swift/Element/disableHeating" class="dashAnchor"></a>
                     <a class="token" href="#/s:9ZTCoreKit9ZTCommandO14disableHeatingyA2CmF">disableHeating</a>
@@ -707,7 +770,7 @@ Only possible when there is no activity in progress</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/Models/ZTCommandEnum.swift#L40">Show on GitHub</a>
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/Models/ZTCommandEnum.swift#L44">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -739,7 +802,7 @@ Only possible when there is no activity in progress</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/Models/ZTCommandEnum.swift#L44">Show on GitHub</a>
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/Models/ZTCommandEnum.swift#L48">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -771,7 +834,7 @@ Only possible when there is no activity in progress</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/Models/ZTCommandEnum.swift#L48">Show on GitHub</a>
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/Models/ZTCommandEnum.swift#L52">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -801,7 +864,7 @@ Only possible when there is no activity in progress</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/Models/ZTCommandEnum.swift#L50">Show on GitHub</a>
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/Models/ZTCommandEnum.swift#L54">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -831,7 +894,7 @@ Only possible when there is no activity in progress</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/Models/ZTCommandEnum.swift#L52">Show on GitHub</a>
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/Models/ZTCommandEnum.swift#L56">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -861,7 +924,7 @@ Only possible when there is no activity in progress</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/Models/ZTCommandEnum.swift#L54">Show on GitHub</a>
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/Models/ZTCommandEnum.swift#L58">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -891,7 +954,97 @@ Only possible when there is no activity in progress</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/Models/ZTCommandEnum.swift#L56">Show on GitHub</a>
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/Models/ZTCommandEnum.swift#L60">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9ZTCoreKit9ZTCommandO11rawDataSendyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/rawDataSend" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ZTCoreKit9ZTCommandO11rawDataSendyA2CmF">rawDataSend</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Send raw data</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">rawDataSend</span> <span class="o">=</span> <span class="mh">0x50</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/Models/ZTCommandEnum.swift#L63">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9ZTCoreKit9ZTCommandO13rawDataEnableyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/rawDataEnable" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ZTCoreKit9ZTCommandO13rawDataEnableyA2CmF">rawDataEnable</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Enable/disable raw data storage</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">rawDataEnable</span> <span class="o">=</span> <span class="mh">0x51</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/Models/ZTCommandEnum.swift#L65">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9ZTCoreKit9ZTCommandO13rawDataLookupyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/rawDataLookup" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ZTCoreKit9ZTCommandO13rawDataLookupyA2CmF">rawDataLookup</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Get the data offsets (data position and size) for a specific time range of rawdata</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">rawDataLookup</span> <span class="o">=</span> <span class="mh">0x52</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/Models/ZTCommandEnum.swift#L67">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -921,7 +1074,7 @@ Only possible when there is no activity in progress</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/Models/ZTCommandEnum.swift#L58">Show on GitHub</a>
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/Models/ZTCommandEnum.swift#L70">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -951,7 +1104,7 @@ Only possible when there is no activity in progress</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/Models/ZTCommandEnum.swift#L60">Show on GitHub</a>
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/Models/ZTCommandEnum.swift#L72">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -981,7 +1134,7 @@ Only possible when there is no activity in progress</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/Models/ZTCommandEnum.swift#L62">Show on GitHub</a>
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/Models/ZTCommandEnum.swift#L74">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1011,7 +1164,37 @@ Only possible when there is no activity in progress</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/Models/ZTCommandEnum.swift#L64">Show on GitHub</a>
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/Models/ZTCommandEnum.swift#L76">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9ZTCoreKit9ZTCommandO20enablePeerConnectionyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/enablePeerConnection" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ZTCoreKit9ZTCommandO20enablePeerConnectionyA2CmF">enablePeerConnection</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Enables direct connection to the left module</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">enablePeerConnection</span> <span class="o">=</span> <span class="mh">0xFE</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/Models/ZTCommandEnum.swift#L78">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1021,7 +1204,7 @@ Only possible when there is no activity in progress</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2021 <a class="link" href="https://zhortech.com" target="_blank" rel="external">Zhortech</a>. All rights reserved. (Last updated: 2021-11-25)</p>
+          <p>&copy; 2021 <a class="link" href="https://zhortech.com" target="_blank" rel="external">Zhortech</a>. All rights reserved. (Last updated: 2021-12-14)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.7</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
