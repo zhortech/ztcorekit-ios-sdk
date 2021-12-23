@@ -1994,29 +1994,6 @@ open class ZTSegmentData : ZTCoreKit.ZTNotifyDataMessage {
       get
     }
   }
-  public enum CodingKeys : Swift.CodingKey {
-    case id
-    case activityId
-    case rawData
-    case timestamp
-    case duration
-    case status
-    case timestampType
-    case originalTimestamp
-    public static func == (a: ZTCoreKit.ZTSegmentData.CodingKeys, b: ZTCoreKit.ZTSegmentData.CodingKeys) -> Swift.Bool
-    public func hash(into hasher: inout Swift.Hasher)
-    public init?(stringValue: Swift.String)
-    public init?(intValue: Swift.Int)
-    public var hashValue: Swift.Int {
-      get
-    }
-    public var intValue: Swift.Int? {
-      get
-    }
-    public var stringValue: Swift.String {
-      get
-    }
-  }
   public init(data: Foundation.Data)
   public init(data: Foundation.Data, activityId: Swift.String)
   required public init(from decoder: Swift.Decoder) throws
@@ -2028,11 +2005,10 @@ open class ZTSegmentData : ZTCoreKit.ZTNotifyDataMessage {
   public static func loadUnsent(activityId: Swift.String) -> [ZTCoreKit.ZTSegmentData]
   public static func loadAll(activityId: Swift.String) -> [ZTCoreKit.ZTSegmentData]
   public static func loadAll(activityId: Swift.String, lastChunkId: Swift.UInt16?) -> [ZTCoreKit.ZTSegmentData]
-  public static func loadAll(activityId: Swift.String, firstChunkId: Swift.UInt16?, lastChunkId: Swift.UInt16? = nil) -> [ZTCoreKit.ZTSegmentData]
+  public static func loadAll(activityId: Swift.String, firstChunkId: Swift.UInt16?, lastChunkId: Swift.UInt16?) -> [ZTCoreKit.ZTSegmentData]
   public static func clear(activityId: Swift.String?)
   public static func move(from: Swift.String?, to: Swift.String?, lastChunkId: Swift.UInt16?)
   public static func checkMissedChunks(activityId: Swift.String) -> Swift.Bool
-  public static func getMissedChunk(activity: ZTCoreKit.ZTActivity?) -> Swift.UInt16?
   public static func hasMissedChunks(activityId: Swift.String, startIndex: Swift.UInt16?, endIndex: Swift.UInt16?) -> Swift.Bool
   public static func getMaxMissedChunk(activityId: Swift.String, chunkId: Swift.UInt16) -> Swift.UInt16?
   @objc deinit
@@ -2714,6 +2690,7 @@ extension Swift.Set where Element : ZTCoreKit.ZTBaseMappable {
   final public let onDeviceStateChange: ZTCoreKit.ZTSignal<(ZTCoreKit.ZTDevice?, Swift.Error?)>
   final public let onDeviceDiscovered: ZTCoreKit.ZTSignal<ZTCoreKit.ZTDevice>
   final public let onDeviceConnectionFailed: ZTCoreKit.ZTSignal<(ZTCoreKit.ZTDevice?, Swift.Error?)>
+  final public let onScanFinished: ZTCoreKit.ZTSignal<(Swift.Error?)>
   final public let onReconnectFailed: ZTCoreKit.ZTSignal<(Swift.Error?)>
   @objc deinit
 }
@@ -2737,6 +2714,8 @@ extension ZTCoreKit.ZTArchive {
   final public func extract(_ entry: ZTCoreKit.ZTEntry, bufferSize: Swift.UInt32 = defaultReadChunkSize, skipCRC32: Swift.Bool = false, progress: Foundation.Progress? = nil, consumer: (_ data: Foundation.Data) throws -> Swift.Void) throws -> ZTCoreKit.CRC32
 }
 public typealias ConnectResultBlock = (ZTCoreKit.ZTDevice?, Swift.Error?) -> Swift.Void
+public typealias ScanResultBlock = (ZTCoreKit.ZTDevice?, Swift.Error?) -> Swift.Void
+public typealias ScanFinishedBlock = (Swift.Error?) -> Swift.Void
 @_hasMissingDesignatedInitializers final public class ZTCore {
   public static let shared: ZTCoreKit.ZTCore
   final public var settings: ZTCoreKit.ZTSettings {
@@ -2760,7 +2739,9 @@ public typealias ConnectResultBlock = (ZTCoreKit.ZTDevice?, Swift.Error?) -> Swi
   final public let bleManager: ZTCoreKit.ZTBleManager
   final public func setup(apiKey: Swift.String, secret: Swift.String, appId: Swift.String, completion: ((Swift.Error?) -> Swift.Void)? = nil)
   final public func updateOrganization(code: Swift.String? = nil, appType: Swift.String? = nil)
+  @available(*, deprecated, message: "Use scan(product:, timeout:, deviceDiscovered:, completion:) instead")
   final public func scan(for product: ZTCoreKit.ZTProductType? = nil, timeout: Swift.Double? = 15, completion: ZTCoreKit.ConnectResultBlock? = nil)
+  final public func scan(for product: ZTCoreKit.ZTProductType? = nil, timeout: Swift.Double? = 15, deviceDiscovered: ZTCoreKit.ScanResultBlock? = nil, completion: ZTCoreKit.ScanFinishedBlock? = nil)
   final public func stopScan()
   final public func connectWithDevice(_ device: ZTCoreKit.ZTDevice?, timeout: Swift.Double? = 5, completion: ZTCoreKit.ConnectResultBlock? = nil)
   final public func connectWithCode(_ code: Swift.String, timeout: Swift.Double? = 20, completion: ZTCoreKit.ConnectResultBlock? = nil)
@@ -2937,8 +2918,6 @@ extension ZTCoreKit.ZTSegmentData.ChunkType : Swift.RawRepresentable {}
 extension ZTCoreKit.ZTSegmentData.PacketType : Swift.Equatable {}
 extension ZTCoreKit.ZTSegmentData.PacketType : Swift.Hashable {}
 extension ZTCoreKit.ZTSegmentData.PacketType : Swift.RawRepresentable {}
-extension ZTCoreKit.ZTSegmentData.CodingKeys : Swift.Equatable {}
-extension ZTCoreKit.ZTSegmentData.CodingKeys : Swift.Hashable {}
 extension ZTCoreKit.ZTActivitySummaryStatus : Swift.Equatable {}
 extension ZTCoreKit.ZTActivitySummaryStatus : Swift.Hashable {}
 extension ZTCoreKit.ZTActivitySummaryStatus : Swift.RawRepresentable {}
