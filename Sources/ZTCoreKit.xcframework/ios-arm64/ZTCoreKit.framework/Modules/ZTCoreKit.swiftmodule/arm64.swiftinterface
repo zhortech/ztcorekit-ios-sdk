@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.5.1 (swiftlang-1300.0.31.4 clang-1300.0.29.6)
+// swift-compiler-version: Apple Swift version 5.5.2 (swiftlang-1300.0.47.5 clang-1300.0.29.30)
 // swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name ZTCoreKit
 import Combine
 import CommonCrypto
@@ -54,6 +54,14 @@ extension Foundation.Data {
   public mutating func append(byte data: Swift.Int8)
   public mutating func append(unsignedInteger data: Swift.UInt32, bigEndian: Swift.Bool = true)
   public mutating func append(unsignedLong data: Swift.UInt64, bigEndian: Swift.Bool = true)
+}
+extension Foundation.Data {
+  public func dataObject<T>(at index: Foundation.Data.Index = 0) -> T
+}
+extension Swift.Numeric {
+  public var data: Foundation.Data {
+    get
+  }
 }
 @objc public enum DFUUuidType : Swift.Int {
   case legacyService = 0
@@ -173,6 +181,14 @@ extension Foundation.UserDefaults {
   public func clear<T>(_ key: ZTCoreKit.ZTDefaultsKey<T>)
   public func clearAll()
 }
+public struct ZTMessageTime : Swift.CustomStringConvertible {
+  public var left: Swift.UInt16
+  public var right: Swift.UInt16
+  public init(bytes: [Swift.UInt8])
+  public var description: Swift.String {
+    get
+  }
+}
 extension Swift.String {
   public func binary(with character: Swift.String = "0", toLength length: Swift.Int = 8) -> Swift.String
   public var fromBase64: Swift.String? {
@@ -197,6 +213,9 @@ extension Swift.UInt8 {
 }
 extension Swift.UInt16 {
   public func toByteArray(size: Swift.Int = 2) -> [Swift.UInt8]
+}
+extension Swift.UInt32 {
+  public func toByteArray(size: Swift.Int = 4) -> [Swift.UInt8]
 }
 extension Swift.Double {
   public var milliseconds: Swift.Int64 {
@@ -915,17 +934,25 @@ public enum ZTCommand : Swift.UInt8 {
   case setChunkMinutesInterval
   case setChunkSecondsInterval
   case selectAlgorithm
+  case freeMemory
+  case getTimestamp
+  case resetActivity
+  case getActivityMetadata
   case disableHeating
   case setHeating
   case setTimer
   case getTemperature
   case getTimer
   case startPostureCalibration
+  case setUserParameters
   case resetCalibration
   case getCalibrationState
-  case setUserParameters
+  case rawDataSend
+  case rawDataEnable
+  case rawDataLookup
   case disconnect
   case startDFULeft
+  case enablePeerConnection
   public var description: Swift.String {
     get
   }
@@ -1007,10 +1034,16 @@ extension ZTCoreKit.ZTDevice : CoreBluetooth.CBPeripheralDelegate {
 }
 @objc public class ZTDevice : ObjectiveC.NSObject {
   public var id: Swift.String
+  public var peripheral: CoreBluetooth.CBPeripheral? {
+    get
+  }
   public var serialNumber: Swift.String {
     get
   }
   public var name: Swift.String? {
+    get
+  }
+  public var qrCode: Swift.String? {
     get
   }
   public var rssi: Swift.Int {
@@ -1040,9 +1073,6 @@ extension ZTCoreKit.ZTDevice : CoreBluetooth.CBPeripheralDelegate {
   public var info: ZTCoreKit.ZTDeviceInfo? {
     get
     set
-  }
-  public var peripheral: CoreBluetooth.CBPeripheral? {
-    get
   }
   public var batterylevel: ZTCoreKit.ZTBatteryLevel? {
     get
@@ -1090,6 +1120,10 @@ extension ZTCoreKit.ZTDevice : CoreBluetooth.CBPeripheralDelegate {
   final public let onGeneralStateUpdated: ZTCoreKit.ZTSignal<(ZTCoreKit.ZTDeviceActualState)>
   final public let onActivityInfoUpdated: ZTCoreKit.ZTSignal<(ZTCoreKit.ZTMessageActivity?)>
   final public let onSoftwareUpdated: ZTCoreKit.ZTSignal<(ZTCoreKit.ZTMessageSoftware?)>
+  final public let onTimeUpdated: ZTCoreKit.ZTSignal<(ZTCoreKit.ZTMessageTime?)>
+  final public let onActivityMetadataUpdated: ZTCoreKit.ZTSignal<(ZTCoreKit.ZTMessageActivityMetadata?)>
+  final public let onRawDataHeaderUpdated: ZTCoreKit.ZTSignal<(Foundation.Data?)>
+  final public let onRawDataFrameUpdated: ZTCoreKit.ZTSignal<(Foundation.Data?)>
   final public let onInactivityTimeoutUpdated: ZTCoreKit.ZTSignal<(ZTCoreKit.ZTMessageInactivityTimeout?)>
   final public let onNotifyCommonGroupUpdated: ZTCoreKit.ZTSignal<(ZTCoreKit.ZTNotifyData.CommonMessageId, [Swift.UInt8]?)>
   final public let onNotifyWarmGroupUpdated: ZTCoreKit.ZTSignal<(ZTCoreKit.ZTNotifyData.WarmMessageId, Foundation.Data?)>
@@ -1202,7 +1236,7 @@ public enum ZTProjectCodeType : Swift.String {
   }
 }
 public enum ZTProductCodeType : Swift.String {
-  case WS
+  case WS, WM
   case SP
   case SF
   case PS
@@ -1345,6 +1379,7 @@ extension ZTCoreKit.ZTError.Enums {
     case notConnected
     case notConnectedLeft
     case activityIsRunning
+    case busy
     public static func == (a: ZTCoreKit.ZTError.Enums.BleError, b: ZTCoreKit.ZTError.Enums.BleError) -> Swift.Bool
     public func hash(into hasher: inout Swift.Hasher)
     public var hashValue: Swift.Int {
@@ -1403,6 +1438,7 @@ extension ZTCoreKit.ZTError.Enums {
     case previousNotStopped
     case previousRestoring
     case noUserParametersSet
+    case rawDataFlowIsRunning
     public static func == (a: ZTCoreKit.ZTError.Enums.ActivityError, b: ZTCoreKit.ZTError.Enums.ActivityError) -> Swift.Bool
     public func hash(into hasher: inout Swift.Hasher)
     public var hashValue: Swift.Int {
@@ -1567,7 +1603,11 @@ public enum ZTNotifyData {
     case MSG_HARDWARE
     case MSG_SOFTWARE
     case MSG_ACTIVITY_INFO
+    case MSG_ACTIVITY_METADATA
+    case MSG_RAWDATA_HEADER
+    case MSG_RAWDATA_FRAME
     case MSG_BTLOADER_INFO
+    case MSG_INACTIVITY_TIMEOUT
     case MSG_DEBUG
     public var description: Swift.String {
       get
@@ -1895,6 +1935,7 @@ open class ZTActivity : Swift.Codable {
     get
     set
   }
+  public var isRawDataMode: Swift.Bool
   public var isAutomatic: Swift.Bool
   public var forceStop: Swift.Bool
   public var firstChunkId: Swift.UInt16?
@@ -1994,6 +2035,29 @@ open class ZTSegmentData : ZTCoreKit.ZTNotifyDataMessage {
       get
     }
   }
+  public enum CodingKeys : Swift.CodingKey {
+    case id
+    case activityId
+    case rawData
+    case timestamp
+    case duration
+    case status
+    case timestampType
+    case originalTimestamp
+    public static func == (a: ZTCoreKit.ZTSegmentData.CodingKeys, b: ZTCoreKit.ZTSegmentData.CodingKeys) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public init?(stringValue: Swift.String)
+    public init?(intValue: Swift.Int)
+    public var hashValue: Swift.Int {
+      get
+    }
+    public var intValue: Swift.Int? {
+      get
+    }
+    public var stringValue: Swift.String {
+      get
+    }
+  }
   public init(data: Foundation.Data)
   public init(data: Foundation.Data, activityId: Swift.String)
   required public init(from decoder: Swift.Decoder) throws
@@ -2005,10 +2069,11 @@ open class ZTSegmentData : ZTCoreKit.ZTNotifyDataMessage {
   public static func loadUnsent(activityId: Swift.String) -> [ZTCoreKit.ZTSegmentData]
   public static func loadAll(activityId: Swift.String) -> [ZTCoreKit.ZTSegmentData]
   public static func loadAll(activityId: Swift.String, lastChunkId: Swift.UInt16?) -> [ZTCoreKit.ZTSegmentData]
-  public static func loadAll(activityId: Swift.String, firstChunkId: Swift.UInt16?, lastChunkId: Swift.UInt16?) -> [ZTCoreKit.ZTSegmentData]
+  public static func loadAll(activityId: Swift.String, firstChunkId: Swift.UInt16?, lastChunkId: Swift.UInt16? = nil) -> [ZTCoreKit.ZTSegmentData]
   public static func clear(activityId: Swift.String?)
   public static func move(from: Swift.String?, to: Swift.String?, lastChunkId: Swift.UInt16?)
   public static func checkMissedChunks(activityId: Swift.String) -> Swift.Bool
+  public static func getMissedChunk(activity: ZTCoreKit.ZTActivity?) -> Swift.UInt16?
   public static func hasMissedChunks(activityId: Swift.String, startIndex: Swift.UInt16?, endIndex: Swift.UInt16?) -> Swift.Bool
   public static func getMaxMissedChunk(activityId: Swift.String, chunkId: Swift.UInt16) -> Swift.UInt16?
   @objc deinit
@@ -2277,7 +2342,7 @@ public struct ZTEntry : Swift.Equatable {
   public var key: Swift.String?
   public var url: Swift.String?
   public var data: Foundation.Data?
-  convenience public init(data: Foundation.Data?, fileName: Swift.String? = nil, mimeType: Swift.String? = nil, description: Swift.String? = nil)
+  convenience public init(data: Foundation.Data? = nil, fileName: Swift.String? = nil, mimeType: Swift.String? = nil, description: Swift.String? = nil)
   required convenience public init?(map: ZTCoreKit.ZTMap)
   public func mapping(map: ZTCoreKit.ZTMap)
   @objc deinit
@@ -2442,6 +2507,17 @@ extension ZTCoreKit.ZTMapper where N : Swift.Hashable {
   final public func mapSet(JSONArray: [[Swift.String : Any]]) -> Swift.Set<N>
   final public func toJSONSet(_ set: Swift.Set<N>) -> [[Swift.String : Any]]
   final public func toJSONString(_ set: Swift.Set<N>, prettyPrint: Swift.Bool = false) -> Swift.String?
+}
+public enum ZTActivityLastStopReason : Swift.UInt8 {
+  case undefined
+  case userRequest
+  case memoryFull
+  case inactivity
+  public init?(rawValue: Swift.UInt8)
+  public typealias RawValue = Swift.UInt8
+  public var rawValue: Swift.UInt8 {
+    get
+  }
 }
 extension Foundation.DateFormatter {
   convenience public init(withFormat format: Swift.String, locale: Swift.String)
@@ -2637,6 +2713,7 @@ extension Swift.Set where Element : ZTCoreKit.ZTBaseMappable {
   final public func addMediaFileToActivityComment(commentId: Swift.String, mediaFileTemplate: ZTCoreKit.ZTMediaFileTemplate, completion: @escaping ZTCoreKit.ZTBaseResult)
   final public func deleteActivityComment(commentId: Swift.String, completion: @escaping ZTCoreKit.ZTBaseResult)
   final public func deleteMediaFile(mediaFileId: Swift.String, completion: @escaping ZTCoreKit.ZTBaseResult)
+  final public func uploadActivityRawData(activityId: Swift.String, filePath: Foundation.URL, completion: @escaping ZTCoreKit.ZTBaseResult)
   final public func getAchievements(completion: @escaping ZTCoreKit.ZTResultArray<ZTCoreKit.ZTAchievement>)
   final public func complianceTestRetry(timeout: Swift.Int, attempts: Swift.Int, statusCode: Swift.Int, completion: @escaping ((Foundation.Data?, Swift.Error?) -> Swift.Void))
   final public func sendDirectMessage(message: [Swift.String : Any], completion: @escaping ZTCoreKit.ZTBaseResult)
@@ -2676,7 +2753,10 @@ extension Swift.Set where Element : ZTCoreKit.ZTBaseMappable {
   final public var serviceTypes: [Swift.String : ZTCoreKit.ZTService.Type] {
     get
   }
-  final public var product: ZTCoreKit.ZTProductType?
+  final public var product: ZTCoreKit.ZTProductType? {
+    get
+    set
+  }
   final public var connectedDevice: ZTCoreKit.ZTDevice? {
     get
   }
@@ -2727,6 +2807,9 @@ public typealias ScanFinishedBlock = (Swift.Error?) -> Swift.Void
   final public var lastDeviceSerialNumber: Swift.String? {
     get
   }
+  final public var lastDeviceQRCode: Swift.String? {
+    get
+  }
   final public var lastCommand: ZTCoreKit.ZTCommand?
   final public var lastCommandResponses: [ZTCoreKit.ZTCommandResponse]
   final public var lastActivityId: Swift.String? {
@@ -2738,15 +2821,16 @@ public typealias ScanFinishedBlock = (Swift.Error?) -> Swift.Void
   weak final public var dfuDelegate: ZTCoreKit.ZTDfuDelegate?
   final public let bleManager: ZTCoreKit.ZTBleManager
   final public func setup(apiKey: Swift.String, secret: Swift.String, appId: Swift.String, completion: ((Swift.Error?) -> Swift.Void)? = nil)
+  final public func clearUser()
   final public func updateOrganization(code: Swift.String? = nil, appType: Swift.String? = nil)
   @available(*, deprecated, message: "Use scan(product:, timeout:, deviceDiscovered:, completion:) instead")
   final public func scan(for product: ZTCoreKit.ZTProductType? = nil, timeout: Swift.Double? = 15, completion: ZTCoreKit.ConnectResultBlock? = nil)
   final public func scan(for product: ZTCoreKit.ZTProductType? = nil, timeout: Swift.Double? = 15, deviceDiscovered: ZTCoreKit.ScanResultBlock? = nil, completion: ZTCoreKit.ScanFinishedBlock? = nil)
   final public func stopScan()
-  final public func connectWithDevice(_ device: ZTCoreKit.ZTDevice?, timeout: Swift.Double? = 5, completion: ZTCoreKit.ConnectResultBlock? = nil)
+  final public func connectWithDevice(_ device: ZTCoreKit.ZTDevice?, timeout: Swift.Double? = 5, isDfu: Swift.Bool = false, completion: ZTCoreKit.ConnectResultBlock? = nil)
   final public func connectWithCode(_ code: Swift.String, timeout: Swift.Double? = 20, completion: ZTCoreKit.ConnectResultBlock? = nil)
   final public func getDeviceInfo(code: Swift.String, completion: @escaping (ZTCoreKit.ZTDeviceInfo?, Swift.Error?) -> Swift.Void)
-  final public func tryReconnect()
+  final public func tryReconnect(completion: ZTCoreKit.ConnectResultBlock? = nil)
   final public func checkConnectedDevice(completion: ZTCoreKit.ConnectResultBlock? = nil)
   @objc deinit
 }
@@ -2757,6 +2841,17 @@ public protocol ZTDfuDelegate : AnyObject {
   func dfuDelegate(didFail error: Swift.Error?)
   func dfuDelegate(leftDidFinish newVersion: Swift.String?)
   func dfuDelegate(rightDidFinish newVersion: Swift.String?)
+}
+public struct ZTMessageActivityMetadata : Swift.CustomStringConvertible {
+  public var lastStopReason: ZTCoreKit.ZTActivityLastStopReason
+  public var chunkCount: Swift.UInt16
+  public var firstChunkId: Swift.UInt16
+  public var startTime: Swift.UInt32
+  public var endTime: Swift.UInt32
+  public init(bytes: [Swift.UInt8])
+  public var description: Swift.String {
+    get
+  }
 }
 @_hasMissingDesignatedInitializers open class ZTJSONParameterEncoder {
   @objc deinit
@@ -2918,6 +3013,8 @@ extension ZTCoreKit.ZTSegmentData.ChunkType : Swift.RawRepresentable {}
 extension ZTCoreKit.ZTSegmentData.PacketType : Swift.Equatable {}
 extension ZTCoreKit.ZTSegmentData.PacketType : Swift.Hashable {}
 extension ZTCoreKit.ZTSegmentData.PacketType : Swift.RawRepresentable {}
+extension ZTCoreKit.ZTSegmentData.CodingKeys : Swift.Equatable {}
+extension ZTCoreKit.ZTSegmentData.CodingKeys : Swift.Hashable {}
 extension ZTCoreKit.ZTActivitySummaryStatus : Swift.Equatable {}
 extension ZTCoreKit.ZTActivitySummaryStatus : Swift.Hashable {}
 extension ZTCoreKit.ZTActivitySummaryStatus : Swift.RawRepresentable {}
@@ -2941,6 +3038,9 @@ extension ZTCoreKit.ZTLoggerSeverity : Swift.Hashable {}
 extension ZTCoreKit.ZTLoggerSeverity : Swift.RawRepresentable {}
 extension ZTCoreKit.ZTMappingType : Swift.Equatable {}
 extension ZTCoreKit.ZTMappingType : Swift.Hashable {}
+extension ZTCoreKit.ZTActivityLastStopReason : Swift.Equatable {}
+extension ZTCoreKit.ZTActivityLastStopReason : Swift.Hashable {}
+extension ZTCoreKit.ZTActivityLastStopReason : Swift.RawRepresentable {}
 extension ZTCoreKit.ZTReachability.ZTConnection : Swift.Equatable {}
 extension ZTCoreKit.ZTReachability.ZTConnection : Swift.Hashable {}
 extension ZTCoreKit.ZTDateDefaultTransform.Unit : Swift.Equatable {}
