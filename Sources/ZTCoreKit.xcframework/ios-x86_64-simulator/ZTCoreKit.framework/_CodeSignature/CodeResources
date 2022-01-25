@@ -10,11 +10,11 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		50w+EG5SSE1AhfWyejGmsq7pSxc=
+		8WdRn9lQOA2lI6eOtrn5XpazSY8=
 		</data>
 		<key>Modules/ZTCoreKit.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		VIYDtvu5SBbU/ipE+ajPcBA7jnc=
+		RxRgBIzDnegsXKkZLGjTK+pFCJo=
 		</data>
 		<key>Modules/ZTCoreKit.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
@@ -22,11 +22,11 @@
 		</data>
 		<key>Modules/ZTCoreKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		T8k0Rw7cIPADQju96BQhPRGcUzU=
+		czGbrE9DL4mtRDLAfa05is8vmqY=
 		</data>
 		<key>Modules/ZTCoreKit.swiftmodule/x86_64.swiftdoc</key>
 		<data>
-		VIYDtvu5SBbU/ipE+ajPcBA7jnc=
+		RxRgBIzDnegsXKkZLGjTK+pFCJo=
 		</data>
 		<key>Modules/ZTCoreKit.swiftmodule/x86_64.swiftinterface</key>
 		<data>
@@ -34,7 +34,7 @@
 		</data>
 		<key>Modules/ZTCoreKit.swiftmodule/x86_64.swiftmodule</key>
 		<data>
-		T8k0Rw7cIPADQju96BQhPRGcUzU=
+		czGbrE9DL4mtRDLAfa05is8vmqY=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -50,7 +50,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			kxVO4vm+N7TWwfmYwKd7jDqDXCcURbjIHB4Kl5md6Z0=
+			LOvGY0w5Qfn/DlVxenROvNVIvTIsMrWv80kWLq7qIDs=
 			</data>
 		</dict>
 		<key>Modules/ZTCoreKit.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
@@ -64,14 +64,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			nUdElixMdD/mlnmvRKVUoeWfZUAKjENUQgS3b0atEr4=
+			DAKOmUIbdk6liIer/iByAqK0FXz5Ed19MgEIwXXsMMk=
 			</data>
 		</dict>
 		<key>Modules/ZTCoreKit.swiftmodule/x86_64.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			kxVO4vm+N7TWwfmYwKd7jDqDXCcURbjIHB4Kl5md6Z0=
+			LOvGY0w5Qfn/DlVxenROvNVIvTIsMrWv80kWLq7qIDs=
 			</data>
 		</dict>
 		<key>Modules/ZTCoreKit.swiftmodule/x86_64.swiftinterface</key>
@@ -85,7 +85,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			nUdElixMdD/mlnmvRKVUoeWfZUAKjENUQgS3b0atEr4=
+			DAKOmUIbdk6liIer/iByAqK0FXz5Ed19MgEIwXXsMMk=
 			</data>
 		</dict>
 	</dict>

@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.1.16](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.16) (2022-01-25)
+
+- DFU support for SF legacy firmware
+
 ## [1.1.15](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.15) (2021-12-14)
 
 - support for Universal firmware

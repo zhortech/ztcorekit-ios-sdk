@@ -289,21 +289,21 @@
     },
     {
       "file": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztcorekit/Sources/ZTCoreKit/Helpers/ZTHelpers.swift",
-      "line": 40,
+      "line": 42,
       "symbol": "ZTEnvironment",
       "symbol_kind": "source.lang.swift.decl.enum",
       "warning": "undocumented"
     },
     {
       "file": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztcorekit/Sources/ZTCoreKit/Helpers/ZTHelpers.swift",
-      "line": 101,
+      "line": 103,
       "symbol": "ZTModuleSide.left",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztcorekit/Sources/ZTCoreKit/Helpers/ZTHelpers.swift",
-      "line": 102,
+      "line": 104,
       "symbol": "ZTModuleSide.right",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
