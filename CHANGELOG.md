@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.1.17](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.17) (2022-02-03)
+
+- Fixed parameter encoding for GET methods for ZC environemnt
+- Fixed saving requests methods for ZC environemnt
+
+
 ## [1.1.16](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.16) (2022-01-25)
 
 - DFU support for SF legacy firmware
