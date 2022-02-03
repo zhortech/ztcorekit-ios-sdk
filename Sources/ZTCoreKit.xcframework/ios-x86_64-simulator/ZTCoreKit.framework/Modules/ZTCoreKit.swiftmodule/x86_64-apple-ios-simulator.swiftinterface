@@ -2693,10 +2693,15 @@ extension Swift.Set where Element : ZTCoreKit.ZTBaseMappable {
   final public func stopActivity<T>(id: Swift.String, duration: Swift.Int? = nil, timestamp: Swift.Int64? = nil, segments: [ZTCoreKit.ZTSegmentData]?, completion: ((T?, Swift.Error?) -> ())? = nil) where T : ZTCoreKit.ZTMappable
   final public func getData<T>(path: Swift.String, parameters: [Swift.String : Any]? = nil, completion: ((T?, Swift.Error?) -> ())? = nil) where T : ZTCoreKit.ZTMappable
   final public func getData(path: Swift.String, parameters: [Swift.String : Any]? = nil, completion: @escaping (([Swift.String : Any]?, Foundation.Data?, Swift.Error?) -> ()))
+  final public func getData(path: Swift.String, parameters: [Swift.String : Any]? = nil, completion: @escaping (([[Swift.String : Any]]?, Swift.Error?) -> ()))
   final public func getAppAttributes(completion: @escaping ([Swift.String : Any]?, Swift.Error?) -> Swift.Void)
   final public func checkFirmwareUpdate(completion: @escaping ((_ updatable: Swift.Bool, _ error: Swift.Error?) -> ()))
+  final public func getDataArray(path: Swift.String, parameters: [Swift.String : Any]? = nil, completion: @escaping (([[Swift.String : Any]]?, Swift.Error?) -> ()))
   final public func postData(path: Swift.String, parameters: [Swift.String : Any], completion: @escaping (ZTCoreKit.ZTBaseResult))
   final public func postData<T>(path: Swift.String, parameters: [Swift.String : Any]? = nil, completion: @escaping (ZTCoreKit.ZTResultObject<T>)) where T : ZTCoreKit.ZTMappable
+  final public func postDataResult(path: Swift.String, parameters: [Swift.String : Any], completion: @escaping (([Swift.String : Any]?, Swift.Error?) -> Swift.Void))
+  final public func postDataResultArray(path: Swift.String, parameters: [Swift.String : Any], completion: @escaping (([[Swift.String : Any]]?, Swift.Error?) -> Swift.Void))
+  final public func deleteData(path: Swift.String, parameters: [Swift.String : Any]? = nil, completion: @escaping (ZTCoreKit.ZTBaseResult))
   final public func addActivityData(activityId: Swift.String, timestamp: Foundation.TimeInterval, data: [Any], completion: @escaping (ZTCoreKit.ZTBaseResult))
   final public func updateActivityAttributes(activityId: Swift.String, attributes: [Swift.String : Any], completion: @escaping ZTCoreKit.ZTBaseResult)
   final public func updatePushNotificationToken(_ token: Swift.String, completion: ZTCoreKit.ZTBaseResult? = nil)
@@ -2716,13 +2721,6 @@ extension Swift.Set where Element : ZTCoreKit.ZTBaseMappable {
   final public func uploadActivityRawData(activityId: Swift.String, filePath: Foundation.URL, completion: @escaping ZTCoreKit.ZTBaseResult)
   final public func getAchievements(completion: @escaping ZTCoreKit.ZTResultArray<ZTCoreKit.ZTAchievement>)
   final public func complianceTestRetry(timeout: Swift.Int, attempts: Swift.Int, statusCode: Swift.Int, completion: @escaping ((Foundation.Data?, Swift.Error?) -> Swift.Void))
-  final public func sendDirectMessage(message: [Swift.String : Any], completion: @escaping ZTCoreKit.ZTBaseResult)
-  final public func getDirectMessages(completion: @escaping (([[Swift.String : Any]]?, Swift.Error?) -> Swift.Void))
-  final public func deleteDirectMessage(id: Swift.String, completion: @escaping ZTCoreKit.ZTBaseResult)
-  final public func sendCannedMessage(message: [Swift.String : Any], completion: @escaping (([Swift.String : Any]?, Swift.Error?) -> Swift.Void))
-  final public func getCannedMessages(parameters: [Swift.String : Any], completion: @escaping (([[Swift.String : Any]]?, Swift.Error?) -> Swift.Void))
-  final public func getTileMessage(name: Swift.String, parameters: [Swift.String : Any], completion: @escaping (([Swift.String : Any]?, Swift.Error?) -> Swift.Void))
-  final public func getMobilityMessage(name: Swift.String, enqueue: Swift.Bool = true, completion: @escaping (([Swift.String : Any]?, Swift.Error?) -> Swift.Void))
   final public func startListenMessages(onMessageReceived: @escaping ((Swift.String?) -> Swift.Void), onDataReceived: @escaping ((Foundation.Data?) -> Swift.Void))
   final public func stopListenMessages()
   @objc deinit

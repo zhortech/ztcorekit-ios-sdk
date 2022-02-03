@@ -1,6 +1,11 @@
 # Changelog
 
-## [1.1.17](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.17) (2022-02-03)
+## [1.1.18](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.18) (2022-02-03)
+
+- Added generic method into ZTApi to post and get data as dictionary
+- Removed Baliston-related methods
+
+## [1.1.17](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.17) (2022-02-02)
 
 - Fixed parameter encoding for GET methods for ZC environemnt
 - Fixed saving requests methods for ZC environemnt
