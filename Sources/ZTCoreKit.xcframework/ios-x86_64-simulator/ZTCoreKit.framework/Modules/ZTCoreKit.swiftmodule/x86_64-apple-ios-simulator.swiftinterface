@@ -2680,6 +2680,9 @@ extension Swift.Set where Element : ZTCoreKit.ZTBaseMappable {
   }
   final public func linkUser(userId: Swift.String, attributes: [Swift.String : Any], completion: @escaping ((Swift.String?, Swift.Error?) -> Swift.Void))
   final public func getUserShoes(completion: @escaping (ZTCoreKit.ZTResultArray<ZTCoreKit.ZTUserShoe>))
+  final public func getUserShoe(code: Swift.String, completion: @escaping ZTCoreKit.ZTResultObject<ZTCoreKit.ZTUserShoe>)
+  final public func updateUserShoe(code: Swift.String, attributes: [Swift.String : Any], completion: @escaping ZTCoreKit.ZTResultObject<ZTCoreKit.ZTUserShoe>)
+  final public func deleteUserShoe(code: Swift.String, completion: @escaping ZTCoreKit.ZTBaseResult)
   final public func uploadProfileImage(_ image: Foundation.Data, completion: (ZTCoreKit.ZTBaseResult)? = nil)
   final public func getActivities<T>(code: Swift.String?, start: Foundation.Date, end: Foundation.Date, fields: [Swift.String] = [], include: [Swift.String]? = nil, completion: (([T]?, Swift.Error?) -> ())? = nil) where T : ZTCoreKit.ZTMappable
   final public func getActivities<T>(code: Swift.String?, offset: Swift.Int, limit: Swift.Int, fields: [Swift.String] = [], include: [Swift.String]? = nil, whereOptions: [Swift.String : Any]? = nil, duration: [Swift.String : Any]? = nil, start: Foundation.Date? = nil, end: Foundation.Date? = nil, completion: (([T]?, Swift.Error?) -> ())? = nil) where T : ZTCoreKit.ZTMappable

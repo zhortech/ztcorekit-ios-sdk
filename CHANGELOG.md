@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.1.19](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.19) (2022-02-07)
+
+- Added method `getUserShoe(code: completion:)` into `ZTApi` to get shoes by code
+- Added method `updateUserShoe(code: attributes: completion:)` into `ZTApi` to update shoe with attributes
+- Added method `deleteUserShoe(code: completion:)` into `ZTApi` to delete user's shoe from ZCloud
+
 ## [1.1.18](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.18) (2022-02-03)
 
 - Added generic method into ZTApi to post and get data as dictionary
