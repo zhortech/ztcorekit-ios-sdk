@@ -1,5 +1,10 @@
 # Changelog
 
+## [1.1.20](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.20) (2022-02-10)
+
+- refactored chunks status update
+
+
 ## [1.1.19](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.19) (2022-02-07)
 
 - Added method `getUserShoe(code: completion:)` into `ZTApi` to get shoes by code
