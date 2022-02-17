@@ -1661,63 +1661,63 @@
     },
     {
       "file": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztcorekit/Sources/ZTCoreKit/Networking/Models/ZTActivitySegment.swift",
-      "line": 106,
+      "line": 108,
       "symbol": "ZTSegmentData.PacketType.description",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztcorekit/Sources/ZTCoreKit/Networking/Models/ZTActivitySegment.swift",
-      "line": 132,
+      "line": 136,
       "symbol": "ZTSegmentData.CodingKeys.id",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztcorekit/Sources/ZTCoreKit/Networking/Models/ZTActivitySegment.swift",
-      "line": 133,
+      "line": 137,
       "symbol": "ZTSegmentData.CodingKeys.activityId",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztcorekit/Sources/ZTCoreKit/Networking/Models/ZTActivitySegment.swift",
-      "line": 134,
+      "line": 138,
       "symbol": "ZTSegmentData.CodingKeys.rawData",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztcorekit/Sources/ZTCoreKit/Networking/Models/ZTActivitySegment.swift",
-      "line": 135,
+      "line": 139,
       "symbol": "ZTSegmentData.CodingKeys.timestamp",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztcorekit/Sources/ZTCoreKit/Networking/Models/ZTActivitySegment.swift",
-      "line": 136,
+      "line": 140,
       "symbol": "ZTSegmentData.CodingKeys.duration",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztcorekit/Sources/ZTCoreKit/Networking/Models/ZTActivitySegment.swift",
-      "line": 137,
+      "line": 141,
       "symbol": "ZTSegmentData.CodingKeys.status",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztcorekit/Sources/ZTCoreKit/Networking/Models/ZTActivitySegment.swift",
-      "line": 138,
+      "line": 142,
       "symbol": "ZTSegmentData.CodingKeys.timestampType",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztcorekit/Sources/ZTCoreKit/Networking/Models/ZTActivitySegment.swift",
-      "line": 139,
+      "line": 143,
       "symbol": "ZTSegmentData.CodingKeys.originalTimestamp",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
@@ -2074,7 +2074,7 @@
     },
     {
       "file": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztcorekit/Sources/ZTCoreKit/ZTApi.swift",
-      "line": 591,
+      "line": 699,
       "symbol": "ZTApi.uploadActivityRawData(activityId:filePath:completion:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"

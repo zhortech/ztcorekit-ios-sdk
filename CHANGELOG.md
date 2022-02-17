@@ -1,5 +1,10 @@
 # Changelog
 
+## [1.1.21](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.21) (2022-02-17)
+
+- changed method `uploadProfileImage(image: completion:)` in `ZTApi` for new ZCloud environment
+- added method `getUserProfile(completion:)` into `ZTApi` to get user's profile as `[String: Any]` 
+
 ## [1.1.20](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.20) (2022-02-10)
 
 - refactored chunks status update
