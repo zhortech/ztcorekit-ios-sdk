@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.1.22](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.22) (2022-03-04)
+
+- fixed storing of chunks in latest Swift
+
 ## [1.1.21](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.21) (2022-02-17)
 
 - changed method `uploadProfileImage(image: completion:)` in `ZTApi` for new ZCloud environment

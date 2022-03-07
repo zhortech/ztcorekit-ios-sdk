@@ -1781,7 +1781,7 @@ open class ZTTransformOf<ObjectType, JSONType> : ZTCoreKit.ZTTransformType {
   open func transformToJSON(_ value: ObjectType?) -> JSONType?
   @objc deinit
 }
-public enum ZTActivityMode : Swift.UInt8 {
+public enum ZTActivityMode : Swift.UInt8, Swift.Decodable {
   case safety
   case walking
   case running
