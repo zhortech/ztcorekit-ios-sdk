@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.1.24](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.24) (2022-03-10)
+
+- cleaning code
+
 ## [1.1.23](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.23) (2022-03-08)
 
 - cancel all requests for `ZTSettings.shared.clear()` which should be called on signout
