@@ -1045,6 +1045,7 @@ typedef SWIFT_ENUM(NSInteger, DFUUuidType, open) {
 
 
 
+
 /// This converter converts Intel HEX file to BIN.
 /// It is based on this specification:
 /// http://www.interlog.com/~speff/usefulinfo/Hexfrmt.pdf
@@ -1072,6 +1073,7 @@ SWIFT_CLASS("_TtC9ZTCoreKit21IntelHex2BinConverter")
 @interface IntelHex2BinConverter : NSObject
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
+
 
 
 

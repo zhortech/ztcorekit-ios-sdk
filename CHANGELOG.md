@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.1.26](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.26) (2022-03-16)
+
+- refactored chunk-related models
+
 ## [1.1.24](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.24) (2022-03-10)
 
 - cleaning code
