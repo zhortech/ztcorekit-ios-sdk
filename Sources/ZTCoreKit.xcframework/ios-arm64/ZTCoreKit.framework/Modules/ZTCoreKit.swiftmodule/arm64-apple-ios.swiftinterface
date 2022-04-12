@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.5.2 (swiftlang-1300.0.47.5 clang-1300.0.29.30)
+// swift-compiler-version: Apple Swift version 5.6 (swiftlang-5.6.0.323.62 clang-1316.0.20.8)
 // swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name ZTCoreKit
 import Combine
 import CommonCrypto
@@ -207,8 +207,7 @@ extension Foundation.UserDefaults {
   public func clearAll()
 }
 public struct ZTMessageTime : Swift.CustomStringConvertible {
-  public var left: Swift.UInt16
-  public var right: Swift.UInt16
+  public var timestamp: Swift.UInt32
   public init(bytes: [Swift.UInt8])
   public var description: Swift.String {
     get
@@ -300,6 +299,8 @@ public enum ZTModuleSide : Swift.String, Swift.Codable {
     get
   }
 }
+public func decodeData<T>(_ data: Foundation.Data, for type: T.Type) -> T? where T : Swift.Decodable, T : Swift.Encodable
+public func encodeData<T>(for type: T) -> Foundation.Data where T : Swift.Decodable, T : Swift.Encodable
 extension ZTCoreKit.ZTArchive {
   final public func totalUnitCountForRemoving(_ entry: ZTCoreKit.ZTEntry) -> Swift.Int64
   final public func totalUnitCountForReading(_ entry: ZTCoreKit.ZTEntry) -> Swift.Int64
@@ -1049,6 +1050,7 @@ public enum ZTCommand : Swift.UInt8 {
   case rawDataEnable
   case rawDataLookup
   case disconnect
+  case startDFURight
   case startDFULeft
   case enablePeerConnection
   public var description: Swift.String {
@@ -1537,6 +1539,7 @@ extension ZTCoreKit.ZTError.Enums {
     case previousRestoring
     case noUserParametersSet
     case rawDataFlowIsRunning
+    case invalidMobilityScanResults
     public static func == (a: ZTCoreKit.ZTError.Enums.ActivityError, b: ZTCoreKit.ZTError.Enums.ActivityError) -> Swift.Bool
     public func hash(into hasher: inout Swift.Hasher)
     public var hashValue: Swift.Int {
@@ -2027,17 +2030,23 @@ open class ZTActivity : Swift.Codable {
   public var startDate: Foundation.Date?
   public var endDate: Foundation.Date?
   public var startTimestamp: Swift.Int64?
+  public var endTimestamp: Swift.Int64?
   public var tz: Swift.String?
   public var status: Swift.String?
   public var state: ZTCoreKit.ZTDeviceActualState {
     get
     set
   }
+  public var metaData: ZTCoreKit.ZTMessageActivityMetadata?
+  public var stopReason: ZTCoreKit.ZTActivityLastStopReason?
   public var isRawDataMode: Swift.Bool
   public var isAutomatic: Swift.Bool
   public var forceStop: Swift.Bool
+  public var isInterrupted: Swift.Bool
   public var firstChunkId: Swift.UInt16?
   public var lastChunkId: Swift.UInt16?
+  public var chunkCount: Swift.UInt16?
+  public var anchorTimestamp: Swift.Int64?
   public init()
   open func save()
   @objc deinit
@@ -2633,7 +2642,7 @@ extension ZTCoreKit.ZTMapper where N : Swift.Hashable {
   final public func toJSONSet(_ set: Swift.Set<N>) -> [[Swift.String : Any]]
   final public func toJSONString(_ set: Swift.Set<N>, prettyPrint: Swift.Bool = false) -> Swift.String?
 }
-public enum ZTActivityLastStopReason : Swift.UInt8 {
+public enum ZTActivityLastStopReason : Swift.UInt8, Swift.Codable {
   case undefined
   case userRequest
   case memoryFull
@@ -2828,6 +2837,7 @@ extension Swift.Set where Element : ZTCoreKit.ZTBaseMappable {
   final public func getDataArray(path: Swift.String, parameters: [Swift.String : Any]? = nil, completion: @escaping (([[Swift.String : Any]]?, Swift.Error?) -> ()))
   final public func postData(path: Swift.String, parameters: [Swift.String : Any], completion: @escaping (ZTCoreKit.ZTBaseResult))
   final public func postData<T>(path: Swift.String, parameters: [Swift.String : Any]? = nil, completion: @escaping (ZTCoreKit.ZTResultObject<T>)) where T : ZTCoreKit.ZTMappable
+  final public func postDataGenericResult(path: Swift.String, parameters: [Swift.String : Any], completion: @escaping ((Any?, Swift.Error?) -> Swift.Void))
   final public func postDataResult(path: Swift.String, parameters: [Swift.String : Any], completion: @escaping (([Swift.String : Any]?, Swift.Error?) -> Swift.Void))
   final public func postDataResultArray(path: Swift.String, parameters: [Swift.String : Any], completion: @escaping (([[Swift.String : Any]]?, Swift.Error?) -> Swift.Void))
   final public func deleteData(path: Swift.String, parameters: [Swift.String : Any]? = nil, completion: @escaping (ZTCoreKit.ZTBaseResult))
@@ -2925,7 +2935,16 @@ public typealias ScanResultBlock = (ZTCoreKit.ZTDevice?, Swift.Error?) -> Swift.
 public typealias ScanFinishedBlock = (Swift.Error?) -> Swift.Void
 @_hasMissingDesignatedInitializers final public class ZTCore {
   public static let shared: ZTCoreKit.ZTCore
+  final public let bleManager: ZTCoreKit.ZTBleManager
   final public var settings: ZTCoreKit.ZTSettings {
+    get
+  }
+  final public var lastCommand: ZTCoreKit.ZTCommand?
+  final public var lastCommandResponses: [ZTCoreKit.ZTCommandResponse]
+  final public var lastActivityId: Swift.String? {
+    get
+  }
+  final public var leftModuleCommandStatus: ZTCoreKit.ZTCommandStatus {
     get
   }
   final public var connectedDevice: ZTCoreKit.ZTDevice? {
@@ -2937,16 +2956,7 @@ public typealias ScanFinishedBlock = (Swift.Error?) -> Swift.Void
   final public var lastDeviceQRCode: Swift.String? {
     get
   }
-  final public var lastCommand: ZTCoreKit.ZTCommand?
-  final public var lastCommandResponses: [ZTCoreKit.ZTCommandResponse]
-  final public var lastActivityId: Swift.String? {
-    get
-  }
-  final public var leftModuleCommandStatus: ZTCoreKit.ZTCommandStatus {
-    get
-  }
   weak final public var dfuDelegate: ZTCoreKit.ZTDfuDelegate?
-  final public let bleManager: ZTCoreKit.ZTBleManager
   final public func setup(apiKey: Swift.String, secret: Swift.String, appId: Swift.String, completion: ((Swift.Error?) -> Swift.Void)? = nil)
   final public func clearUser()
   final public func updateOrganization(code: Swift.String? = nil, appType: Swift.String? = nil)
@@ -2954,8 +2964,8 @@ public typealias ScanFinishedBlock = (Swift.Error?) -> Swift.Void
   final public func scan(for product: ZTCoreKit.ZTProductType? = nil, timeout: Swift.Double? = 15, completion: ZTCoreKit.ConnectResultBlock? = nil)
   final public func scan(for product: ZTCoreKit.ZTProductType? = nil, timeout: Swift.Double? = 15, deviceDiscovered: ZTCoreKit.ScanResultBlock? = nil, completion: ZTCoreKit.ScanFinishedBlock? = nil)
   final public func stopScan()
-  final public func connectWithDevice(_ device: ZTCoreKit.ZTDevice?, timeout: Swift.Double? = 5, isDfu: Swift.Bool = false, completion: ZTCoreKit.ConnectResultBlock? = nil)
-  final public func connectWithCode(_ code: Swift.String, timeout: Swift.Double? = 20, completion: ZTCoreKit.ConnectResultBlock? = nil)
+  final public func connectWithDevice(_ device: ZTCoreKit.ZTDevice?, timeout: Swift.Double? = 5, isDfu: Swift.Bool = false, completion: @escaping ZTCoreKit.ConnectResultBlock)
+  final public func connectWithCode(_ code: Swift.String, timeout: Swift.Double? = 20, completion: @escaping ZTCoreKit.ConnectResultBlock)
   final public func getDeviceInfo(code: Swift.String, completion: @escaping (ZTCoreKit.ZTDeviceInfo?, Swift.Error?) -> Swift.Void)
   final public func tryReconnect(completion: ZTCoreKit.ConnectResultBlock? = nil)
   final public func checkConnectedDevice(completion: ZTCoreKit.ConnectResultBlock? = nil)
@@ -2964,21 +2974,26 @@ public typealias ScanFinishedBlock = (Swift.Error?) -> Swift.Void
 public protocol ZTDfuDelegate : AnyObject {
   func dfuDelegate(firmwareDownloaded: Swift.Bool, version: Swift.String?)
   func dfuDelegate(didFinish: Swift.Bool)
+  func dfuDelegate(didFail error: ZTCoreKit.ZTError?)
   func dfuDelegate(progress: Swift.Float?)
-  func dfuDelegate(didFail error: Swift.Error?)
   func dfuDelegate(leftDidFinish newVersion: Swift.String?)
   func dfuDelegate(rightDidFinish newVersion: Swift.String?)
 }
-public struct ZTMessageActivityMetadata : Swift.CustomStringConvertible {
+public struct ZTMessageActivityMetadata : Swift.Codable, Swift.CustomStringConvertible {
   public var lastStopReason: ZTCoreKit.ZTActivityLastStopReason
   public var chunkCount: Swift.UInt16
   public var firstChunkId: Swift.UInt16
+  public var lastChunkId: Swift.UInt16 {
+    get
+  }
   public var startTime: Swift.UInt32
   public var endTime: Swift.UInt32
   public init(bytes: [Swift.UInt8])
   public var description: Swift.String {
     get
   }
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
 }
 @_hasMissingDesignatedInitializers open class ZTJSONParameterEncoder {
   @objc deinit

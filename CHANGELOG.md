@@ -1,5 +1,26 @@
 # Changelog
 
+## [1.1.32](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.32) (2022-04-05)
+
+- tweak for subscribers
+
+## [1.1.31](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.31) (2022-03-28)
+
+- added MSG_ACTIVITY_METADATA to `ZTActivity`
+
+## [1.1.30](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.30) (2022-03-24)
+
+- improved DFU for sdk17 firmware
+
+## [1.1.29](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.29) (2022-03-23)
+
+- ZTDfuDelegate change in `func dfuDelegate(didFail error: ZTError?)`
+
+## [1.1.27](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.27) (2022-03-17)
+
+- refactored DFU
+- added more logging for commands
+
 ## [1.1.26](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.26) (2022-03-16)
 
 - refactored chunk-related models
