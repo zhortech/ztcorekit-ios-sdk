@@ -17,19 +17,19 @@
     <a title="Other Enumerations  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html">ZTCoreKit 1.1.21 Docs</a></p>
-        <p class="header-right"><a href="https://github.com/zhortech/ztcorekit-ios-sdk"><img src="img/gh.png"/>View on GitHub</a></p>
-        <p class="header-right">
+        <p><a href="index.html">ZTCoreKit 1.1.35 Docs</a></p>
+        <p class="header-right"><a href="https://github.com/zhortech/ztcorekit-ios-sdk"><img src="img/gh.png" alt="GitHub"/>View on GitHub</a></p>
+        <div class="header-right">
           <form role="search" action="search.json">
             <input type="text" placeholder="Search documentation" data-typeahead>
           </form>
-        </p>
+        </div>
       </div>
     </header>
     <div class="content-wrapper">
       <p id="breadcrumbs">
         <a href="index.html">ZTCoreKit Reference</a>
-        <img id="carat" src="img/carat.png" />
+        <img id="carat" src="img/carat.png" alt=""/>
         Other Enumerations  Reference
       </p>
     </div>
@@ -211,6 +211,12 @@
                 <a href="Classes/ZTModelNumberCharacteristic.html">ZTModelNumberCharacteristic</a>
               </li>
               <li class="nav-group-task">
+                <a href="Classes/ZTPlist.html">ZTPlist</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/ZTPlist/Error.html">– Error</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Classes/ZTPrimaryOldService.html">ZTPrimaryOldService</a>
               </li>
               <li class="nav-group-task">
@@ -261,6 +267,9 @@
                 <a href="Enums/ZTNotifyData.html#/s:9ZTCoreKit12ZTNotifyDataO15CommonMessageIdO">– CommonMessageId</a>
               </li>
               <li class="nav-group-task">
+                <a href="Enums/ZTSamplingMode.html">ZTSamplingMode</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Other%20Enums.html#/s:9ZTCoreKit10ZTServicesO">ZTServices</a>
               </li>
             </ul>
@@ -282,6 +291,12 @@
               <li class="nav-group-task">
                 <a href="Other%20Functions.html#/s:9ZTCoreKit2egoiyyAA8ZTSignalCyxG_xtlF">=&gt;(_:_:)</a>
               </li>
+              <li class="nav-group-task">
+                <a href="Other%20Functions.html#/s:9ZTCoreKit10decodeData_3forxSg10Foundation0D0V_xmtSeRzSERzlF">decodeData(_:for:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Other%20Functions.html#/s:9ZTCoreKit10encodeData3for10Foundation0D0Vx_tSeRzSERzlF">encodeData(for:)</a>
+              </li>
             </ul>
           </li>
           <li class="nav-group-name">
@@ -298,6 +313,9 @@
           <li class="nav-group-name">
             <a href="Other%20Structs.html">Other Structures</a>
             <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Structs/ZTAES.html">ZTAES</a>
+              </li>
               <li class="nav-group-task">
                 <a href="Structs/ZTBatteryLevel.html">ZTBatteryLevel</a>
               </li>
@@ -400,7 +418,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">ZTActivityLastStopReason</span> <span class="p">:</span> <span class="kt">UInt8</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">ZTActivityLastStopReason</span> <span class="p">:</span> <span class="kt">UInt8</span><span class="p">,</span> <span class="kt">Codable</span></code></pre>
 
                         </div>
                       </div>
@@ -437,7 +455,7 @@ Note: Values must be sent LSB first (Little endian)</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/Models/ZTCommandEnum.swift#L13-L148">Show on GitHub</a>
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/Models/ZTCommandEnum.swift#L13-L190">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -599,6 +617,37 @@ Note: Values must be sent LSB first (Little endian)</p>
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:9ZTCoreKit14ZTSamplingModeO"></a>
+                    <a name="//apple_ref/swift/Enum/ZTSamplingMode" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ZTCoreKit14ZTSamplingModeO">ZTSamplingMode</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Sampling mode, used to set activity frequency via MEMS command</p>
+
+                        <a href="Enums/ZTSamplingMode.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">ZTSamplingMode</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/Models/ZTSamplingMode.swift#L11-L33">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:9ZTCoreKit10ZTServicesO"></a>
                     <a name="//apple_ref/swift/Enum/ZTServices" class="dashAnchor"></a>
                     <a class="token" href="#/s:9ZTCoreKit10ZTServicesO">ZTServices</a>
@@ -647,7 +696,7 @@ Note: Values must be sent LSB first (Little endian)</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">ZTActivityMode</span> <span class="p">:</span> <span class="kt">UInt8</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">ZTActivityMode</span> <span class="p">:</span> <span class="kt">UInt8</span><span class="p">,</span> <span class="kt">Codable</span></code></pre>
 
                         </div>
                       </div>
@@ -662,11 +711,10 @@ Note: Values must be sent LSB first (Little endian)</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2022 <a class="link" href="https://zhortech.com" target="_blank" rel="external">Zhortech</a>. All rights reserved. (Last updated: 2022-02-17)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.7</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2022 <a class="link" href="https://zhortech.com" target="_blank" rel="external noopener">Zhortech</a>. All rights reserved. (Last updated: 2022-04-29)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.2</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
         </section>
       </article>
     </div>
   </body>
-</div>
 </html>

@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.1.35](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.35) (2022-04-27)
+
+- support for new commands for universal firmware
+
+## [1.1.34](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.34) (2022-04-14)
+
+- fix for `checkFirmwareUpdate` method in `ZTApi`
+
+## [1.1.33](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.33) (2022-04-12)
+
+- `ZTMessageTime` timestamp type changed
+- new `ZTError` - `.invalidMobilityScanResults` 
+- more logging
+
 ## [1.1.32](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.32) (2022-04-05)
 
 - tweak for subscribers

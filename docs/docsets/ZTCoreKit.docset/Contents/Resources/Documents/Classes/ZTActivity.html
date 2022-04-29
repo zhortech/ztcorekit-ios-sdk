@@ -17,19 +17,19 @@
     <a title="ZTActivity Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">ZTCoreKit 1.1.21 Docs</a></p>
-        <p class="header-right"><a href="https://github.com/zhortech/ztcorekit-ios-sdk"><img src="../img/gh.png"/>View on GitHub</a></p>
-        <p class="header-right">
+        <p><a href="../index.html">ZTCoreKit 1.1.35 Docs</a></p>
+        <p class="header-right"><a href="https://github.com/zhortech/ztcorekit-ios-sdk"><img src="../img/gh.png" alt="GitHub"/>View on GitHub</a></p>
+        <div class="header-right">
           <form role="search" action="../search.json">
             <input type="text" placeholder="Search documentation" data-typeahead>
           </form>
-        </p>
+        </div>
       </div>
     </header>
     <div class="content-wrapper">
       <p id="breadcrumbs">
         <a href="../index.html">ZTCoreKit Reference</a>
-        <img id="carat" src="../img/carat.png" />
+        <img id="carat" src="../img/carat.png" alt=""/>
         ZTActivity Class Reference
       </p>
     </div>
@@ -211,6 +211,12 @@
                 <a href="../Classes/ZTModelNumberCharacteristic.html">ZTModelNumberCharacteristic</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Classes/ZTPlist.html">ZTPlist</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ZTPlist/Error.html">– Error</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/ZTPrimaryOldService.html">ZTPrimaryOldService</a>
               </li>
               <li class="nav-group-task">
@@ -261,6 +267,9 @@
                 <a href="../Enums/ZTNotifyData.html#/s:9ZTCoreKit12ZTNotifyDataO15CommonMessageIdO">– CommonMessageId</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Enums/ZTSamplingMode.html">ZTSamplingMode</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Other%20Enums.html#/s:9ZTCoreKit10ZTServicesO">ZTServices</a>
               </li>
             </ul>
@@ -282,6 +291,12 @@
               <li class="nav-group-task">
                 <a href="../Other%20Functions.html#/s:9ZTCoreKit2egoiyyAA8ZTSignalCyxG_xtlF">=&gt;(_:_:)</a>
               </li>
+              <li class="nav-group-task">
+                <a href="../Other%20Functions.html#/s:9ZTCoreKit10decodeData_3forxSg10Foundation0D0V_xmtSeRzSERzlF">decodeData(_:for:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Other%20Functions.html#/s:9ZTCoreKit10encodeData3for10Foundation0D0Vx_tSeRzSERzlF">encodeData(for:)</a>
+              </li>
             </ul>
           </li>
           <li class="nav-group-name">
@@ -298,6 +313,9 @@
           <li class="nav-group-name">
             <a href="../Other%20Structs.html">Other Structures</a>
             <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/ZTAES.html">ZTAES</a>
+              </li>
               <li class="nav-group-task">
                 <a href="../Structs/ZTBatteryLevel.html">ZTBatteryLevel</a>
               </li>
@@ -354,7 +372,7 @@
             <p>Activity. It represents activity running on modules.</p>
 
               <div class="slightly-smaller">
-                <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/Networking/Models/ZTActivity.swift#L12-L82">Show on GitHub</a>
+                <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/Networking/Models/ZTActivity.swift#L12-L105">Show on GitHub</a>
               </div>
           </section>
           <section class="section task-group-section">
@@ -553,7 +571,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Start segment timestamp in ms</p>
+                        <p>Start timestamp in ms from firmware</p>
 
                       </div>
                       <div class="declaration">
@@ -566,6 +584,36 @@
                       </div>
                       <div class="slightly-smaller">
                         <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/Networking/Models/ZTActivity.swift#L31">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9ZTCoreKit10ZTActivityC12endTimestamps5Int64VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/endTimestamp" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ZTCoreKit10ZTActivityC12endTimestamps5Int64VSgvp">endTimestamp</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>End timestamp in ms from firmware</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">endTimestamp</span><span class="p">:</span> <span class="kt">Int64</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/Networking/Models/ZTActivity.swift#L34">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -595,7 +643,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/Networking/Models/ZTActivity.swift#L34">Show on GitHub</a>
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/Networking/Models/ZTActivity.swift#L37">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -625,7 +673,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/Networking/Models/ZTActivity.swift#L36">Show on GitHub</a>
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/Networking/Models/ZTActivity.swift#L39">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -655,7 +703,67 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/Networking/Models/ZTActivity.swift#L38-L42">Show on GitHub</a>
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/Networking/Models/ZTActivity.swift#L41-L45">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9ZTCoreKit10ZTActivityC8metaDataAA25ZTMessageActivityMetadataVSgvp"></a>
+                    <a name="//apple_ref/swift/Property/metaData" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ZTCoreKit10ZTActivityC8metaDataAA25ZTMessageActivityMetadataVSgvp">metaData</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Information about the current activity</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">metaData</span><span class="p">:</span> <span class="kt"><a href="../Structs/ZTMessageActivityMetadata.html">ZTMessageActivityMetadata</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/Networking/Models/ZTActivity.swift#L48">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9ZTCoreKit10ZTActivityC10stopReasonAA0c8LastStopE0OSgvp"></a>
+                    <a name="//apple_ref/swift/Property/stopReason" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ZTCoreKit10ZTActivityC10stopReasonAA0c8LastStopE0OSgvp">stopReason</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Stop reason obtained from firmware</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">stopReason</span><span class="p">:</span> <span class="kt"><a href="../Other%20Enums.html#/s:9ZTCoreKit24ZTActivityLastStopReasonO">ZTActivityLastStopReason</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/Networking/Models/ZTActivity.swift#L50">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -686,7 +794,7 @@ Used for Universal firmware</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/Networking/Models/ZTActivity.swift#L46">Show on GitHub</a>
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/Networking/Models/ZTActivity.swift#L54">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -717,7 +825,7 @@ Used for Safety</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/Networking/Models/ZTActivity.swift#L50">Show on GitHub</a>
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/Networking/Models/ZTActivity.swift#L58">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -748,7 +856,37 @@ Used for Safety</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/Networking/Models/ZTActivity.swift#L54">Show on GitHub</a>
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/Networking/Models/ZTActivity.swift#L62">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9ZTCoreKit10ZTActivityC13isInterruptedSbvp"></a>
+                    <a name="//apple_ref/swift/Property/isInterrupted" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ZTCoreKit10ZTActivityC13isInterruptedSbvp">isInterrupted</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Activity was interrupted e.g. in case of mobility scan</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">isInterrupted</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/Networking/Models/ZTActivity.swift#L65">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -779,7 +917,7 @@ Used for Safety</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/Networking/Models/ZTActivity.swift#L58">Show on GitHub</a>
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/Networking/Models/ZTActivity.swift#L69">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -810,7 +948,67 @@ Used for Safety</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/Networking/Models/ZTActivity.swift#L62">Show on GitHub</a>
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/Networking/Models/ZTActivity.swift#L73">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9ZTCoreKit10ZTActivityC10chunkCounts6UInt16VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/chunkCount" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ZTCoreKit10ZTActivityC10chunkCounts6UInt16VSgvp">chunkCount</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Number of chunks for activity stored in firmware</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">chunkCount</span><span class="p">:</span> <span class="kt">UInt16</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/Networking/Models/ZTActivity.swift#L76">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9ZTCoreKit10ZTActivityC15anchorTimestamps5Int64VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/anchorTimestamp" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ZTCoreKit10ZTActivityC15anchorTimestamps5Int64VSgvp">anchorTimestamp</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Anchor timestamp defined with firmware MSG_TIME</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">anchorTimestamp</span><span class="p">:</span> <span class="kt">Int64</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/Networking/Models/ZTActivity.swift#L79">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -840,7 +1038,7 @@ Used for Safety</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/Networking/Models/ZTActivity.swift#L65-L76">Show on GitHub</a>
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/Networking/Models/ZTActivity.swift#L88-L99">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -870,7 +1068,7 @@ Used for Safety</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/Networking/Models/ZTActivity.swift#L81">Show on GitHub</a>
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/Networking/Models/ZTActivity.swift#L104">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -900,7 +1098,7 @@ Used for Safety</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/Networking/Models/ZTActivity.swift#L86-L89">Show on GitHub</a>
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/Networking/Models/ZTActivity.swift#L109-L112">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -910,11 +1108,10 @@ Used for Safety</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2022 <a class="link" href="https://zhortech.com" target="_blank" rel="external">Zhortech</a>. All rights reserved. (Last updated: 2022-02-17)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.7</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2022 <a class="link" href="https://zhortech.com" target="_blank" rel="external noopener">Zhortech</a>. All rights reserved. (Last updated: 2022-04-29)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.2</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
         </section>
       </article>
     </div>
   </body>
-</div>
 </html>

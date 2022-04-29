@@ -207,7 +207,7 @@ extension Foundation.UserDefaults {
   public func clearAll()
 }
 public struct ZTMessageTime : Swift.CustomStringConvertible {
-  public var timestamp: Swift.UInt32
+  public var timestamp: Swift.UInt64
   public init(bytes: [Swift.UInt8])
   public var description: Swift.String {
     get
@@ -1049,7 +1049,15 @@ public enum ZTCommand : Swift.UInt8 {
   case rawDataSend
   case rawDataEnable
   case rawDataLookup
+  case rawDataDebug
   case disconnect
+  case calibrateStatic
+  case clearCalibrateStatic
+  case cancelCalibrateStatic
+  case getCalibrateStaticMessage
+  case getCalibrateStaticData
+  case testCalibrateStatic
+  case memsConfig
   case startDFURight
   case startDFULeft
   case enablePeerConnection
@@ -2237,6 +2245,15 @@ open class ZTDateFormatterTransform : ZTCoreKit.ZTTransformType {
   open func transformToJSON(_ value: Foundation.Date?) -> Swift.String?
   @objc deinit
 }
+public enum ZTSamplingMode {
+  case jump
+  case run
+  case walk
+  case custom(sequence: [Swift.UInt8])
+  public var parameters: [Swift.UInt8] {
+    get
+  }
+}
 @objc public enum DFUError : Swift.Int {
   case remoteLegacyDFUSuccess = 1
   case remoteLegacyDFUInvalidState = 2
@@ -2909,6 +2926,8 @@ extension Swift.Set where Element : ZTCoreKit.ZTBaseMappable {
   final public let onDeviceConnectionFailed: ZTCoreKit.ZTSignal<(ZTCoreKit.ZTDevice?, Swift.Error?)>
   final public let onScanFinished: ZTCoreKit.ZTSignal<(Swift.Error?)>
   final public let onReconnectFailed: ZTCoreKit.ZTSignal<(Swift.Error?)>
+  final public let onGeneralStateUpdated: ZTCoreKit.ZTSignal<(ZTCoreKit.ZTMessageGeneralState)>
+  final public let onCommandAck: ZTCoreKit.ZTSignal<(ZTCoreKit.ZTCommandResponse?)>
   @objc deinit
 }
 extension ZTCoreKit.ZTBleManager : CoreBluetooth.CBCentralManagerDelegate {

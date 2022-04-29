@@ -17,19 +17,19 @@
     <a title="Other Classes  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html">ZTCoreKit 1.1.21 Docs</a></p>
-        <p class="header-right"><a href="https://github.com/zhortech/ztcorekit-ios-sdk"><img src="img/gh.png"/>View on GitHub</a></p>
-        <p class="header-right">
+        <p><a href="index.html">ZTCoreKit 1.1.35 Docs</a></p>
+        <p class="header-right"><a href="https://github.com/zhortech/ztcorekit-ios-sdk"><img src="img/gh.png" alt="GitHub"/>View on GitHub</a></p>
+        <div class="header-right">
           <form role="search" action="search.json">
             <input type="text" placeholder="Search documentation" data-typeahead>
           </form>
-        </p>
+        </div>
       </div>
     </header>
     <div class="content-wrapper">
       <p id="breadcrumbs">
         <a href="index.html">ZTCoreKit Reference</a>
-        <img id="carat" src="img/carat.png" />
+        <img id="carat" src="img/carat.png" alt=""/>
         Other Classes  Reference
       </p>
     </div>
@@ -211,6 +211,12 @@
                 <a href="Classes/ZTModelNumberCharacteristic.html">ZTModelNumberCharacteristic</a>
               </li>
               <li class="nav-group-task">
+                <a href="Classes/ZTPlist.html">ZTPlist</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/ZTPlist/Error.html">– Error</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Classes/ZTPrimaryOldService.html">ZTPrimaryOldService</a>
               </li>
               <li class="nav-group-task">
@@ -261,6 +267,9 @@
                 <a href="Enums/ZTNotifyData.html#/s:9ZTCoreKit12ZTNotifyDataO15CommonMessageIdO">– CommonMessageId</a>
               </li>
               <li class="nav-group-task">
+                <a href="Enums/ZTSamplingMode.html">ZTSamplingMode</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Other%20Enums.html#/s:9ZTCoreKit10ZTServicesO">ZTServices</a>
               </li>
             </ul>
@@ -282,6 +291,12 @@
               <li class="nav-group-task">
                 <a href="Other%20Functions.html#/s:9ZTCoreKit2egoiyyAA8ZTSignalCyxG_xtlF">=&gt;(_:_:)</a>
               </li>
+              <li class="nav-group-task">
+                <a href="Other%20Functions.html#/s:9ZTCoreKit10decodeData_3forxSg10Foundation0D0V_xmtSeRzSERzlF">decodeData(_:for:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Other%20Functions.html#/s:9ZTCoreKit10encodeData3for10Foundation0D0Vx_tSeRzSERzlF">encodeData(for:)</a>
+              </li>
             </ul>
           </li>
           <li class="nav-group-name">
@@ -298,6 +313,9 @@
           <li class="nav-group-name">
             <a href="Other%20Structs.html">Other Structures</a>
             <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Structs/ZTAES.html">ZTAES</a>
+              </li>
               <li class="nav-group-task">
                 <a href="Structs/ZTBatteryLevel.html">ZTBatteryLevel</a>
               </li>
@@ -625,7 +643,7 @@ class fires.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/Models/InformationService/ZTSerialNumberCharacteristic.swift#L12-L25">Show on GitHub</a>
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/Models/InformationService/ZTSerialNumberCharacteristic.swift#L12-L29">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -725,7 +743,49 @@ class fires.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTBleManager.swift#L17-L352">Show on GitHub</a>
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTBleManager.swift#L17-L339">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9ZTCoreKit7ZTPlistC"></a>
+                    <a name="//apple_ref/swift/Class/ZTPlist" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ZTCoreKit7ZTPlistC">ZTPlist</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Property list, A file with the default settings.</p>
+
+<p>In the macOS, iOS, NeXTSTEP, and GNUstep programming frameworks, property list files are files that store serialized objects.</p>
+
+<p>Property list files use the filename extension .plist, and thus are often referred to as p-list files.</p>
+
+<p><a href="https://en.wikipedia.org/wiki/Property_list">Wikipedia</a></p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">plist</span> <span class="o">=</span> <span class="kt">ZTPlist</span><span class="p">(</span><span class="nv">withNameAtDocumentDirectory</span><span class="p">:</span> <span class="s">"Plister"</span><span class="p">)</span>
+<span class="n">plist</span><span class="o">.</span><span class="nf">set</span><span class="p">(</span><span class="mi">2020</span><span class="p">,</span><span class="nv">for</span><span class="p">:</span> <span class="s">"new.year"</span><span class="p">)</span>
+<span class="n">plist</span><span class="o">.</span><span class="nf">get</span><span class="p">(</span><span class="s">"new.year"</span><span class="p">)</span>
+<span class="c1">// Output: 2020</span>
+</code></pre>
+
+                        <a href="Classes/ZTPlist.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">ZTPlist</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTPlist/ZTPlist.swift#L20-L199">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -735,11 +795,10 @@ class fires.</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2022 <a class="link" href="https://zhortech.com" target="_blank" rel="external">Zhortech</a>. All rights reserved. (Last updated: 2022-02-17)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.7</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2022 <a class="link" href="https://zhortech.com" target="_blank" rel="external noopener">Zhortech</a>. All rights reserved. (Last updated: 2022-04-29)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.2</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
         </section>
       </article>
     </div>
   </body>
-</div>
 </html>

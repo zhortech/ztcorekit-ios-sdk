@@ -17,19 +17,19 @@
     <a title="Other Structures  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html">ZTCoreKit 1.1.21 Docs</a></p>
-        <p class="header-right"><a href="https://github.com/zhortech/ztcorekit-ios-sdk"><img src="img/gh.png"/>View on GitHub</a></p>
-        <p class="header-right">
+        <p><a href="index.html">ZTCoreKit 1.1.35 Docs</a></p>
+        <p class="header-right"><a href="https://github.com/zhortech/ztcorekit-ios-sdk"><img src="img/gh.png" alt="GitHub"/>View on GitHub</a></p>
+        <div class="header-right">
           <form role="search" action="search.json">
             <input type="text" placeholder="Search documentation" data-typeahead>
           </form>
-        </p>
+        </div>
       </div>
     </header>
     <div class="content-wrapper">
       <p id="breadcrumbs">
         <a href="index.html">ZTCoreKit Reference</a>
-        <img id="carat" src="img/carat.png" />
+        <img id="carat" src="img/carat.png" alt=""/>
         Other Structures  Reference
       </p>
     </div>
@@ -211,6 +211,12 @@
                 <a href="Classes/ZTModelNumberCharacteristic.html">ZTModelNumberCharacteristic</a>
               </li>
               <li class="nav-group-task">
+                <a href="Classes/ZTPlist.html">ZTPlist</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/ZTPlist/Error.html">– Error</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Classes/ZTPrimaryOldService.html">ZTPrimaryOldService</a>
               </li>
               <li class="nav-group-task">
@@ -261,6 +267,9 @@
                 <a href="Enums/ZTNotifyData.html#/s:9ZTCoreKit12ZTNotifyDataO15CommonMessageIdO">– CommonMessageId</a>
               </li>
               <li class="nav-group-task">
+                <a href="Enums/ZTSamplingMode.html">ZTSamplingMode</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Other%20Enums.html#/s:9ZTCoreKit10ZTServicesO">ZTServices</a>
               </li>
             </ul>
@@ -282,6 +291,12 @@
               <li class="nav-group-task">
                 <a href="Other%20Functions.html#/s:9ZTCoreKit2egoiyyAA8ZTSignalCyxG_xtlF">=&gt;(_:_:)</a>
               </li>
+              <li class="nav-group-task">
+                <a href="Other%20Functions.html#/s:9ZTCoreKit10decodeData_3forxSg10Foundation0D0V_xmtSeRzSERzlF">decodeData(_:for:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Other%20Functions.html#/s:9ZTCoreKit10encodeData3for10Foundation0D0Vx_tSeRzSERzlF">encodeData(for:)</a>
+              </li>
             </ul>
           </li>
           <li class="nav-group-name">
@@ -298,6 +313,9 @@
           <li class="nav-group-name">
             <a href="Other%20Structs.html">Other Structures</a>
             <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Structs/ZTAES.html">ZTAES</a>
+              </li>
               <li class="nav-group-task">
                 <a href="Structs/ZTBatteryLevel.html">ZTBatteryLevel</a>
               </li>
@@ -434,12 +452,12 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ZTMessageActivityMetadata</span> <span class="p">:</span> <span class="kt">CustomStringConvertible</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ZTMessageActivityMetadata</span> <span class="p">:</span> <span class="kt">Codable</span><span class="p">,</span> <span class="kt">CustomStringConvertible</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/Models/PrimaryService/Data/ZTMessageActivityMetadata.swift#L12-L52">Show on GitHub</a>
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/Models/PrimaryService/Data/ZTMessageActivityMetadata.swift#L12-L56">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -596,7 +614,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/Models/PrimaryService/Data/ZTMessageTime.swift#L12-L40">Show on GitHub</a>
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/Models/PrimaryService/Data/ZTMessageTime.swift#L12-L33">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -632,16 +650,55 @@
                     </section>
                   </div>
                 </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9ZTCoreKit5ZTAESV"></a>
+                    <a name="//apple_ref/swift/Struct/ZTAES" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ZTCoreKit5ZTAESV">ZTAES</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Advanced Encryption Standard (ZTAES)</p>
+
+<p>For testing purpose created a static instance called <code>default</code> which takes a key of 16 or 32 characters and an iv of 16 characters
+for <strong>Production</strong> try to create your own ZTAES object</p>
+<pre class="highlight swift"><code><span class="k">var</span> <span class="nv">aes</span><span class="p">:</span> <span class="kt">ZTAES</span><span class="p">?</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="k">var</span> <span class="nv">key128</span> <span class="o">=</span> <span class="s">"1qaz2wsx3edc4rfv"</span>
+  <span class="k">let</span> <span class="nv">iv</span> <span class="o">=</span>  <span class="s">"5tgb6yhn7ujm8ikl"</span>
+  <span class="k">return</span> <span class="kt">ZTAES</span><span class="p">(</span><span class="nv">key</span><span class="p">:</span> <span class="n">key128</span><span class="p">,</span> <span class="nv">iv</span><span class="p">:</span> <span class="n">iv</span><span class="p">)</span>
+<span class="p">}()</span>
+</code></pre>
+
+                        <a href="Structs/ZTAES.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ZTAES</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTPlist/ZTAES.swift#L16-L166">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
               </ul>
             </div>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2022 <a class="link" href="https://zhortech.com" target="_blank" rel="external">Zhortech</a>. All rights reserved. (Last updated: 2022-02-17)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.7</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2022 <a class="link" href="https://zhortech.com" target="_blank" rel="external noopener">Zhortech</a>. All rights reserved. (Last updated: 2022-04-29)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.2</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
         </section>
       </article>
     </div>
   </body>
-</div>
 </html>

@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Error Enumeration Reference</title>
+    <link rel="stylesheet" type="text/css" href="../../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../../js/jquery.min.js" defer></script>
+    <script src="../../js/jazzy.js" defer></script>
+    
+    <script src="../../js/lunr.min.js" defer></script>
+    <script src="../../js/typeahead.jquery.js" defer></script>
+    <script src="../../js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Enum/Error" class="dashAnchor"></a>
+    <a title="Error Enumeration Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../../index.html">ZTCoreKit 1.1.35 Docs</a></p>
+        <p class="header-right"><a href="https://github.com/zhortech/ztcorekit-ios-sdk"><img src="../../img/gh.png" alt="GitHub"/>View on GitHub</a></p>
+        <div class="header-right">
+          <form role="search" action="../../search.json">
+            <input type="text" placeholder="Search documentation" data-typeahead>
+          </form>
+        </div>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../../index.html">ZTCoreKit Reference</a>
+        <img id="carat" src="../../img/carat.png" alt=""/>
+        Error Enumeration Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../../Common.html">Common</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../../Classes/ZTCore.html">ZTCore</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Classes/ZTApi.html">ZTApi</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Classes/ZTSettings.html">ZTSettings</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../../Models.html">Models</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../../Classes/ZTActivity.html">ZTActivity</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Classes/ZTActivityComment.html">ZTActivityComment</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Classes/ZTActivitySummary.html">ZTActivitySummary</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Classes/ZTCharacteristic.html">ZTCharacteristic</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Classes/ZTDevice.html">ZTDevice</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Classes/ZTMediaFile.html">ZTMediaFile</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Classes/ZTMediaFileTemplate.html">ZTMediaFileTemplate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Classes/ZTSegmentData.html">ZTSegmentData</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Classes/ZTSegmentData.html#/s:9ZTCoreKit13ZTSegmentDataC6StatusO">– Status</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Classes/ZTSegmentData.html#/s:9ZTCoreKit13ZTSegmentDataC9ChunkTypeO">– ChunkType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Classes/ZTSegmentData/PacketType.html">– PacketType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Classes/ZTSegmentData.html#/s:9ZTCoreKit13ZTSegmentDataC10CodingKeysO">– CodingKeys</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Classes/ZTService.html">ZTService</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Classes/ZTUserShoe.html">ZTUserShoe</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../../ZTDevice.html">ZTDevice</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../../Classes/ZTDeviceInfo.html">ZTDeviceInfo</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Enums/ZTProductType.html">ZTProductType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../ZTDevice.html#/s:9ZTCoreKit17ZTProjectCodeTypeO">ZTProjectCodeType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Enums/ZTProductCodeType.html">ZTProductCodeType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../ZTDevice.html#/s:9ZTCoreKit22ZTManufacturerCodeTypeO">ZTManufacturerCodeType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../ZTDevice.html#/s:9ZTCoreKit17ZTProductTypeCodeO">ZTProductTypeCode</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../../ZTService.html">ZTService</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../../Classes/ZTPrimaryService.html">ZTPrimaryService</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Classes/ZTInformationService.html">ZTInformationService</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../../ZTCharacteristic.html">ZTCharacteristic</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../../Classes/ZTBatteryCharacteristic.html">ZTBatteryCharacteristic</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Classes/ZTCommandsCharacteristic.html">ZTCommandsCharacteristic</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Classes/ZTIndicateCharacteristic.html">ZTIndicateCharacteristic</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Classes/ZTNotifyCharacteristic.html">ZTNotifyCharacteristic</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Classes/ZTPairedSolesCharacteristic.html">ZTPairedSolesCharacteristic</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Classes/ZTTextCharacteristic.html">ZTTextCharacteristic</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../../Enums.html">Enums</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../../Enums/ZTActivitySummaryStatus.html">ZTActivitySummaryStatus</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Enums/ZTBleManagerState.html">ZTBleManagerState</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Enums/ZTError.html">ZTError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Enums/ZTLogLevel.html">ZTLogLevel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Enums.html#/s:9ZTCoreKit8ZTPeriodO">ZTPeriod</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Enums/ZTScannerResult.html">ZTScannerResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Enums.html#/s:9ZTCoreKit20ZTGenderSizeCodeTypeO">ZTGenderSizeCodeType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Enums.html#/s:9ZTCoreKit18ZTUnitSizeCodeTypeO">ZTUnitSizeCodeType</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../../Other%20Classes.html">Other Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../../Classes/ZTBleManager.html">ZTBleManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Classes/ZTButtonlessDfuCharacteristic.html">ZTButtonlessDfuCharacteristic</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Classes/ZTDfuService.html">ZTDfuService</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Classes/ZTFirmwareCharacteristic.html">ZTFirmwareCharacteristic</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Classes/ZTHardwareCharacteristic.html">ZTHardwareCharacteristic</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Other%20Classes.html#/s:9ZTCoreKit8ZTLoggerC">ZTLogger</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Classes/ZTManufacturerNameCharacteristic.html">ZTManufacturerNameCharacteristic</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Classes/ZTModelNumberCharacteristic.html">ZTModelNumberCharacteristic</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Classes/ZTPlist.html">ZTPlist</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Classes/ZTPlist/Error.html">– Error</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Classes/ZTPrimaryOldService.html">ZTPrimaryOldService</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Classes/ZTSerialNumberCharacteristic.html">ZTSerialNumberCharacteristic</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Classes/ZTSignal.html">ZTSignal</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Classes/ZTSignalSubscription.html">ZTSignalSubscription</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../../Other%20Enums.html">Other Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../../Other%20Enums.html#/s:9ZTCoreKit24ZTActivityLastStopReasonO">ZTActivityLastStopReason</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Enums/ZTActivityMode.html">ZTActivityMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Enums/ZTCommand.html">ZTCommand</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Enums/ZTCommandStatus.html">ZTCommandStatus</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Other%20Enums.html#/s:9ZTCoreKit19ZTDeviceActualStateO">ZTDeviceActualState</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Other%20Enums.html#/s:9ZTCoreKit16ZTGenderCodeTypeO">ZTGenderCodeType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Enums/ZTLogCategory.html">ZTLogCategory</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Other%20Enums.html#/s:9ZTCoreKit12ZTModuleSideO">ZTModuleSide</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Enums/ZTNotifyData.html">ZTNotifyData</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Enums/ZTNotifyData.html#/s:9ZTCoreKit12ZTNotifyDataO7GroupIDO">– GroupID</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Enums/ZTNotifyData.html#/s:9ZTCoreKit12ZTNotifyDataO15CommonMessageIdO">– CommonMessageId</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Enums/ZTSamplingMode.html">ZTSamplingMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Other%20Enums.html#/s:9ZTCoreKit10ZTServicesO">ZTServices</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../../Other%20Extensions.html">Other Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../../Extensions/CBCharacteristic.html">CBCharacteristic</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Extensions/Data.html">Data</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../../Other%20Functions.html">Other Functions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../../Other%20Functions.html#/s:9ZTCoreKit2egoiyyAA8ZTSignalCyxG_xtlF">=&gt;(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Other%20Functions.html#/s:9ZTCoreKit10decodeData_3forxSg10Foundation0D0V_xmtSeRzSERzlF">decodeData(_:for:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Other%20Functions.html#/s:9ZTCoreKit10encodeData3for10Foundation0D0Vx_tSeRzSERzlF">encodeData(for:)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../../Other%20Protocols.html">Other Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../../Other%20Protocols.html#/s:9ZTCoreKit13ZTDfuDelegateP">ZTDfuDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Protocols/ZTServiceProtocol.html">ZTServiceProtocol</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../../Other%20Structs.html">Other Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../../Structs/ZTAES.html">ZTAES</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Structs/ZTBatteryLevel.html">ZTBatteryLevel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Structs/ZTMessageActivity.html">ZTMessageActivity</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Structs/ZTMessageActivityMetadata.html">ZTMessageActivityMetadata</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Structs/ZTMessageBootloaderInfo.html">ZTMessageBootloaderInfo</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Structs/ZTMessageGeneralState.html">ZTMessageGeneralState</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Structs/ZTMessageInactivityTimeout.html">ZTMessageInactivityTimeout</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Structs/ZTMessageSoftware.html">ZTMessageSoftware</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Structs/ZTMessageTime.html">ZTMessageTime</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Structs/ZTPairedDevice.html">ZTPairedDevice</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../../Other%20Typealiases.html">Other Type Aliases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../../Other%20Typealiases.html#/s:9ZTCoreKit18ConnectResultBlocka">ConnectResultBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Other%20Typealiases.html#/s:9ZTCoreKit20ZTScannerResultBlocka">ZTScannerResultBlock</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>Error</h1>
+              <div class="declaration">
+                <div class="language">
+                  
+                  <pre class="highlight swift"><code><span class="kd">enum</span> <span class="kt">Error</span></code></pre>
+<pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt"><a href="../../Classes/ZTPlist.html">ZTPlist</a></span><span class="o">.</span><span class="kt">Error</span><span class="p">:</span> <span class="kt">Swift</span><span class="o">.</span><span class="kt">Error</span><span class="p">,</span> <span class="kt">LocalizedError</span></code></pre>
+
+                </div>
+              </div>
+            <p>A type representing an error value that wont thrown but raise in debugger</p>
+
+              <div class="slightly-smaller">
+                <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTPlist/ZTPlist+Error.swift#L7-L58">Show on GitHub</a>
+              </div>
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9ZTCoreKit7ZTPlistC5ErrorO8notFoundyAE10Foundation3URLVSg_tcAEmF"></a>
+                    <a name="//apple_ref/swift/Element/notFound(at:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ZTCoreKit7ZTPlistC5ErrorO8notFoundyAE10Foundation3URLVSg_tcAEmF">notFound(at:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>When file not found</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="nf">notFound</span><span class="p">(</span><span class="nv">at</span><span class="p">:</span> <span class="kt">URL</span><span class="p">?)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTPlist/ZTPlist+Error.swift#L11">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9ZTCoreKit7ZTPlistC5ErrorO7deletedyAE10Foundation3URLVSg_tcAEmF"></a>
+                    <a name="//apple_ref/swift/Element/deleted(at:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ZTCoreKit7ZTPlistC5ErrorO7deletedyAE10Foundation3URLVSg_tcAEmF">deleted(at:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>When file already deleted</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="nf">deleted</span><span class="p">(</span><span class="nv">at</span><span class="p">:</span> <span class="kt">URL</span><span class="p">?)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTPlist/ZTPlist+Error.swift#L15">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9ZTCoreKit7ZTPlistC5ErrorO5parseyAE10Foundation3URLVSg_tcAEmF"></a>
+                    <a name="//apple_ref/swift/Element/parse(at:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ZTCoreKit7ZTPlistC5ErrorO5parseyAE10Foundation3URLVSg_tcAEmF">parse(at:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>When there is a problem with parsing to json</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="nf">parse</span><span class="p">(</span><span class="nv">at</span><span class="p">:</span> <span class="kt">URL</span><span class="p">?)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTPlist/ZTPlist+Error.swift#L19">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9ZTCoreKit7ZTPlistC5ErrorO17filemanagerRemoveyAEsAD_p_tcAEmF"></a>
+                    <a name="//apple_ref/swift/Element/filemanagerRemove(with:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ZTCoreKit7ZTPlistC5ErrorO17filemanagerRemoveyAEsAD_p_tcAEmF">filemanagerRemove(with:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>When unknown error occurd by file manger</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="nf">filemanagerRemove</span><span class="p">(</span><span class="nv">with</span><span class="p">:</span> <span class="kt">Swift</span><span class="o">.</span><span class="kt">Error</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTPlist/ZTPlist+Error.swift#L23">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9ZTCoreKit7ZTPlistC5ErrorO10aesKeyFailyAESS_tcAEmF"></a>
+                    <a name="//apple_ref/swift/Element/aesKeyFail(key:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ZTCoreKit7ZTPlistC5ErrorO10aesKeyFailyAESS_tcAEmF">aesKeyFail(key:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>When AES encryption fail to use given key</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="nf">aesKeyFail</span><span class="p">(</span><span class="nv">key</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTPlist/ZTPlist+Error.swift#L27">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9ZTCoreKit7ZTPlistC5ErrorO20aesInitialVectorFailyAESS_tcAEmF"></a>
+                    <a name="//apple_ref/swift/Element/aesInitialVectorFail(iv:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ZTCoreKit7ZTPlistC5ErrorO20aesInitialVectorFailyAESS_tcAEmF">aesInitialVectorFail(iv:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>When AES encryption fail to use given initial vector</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="nf">aesInitialVectorFail</span><span class="p">(</span><span class="nv">iv</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTPlist/ZTPlist+Error.swift#L31">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9ZTCoreKit7ZTPlistC5ErrorO12aesCryptFailyAEs5Int32V_tcAEmF"></a>
+                    <a name="//apple_ref/swift/Element/aesCryptFail(status:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ZTCoreKit7ZTPlistC5ErrorO12aesCryptFailyAEs5Int32V_tcAEmF">aesCryptFail(status:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>When AES encryption fail to crypt with status</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="nf">aesCryptFail</span><span class="p">(</span><span class="nv">status</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTPlist/ZTPlist+Error.swift#L35">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9ZTCoreKit7ZTPlistC5ErrorO6noDatayA2EmF"></a>
+                    <a name="//apple_ref/swift/Element/noData" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ZTCoreKit7ZTPlistC5ErrorO6noDatayA2EmF">noData</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>When given data was not in data fromat</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">noData</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTPlist/ZTPlist+Error.swift#L39">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9ZTCoreKit7ZTPlistC5ErrorO15stringNotInUtf8yA2EmF"></a>
+                    <a name="//apple_ref/swift/Element/stringNotInUtf8" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ZTCoreKit7ZTPlistC5ErrorO15stringNotInUtf8yA2EmF">stringNotInUtf8</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>When given string could not convert to utf8</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">stringNotInUtf8</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTPlist/ZTPlist+Error.swift#L43">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9ZTCoreKit7ZTPlistC5ErrorO10identifierSSvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/identifier" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ZTCoreKit7ZTPlistC5ErrorO10identifierSSvpZ">identifier</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Identifier to search in debugger console</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">identifier</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTPlist/ZTPlist+Error.swift#L47">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9ZTCoreKit7ZTPlistC5ErrorO5raiseyyF"></a>
+                    <a name="//apple_ref/swift/Method/raise()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ZTCoreKit7ZTPlistC5ErrorO5raiseyyF">raise()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Raise given error in debugger</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">raise</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTPlist/ZTPlist+Error.swift#L52-L57">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9ZTCoreKit7ZTPlistC5ErrorO16errorDescriptionSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/errorDescription" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ZTCoreKit7ZTPlistC5ErrorO16errorDescriptionSSSgvp">errorDescription</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A localized message describing what error occurred.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">errorDescription</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/ZTPlist/ZTPlist+Error.swift#L66-L88">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2022 <a class="link" href="https://zhortech.com" target="_blank" rel="external noopener">Zhortech</a>. All rights reserved. (Last updated: 2022-04-29)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.2</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</html>
