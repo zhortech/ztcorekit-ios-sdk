@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.1.36](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.36) (2022-05-04)
+
+- refactoring for `ZTDevice`
+
 ## [1.1.35](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.35) (2022-04-27)
 
 - support for new commands for universal firmware

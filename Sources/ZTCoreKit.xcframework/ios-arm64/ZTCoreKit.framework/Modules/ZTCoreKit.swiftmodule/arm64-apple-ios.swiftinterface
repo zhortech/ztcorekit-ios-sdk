@@ -1158,6 +1158,7 @@ extension ZTCoreKit.ZTDevice : CoreBluetooth.CBPeripheralDelegate {
     get
   }
   public var macAddressRight: Swift.String?
+  public var macAddressLeft: Swift.String?
   public var advertisementData: [Swift.String : Any]?
   public var manufacturer: Swift.String? {
     get
