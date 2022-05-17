@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.1.37](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.37) (2022-05-17)
+
+- support of background mode for DFU 
+
 ## [1.1.36](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.36) (2022-05-04)
 
 - refactoring for `ZTDevice`
