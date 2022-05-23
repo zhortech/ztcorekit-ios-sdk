@@ -268,21 +268,28 @@
     },
     {
       "file": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztcorekit/Sources/ZTCoreKit/Helpers/ZTExtensions.swift",
-      "line": 209,
+      "line": 161,
+      "symbol": "Date.logFormat",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztcorekit/Sources/ZTCoreKit/Helpers/ZTExtensions.swift",
+      "line": 217,
       "symbol": "Array.has(peripheral:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztcorekit/Sources/ZTCoreKit/Helpers/ZTExtensions.swift",
-      "line": 215,
+      "line": 223,
       "symbol": "Array.chunked(into:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztcorekit/Sources/ZTCoreKit/Helpers/ZTExtensions.swift",
-      "line": 223,
+      "line": 231,
       "symbol": "Array.stringify()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
@@ -2081,7 +2088,7 @@
     },
     {
       "file": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztcorekit/Sources/ZTCoreKit/ZTApi.swift",
-      "line": 701,
+      "line": 702,
       "symbol": "ZTApi.uploadActivityRawData(activityId:filePath:completion:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"

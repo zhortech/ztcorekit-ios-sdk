@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.1.40](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.40) (2022-05-20)
+
+- added logging into file for .debug loglevel
+
+## [1.1.39](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.39) (2022-05-20)
+
+- fix for connecting device in raw data mode 
+
+## [1.1.38](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.38) (2022-05-19)
+
+- fix for scanning in raw data mode 
+
 ## [1.1.37](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.37) (2022-05-17)
 
 - support of background mode for DFU 
