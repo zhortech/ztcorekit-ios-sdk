@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.1.41](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.41) (2022-05-25)
+
+- ignoring battery level 0 for left side for connected device
+
 ## [1.1.40](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.40) (2022-05-20)
 
 - added logging into file for .debug loglevel
