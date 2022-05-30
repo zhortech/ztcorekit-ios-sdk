@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.1.42](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/v1.1.42) (2022-05-30)
+
+- fix for full custom url 
+
 ## [1.1.41](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.41) (2022-05-25)
 
 - ignoring battery level 0 for left side for connected device
