@@ -2061,6 +2061,9 @@ open class ZTActivity : Swift.Codable {
   public var anchorTimestamp: Swift.Int64?
   public init()
   open func save()
+  public func hasMissedChunk() -> Swift.Bool
+  public func loadAll(firstChunkId: Swift.UInt16?, lastChunkId: Swift.UInt16? = nil) -> [ZTCoreKit.ZTSegmentData]
+  public func lastSavedChunkId() -> Swift.UInt16?
   @objc deinit
   open func encode(to encoder: Swift.Encoder) throws
   required public init(from decoder: Swift.Decoder) throws
@@ -2706,74 +2709,40 @@ open class ZTEnumTransform<T> : ZTCoreKit.ZTTransformType where T : Swift.RawRep
   open func transformToJSON(_ value: T?) -> T.RawValue?
   @objc deinit
 }
-public enum ZTReachabilityError : Swift.Error {
-  case failedToCreateWithAddress(Darwin.sockaddr, Swift.Int32)
-  case failedToCreateWithHostname(Swift.String, Swift.Int32)
-  case unableToSetCallback(Swift.Int32)
-  case unableToSetDispatchQueue(Swift.Int32)
-  case unableToGetFlags(Swift.Int32)
-}
-@available(*, unavailable, renamed: "Notification.Name.reachabilityChanged")
-public let ZTReachabilityChangedNotification: Foundation.NSNotification.Name
-extension Foundation.NSNotification.Name {
-  public static let ZTReachabilityChanged: Foundation.Notification.Name
-}
 public class ZTReachability {
-  public typealias ZTNetworkReachable = (ZTCoreKit.ZTReachability) -> ()
-  public typealias ZTNetworkUnreachable = (ZTCoreKit.ZTReachability) -> ()
-  public enum ZTConnection : Swift.CustomStringConvertible {
-    case unavailable, wifi, cellular
+  public var currentAdapterMode: ZTCoreKit.ZTReachability.Adapter
+  public var currentConnectionStatus: ZTCoreKit.ZTReachability.Connection {
+    get
+    set
+  }
+  public typealias ZTConnectionReachable = (ZTCoreKit.ZTReachability) -> ()
+  public typealias ZTConnectionUnReachable = (ZTCoreKit.ZTReachability) -> ()
+  public var onConnectionReachable: ZTCoreKit.ZTReachability.ZTConnectionReachable?
+  public var onConnectionUnReachable: ZTCoreKit.ZTReachability.ZTConnectionUnReachable?
+  public var managerStarted: Swift.Bool
+  public enum Adapter : Swift.CustomStringConvertible, Swift.Equatable {
+    case all, wifi, cellular, wiredEthernet, loopback, other, none
     public var description: Swift.String {
       get
     }
-    @available(*, deprecated, renamed: "unavailable")
-    public static let none: ZTCoreKit.ZTReachability.ZTConnection
-    public static func == (a: ZTCoreKit.ZTReachability.ZTConnection, b: ZTCoreKit.ZTReachability.ZTConnection) -> Swift.Bool
+    public func getInterfaceType() -> Network.NWInterface.InterfaceType
     public func hash(into hasher: inout Swift.Hasher)
+    public static func == (a: ZTCoreKit.ZTReachability.Adapter, b: ZTCoreKit.ZTReachability.Adapter) -> Swift.Bool
     public var hashValue: Swift.Int {
       get
     }
   }
-  public var whenReachable: ZTCoreKit.ZTReachability.ZTNetworkReachable?
-  public var whenUnreachable: ZTCoreKit.ZTReachability.ZTNetworkUnreachable?
-  @available(*, deprecated, renamed: "allowsCellularConnection")
-  final public let reachableOnWWAN: Swift.Bool
-  public var allowsCellularConnection: Swift.Bool
-  public var notificationCenter: Foundation.NotificationCenter
-  @available(*, deprecated, renamed: "connection.description")
-  public var currentReachabilityString: Swift.String {
-    get
+  public enum Connection : Swift.CustomStringConvertible, Swift.Equatable {
+    case online(adapter: ZTCoreKit.ZTReachability.Adapter), offline
+    public var description: Swift.String {
+      get
+    }
+    public static func == (lhs: ZTCoreKit.ZTReachability.Connection, rhs: ZTCoreKit.ZTReachability.Connection) -> Swift.Bool
   }
-  @available(*, unavailable, renamed: "connection")
-  public var currentReachabilityStatus: ZTCoreKit.ZTReachability.ZTConnection {
-    get
-  }
-  public var connection: ZTCoreKit.ZTReachability.ZTConnection {
-    get
-  }
-  required public init(reachabilityRef: SystemConfiguration.SCNetworkReachability, queueQoS: Dispatch.DispatchQoS = .default, targetQueue: Dispatch.DispatchQueue? = nil, notificationQueue: Dispatch.DispatchQueue? = .main)
-  convenience public init(hostname: Swift.String, queueQoS: Dispatch.DispatchQoS = .default, targetQueue: Dispatch.DispatchQueue? = nil, notificationQueue: Dispatch.DispatchQueue? = .main) throws
-  convenience public init(queueQoS: Dispatch.DispatchQoS = .default, targetQueue: Dispatch.DispatchQueue? = nil, notificationQueue: Dispatch.DispatchQueue? = .main) throws
+  public init(adapter: ZTCoreKit.ZTReachability.Adapter = .all)
+  public func startManager()
+  public func stopManager()
   @objc deinit
-}
-extension ZTCoreKit.ZTReachability {
-  public func startNotifier() throws
-  public func stopNotifier()
-  @available(*, deprecated, message: "Please use `connection != .none`")
-  public var isReachable: Swift.Bool {
-    get
-  }
-  @available(*, deprecated, message: "Please use `connection == .cellular`")
-  public var isReachableViaWWAN: Swift.Bool {
-    get
-  }
-  @available(*, deprecated, message: "Please use `connection == .wifi`")
-  public var isReachableViaWiFi: Swift.Bool {
-    get
-  }
-  public var description: Swift.String {
-    get
-  }
 }
 open class ZTDateDefaultTransform : ZTCoreKit.ZTTransformType {
   public typealias Object = Foundation.Date
@@ -3206,8 +3175,7 @@ extension ZTCoreKit.ZTMappingType : Swift.Hashable {}
 extension ZTCoreKit.ZTActivityLastStopReason : Swift.Equatable {}
 extension ZTCoreKit.ZTActivityLastStopReason : Swift.Hashable {}
 extension ZTCoreKit.ZTActivityLastStopReason : Swift.RawRepresentable {}
-extension ZTCoreKit.ZTReachability.ZTConnection : Swift.Equatable {}
-extension ZTCoreKit.ZTReachability.ZTConnection : Swift.Hashable {}
+extension ZTCoreKit.ZTReachability.Adapter : Swift.Hashable {}
 extension ZTCoreKit.ZTDateDefaultTransform.Unit : Swift.Equatable {}
 extension ZTCoreKit.ZTDateDefaultTransform.Unit : Swift.Hashable {}
 extension ZTCoreKit.ZTDateDefaultTransform.Unit : Swift.RawRepresentable {}

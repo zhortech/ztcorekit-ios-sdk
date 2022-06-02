@@ -1731,7 +1731,7 @@
     },
     {
       "file": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztcorekit/Sources/ZTCoreKit/Networking/Models/ZTActivitySegment.swift",
-      "line": 406,
+      "line": 410,
       "symbol": "ZTSegmentData.loadAllChunks(activityId:)",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"
@@ -2032,30 +2032,9 @@
     },
     {
       "file": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztcorekit/Sources/ZTCoreKit/Networking/ZTReachability.swift",
-      "line": 31,
-      "symbol": "ZTReachabilityError",
-      "symbol_kind": "source.lang.swift.decl.enum",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztcorekit/Sources/ZTCoreKit/Networking/ZTReachability.swift",
-      "line": 43,
-      "symbol": "Notification.Name.ZTReachabilityChanged",
-      "symbol_kind": "source.lang.swift.decl.var.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztcorekit/Sources/ZTCoreKit/Networking/ZTReachability.swift",
-      "line": 46,
+      "line": 32,
       "symbol": "ZTReachability",
       "symbol_kind": "source.lang.swift.decl.class",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztcorekit/Sources/ZTCoreKit/Networking/ZTReachability.swift",
-      "line": 157,
-      "symbol": "ZTReachability",
-      "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
     },
     {

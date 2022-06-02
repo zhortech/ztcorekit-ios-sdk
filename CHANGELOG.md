@@ -1,6 +1,14 @@
 # Changelog
 
-## [1.1.42](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/v1.1.42) (2022-05-30)
+## [1.1.44](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.44) (2022-06-02)
+
+- refactoring activity chunks check
+
+## [1.1.43](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.43) (2022-06-01)
+
+- using `NWPathMonitor` instead of `Reachability` 
+
+## [1.1.42](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.42) (2022-05-30)
 
 - fix for full custom url 
 

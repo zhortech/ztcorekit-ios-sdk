@@ -17,7 +17,7 @@
     <a title="ZTActivity Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">ZTCoreKit 1.1.40 Docs</a></p>
+        <p><a href="../index.html">ZTCoreKit 1.1.44 Docs</a></p>
         <p class="header-right"><a href="https://github.com/zhortech/ztcorekit-ios-sdk"><img src="../img/gh.png" alt="GitHub"/>View on GitHub</a></p>
         <div class="header-right">
           <form role="search" action="../search.json">
@@ -372,7 +372,7 @@
             <p>Activity. It represents activity running on modules.</p>
 
               <div class="slightly-smaller">
-                <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/Networking/Models/ZTActivity.swift#L12-L105">Show on GitHub</a>
+                <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/Networking/Models/ZTActivity.swift#L12-L143">Show on GitHub</a>
               </div>
           </section>
           <section class="section task-group-section">
@@ -1038,7 +1038,7 @@ Used for Safety</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/Networking/Models/ZTActivity.swift#L88-L99">Show on GitHub</a>
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/Networking/Models/ZTActivity.swift#L88-L98">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1068,7 +1068,140 @@ Used for Safety</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/Networking/Models/ZTActivity.swift#L104">Show on GitHub</a>
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/Networking/Models/ZTActivity.swift#L103">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9ZTCoreKit10ZTActivityC14hasMissedChunkSbyF"></a>
+                    <a name="//apple_ref/swift/Method/hasMissedChunk()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ZTCoreKit10ZTActivityC14hasMissedChunkSbyF">hasMissedChunk()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Check missed chunks and return true if count of chunk in metadata differs from stored number of chunks</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">hasMissedChunk</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p><code>Bool</code> - true if there is missed chunk</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/Networking/Models/ZTActivity.swift#L107-L110">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9ZTCoreKit10ZTActivityC7loadAll12firstChunkId04lastgH0SayAA13ZTSegmentDataCGs6UInt16VSg_ALtF"></a>
+                    <a name="//apple_ref/swift/Method/loadAll(firstChunkId:lastChunkId:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ZTCoreKit10ZTActivityC7loadAll12firstChunkId04lastgH0SayAA13ZTSegmentDataCGs6UInt16VSg_ALtF">loadAll(firstChunkId:<wbr>lastChunkId:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Load all segments data from local storage for activity till last segment id</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">loadAll</span><span class="p">(</span><span class="nv">firstChunkId</span><span class="p">:</span> <span class="kt">UInt16</span><span class="p">?,</span> <span class="nv">lastChunkId</span><span class="p">:</span> <span class="kt">UInt16</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt"><a href="../Classes/ZTSegmentData.html">ZTSegmentData</a></span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>firstChunkId</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>first chunk id for activity (optional)</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>lastChunkId</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>last chunk id for activity (optional)</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p><code>[ZTSegmentData]</code></p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/Networking/Models/ZTActivity.swift#L117-L135">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9ZTCoreKit10ZTActivityC16lastSavedChunkIds6UInt16VSgyF"></a>
+                    <a name="//apple_ref/swift/Method/lastSavedChunkId()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9ZTCoreKit10ZTActivityC16lastSavedChunkIds6UInt16VSgyF">lastSavedChunkId()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Return last saved chunk id from storage</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">lastSavedChunkId</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">UInt16</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p><code>UInt16</code></p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/Networking/Models/ZTActivity.swift#L139-L142">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1098,7 +1231,7 @@ Used for Safety</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/Networking/Models/ZTActivity.swift#L109-L112">Show on GitHub</a>
+                        <a href="https://github.com/zhortech/ztcorekit-ios-sdk/tree/master/Sources/ZTCoreKit/Networking/Models/ZTActivity.swift#L147-L150">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1108,7 +1241,7 @@ Used for Safety</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2022 <a class="link" href="https://zhortech.com" target="_blank" rel="external noopener">Zhortech</a>. All rights reserved. (Last updated: 2022-05-21)</p>
+          <p>&copy; 2022 <a class="link" href="https://zhortech.com" target="_blank" rel="external noopener">Zhortech</a>. All rights reserved. (Last updated: 2022-06-02)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.2</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
         </section>
       </article>
