@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.1.45](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.45) (2022-06-16)
+
+- fix for `connectWithDevice` method
+
 ## [1.1.44](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.44) (2022-06-02)
 
 - refactoring activity chunks check
