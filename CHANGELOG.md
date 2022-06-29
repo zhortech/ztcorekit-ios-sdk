@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.1.46](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.46) (2022-06-29)
+
+- resetting chunk id after reaching UInt16.max
+- notification about firmware errors using “onFirmwareError“
+- added model number as property into device
+
 ## [1.1.45](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.45) (2022-06-16)
 
 - fix for `connectWithDevice` method

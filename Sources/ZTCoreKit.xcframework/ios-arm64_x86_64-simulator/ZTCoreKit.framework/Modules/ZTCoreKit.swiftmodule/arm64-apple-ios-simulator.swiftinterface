@@ -1172,6 +1172,9 @@ extension ZTCoreKit.ZTDevice : CoreBluetooth.CBPeripheralDelegate {
   public var firmwareRevision: ZTCoreKit.ZTFirmwareRevision? {
     get
   }
+  public var modelNumber: Swift.String? {
+    get
+  }
   public var uuid: Swift.String {
     get
   }
@@ -1237,6 +1240,7 @@ extension ZTCoreKit.ZTDevice : CoreBluetooth.CBPeripheralDelegate {
   final public let onRawDataHeaderUpdated: ZTCoreKit.ZTSignal<(Foundation.Data?)>
   final public let onRawDataFrameUpdated: ZTCoreKit.ZTSignal<(Foundation.Data?)>
   final public let onInactivityTimeoutUpdated: ZTCoreKit.ZTSignal<(ZTCoreKit.ZTMessageInactivityTimeout?)>
+  final public let onFirmwareError: ZTCoreKit.ZTSignal<(ZTCoreKit.ZTError.Enums.FirmwareError)>
   final public let onNotifyCommonGroupUpdated: ZTCoreKit.ZTSignal<(ZTCoreKit.ZTNotifyData.CommonMessageId, [Swift.UInt8]?)>
   final public let onNotifyWarmGroupUpdated: ZTCoreKit.ZTSignal<(ZTCoreKit.ZTNotifyData.WarmMessageId, Foundation.Data?)>
   final public let onNotifyRunningGroupUpdated: ZTCoreKit.ZTSignal<(ZTCoreKit.ZTNotifyData.RunningMessageId, [Swift.UInt8]?)>
@@ -1505,6 +1509,22 @@ extension ZTCoreKit.ZTError.Enums.BleError : Foundation.LocalizedError {
   }
 }
 extension ZTCoreKit.ZTError.Enums {
+  public enum FirmwareError {
+    case differentFirmware
+    case memsError
+    public static func == (a: ZTCoreKit.ZTError.Enums.FirmwareError, b: ZTCoreKit.ZTError.Enums.FirmwareError) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+}
+extension ZTCoreKit.ZTError.Enums.FirmwareError : Foundation.LocalizedError {
+  public var errorDescription: Swift.String? {
+    get
+  }
+}
+extension ZTCoreKit.ZTError.Enums {
   public enum DfuError {
     case noLeftModule
     case noUpdate
@@ -1619,6 +1639,14 @@ extension ZTCoreKit.ZTError.Enums.DecodableError : Foundation.LocalizedError {
     get
   }
   @objc deinit
+}
+extension ZTCoreKit.ZTFirmwareRevision {
+  public var codeVersionNumber: Swift.Int {
+    get
+  }
+  public var buildNumber: Swift.Int {
+    get
+  }
 }
 open class ZTNSDecimalNumberTransform : ZTCoreKit.ZTTransformType {
   public typealias Object = Foundation.NSDecimalNumber
@@ -3091,6 +3119,8 @@ extension ZTCoreKit.ZTError.Enums.ScanningError : Swift.Equatable {}
 extension ZTCoreKit.ZTError.Enums.ScanningError : Swift.Hashable {}
 extension ZTCoreKit.ZTError.Enums.BleError : Swift.Equatable {}
 extension ZTCoreKit.ZTError.Enums.BleError : Swift.Hashable {}
+extension ZTCoreKit.ZTError.Enums.FirmwareError : Swift.Equatable {}
+extension ZTCoreKit.ZTError.Enums.FirmwareError : Swift.Hashable {}
 extension ZTCoreKit.ZTError.Enums.DfuError : Swift.Equatable {}
 extension ZTCoreKit.ZTError.Enums.DfuError : Swift.Hashable {}
 extension ZTCoreKit.ZTError.Enums.ActivityError : Swift.Equatable {}

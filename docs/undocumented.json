@@ -590,7 +590,7 @@
     },
     {
       "file": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztcorekit/Sources/ZTCoreKit/Models/ZTDevice.swift",
-      "line": 496,
+      "line": 507,
       "symbol": "ZTDevice.isLowBattery",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
@@ -1095,27 +1095,34 @@
     {
       "file": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztcorekit/Sources/ZTCoreKit/Models/ZTError.swift",
       "line": 121,
+      "symbol": "ZTError.Enums.FirmwareError",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztcorekit/Sources/ZTCoreKit/Models/ZTError.swift",
+      "line": 144,
       "symbol": "ZTError.Enums.DfuError",
       "symbol_kind": "source.lang.swift.decl.enum",
       "warning": "undocumented"
     },
     {
       "file": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztcorekit/Sources/ZTCoreKit/Models/ZTError.swift",
-      "line": 157,
+      "line": 180,
       "symbol": "ZTError.Enums.StoreError",
       "symbol_kind": "source.lang.swift.decl.enum",
       "warning": "undocumented"
     },
     {
       "file": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztcorekit/Sources/ZTCoreKit/Models/ZTError.swift",
-      "line": 184,
+      "line": 207,
       "symbol": "ZTError.Enums.ActivityError",
       "symbol_kind": "source.lang.swift.decl.enum",
       "warning": "undocumented"
     },
     {
       "file": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztcorekit/Sources/ZTCoreKit/Models/ZTError.swift",
-      "line": 294,
+      "line": 317,
       "symbol": "ZTError.Enums.DecodableError",
       "symbol_kind": "source.lang.swift.decl.enum",
       "warning": "undocumented"
@@ -1731,7 +1738,7 @@
     },
     {
       "file": "/Users/pavel/Documents/Work/Zhortech/Framework/iOS/ztcorekit/Sources/ZTCoreKit/Networking/Models/ZTActivitySegment.swift",
-      "line": 410,
+      "line": 411,
       "symbol": "ZTSegmentData.loadAllChunks(activityId:)",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"
