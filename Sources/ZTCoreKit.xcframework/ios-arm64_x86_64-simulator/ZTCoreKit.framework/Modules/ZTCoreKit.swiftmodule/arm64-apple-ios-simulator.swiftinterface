@@ -20,18 +20,6 @@ import _Concurrency
 import os.log
 import os
 import zlib
-@_hasMissingDesignatedInitializers @objc open class DFUFirmwareSize : ObjectiveC.NSObject {
-  @objc open var softdevice: Swift.UInt32 {
-    get
-  }
-  @objc open var bootloader: Swift.UInt32 {
-    get
-  }
-  @objc open var application: Swift.UInt32 {
-    get
-  }
-  @objc deinit
-}
 extension Foundation.Data {
   public func macAddress() -> Swift.String?
   public var bytes: [Swift.UInt8] {
@@ -87,68 +75,6 @@ public struct ZTAES {
   public func encrypt(data: Foundation.Data) -> Foundation.Data?
   public func decrypt(data: Foundation.Data?) -> Foundation.Data?
   public func crypt(data: Foundation.Data?, option: CommonCrypto.CCOperation) -> Foundation.Data?
-}
-@objc public enum DFUUuidType : Swift.Int {
-  case legacyService = 0
-  case legacyControlPoint = 1
-  case legacyPacket = 2
-  case legacyVersion = 3
-  case secureService = 4
-  case secureControl = 5
-  case securePacket = 6
-  case buttonlessService = 7
-  case buttonlessCharacteristic = 8
-  case buttonlessWithoutBondSharing = 9
-  case buttonlessWithBondSharing = 10
-  public init?(rawValue: Swift.Int)
-  public typealias RawValue = Swift.Int
-  public var rawValue: Swift.Int {
-    get
-  }
-}
-@objc public class DFUUuid : ObjectiveC.NSObject {
-  @objc final public let uuid: CoreBluetooth.CBUUID
-  @objc final public let type: ZTCoreKit.DFUUuidType
-  @objc public init(withUUID: CoreBluetooth.CBUUID, forType: ZTCoreKit.DFUUuidType)
-  @objc deinit
-}
-@_inheritsConvenienceInitializers @objc public class DFUUuidHelper : ObjectiveC.NSObject {
-  @objc public var legacyDFUService: CoreBluetooth.CBUUID {
-    get
-  }
-  @objc public var legacyDFUControlPoint: CoreBluetooth.CBUUID {
-    get
-  }
-  @objc public var legacyDFUPacket: CoreBluetooth.CBUUID {
-    get
-  }
-  @objc public var legacyDFUVersion: CoreBluetooth.CBUUID {
-    get
-  }
-  @objc public var secureDFUService: CoreBluetooth.CBUUID {
-    get
-  }
-  @objc public var secureDFUControlPoint: CoreBluetooth.CBUUID {
-    get
-  }
-  @objc public var secureDFUPacket: CoreBluetooth.CBUUID {
-    get
-  }
-  @objc public var buttonlessExperimentalService: CoreBluetooth.CBUUID {
-    get
-  }
-  @objc public var buttonlessExperimentalCharacteristic: CoreBluetooth.CBUUID {
-    get
-  }
-  @objc public var buttonlessWithoutBonds: CoreBluetooth.CBUUID {
-    get
-  }
-  @objc public var buttonlessWithBonds: CoreBluetooth.CBUUID {
-    get
-  }
-  @objc override dynamic public init()
-  @objc convenience public init(customUuids uuids: [ZTCoreKit.DFUUuid])
-  @objc deinit
 }
 @_hasMissingDesignatedInitializers open class ZTRetryPolicy {
   @objc deinit
@@ -412,32 +338,6 @@ extension Foundation.Data {
     get
   }
 }
-public protocol DataConvertible {
-  static func + (lhs: Foundation.Data, rhs: Self) -> Foundation.Data
-  static func += (lhs: inout Foundation.Data, rhs: Self)
-}
-extension ZTCoreKit.DataConvertible {
-  public static func + (lhs: Foundation.Data, rhs: Self) -> Foundation.Data
-  public static func += (lhs: inout Foundation.Data, rhs: Self)
-}
-extension Swift.UInt8 : ZTCoreKit.DataConvertible {
-}
-extension Swift.UInt16 : ZTCoreKit.DataConvertible {
-}
-extension Swift.UInt32 : ZTCoreKit.DataConvertible {
-}
-extension Swift.Int : ZTCoreKit.DataConvertible {
-}
-extension Swift.Float : ZTCoreKit.DataConvertible {
-}
-extension Swift.Double : ZTCoreKit.DataConvertible {
-}
-extension Swift.String : ZTCoreKit.DataConvertible {
-  public static func + (lhs: Foundation.Data, rhs: Swift.String) -> Foundation.Data
-}
-extension Foundation.Data : ZTCoreKit.DataConvertible {
-  public static func + (lhs: Foundation.Data, rhs: Foundation.Data) -> Foundation.Data
-}
 public class ZTDateTransform : ZTCoreKit.ZTTransformType {
   public typealias Object = Foundation.Date
   public typealias JSON = Swift.String
@@ -492,39 +392,6 @@ open class ZTCharacteristic {
   @objc deinit
 }
 @_hasMissingDesignatedInitializers open class ZTSession {
-  @objc deinit
-}
-@objc public enum DFUFirmwareType : Swift.UInt8 {
-  case softdevice = 1
-  case bootloader = 2
-  case application = 4
-  case softdeviceBootloader = 3
-  case softdeviceBootloaderApplication = 7
-  public init?(rawValue: Swift.UInt8)
-  public typealias RawValue = Swift.UInt8
-  public var rawValue: Swift.UInt8 {
-    get
-  }
-}
-@objc public class DFUFirmware : ObjectiveC.NSObject {
-  @objc final public let fileName: Swift.String?
-  @objc final public let fileUrl: Foundation.URL?
-  @objc public var valid: Swift.Bool {
-    @objc get
-  }
-  @objc public var size: ZTCoreKit.DFUFirmwareSize {
-    @objc get
-  }
-  @objc public var parts: Swift.Int {
-    @objc get
-  }
-  @objc convenience public init?(urlToZipFile: Foundation.URL)
-  @objc public init?(urlToZipFile: Foundation.URL, type: ZTCoreKit.DFUFirmwareType)
-  @objc convenience public init?(zipFile: Foundation.Data)
-  @objc public init?(zipFile: Foundation.Data, type: ZTCoreKit.DFUFirmwareType)
-  @objc public init?(urlToBinOrHexFile: Foundation.URL, urlToDatFile: Foundation.URL?, type: ZTCoreKit.DFUFirmwareType)
-  @objc public init?(binFile: Foundation.Data, datFile: Foundation.Data?, type: ZTCoreKit.DFUFirmwareType)
-  @objc public init?(hexFile: Foundation.Data, datFile: Foundation.Data?, type: ZTCoreKit.DFUFirmwareType)
   @objc deinit
 }
 open class ZTService {
@@ -708,13 +575,6 @@ public struct ZTBatteryLevel : ZTCoreKit.ZTNotifyDataMessage {
   public init(data: Foundation.Data)
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
-}
-@_inheritsConvenienceInitializers @objc public class LegacyDFUServiceInitiator : ZTCoreKit.DFUServiceInitiator {
-  @objc override public func start(targetWithIdentifier uuid: Foundation.UUID) -> ZTCoreKit.DFUServiceController?
-  @available(*, deprecated)
-  @objc override public init(centralManager: CoreBluetooth.CBCentralManager, target: CoreBluetooth.CBPeripheral)
-  @objc override public init(queue: Dispatch.DispatchQueue? = nil, delegateQueue: Dispatch.DispatchQueue = super, progressQueue: Dispatch.DispatchQueue = super, loggerQueue: Dispatch.DispatchQueue = super)
-  @objc deinit
 }
 extension ZTCoreKit.ZTPlist {
   public func asCollection() -> [Foundation.NSDictionary.Element]
@@ -1937,31 +1797,6 @@ public enum ZTActivityMode : Swift.UInt8, Swift.Codable {
     get
   }
 }
-@objc public class DFUServiceInitiator : ObjectiveC.NSObject {
-  @objc weak public var delegate: ZTCoreKit.DFUServiceDelegate?
-  @objc weak public var progressDelegate: ZTCoreKit.DFUProgressDelegate?
-  @objc weak public var logger: ZTCoreKit.LoggerDelegate?
-  @objc public var peripheralSelector: ZTCoreKit.DFUPeripheralSelectorDelegate
-  @objc public var packetReceiptNotificationParameter: Swift.UInt16
-  @objc public var forceDfu: Swift.Bool
-  @objc public var forceScanningForNewAddressInLegacyDfu: Swift.Bool
-  @objc public var connectionTimeout: Swift.Double
-  @objc public var dataObjectPreparationDelay: Swift.Double
-  @objc public var alternativeAdvertisingNameEnabled: Swift.Bool
-  @objc public var alternativeAdvertisingName: Swift.String?
-  @objc public var enableUnsafeExperimentalButtonlessServiceInSecureDfu: Swift.Bool
-  @objc public var uuidHelper: ZTCoreKit.DFUUuidHelper
-  @objc public var disableResume: Swift.Bool
-  @available(*, deprecated, message: "Use init(queue: DispatchQueue?) instead.")
-  @objc public init(centralManager: CoreBluetooth.CBCentralManager, target: CoreBluetooth.CBPeripheral)
-  @objc public init(queue: Dispatch.DispatchQueue? = nil, delegateQueue: Dispatch.DispatchQueue = DispatchQueue.main, progressQueue: Dispatch.DispatchQueue = DispatchQueue.main, loggerQueue: Dispatch.DispatchQueue = DispatchQueue.main)
-  @objc public func with(firmware file: ZTCoreKit.DFUFirmware) -> ZTCoreKit.DFUServiceInitiator
-  @available(*, deprecated, message: "Use start(target: CBPeripheral) instead.")
-  @objc public func start() -> ZTCoreKit.DFUServiceController?
-  @objc public func start(target: CoreBluetooth.CBPeripheral) -> ZTCoreKit.DFUServiceController?
-  @objc public func start(targetWithIdentifier uuid: Foundation.UUID) -> ZTCoreKit.DFUServiceController?
-  @objc deinit
-}
 @_hasMissingDesignatedInitializers open class Adapter {
   @objc deinit
 }
@@ -1970,23 +1805,6 @@ public enum ZTActivityMode : Swift.UInt8, Swift.Codable {
 }
 @_hasMissingDesignatedInitializers open class Interceptor {
   @objc deinit
-}
-@objc public enum LogLevel : Swift.Int {
-  case debug = 0
-  case verbose = 1
-  case info = 5
-  case application = 10
-  case warning = 15
-  case error = 20
-  public func name() -> Swift.String
-  public init?(rawValue: Swift.Int)
-  public typealias RawValue = Swift.Int
-  public var rawValue: Swift.Int {
-    get
-  }
-}
-@objc public protocol LoggerDelegate {
-  @objc func logWith(_ level: ZTCoreKit.LogLevel, message: Swift.String)
 }
 public protocol ZTImmutableMappable : ZTCoreKit.ZTBaseMappable {
   init(map: ZTCoreKit.ZTMap) throws
@@ -2359,19 +2177,16 @@ public enum ZTSamplingMode {
   case disconnecting
   case completed
   case aborted
-  public func description() -> Swift.String
   public init?(rawValue: Swift.Int)
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
   }
 }
-@objc public protocol DFUProgressDelegate {
-  @objc func dfuProgressDidChange(for part: Swift.Int, outOf totalParts: Swift.Int, to progress: Swift.Int, currentSpeedBytesPerSecond: Swift.Double, avgSpeedBytesPerSecond: Swift.Double)
-}
-@objc public protocol DFUServiceDelegate {
-  @objc func dfuStateDidChange(to state: ZTCoreKit.DFUState)
-  @objc func dfuError(_ error: ZTCoreKit.DFUError, didOccurWithMessage message: Swift.String)
+extension ZTCoreKit.DFUState : Swift.CustomStringConvertible {
+  public var description: Swift.String {
+    get
+  }
 }
 public func <<- <Transform>(left: inout Transform.Object, right: (ZTCoreKit.ZTMap, Transform)) where Transform : ZTCoreKit.ZTTransformType
 public func ->> <Transform>(left: Transform.Object, right: (ZTCoreKit.ZTMap, Transform)) where Transform : ZTCoreKit.ZTTransformType
@@ -2565,12 +2380,6 @@ extension Foundation.FileManager {
 extension Foundation.URL {
   public func isContained(in parentDirectoryURL: Foundation.URL) -> Swift.Bool
 }
-@_inheritsConvenienceInitializers @objc open class DFUPeripheralSelector : ObjectiveC.NSObject, ZTCoreKit.DFUPeripheralSelectorDelegate {
-  @objc open func select(_ peripheral: CoreBluetooth.CBPeripheral, advertisementData: [Swift.String : Swift.AnyObject], RSSI: Foundation.NSNumber, hint name: Swift.String? = nil) -> Swift.Bool
-  @objc open func filterBy(hint dfuServiceUUID: CoreBluetooth.CBUUID) -> [CoreBluetooth.CBUUID]?
-  @objc override dynamic public init()
-  @objc deinit
-}
 open class ZTCodableTransform<T> : ZTCoreKit.ZTTransformType where T : Swift.Decodable, T : Swift.Encodable {
   public typealias Object = T
   public typealias JSON = Any
@@ -2578,10 +2387,6 @@ open class ZTCodableTransform<T> : ZTCoreKit.ZTTransformType where T : Swift.Dec
   open func transformFromJSON(_ value: Any?) -> ZTCoreKit.ZTCodableTransform<T>.Object?
   open func transformToJSON(_ value: T?) -> ZTCoreKit.ZTCodableTransform<T>.JSON?
   @objc deinit
-}
-@objc public protocol DFUPeripheralSelectorDelegate {
-  @objc func select(_ peripheral: CoreBluetooth.CBPeripheral, advertisementData: [Swift.String : Swift.AnyObject], RSSI: Foundation.NSNumber, hint name: Swift.String?) -> Swift.Bool
-  @objc func filterBy(hint dfuServiceUUID: CoreBluetooth.CBUUID) -> [CoreBluetooth.CBUUID]?
 }
 open class ZTURLTransform : ZTCoreKit.ZTTransformType {
   public typealias Object = Foundation.URL
@@ -2610,11 +2415,6 @@ public class ZTUserShoe : ZTCoreKit.ZTMappable {
     public func mapping(map: ZTCoreKit.ZTMap)
     @objc deinit
   }
-  @objc deinit
-}
-@objc @_inheritsConvenienceInitializers public class IntelHex2BinConverter : ObjectiveC.NSObject {
-  public static func convert(_ hex: Foundation.Data, mbrSize: Swift.UInt32 = 0) -> Foundation.Data?
-  @objc override dynamic public init()
   @objc deinit
 }
 public enum ZTLoggerComponent : Swift.String {
@@ -2882,13 +2682,6 @@ extension Swift.Set where Element : ZTCoreKit.ZTBaseMappable {
   final public func stopListenMessages()
   @objc deinit
 }
-@_inheritsConvenienceInitializers @objc public class SecureDFUServiceInitiator : ZTCoreKit.DFUServiceInitiator {
-  @objc override public func start(targetWithIdentifier uuid: Foundation.UUID) -> ZTCoreKit.DFUServiceController?
-  @available(*, deprecated)
-  @objc override public init(centralManager: CoreBluetooth.CBCentralManager, target: CoreBluetooth.CBPeripheral)
-  @objc override public init(queue: Dispatch.DispatchQueue? = nil, delegateQueue: Dispatch.DispatchQueue = super, progressQueue: Dispatch.DispatchQueue = super, loggerQueue: Dispatch.DispatchQueue = super)
-  @objc deinit
-}
 @objc @_hasMissingDesignatedInitializers final public class ZTBleManager : ObjectiveC.NSObject {
   final public var advertisingServices: [CoreBluetooth.CBUUID]?
   final public var managerState: ZTCoreKit.ZTBleManagerState {
@@ -2939,12 +2732,11 @@ extension ZTCoreKit.ZTBleManager : CoreBluetooth.CBCentralManagerDelegate {
   @objc final public func centralManager(_ central: CoreBluetooth.CBCentralManager, didDisconnectPeripheral peripheral: CoreBluetooth.CBPeripheral, error: Swift.Error?)
   @objc final public func centralManagerDidUpdateState(_ central: CoreBluetooth.CBCentralManager)
 }
-extension ZTCoreKit.ZTCore : ZTCoreKit.DFUServiceDelegate, ZTCoreKit.DFUProgressDelegate, ZTCoreKit.LoggerDelegate {
+extension ZTCoreKit.ZTCore {
   final public func updateFirmware()
   @objc final public func dfuStateDidChange(to state: ZTCoreKit.DFUState)
   @objc final public func dfuError(_ error: ZTCoreKit.DFUError, didOccurWithMessage message: Swift.String)
   @objc final public func dfuProgressDidChange(for part: Swift.Int, outOf totalParts: Swift.Int, to progress: Swift.Int, currentSpeedBytesPerSecond: Swift.Double, avgSpeedBytesPerSecond: Swift.Double)
-  @objc final public func logWith(_ level: ZTCoreKit.LogLevel, message: Swift.String)
 }
 extension ZTCoreKit.ZTArchive {
   final public func extract(_ entry: ZTCoreKit.ZTEntry, to url: Foundation.URL, bufferSize: Swift.UInt32 = defaultReadChunkSize, skipCRC32: Swift.Bool = false, progress: Foundation.Progress? = nil) throws -> ZTCoreKit.CRC32
@@ -3021,19 +2813,6 @@ public struct ZTMessageActivityMetadata : Swift.Codable, Swift.CustomStringConve
 @_hasMissingDesignatedInitializers open class ZTURLEncodedFormParameterEncoder {
   @objc deinit
 }
-@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc public class DFUServiceController : ObjectiveC.NSObject {
-  @objc public func pause()
-  @objc public func resume()
-  @objc public func abort() -> Swift.Bool
-  @objc public func restart()
-  @objc public var paused: Swift.Bool {
-    @objc get
-  }
-  @objc public var aborted: Swift.Bool {
-    @objc get
-  }
-  @objc deinit
-}
 @_hasMissingDesignatedInitializers final public class ZTSettings {
   public static let shared: ZTCoreKit.ZTSettings
   final public var version: Swift.String?
@@ -3064,9 +2843,6 @@ public struct ZTMessageActivityMetadata : Swift.Codable, Swift.CustomStringConve
   open var downloadTaskDidResumeAtOffset: ((Foundation.URLSession, Foundation.URLSessionDownloadTask, Swift.Int64, Swift.Int64) -> Swift.Void)?
   @objc deinit
 }
-extension ZTCoreKit.DFUUuidType : Swift.Equatable {}
-extension ZTCoreKit.DFUUuidType : Swift.Hashable {}
-extension ZTCoreKit.DFUUuidType : Swift.RawRepresentable {}
 extension ZTCoreKit.ZTEnvironment : Swift.Equatable {}
 extension ZTCoreKit.ZTEnvironment : Swift.Hashable {}
 extension ZTCoreKit.ZTModuleSide : Swift.Equatable {}
@@ -3077,9 +2853,6 @@ extension ZTCoreKit.ZTArchive.ArchiveError : Swift.Hashable {}
 extension ZTCoreKit.ZTArchive.AccessMode : Swift.Equatable {}
 extension ZTCoreKit.ZTArchive.AccessMode : Swift.Hashable {}
 extension ZTCoreKit.ZTArchive.AccessMode : Swift.RawRepresentable {}
-extension ZTCoreKit.DFUFirmwareType : Swift.Equatable {}
-extension ZTCoreKit.DFUFirmwareType : Swift.Hashable {}
-extension ZTCoreKit.DFUFirmwareType : Swift.RawRepresentable {}
 extension ZTCoreKit.ZTCompressionMethod : Swift.Equatable {}
 extension ZTCoreKit.ZTCompressionMethod : Swift.Hashable {}
 extension ZTCoreKit.ZTCompressionMethod : Swift.RawRepresentable {}
@@ -3165,9 +2938,6 @@ extension ZTCoreKit.ZTServices.DeviceDFU.Characteristic : Swift.Hashable {}
 extension ZTCoreKit.ZTActivityMode : Swift.Equatable {}
 extension ZTCoreKit.ZTActivityMode : Swift.Hashable {}
 extension ZTCoreKit.ZTActivityMode : Swift.RawRepresentable {}
-extension ZTCoreKit.LogLevel : Swift.Equatable {}
-extension ZTCoreKit.LogLevel : Swift.Hashable {}
-extension ZTCoreKit.LogLevel : Swift.RawRepresentable {}
 extension ZTCoreKit.ZTSegmentData.Status : Swift.Equatable {}
 extension ZTCoreKit.ZTSegmentData.Status : Swift.Hashable {}
 extension ZTCoreKit.ZTSegmentData.Status : Swift.RawRepresentable {}

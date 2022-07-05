@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.1.47](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.47) (2022-07-04)
+
+- updated DFU library to latest version
+
 ## [1.1.46](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.46) (2022-06-29)
 
 - resetting chunk id after reaching UInt16.max
