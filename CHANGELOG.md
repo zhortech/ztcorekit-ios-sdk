@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.1.48](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.48) (2022-07-07)
+
+- DFU support with local file
+
 ## [1.1.47](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.47) (2022-07-04)
 
 - updated DFU library to latest version

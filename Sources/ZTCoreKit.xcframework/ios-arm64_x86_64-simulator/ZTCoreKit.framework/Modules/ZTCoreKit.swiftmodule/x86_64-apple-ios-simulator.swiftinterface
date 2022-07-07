@@ -2734,6 +2734,7 @@ extension ZTCoreKit.ZTBleManager : CoreBluetooth.CBCentralManagerDelegate {
 }
 extension ZTCoreKit.ZTCore {
   final public func updateFirmware()
+  final public func updateFirmware(path: Swift.String)
   @objc final public func dfuStateDidChange(to state: ZTCoreKit.DFUState)
   @objc final public func dfuError(_ error: ZTCoreKit.DFUError, didOccurWithMessage message: Swift.String)
   @objc final public func dfuProgressDidChange(for part: Swift.Int, outOf totalParts: Swift.Int, to progress: Swift.Int, currentSpeedBytesPerSecond: Swift.Double, avgSpeedBytesPerSecond: Swift.Double)
