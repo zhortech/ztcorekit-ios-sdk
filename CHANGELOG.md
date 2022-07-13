@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.1.49](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.49) (2022-07-13)
+
+- new method `getLogFilesList` for `ZTApi` instance to get list of log files in development environment
+
 ## [1.1.48](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.48) (2022-07-07)
 
 - DFU support with local file
