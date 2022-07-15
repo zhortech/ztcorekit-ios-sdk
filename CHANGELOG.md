@@ -1,5 +1,9 @@
 # Changelog
 
+## [v1.1.50](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.50) (2022-07-15)
+
+- extended ZTError with `outsideActivityDetected` case
+
 ## [1.1.49](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.49) (2022-07-13)
 
 - new method `getLogFilesList` for `ZTApi` instance to get list of log files in development environment

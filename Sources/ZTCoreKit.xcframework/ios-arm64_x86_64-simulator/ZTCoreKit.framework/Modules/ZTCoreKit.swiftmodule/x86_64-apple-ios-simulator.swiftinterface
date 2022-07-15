@@ -1432,6 +1432,7 @@ extension ZTCoreKit.ZTError.Enums {
     case noUserParametersSet
     case rawDataFlowIsRunning
     case invalidMobilityScanResults
+    case outsideActivityDetected
     public static func == (a: ZTCoreKit.ZTError.Enums.ActivityError, b: ZTCoreKit.ZTError.Enums.ActivityError) -> Swift.Bool
     public func hash(into hasher: inout Swift.Hasher)
     public var hashValue: Swift.Int {
