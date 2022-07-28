@@ -1,6 +1,10 @@
 # Changelog
 
-## [v1.1.50](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.50) (2022-07-15)
+## [1.1.51](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.51) (2022-07-28)
+
+- make static `version` property as public
+
+## [1.1.50](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.50) (2022-07-15)
 
 - extended ZTError with `outsideActivityDetected` case
 

@@ -1372,6 +1372,7 @@ extension ZTCoreKit.ZTError.Enums {
   public enum FirmwareError {
     case differentFirmware
     case memsError
+    case leftNoConnected
     public static func == (a: ZTCoreKit.ZTError.Enums.FirmwareError, b: ZTCoreKit.ZTError.Enums.FirmwareError) -> Swift.Bool
     public func hash(into hasher: inout Swift.Hasher)
     public var hashValue: Swift.Int {
@@ -2759,6 +2760,7 @@ public typealias ConnectResultBlock = (ZTCoreKit.ZTDevice?, Swift.Error?) -> Swi
 public typealias ScanResultBlock = (ZTCoreKit.ZTDevice?, Swift.Error?) -> Swift.Void
 public typealias ScanFinishedBlock = (Swift.Error?) -> Swift.Void
 @_hasMissingDesignatedInitializers final public class ZTCore {
+  public static let version: Swift.String
   public static let shared: ZTCoreKit.ZTCore
   final public let bleManager: ZTCoreKit.ZTBleManager
   final public var settings: ZTCoreKit.ZTSettings {
