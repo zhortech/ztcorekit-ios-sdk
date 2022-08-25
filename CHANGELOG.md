@@ -1,5 +1,10 @@
 # Changelog
 
+## [1.1.52](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.52) (2022-08-05)
+
+- added commands for `Gaming` firmware
+- fixed `preconditionFailure` which may cause crash when making signout with method `ZTSettings.shared.clear()` 
+
 ## [1.1.51](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.51) (2022-07-28)
 
 - make static `version` property as public

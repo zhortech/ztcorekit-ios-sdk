@@ -220,6 +220,10 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 
 
 
+
+
+
+
 typedef SWIFT_ENUM(NSInteger, DFUError, open) {
   DFUErrorRemoteLegacyDFUSuccess = 1,
   DFUErrorRemoteLegacyDFUInvalidState = 2,
@@ -385,6 +389,7 @@ SWIFT_CLASS("_TtC9ZTCoreKit12ZTBleManager")
 /// :nodoc:
 - (void)centralManagerDidUpdateState:(CBCentralManager * _Nonnull)central;
 @end
+
 
 
 /// Instance of peripheral device
