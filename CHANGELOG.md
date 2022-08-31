@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.1.53](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.53) (2022-08-31)
+
+- fixed parameters for `ZTSamplingMode`
+
 ## [1.1.52](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.52) (2022-08-05)
 
 - added commands for `Gaming` firmware

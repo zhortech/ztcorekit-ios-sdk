@@ -1167,7 +1167,7 @@ public protocol ZTTransformType {
   func transformFromJSON(_ value: Any?) -> Self.Object?
   func transformToJSON(_ value: Self.Object?) -> Self.JSON?
 }
-public enum ZTError : Swift.Equatable {
+public enum ZTError : Swift.Equatable, Swift.Error {
   case scanning(type: ZTCoreKit.ZTError.Enums.ScanningError)
   case ble(type: ZTCoreKit.ZTError.Enums.BleError)
   case network(type: ZTCoreKit.ZTError.Enums.NetworkError)
