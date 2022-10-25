@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.1.54](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.55) (2022-10-24)
+
+- new parameters `shouldObtaineMissedChunks` in `ZTSettings` to skip gathering of missed chunks during monitored activity stop. Activity with `raw data` mode will always gather chunks.
+
 ## [1.1.53](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.53) (2022-08-31)
 
 - fixed parameters for `ZTSamplingMode`

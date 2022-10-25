@@ -1,6 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.6.1 (swiftlang-5.6.0.323.66 clang-1316.0.20.12)
+// swift-compiler-version: Apple Swift version 5.7 (swiftlang-5.7.0.127.4 clang-1400.0.29.50)
 // swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name ZTCoreKit
+// swift-module-flags-ignorable: -enable-bare-slash-regex
 import Combine
 import CommonCrypto
 import Compression
@@ -17,6 +18,7 @@ import Swift
 import SystemConfiguration
 import UIKit
 import _Concurrency
+import _StringProcessing
 import os.log
 import os
 import zlib
@@ -29,7 +31,7 @@ extension Foundation.Data {
     get
   }
   public init?(hex: Swift.String)
-  public func subdata<R>(in range: R) -> Foundation.Data where R : Swift.RangeExpression, R.Bound == Foundation.Data.Index
+  public func subdata<R>(in range: R) -> Foundation.Data where R : Swift.RangeExpression, R.Bound == Swift.Int
   public func object<T>(at offset: Swift.Int) -> T
   public func getUInt(offset: Swift.Int) -> Swift.UInt16
   public func getUInt32(offset: Swift.Int) -> Swift.UInt32
@@ -364,7 +366,7 @@ final public class ZTSignal<T> {
   final public func clearLastData()
   @objc deinit
 }
-extension ZTCoreKit.ZTSignal where T == Swift.Void {
+extension ZTCoreKit.ZTSignal where T == () {
   final public func fire()
 }
 @_hasMissingDesignatedInitializers final public class ZTSignalSubscription<T> {
@@ -1570,6 +1572,7 @@ public enum ZTDeviceActualState : Swift.UInt8, Swift.Codable {
   case activityStopping
   case activityPendData
   case activitySendData
+  case unknown
   public var description: Swift.String {
     get
   }
@@ -1584,7 +1587,7 @@ public struct ZTDictionaryTransform<Key, Value> : ZTCoreKit.ZTTransformType wher
   public func transformFromJSON(_ value: Any?) -> [Key : Value]?
   public func transformToJSON(_ value: [Key : Value]?) -> Any?
   public typealias JSON = Any
-  public typealias Object = Swift.Dictionary<Key, Value>
+  public typealias Object = [Key : Value]
 }
 public typealias ZTScannerResultBlock = (ZTCoreKit.ZTScannerResult) -> Swift.Void
 public enum ZTScannerResult {
@@ -1989,6 +1992,7 @@ open class ZTSegmentData : ZTCoreKit.ZTNotifyDataMessage {
     case jump
     case staticActivity
     case debug
+    case timestampPacketBM
     case timestampPacket
     public var description: Swift.String {
       get
@@ -2896,6 +2900,7 @@ public typealias ScanFinishedBlock = (Swift.Error?) -> Swift.Void
   final public var environment: ZTCoreKit.ZTEnvironment
   final public var autoConnect: Swift.Bool
   final public var enableEventLogging: Swift.Bool
+  final public var shouldObtaineMissedChunks: Swift.Bool
   final public var chunkDuration: Swift.Int? {
     get
     set
