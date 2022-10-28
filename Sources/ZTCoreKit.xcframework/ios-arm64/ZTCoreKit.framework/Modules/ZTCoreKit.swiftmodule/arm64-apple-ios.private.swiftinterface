@@ -2901,6 +2901,7 @@ public typealias ScanFinishedBlock = (Swift.Error?) -> Swift.Void
   final public var autoConnect: Swift.Bool
   final public var enableEventLogging: Swift.Bool
   final public var shouldObtaineMissedChunks: Swift.Bool
+  final public var enableRawDataCheck: Swift.Bool
   final public var chunkDuration: Swift.Int? {
     get
     set
