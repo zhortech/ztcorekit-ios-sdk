@@ -16,6 +16,7 @@ The ZTCoreKit for iOS provides a library and documentation for developers to bui
 * [User](#user)
 * [Scan](#scan)
 * [Connect](#connect)
+* [Auto Reconnect](#autoreconnect)
 * [Listen](#listen)
 * [Disconnection](#disconnection)
 * [Observers](#observers)
@@ -255,6 +256,12 @@ You can connect using `ZTDevice` instance obtained during scanning. You will rec
             }
         }
 ```
+
+### Auto Reconnect
+By default, ZTSettings `autoConnect` is true and ZTCoreKit will always try to automatically reconnect after an unexpected disconnection.
+
+ZTCoreKit will only set `autoConnect` to false after calling `disconnect()` and the disconnection is successful.
+
 ### Disconnection
 Disconnection can be explicit or unexpected.
 If you need to disconnect from peripheral, use this method:
