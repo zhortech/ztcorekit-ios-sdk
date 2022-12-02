@@ -1,5 +1,10 @@
 # Changelog
 
+## [1.1.56](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.56) (2022-12-02)
+
+- support for background DFU
+- new method `initiateBackgroundDFU` to start upgrade with background DFU. BL and APP will be updated automatically if they are outdated. This method must be used only with Baliston firmware which support background DFU
+
 ## [1.1.55](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.55) (2022-10-28)
 
 - new parameter `enableRawDataCheck` in `ZTSettings` to obtain raw data automatically for last activity on reconnection.
@@ -45,7 +50,7 @@
 
 ## [1.1.45](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.45) (2022-06-16)
 
-- fix for `connectWithDevice` method
+- remove only self subscriber for onDeviceStateChanged in `connectWithDevice` method
 
 ## [1.1.44](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.44) (2022-06-02)
 
@@ -54,7 +59,7 @@
 ## [1.1.43](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.43) (2022-06-01)
 
 - using `NWPathMonitor` instead of `Reachability` 
-
+    
 ## [1.1.42](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.42) (2022-05-30)
 
 - fix for full custom url 
@@ -113,14 +118,21 @@
 
 - ZTDfuDelegate change in `func dfuDelegate(didFail error: ZTError?)`
 
+## [1.1.28](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.28) (2022-03-21)
+- read serial number from Serial Number characteristic or from QR code 
+
 ## [1.1.27](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.27) (2022-03-17)
 
 - refactored DFU
 - added more logging for commands
 
-## [1.1.26](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.26) (2022-03-16)
+## [1.1.26](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.26) (2022-03-15)
 
 - refactored chunk-related models
+
+## [1.1.25](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.25) (2022-03-14)
+
+- improved the way chunks are stored
 
 ## [1.1.24](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.24) (2022-03-10)
 
@@ -128,7 +140,7 @@
 
 ## [1.1.23](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.23) (2022-03-08)
 
-- cancel all requests for `ZTSettings.shared.clear()` which should be called on signout
+- cancel all requests on signout - `ZTSettings.shared.clear()`
 
 ## [1.1.22](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.22) (2022-03-04)
 
@@ -143,7 +155,6 @@
 
 - refactored chunks status update
 
-
 ## [1.1.19](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.19) (2022-02-07)
 
 - Added method `getUserShoe(code: completion:)` into `ZTApi` to get shoes by code
@@ -155,11 +166,11 @@
 - Added generic method into ZTApi to post and get data as dictionary
 - Removed Baliston-related methods
 
+
 ## [1.1.17](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.17) (2022-02-02)
 
-- Fixed parameter encoding for GET methods for ZC environemnt
-- Fixed saving requests methods for ZC environemnt
-
+- Fixed parameter encoding for GET methods
+- Fixed saving requests methods for ZC environment
 
 ## [1.1.16](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.16) (2022-01-25)
 
@@ -196,7 +207,7 @@
 - fixed `userExist` to return error if ZCloud returns error. App shouldn't go further if error is returned
 - added `chunkDuration` property into ZTSettings. It is used to set custom chunk duration in seconds for activity
 - added `isReady` property to `ZTDevice` which is updated when all characteristics are read during connection
-- added `onAllCharacteristicsRead` observer for `ZTDevice` to notify when all characteristics were read so `ZTDevice` can accept command and has characteristics values from `DeviceInformation` service
+- added `onAllCharacteristicsRead` observer for `ZTDevice` to notify when all characteristics were read so `ZTDevice` can accept command and has characteristics values from `DeviceInformation` service  
 
 ## [1.1.9](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.9) (2021-09-24)
 
@@ -206,7 +217,6 @@
 
 - changed `onActivityInfoUpdated` observer to send full `ZTMessageActivity`
 - changed `ZTActivity` to support automatic activity and activity events
-
 
 ## [1.1.7](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.7) (2021-08-31)
 
