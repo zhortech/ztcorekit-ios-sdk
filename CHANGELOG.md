@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.1.57](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.57) (2022-12-05)
+
+- `ZTSamplingMode` updated
+
 ## [1.1.56](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.56) (2022-12-02)
 
 - support for background DFU

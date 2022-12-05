@@ -1853,7 +1853,7 @@ public enum ZTServices {
     public enum Characteristic {
       case dfuControlPoint
       case dfuPacket
-      case buttonlessDfu
+      case dfuButtonless
       public var uid: Swift.String {
         get
       }
@@ -2386,12 +2386,16 @@ public struct ZTMessageActivity : Swift.CustomStringConvertible, Swift.Codable {
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
 }
-public enum ZTSamplingMode {
+public enum ZTSamplingMode : Swift.UInt8, Swift.Codable {
   case jump
   case run
   case walk
-  case custom(sequence: [Swift.UInt8])
   public var parameters: [Swift.UInt8] {
+    get
+  }
+  public init?(rawValue: Swift.UInt8)
+  public typealias RawValue = Swift.UInt8
+  public var rawValue: Swift.UInt8 {
     get
   }
 }
@@ -3347,6 +3351,9 @@ extension ZTCoreKit.DFUStreamHexError : Swift.Equatable {}
 extension ZTCoreKit.DFUStreamHexError : Swift.Hashable {}
 extension ZTCoreKit.DFUStreamZipError : Swift.Equatable {}
 extension ZTCoreKit.DFUStreamZipError : Swift.Hashable {}
+extension ZTCoreKit.ZTSamplingMode : Swift.Equatable {}
+extension ZTCoreKit.ZTSamplingMode : Swift.Hashable {}
+extension ZTCoreKit.ZTSamplingMode : Swift.RawRepresentable {}
 extension ZTCoreKit.DFUError : Swift.Equatable {}
 extension ZTCoreKit.DFUError : Swift.Hashable {}
 extension ZTCoreKit.DFUError : Swift.RawRepresentable {}
