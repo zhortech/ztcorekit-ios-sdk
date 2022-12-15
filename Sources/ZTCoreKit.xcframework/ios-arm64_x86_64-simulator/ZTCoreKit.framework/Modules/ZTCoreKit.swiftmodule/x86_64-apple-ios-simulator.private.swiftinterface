@@ -1338,7 +1338,7 @@ public enum ZTError : Swift.Equatable, Swift.Error {
   case ble(type: ZTCoreKit.ZTError.Enums.BleError)
   case network(type: ZTCoreKit.ZTError.Enums.NetworkError)
   case store(type: ZTCoreKit.ZTError.Enums.StoreError)
-  case custom(errorDescription: Swift.String?)
+  case custom(errorDescription: Swift.String?, error: Swift.Error? = nil)
   case decoding(type: ZTCoreKit.ZTError.Enums.DecodableError)
   case activity(type: ZTCoreKit.ZTError.Enums.ActivityError)
   case dfu(type: ZTCoreKit.ZTError.Enums.DfuError)
@@ -1346,6 +1346,9 @@ public enum ZTError : Swift.Equatable, Swift.Error {
     @objc deinit
   }
   public static func == (lhs: ZTCoreKit.ZTError, rhs: ZTCoreKit.ZTError) -> Swift.Bool
+  public var error: Swift.Error? {
+    get
+  }
 }
 extension ZTCoreKit.ZTError : Foundation.LocalizedError {
   public var errorDescription: Swift.String? {
@@ -2487,6 +2490,10 @@ extension ZTCoreKit.DFUState : Swift.CustomStringConvertible {
   @objc func dfuStateDidChange(to state: ZTCoreKit.DFUState)
   @objc func dfuError(_ error: ZTCoreKit.DFUError, didOccurWithMessage message: Swift.String)
 }
+extension ZTCoreKit.ZTCore {
+  final public func isPendingEmbeddedActivity(completion: @escaping (Swift.Bool, ZTCoreKit.ZTError?) -> Swift.Void)
+  final public func pushPendingEmbeddedActivities(completion: @escaping (ZTCoreKit.ZTError?) -> Swift.Void)
+}
 public func <<- <Transform>(left: inout Transform.Object, right: (ZTCoreKit.ZTMap, Transform)) where Transform : ZTCoreKit.ZTTransformType
 public func ->> <Transform>(left: Transform.Object, right: (ZTCoreKit.ZTMap, Transform)) where Transform : ZTCoreKit.ZTTransformType
 public func <<- <Transform>(left: inout Transform.Object?, right: (ZTCoreKit.ZTMap, Transform)) where Transform : ZTCoreKit.ZTTransformType
@@ -3197,6 +3204,7 @@ public typealias ScanFinishedBlock = (Swift.Error?) -> Swift.Void
   final public var enableEventLogging: Swift.Bool
   final public var shouldObtaineMissedChunks: Swift.Bool
   final public var enableRawDataCheck: Swift.Bool
+  final public var shouldAutoResendData: Swift.Bool
   final public var chunkDuration: Swift.Int? {
     get
     set

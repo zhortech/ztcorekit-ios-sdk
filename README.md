@@ -198,6 +198,8 @@ When we release a new version of the SDK, you can pick up the changes as describ
                         appId: 'YOUR_APPLICATION_ID')
     ```
 
+**Note**: Most of the service client classes have a singleton method to get a default instance. The naming convention is `.shared` (e.g. `ZTCore.shared` in the above code snippet). This singleton method creates a service client with `ZTCore` and maintains a strong reference to the client.
+
 3. Associated application's user with portal user or create new user in portal.
 *It is important point*.
 
@@ -205,7 +207,7 @@ When we release a new version of the SDK, you can pick up the changes as describ
 ZTApi.shared.linkUser(userId: applicationUser.id, attributes: applicationUser.asDictionary()])
 ```
 
-**Note**: Most of the service client classes have a singleton method to get a default instance. The naming convention is `.shared` (e.g. `ZTCore.shared` in the above code snippet). This singleton method creates a service client with `ZTCore`, which you set up in step 2 and maintains a strong reference to the client.
+**Note**: If `attributes` include key `uid` - be sure it is the same as passed into `userId` or better don't pass such key `uid` in `attributes` parameter.
 
 ### User
 

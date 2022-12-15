@@ -1,5 +1,10 @@
 # Changelog
 
+## [1.1.58](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.58) (2022-12-15)
+
+- new method `isPendingEmbeddedActivity(completion:)` to check if there is activity with stop event and data not sent to ZCloud. It can be used when `ZTSettings.shared.shouldAutoResendData = false`
+- new method `pushPendingEmbeddedActivities(completion:)` to resend all saved embedded activities which were not sent. It will send stop event and not sent chunk data for it
+
 ## [1.1.57](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.57) (2022-12-05)
 
 - `ZTSamplingMode` updated
