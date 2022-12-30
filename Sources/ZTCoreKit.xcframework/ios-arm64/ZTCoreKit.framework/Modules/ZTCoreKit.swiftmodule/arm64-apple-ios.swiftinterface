@@ -2159,9 +2159,11 @@ open class ZTSegmentData : ZTCoreKit.ZTNotifyDataMessage {
   public var timestamp: Swift.Int64?
   public var duration: Swift.Int?
   public var status: ZTCoreKit.ZTSegmentData.Status
-  public var timestampType: ZTCoreKit.ZTSegmentData.ChunkType
+  public var chunkType: ZTCoreKit.ZTSegmentData.ChunkType
+  public var timestampType: ZTCoreKit.ZTSegmentData.TimestampType
   public var packetType: ZTCoreKit.ZTSegmentData.PacketType
   public var originalTimestamp: Swift.Int64
+  public var packetsNumber: Swift.UInt8
   public var rawDescription: Swift.String {
     get
   }
@@ -2177,6 +2179,22 @@ open class ZTSegmentData : ZTCoreKit.ZTNotifyDataMessage {
     }
   }
   public enum ChunkType : Swift.UInt8, Swift.Codable {
+    case unknown
+    case fwTimestamp
+    case bmTimestamp
+    public var description: Swift.String {
+      get
+    }
+    public var name: Swift.String {
+      get
+    }
+    public init?(rawValue: Swift.UInt8)
+    public typealias RawValue = Swift.UInt8
+    public var rawValue: Swift.UInt8 {
+      get
+    }
+  }
+  public enum TimestampType : Swift.UInt8, Swift.Codable {
     case unknown
     case start
     case stop
@@ -2223,9 +2241,11 @@ open class ZTSegmentData : ZTCoreKit.ZTNotifyDataMessage {
     case timestamp
     case duration
     case status
+    case chunkType
     case timestampType
-    case originalTimestamp
     case packetType
+    case originalTimestamp
+    case packetsNumber
     public static func == (a: ZTCoreKit.ZTSegmentData.CodingKeys, b: ZTCoreKit.ZTSegmentData.CodingKeys) -> Swift.Bool
     public func hash(into hasher: inout Swift.Hasher)
     public init?(stringValue: Swift.String)
@@ -3348,6 +3368,9 @@ extension ZTCoreKit.ZTSegmentData.Status : Swift.RawRepresentable {}
 extension ZTCoreKit.ZTSegmentData.ChunkType : Swift.Equatable {}
 extension ZTCoreKit.ZTSegmentData.ChunkType : Swift.Hashable {}
 extension ZTCoreKit.ZTSegmentData.ChunkType : Swift.RawRepresentable {}
+extension ZTCoreKit.ZTSegmentData.TimestampType : Swift.Equatable {}
+extension ZTCoreKit.ZTSegmentData.TimestampType : Swift.Hashable {}
+extension ZTCoreKit.ZTSegmentData.TimestampType : Swift.RawRepresentable {}
 extension ZTCoreKit.ZTSegmentData.PacketType : Swift.Equatable {}
 extension ZTCoreKit.ZTSegmentData.PacketType : Swift.Hashable {}
 extension ZTCoreKit.ZTSegmentData.PacketType : Swift.RawRepresentable {}

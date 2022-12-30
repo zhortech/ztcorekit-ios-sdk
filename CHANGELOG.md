@@ -1,5 +1,8 @@
 # Changelog
 
+## [1.1.60](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.60) (2022-12-30)
+- added packets number byte parsing which fixed timestamp type chunk parsing
+
 ## [1.1.59](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.59) (2022-12-16)
 - fixed bug with storing chunk's `packetType`
 
