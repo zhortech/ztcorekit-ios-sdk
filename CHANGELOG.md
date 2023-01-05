@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.1.61](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.61) (2023-01-03)
+- send packet_type 253 as event to backend
+- timestamp for packets fix
+
 ## [1.1.60](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.60) (2022-12-30)
 - added packets number byte parsing which fixed timestamp type chunk parsing
 
