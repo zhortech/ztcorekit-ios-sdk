@@ -1,5 +1,8 @@
 # Changelog
 
+## [1.1.62](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.62) (2022-01-10)
+- Background DFU using image file path
+
 ## [1.1.61](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.61) (2023-01-03)
 - send packet_type 253 as event to backend
 - timestamp for packets fix

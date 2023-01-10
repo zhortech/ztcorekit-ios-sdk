@@ -1998,6 +1998,7 @@ public enum ZTActivityMode : Swift.UInt8, Swift.Codable {
 }
 extension ZTCoreKit.ZTCore {
   final public func initiateBackgroundDFU()
+  final public func initiateBackgroundDFU(path: Swift.String)
 }
 @objc public enum LogLevel : Swift.Int {
   case debug = 0
