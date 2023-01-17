@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.1.63](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.63) (2022-01-17)
+- new command for hardware info added
+- timestamp calculation additions
+
 ## [1.1.62](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.62) (2022-01-10)
 - Background DFU using image file path
 

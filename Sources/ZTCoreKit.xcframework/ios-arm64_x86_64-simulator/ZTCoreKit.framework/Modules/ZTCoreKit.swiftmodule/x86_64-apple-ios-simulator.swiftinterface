@@ -43,8 +43,6 @@ extension Foundation.Data {
     get
   }
   public init?(hex: Swift.String)
-  public func subdata<R>(in range: R) -> Foundation.Data where R : Swift.RangeExpression, R.Bound == Swift.Int
-  public func object<T>(at offset: Swift.Int) -> T
   public func getUInt(offset: Swift.Int) -> Swift.UInt16
   public func getUInt32(offset: Swift.Int) -> Swift.UInt32
   public func getFloat(offset: Swift.Int) -> Swift.Float
@@ -59,6 +57,8 @@ extension Foundation.Data {
 }
 extension Foundation.Data {
   public func dataObject<T>(at index: Foundation.Data.Index = 0) -> T
+  public func subdata<R>(in range: R) -> Foundation.Data where R : Swift.RangeExpression, R.Bound == Swift.Int
+  public func object<T>(at offset: Swift.Int) -> T
 }
 extension Swift.Numeric {
   public var data: Foundation.Data {
@@ -483,6 +483,7 @@ infix operator => : AssignmentPrecedence
 public func => <T>(signal: ZTCoreKit.ZTSignal<T>, data: T)
 public struct ZTMessageTime : Swift.CustomStringConvertible {
   public var timestamp: Swift.UInt64
+  public var side: ZTCoreKit.ZTModuleSide
   public init(bytes: [Swift.UInt8])
   public var description: Swift.String {
     get
@@ -902,6 +903,7 @@ public enum ZTCommand : Swift.UInt8 {
   case resendData
   case reboot
   case detailedBattery
+  case hardwareInformation
   case firmwareInformation
   case bootloaderVersion
   case setInactivityTimeout
@@ -1997,7 +1999,7 @@ public enum ZTActivityMode : Swift.UInt8, Swift.Codable {
   @objc deinit
 }
 extension ZTCoreKit.ZTCore {
-  final public func initiateBackgroundDFU()
+  final public func initiateBackgroundDFU(isRestartRequired: Swift.Bool = false)
   final public func initiateBackgroundDFU(path: Swift.String)
 }
 @objc public enum LogLevel : Swift.Int {
@@ -2272,6 +2274,7 @@ open class ZTSegmentData : ZTCoreKit.ZTNotifyDataMessage {
   public static func segmentsCount(activityId: Swift.String) -> Swift.Int
   public static func loadUnsent(activityId: Swift.String) -> [ZTCoreKit.ZTSegmentData]
   public static func loadAll(activityId: Swift.String) -> [ZTCoreKit.ZTSegmentData]
+  public static func loadPrevious(activityId: Swift.String?, chunkId: Swift.UInt16) -> ZTCoreKit.ZTSegmentData?
   public static func loadAllChunks<T>(activityId: Swift.String) -> [T] where T : ZTCoreKit.ZTSegmentData
   public static func loadAll(activityId: Swift.String, lastChunkId: Swift.UInt16?) -> [ZTCoreKit.ZTSegmentData]
   public static func loadAll(activityId: Swift.String, firstChunkId: Swift.UInt16?, lastChunkId: Swift.UInt16? = nil) -> [ZTCoreKit.ZTSegmentData]
