@@ -1,5 +1,10 @@
 # Changelog
 
+## [1.1.64](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.64) (2022-01-25)
+- `ZTDFUState` added
+- updated method `checkBattery` for battery levels
+- `isReady` property updated for connected device
+
 ## [1.1.63](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.63) (2022-01-17)
 - new command for hardware info added
 - timestamp calculation additions

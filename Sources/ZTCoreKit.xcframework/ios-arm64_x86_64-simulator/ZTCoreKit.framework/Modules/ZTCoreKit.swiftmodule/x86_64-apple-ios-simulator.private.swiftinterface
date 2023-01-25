@@ -482,7 +482,7 @@ extension ZTCoreKit.ZTSignal where T == () {
 infix operator => : AssignmentPrecedence
 public func => <T>(signal: ZTCoreKit.ZTSignal<T>, data: T)
 public struct ZTMessageTime : Swift.CustomStringConvertible {
-  public var timestamp: Swift.UInt64
+  public var timestamp: Swift.Int64
   public var side: ZTCoreKit.ZTModuleSide
   public init(bytes: [Swift.UInt8])
   public var description: Swift.String {
@@ -1061,7 +1061,9 @@ extension ZTCoreKit.ZTArchive {
   public var isActivityRunning: Swift.Bool {
     get
   }
-  public var isDeviceReady: Swift.Bool
+  public var isDeviceReady: Swift.Bool {
+    get
+  }
   public var info: ZTCoreKit.ZTDeviceInfo? {
     get
     set
@@ -1134,7 +1136,7 @@ extension ZTCoreKit.ZTArchive {
   @objc deinit
   @objc override dynamic open func observeValue(forKeyPath keyPath: Swift.String?, of object: Any?, change: [Foundation.NSKeyValueChangeKey : Any]?, context: Swift.UnsafeMutableRawPointer?)
   public func service<T>(_ uuid: Swift.String? = nil) -> T? where T : ZTCoreKit.ZTService
-  public func checkBattery(completion: @escaping ((Swift.UInt8, Swift.Bool) -> Swift.Void))
+  public func checkBattery(completion: @escaping ((Swift.UInt8, Swift.UInt8, Swift.Bool) -> Swift.Void))
   public func readGeneralState()
 }
 extension ZTCoreKit.ZTDevice {
@@ -2284,6 +2286,7 @@ open class ZTSegmentData : ZTCoreKit.ZTNotifyDataMessage {
   public static func hasPreviousChunk(activityId: Swift.String, currentIndex: Swift.UInt16) -> Swift.Bool
   public static func hasMissedChunks(activityId: Swift.String, startIndex: Swift.UInt16?, endIndex: Swift.UInt16?) -> Swift.Bool
   public static func getMaxMissedChunk(activityId: Swift.String, chunkId: Swift.UInt16) -> Swift.UInt16?
+  public static func isChunkSaved(activityId: Swift.String?, chunkId: Swift.UInt16) -> Swift.Bool
   @objc deinit
 }
 public enum ZTActivitySummaryStatus : Swift.String {
@@ -2425,6 +2428,23 @@ public enum ZTSamplingMode : Swift.UInt8, Swift.Codable {
   public init?(rawValue: Swift.UInt8)
   public typealias RawValue = Swift.UInt8
   public var rawValue: Swift.UInt8 {
+    get
+  }
+}
+public enum ZTDFUState : Swift.Int {
+  case started
+  case startedLeft
+  case completedLeft
+  case startedRight
+  case completedRight
+  case completed
+  case error
+  public var description: Swift.String {
+    get
+  }
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
     get
   }
 }
@@ -3181,8 +3201,13 @@ public typealias ScanFinishedBlock = (Swift.Error?) -> Swift.Void
     get
   }
   weak final public var dfuDelegate: ZTCoreKit.ZTDfuDelegate?
+  final public let onDfuStateChanged: ZTCoreKit.ZTSignal<(ZTCoreKit.ZTDFUState, ZTCoreKit.ZTError?)>
+  final public let onDfuUploadProgress: ZTCoreKit.ZTSignal<(Swift.Float?)>
+  @available(*, deprecated, renamed: "onDfuStateChanged", message: "Use onDfuStateChanged")
   final public let onDfuFinishedLeft: ZTCoreKit.ZTSignal<(ZTCoreKit.ZTError?)>
+  @available(*, deprecated, renamed: "onDfuStateChanged", message: "Use onDfuStateChanged")
   final public let onDfuFinishedRight: ZTCoreKit.ZTSignal<(ZTCoreKit.ZTError?)>
+  @available(*, deprecated, renamed: "onDfuStateChanged", message: "Use onDfuStateChanged")
   final public let onDfuFinished: ZTCoreKit.ZTSignal<(ZTCoreKit.ZTError?)>
   final public func setup(apiKey: Swift.String, secret: Swift.String, appId: Swift.String, completion: ((Swift.Error?) -> Swift.Void)? = nil)
   final public func clearUser()
@@ -3236,6 +3261,8 @@ public typealias ScanFinishedBlock = (Swift.Error?) -> Swift.Void
   final public var shouldObtaineMissedChunks: Swift.Bool
   final public var enableRawDataCheck: Swift.Bool
   final public var shouldAutoResendData: Swift.Bool
+  final public var activityDataSyncThreshold: Swift.Int
+  final public var checkFirmwareUpdatePeriod: Swift.Int
   final public var chunkDuration: Swift.Int? {
     get
     set
@@ -3396,6 +3423,9 @@ extension ZTCoreKit.DFUStreamZipError : Swift.Hashable {}
 extension ZTCoreKit.ZTSamplingMode : Swift.Equatable {}
 extension ZTCoreKit.ZTSamplingMode : Swift.Hashable {}
 extension ZTCoreKit.ZTSamplingMode : Swift.RawRepresentable {}
+extension ZTCoreKit.ZTDFUState : Swift.Equatable {}
+extension ZTCoreKit.ZTDFUState : Swift.Hashable {}
+extension ZTCoreKit.ZTDFUState : Swift.RawRepresentable {}
 extension ZTCoreKit.DFUError : Swift.Equatable {}
 extension ZTCoreKit.DFUError : Swift.Hashable {}
 extension ZTCoreKit.DFUError : Swift.RawRepresentable {}
