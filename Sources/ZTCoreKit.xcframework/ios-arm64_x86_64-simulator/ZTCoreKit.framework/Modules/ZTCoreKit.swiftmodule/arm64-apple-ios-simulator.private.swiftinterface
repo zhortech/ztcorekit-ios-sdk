@@ -1129,6 +1129,7 @@ extension ZTCoreKit.ZTArchive {
   final public let onCommandUpdated: ZTCoreKit.ZTSignal<(ZTCoreKit.ZTCommandResponse?)>
   final public let onCommandAck: ZTCoreKit.ZTSignal<(ZTCoreKit.ZTCommandResponse?)>
   final public let onIndicateValueUpdated: ZTCoreKit.ZTSignal<(Foundation.Data?)>
+  final public let onBootloaderInfoUpdated: ZTCoreKit.ZTSignal<(ZTCoreKit.ZTMessageBootloaderInfo?)>
   required public init(peripheral: CoreBluetooth.CBPeripheral)
   public init(cbPeripheral: ZTCoreKit.ZTCBPeripheralProtocol)
   public func connect()
@@ -3157,6 +3158,7 @@ extension Swift.Set where Element : ZTCoreKit.ZTBaseMappable {
   final public func startListenMessages(onMessageReceived: @escaping ((Swift.String?) -> Swift.Void), onDataReceived: @escaping ((Foundation.Data?) -> Swift.Void))
   final public func stopListenMessages()
   final public func getLogFilesList(date: Foundation.Date? = nil) -> [Foundation.URL]?
+  final public func resendSavedRequests()
   @objc deinit
 }
 @_inheritsConvenienceInitializers @objc public class SecureDFUServiceInitiator : ZTCoreKit.DFUServiceInitiator {
@@ -3201,13 +3203,14 @@ public typealias ScanFinishedBlock = (Swift.Error?) -> Swift.Void
     get
   }
   weak final public var dfuDelegate: ZTCoreKit.ZTDfuDelegate?
-  final public let onDfuStateChanged: ZTCoreKit.ZTSignal<(ZTCoreKit.ZTDFUState, ZTCoreKit.ZTError?)>
+  final public var currentDfuState: ZTCoreKit.ZTMessageBootloaderInfo.DfuState {
+    get
+    set
+  }
+  final public let onDfuStateUpdated: ZTCoreKit.ZTSignal<(ZTCoreKit.ZTMessageBootloaderInfo.DfuState)>
   final public let onDfuUploadProgress: ZTCoreKit.ZTSignal<(Swift.Float?)>
-  @available(*, deprecated, renamed: "onDfuStateChanged", message: "Use onDfuStateChanged")
   final public let onDfuFinishedLeft: ZTCoreKit.ZTSignal<(ZTCoreKit.ZTError?)>
-  @available(*, deprecated, renamed: "onDfuStateChanged", message: "Use onDfuStateChanged")
   final public let onDfuFinishedRight: ZTCoreKit.ZTSignal<(ZTCoreKit.ZTError?)>
-  @available(*, deprecated, renamed: "onDfuStateChanged", message: "Use onDfuStateChanged")
   final public let onDfuFinished: ZTCoreKit.ZTSignal<(ZTCoreKit.ZTError?)>
   final public func setup(apiKey: Swift.String, secret: Swift.String, appId: Swift.String, completion: ((Swift.Error?) -> Swift.Void)? = nil)
   final public func clearUser()

@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.1.65](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.65) (2022-01-26)
+- Secure DFU background DFU support
+- bootloader DFU state observer `ZTCore.shared.onDfuStateUpdated` and current state `ZTCore.shared.currentDfuState`
+
 ## [1.1.64](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.64) (2022-01-25)
 - `ZTDFUState` added
 - updated method `checkBattery` for battery levels
