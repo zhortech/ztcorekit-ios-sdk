@@ -3265,6 +3265,7 @@ public typealias ScanFinishedBlock = (Swift.Error?) -> Swift.Void
   final public var enableRawDataCheck: Swift.Bool
   final public var shouldAutoResendData: Swift.Bool
   final public var activityDataSyncThreshold: Swift.Int
+  final public var activityChunkStoreForFreeMemory: Swift.Int
   final public var checkFirmwareUpdatePeriod: Swift.Int
   final public var chunkDuration: Swift.Int? {
     get

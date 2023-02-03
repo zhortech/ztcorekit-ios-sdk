@@ -1,19 +1,23 @@
 # Changelog
 
-## [1.1.65](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.65) (2022-01-26)
+## [1.1.66](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.65) (2023-02-03)
+- added `activityChunkStoreForFreeMemory` into ZTSettings so it can be changed
+
+## [1.1.65](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.65) (2023-01-26)
 - Secure DFU background DFU support
 - bootloader DFU state observer `ZTCore.shared.onDfuStateUpdated` and current state `ZTCore.shared.currentDfuState`
+- added `activityDataSyncThreshold` in `ZTSettings` to confugure number of chunks stored before uploading them to ZCloud 
 
-## [1.1.64](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.64) (2022-01-25)
+## [1.1.64](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.64) (2023-01-25)
 - `ZTDFUState` added
 - updated method `checkBattery` for battery levels
 - `isReady` property updated for connected device
 
-## [1.1.63](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.63) (2022-01-17)
+## [1.1.63](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.63) (2023-01-17)
 - new command for hardware info added
 - timestamp calculation additions
 
-## [1.1.62](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.62) (2022-01-10)
+## [1.1.62](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.62) (2023-01-10)
 - Background DFU using image file path
 
 ## [1.1.61](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.61) (2023-01-03)
