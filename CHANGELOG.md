@@ -1,6 +1,10 @@
 # Changelog
 
-## [1.1.66](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.65) (2023-02-03)
+## [1.1.67](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.67) (2023-02-09)
+- added `enableBackgroundDFU` into ZTSettings
+- embedded activity chunks with PacketType 0 are sent to ZCloud
+
+## [1.1.66](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.66) (2023-02-03)
 - added `activityChunkStoreForFreeMemory` into ZTSettings so it can be changed
 
 ## [1.1.65](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.65) (2023-01-26)

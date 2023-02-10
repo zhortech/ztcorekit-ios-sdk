@@ -2365,6 +2365,9 @@ open class ZTDateFormatterTransform : ZTCoreKit.ZTTransformType {
   final public var scanning: Swift.Bool {
     get
   }
+  final public var isDfuMode: Swift.Bool {
+    get
+  }
   final public let onBluetoothStateChange: ZTCoreKit.ZTSignal<CoreBluetooth.CBManagerState>
   final public let onDeviceStateChange: ZTCoreKit.ZTSignal<(ZTCoreKit.ZTDevice?, Swift.Error?)>
   final public let onDeviceDiscovered: ZTCoreKit.ZTSignal<ZTCoreKit.ZTDevice>
@@ -3263,6 +3266,7 @@ public typealias ScanFinishedBlock = (Swift.Error?) -> Swift.Void
   final public var enableEventLogging: Swift.Bool
   final public var shouldObtaineMissedChunks: Swift.Bool
   final public var enableRawDataCheck: Swift.Bool
+  final public var enableBackgroundDFU: Swift.Bool
   final public var shouldAutoResendData: Swift.Bool
   final public var activityDataSyncThreshold: Swift.Int
   final public var activityChunkStoreForFreeMemory: Swift.Int
