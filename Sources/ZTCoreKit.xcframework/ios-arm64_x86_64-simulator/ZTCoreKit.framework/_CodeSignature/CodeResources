@@ -10,11 +10,11 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		Ab5xHfBuNAr5H71rTkJQyTqhyCI=
+		k+mSnEu2omw1pJBunY9YvmivOZw=
 		</data>
 		<key>Modules/ZTCoreKit.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		h/L5d6MRIlmUT3bbwsgt5Isd0YM=
+		C68KdxBI7umU3J7tpv+1CzFr/cQ=
 		</data>
 		<key>Modules/ZTCoreKit.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -30,11 +30,11 @@
 		</data>
 		<key>Modules/ZTCoreKit.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		+4OmmUwjbNPuDwzQ3peK06Tc+r0=
+		Z+/xc73khFGT0/FNQzj7oJClK4U=
 		</data>
 		<key>Modules/ZTCoreKit.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		h/L5d6MRIlmUT3bbwsgt5Isd0YM=
+		C68KdxBI7umU3J7tpv+1CzFr/cQ=
 		</data>
 		<key>Modules/ZTCoreKit.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -50,7 +50,7 @@
 		</data>
 		<key>Modules/ZTCoreKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		KbpXSgTH7EzqvWaDtfnhqIELfuM=
+		WxSResgk4dbZxvzdU9yubGKSOZM=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -66,7 +66,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			kMQM7piRP8G/N5CGMsdRR5BFIFTJ/mEOzrl8YWKDN8U=
+			se7tcxc3X96Af3+03De2xw2YZDlLxIww2rdWqrkCgOU=
 			</data>
 		</dict>
 		<key>Modules/ZTCoreKit.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
@@ -94,14 +94,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			UC8GAwo+qnMF3Iqv3eNCiDDCAKg7sbo3f1dO3oCpw04=
+			iy903m2C9lojHcY5fqhdyLquAGJtNlvyJ0VPgRYIXO0=
 			</data>
 		</dict>
 		<key>Modules/ZTCoreKit.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			kMQM7piRP8G/N5CGMsdRR5BFIFTJ/mEOzrl8YWKDN8U=
+			se7tcxc3X96Af3+03De2xw2YZDlLxIww2rdWqrkCgOU=
 			</data>
 		</dict>
 		<key>Modules/ZTCoreKit.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
@@ -129,7 +129,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			idEyQUIojNSiJ4Vew8SV1Erpk/0oXB6TvOlHSQQhIMI=
+			om2XbGh7/81CRIFqKTwapKrpH3LVjUPG+FiKaKOLXrc=
 			</data>
 		</dict>
 	</dict>

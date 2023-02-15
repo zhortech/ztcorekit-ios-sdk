@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.1.68](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.68) (2023-02-15)
+
+- notify ZCloud about background DFU update done
+
 ## [1.1.67](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.67) (2023-02-09)
 - added `enableBackgroundDFU` into ZTSettings
 - embedded activity chunks with PacketType 0 are sent to ZCloud
