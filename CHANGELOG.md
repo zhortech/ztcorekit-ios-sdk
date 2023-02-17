@@ -1,5 +1,10 @@
 # Changelog
 
+## [1.1.69](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.69) (2023-02-16)
+
+- added optional callback to `sendCommand`
+- added `enableAnalyticsData` to `ZTSettings` to request analytics data when application becomes active
+
 ## [1.1.68](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.68) (2023-02-15)
 
 - notify ZCloud about background DFU update done

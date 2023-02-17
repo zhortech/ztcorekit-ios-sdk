@@ -2974,7 +2974,7 @@ extension ZTCoreKit.ZTDevice : CoreBluetooth.CBPeripheralDelegate {
   @objc dynamic public func peripheral(_ peripheral: CoreBluetooth.CBPeripheral, didWriteValueFor characteristic: CoreBluetooth.CBCharacteristic, error: Swift.Error?)
   @objc dynamic public func peripheral(_ peripheral: CoreBluetooth.CBPeripheral, didUpdateNotificationStateFor characteristic: CoreBluetooth.CBCharacteristic, error: Swift.Error?)
   @objc dynamic public func peripheral(_ peripheral: CoreBluetooth.CBPeripheral, didReadRSSI RSSI: Foundation.NSNumber, error: Swift.Error?)
-  public func sendCommand(_ command: ZTCoreKit.ZTCommand, parameters: [Swift.UInt8]? = nil)
+  public func sendCommand(_ command: ZTCoreKit.ZTCommand, parameters: [Swift.UInt8]? = nil, completion: ((Swift.Bool) -> Swift.Void)? = nil)
   public func sendCommandWithAck(command: ZTCoreKit.ZTCommand, parameters: [Swift.UInt8]? = nil, completion: @escaping ZTCoreKit.ZTBaseResult)
 }
 extension Foundation.DateFormatter {
@@ -3271,6 +3271,7 @@ public typealias ScanFinishedBlock = (Swift.Error?) -> Swift.Void
   final public var activityDataSyncThreshold: Swift.Int
   final public var activityChunkStoreForFreeMemory: Swift.Int
   final public var checkFirmwareUpdatePeriod: Swift.Int
+  final public var enableAnalyticsData: Swift.Bool
   final public var chunkDuration: Swift.Int? {
     get
     set
