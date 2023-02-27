@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.1.70](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.70) (2023-02-27)
+
+- firmware version fixed
+
 ## [1.1.69](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.69) (2023-02-16)
 
 - added optional callback to `sendCommand`
