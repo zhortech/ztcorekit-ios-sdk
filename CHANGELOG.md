@@ -1,5 +1,10 @@
 # Changelog
 
+## [1.1.71](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.71) (2023-03-02)
+
+- new method `ZTApi.shared.checkFirmwareUpdate` which also returns new firmware version
+- update bootloader info after connection
+
 ## [1.1.70](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.70) (2023-02-27)
 
 - firmware version fixed

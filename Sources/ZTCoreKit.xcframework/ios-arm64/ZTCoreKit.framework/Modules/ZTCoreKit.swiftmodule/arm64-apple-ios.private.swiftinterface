@@ -3132,6 +3132,7 @@ extension Swift.Set where Element : ZTCoreKit.ZTBaseMappable {
   final public func getData(path: Swift.String, parameters: [Swift.String : Any]? = nil, completion: @escaping (([[Swift.String : Any]]?, Swift.Error?) -> ()))
   final public func getAppAttributes(completion: @escaping ([Swift.String : Any]?, Swift.Error?) -> Swift.Void)
   final public func checkFirmwareUpdate(completion: @escaping ((_ updatable: Swift.Bool, _ error: Swift.Error?) -> ()))
+  final public func checkFirmwareUpdate(completion: @escaping ((_ updatable: Swift.Bool, _ version: Swift.String?, _ error: Swift.Error?) -> ()))
   final public func getDataArray(path: Swift.String, parameters: [Swift.String : Any]? = nil, completion: @escaping (([[Swift.String : Any]]?, Swift.Error?) -> ()))
   final public func postData(path: Swift.String, parameters: [Swift.String : Any], completion: @escaping (ZTCoreKit.ZTBaseResult))
   final public func postData<T>(path: Swift.String, parameters: [Swift.String : Any]? = nil, completion: @escaping (ZTCoreKit.ZTResultObject<T>)) where T : ZTCoreKit.ZTMappable
