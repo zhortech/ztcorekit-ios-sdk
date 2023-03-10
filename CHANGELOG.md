@@ -1,5 +1,10 @@
 # Changelog
 
+## [1.1.72](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.72) (2023-03-10)
+
+- pass firmware version with chunks
+- added notification `onDfuCopied` called when background DFU was copied
+
 ## [1.1.71](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.71) (2023-03-02)
 
 - new method `ZTApi.shared.checkFirmwareUpdate` which also returns new firmware version

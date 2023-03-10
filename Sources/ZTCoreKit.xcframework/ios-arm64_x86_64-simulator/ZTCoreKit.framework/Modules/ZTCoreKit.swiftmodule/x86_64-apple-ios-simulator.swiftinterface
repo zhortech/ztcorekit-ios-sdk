@@ -3216,6 +3216,7 @@ public typealias ScanFinishedBlock = (Swift.Error?) -> Swift.Void
   final public let onDfuFinishedLeft: ZTCoreKit.ZTSignal<(ZTCoreKit.ZTError?)>
   final public let onDfuFinishedRight: ZTCoreKit.ZTSignal<(ZTCoreKit.ZTError?)>
   final public let onDfuFinished: ZTCoreKit.ZTSignal<(ZTCoreKit.ZTError?)>
+  final public let onDfuCopied: ZTCoreKit.ZTSignal<()>
   final public func setup(apiKey: Swift.String, secret: Swift.String, appId: Swift.String, completion: ((Swift.Error?) -> Swift.Void)? = nil)
   final public func clearUser()
   final public func updateOrganization(code: Swift.String? = nil, appType: Swift.String? = nil)
