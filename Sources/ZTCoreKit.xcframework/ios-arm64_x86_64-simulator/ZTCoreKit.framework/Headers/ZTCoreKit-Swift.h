@@ -1230,9 +1230,11 @@ SWIFT_CLASS("_TtC9ZTCoreKit12ZTBleManager")
 @end
 
 
+
 @interface ZTBleManager (SWIFT_EXTENSION(ZTCoreKit)) <CBCentralManagerDelegate>
 /// :nodoc:
 - (void)centralManager:(CBCentralManager * _Nonnull)central willRestoreState:(NSDictionary<NSString *, id> * _Nonnull)dict;
+- (void)centralManager:(CBCentralManager * _Nonnull)central connectionEventDidOccur:(CBConnectionEvent)event forPeripheral:(CBPeripheral * _Nonnull)peripheral;
 /// :nodoc:
 - (void)centralManager:(CBCentralManager * _Nonnull)central didDiscoverPeripheral:(CBPeripheral * _Nonnull)peripheral advertisementData:(NSDictionary<NSString *, id> * _Nonnull)advertisementData RSSI:(NSNumber * _Nonnull)RSSI;
 /// :nodoc:
@@ -1244,7 +1246,6 @@ SWIFT_CLASS("_TtC9ZTCoreKit12ZTBleManager")
 /// :nodoc:
 - (void)centralManagerDidUpdateState:(CBCentralManager * _Nonnull)central;
 @end
-
 
 
 /// Instance of peripheral device
@@ -2563,9 +2564,11 @@ SWIFT_CLASS("_TtC9ZTCoreKit12ZTBleManager")
 @end
 
 
+
 @interface ZTBleManager (SWIFT_EXTENSION(ZTCoreKit)) <CBCentralManagerDelegate>
 /// :nodoc:
 - (void)centralManager:(CBCentralManager * _Nonnull)central willRestoreState:(NSDictionary<NSString *, id> * _Nonnull)dict;
+- (void)centralManager:(CBCentralManager * _Nonnull)central connectionEventDidOccur:(CBConnectionEvent)event forPeripheral:(CBPeripheral * _Nonnull)peripheral;
 /// :nodoc:
 - (void)centralManager:(CBCentralManager * _Nonnull)central didDiscoverPeripheral:(CBPeripheral * _Nonnull)peripheral advertisementData:(NSDictionary<NSString *, id> * _Nonnull)advertisementData RSSI:(NSNumber * _Nonnull)RSSI;
 /// :nodoc:
@@ -2577,7 +2580,6 @@ SWIFT_CLASS("_TtC9ZTCoreKit12ZTBleManager")
 /// :nodoc:
 - (void)centralManagerDidUpdateState:(CBCentralManager * _Nonnull)central;
 @end
-
 
 
 /// Instance of peripheral device

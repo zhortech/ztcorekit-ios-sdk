@@ -17,7 +17,7 @@
     <a title="ZTCore Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">ZTCoreKit 1.1.64 Docs</a></p>
+        <p><a href="../index.html">ZTCoreKit 1.1.73 Docs</a></p>
         <p class="header-right"><a href="https://github.com/zhortech/ztcorekit-ios-sdk"><img src="../img/gh.png" alt="GitHub"/>View on GitHub</a></p>
         <div class="header-right">
           <form role="search" action="../search.json">
@@ -786,8 +786,8 @@ It can be used to:</p>
                   <div>
                     <code>
                     <a name="/"></a>
-                    <a name="//apple_ref/swift/Property/onDfuStateChanged" class="dashAnchor"></a>
-                    <a class="token" href="#/">onDfuStateChanged</a>
+                    <a name="//apple_ref/swift/Property/currentDfuState" class="dashAnchor"></a>
+                    <a class="token" href="#/">currentDfuState</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -795,7 +795,28 @@ It can be used to:</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Notify about changes in  DFU flow</p>
+                        <p>Current DFU state.
+If state is readyForCopy - shoes can be rebooted to apply new firmware</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/"></a>
+                    <a name="//apple_ref/swift/Property/onDfuStateUpdated" class="dashAnchor"></a>
+                    <a class="token" href="#/">onDfuStateUpdated</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Notify when firmware dfu status is updated
+If state is readyForCopy - shoes can be rebooted to apply new firmware</p>
 
                       </div>
                     </section>
@@ -815,6 +836,82 @@ It can be used to:</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Notify about firmware upload progress</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/"></a>
+                    <a name="//apple_ref/swift/Property/onDfuFinishedLeft" class="dashAnchor"></a>
+                    <a class="token" href="#/">onDfuFinishedLeft</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Notify when DFU finished for left side</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/"></a>
+                    <a name="//apple_ref/swift/Property/onDfuFinishedRight" class="dashAnchor"></a>
+                    <a class="token" href="#/">onDfuFinishedRight</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Notify when DFU finished for right side</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/"></a>
+                    <a name="//apple_ref/swift/Property/onDfuFinished" class="dashAnchor"></a>
+                    <a class="token" href="#/">onDfuFinished</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Notify when DFU finished</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/"></a>
+                    <a name="//apple_ref/swift/Property/onDfuCopied" class="dashAnchor"></a>
+                    <a class="token" href="#/">onDfuCopied</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Notify when firmware was copied</p>
 
                       </div>
                     </section>
@@ -1253,7 +1350,7 @@ You can inspect the result in completion handler.</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2023 <a class="link" href="https://zhortech.com" target="_blank" rel="external noopener">Zhortech</a>. All rights reserved. (Last updated: 2023-01-25)</p>
+          <p>&copy; 2023 <a class="link" href="https://zhortech.com" target="_blank" rel="external noopener">Zhortech</a>. All rights reserved. (Last updated: 2023-03-21)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.2</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
         </section>
       </article>

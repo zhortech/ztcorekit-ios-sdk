@@ -2142,6 +2142,7 @@ open class ZTActivity : Swift.Codable {
   public var lastChunkId: Swift.UInt16?
   public var chunkCount: Swift.UInt16?
   public var anchorTimestamp: Swift.Int64?
+  public var fwVersion: Swift.String?
   public init()
   open func save()
   public func loadAll(firstChunkId: Swift.UInt16?, lastChunkId: Swift.UInt16? = nil) -> [ZTCoreKit.ZTSegmentData]
@@ -2244,6 +2245,7 @@ open class ZTSegmentData : ZTCoreKit.ZTNotifyDataMessage {
   public var rawDescription: Swift.String {
     get
   }
+  public var fwVersion: Swift.String?
   public enum CodingKeys : Swift.CodingKey {
     case id
     case activityId
@@ -2255,6 +2257,7 @@ open class ZTSegmentData : ZTCoreKit.ZTNotifyDataMessage {
     case timestampType
     case originalTimestamp
     case packetsNumber
+    case fwVersion
     public static func == (a: ZTCoreKit.ZTSegmentData.CodingKeys, b: ZTCoreKit.ZTSegmentData.CodingKeys) -> Swift.Bool
     public func hash(into hasher: inout Swift.Hasher)
     public init?(stringValue: Swift.String)
@@ -2270,7 +2273,7 @@ open class ZTSegmentData : ZTCoreKit.ZTNotifyDataMessage {
     }
   }
   public init(data: Foundation.Data)
-  public init(data: Foundation.Data, activityId: Swift.String)
+  public init(data: Foundation.Data, activityId: Swift.String, fwversion: Swift.String? = nil)
   required public init(from decoder: Swift.Decoder) throws
   public func encode(to encoder: Swift.Encoder) throws
   public static func lastSegmentId(activityId: Swift.String) -> Swift.Int
@@ -2380,6 +2383,7 @@ open class ZTDateFormatterTransform : ZTCoreKit.ZTTransformType {
 }
 extension ZTCoreKit.ZTBleManager : CoreBluetooth.CBCentralManagerDelegate {
   @objc final public func centralManager(_ central: CoreBluetooth.CBCentralManager, willRestoreState dict: [Swift.String : Any])
+  @objc final public func centralManager(_ central: CoreBluetooth.CBCentralManager, connectionEventDidOccur event: CoreBluetooth.CBConnectionEvent, for peripheral: CoreBluetooth.CBPeripheral)
   @objc final public func centralManager(_ central: CoreBluetooth.CBCentralManager, didDiscover peripheral: CoreBluetooth.CBPeripheral, advertisementData: [Swift.String : Any], rssi RSSI: Foundation.NSNumber)
   @objc final public func centralManager(_ central: CoreBluetooth.CBCentralManager, didFailToConnect peripheral: CoreBluetooth.CBPeripheral, error: Swift.Error?)
   @objc final public func centralManager(_ central: CoreBluetooth.CBCentralManager, didConnect peripheral: CoreBluetooth.CBPeripheral)

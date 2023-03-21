@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.1.73](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.73) (2023-03-21)
+
+- new property `fwVersion` added to activity
+- resend chunks with `.error` status
+- use firmware version from activity for chunks
+
 ## [1.1.72](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.72) (2023-03-10)
 
 - pass firmware version with chunks
