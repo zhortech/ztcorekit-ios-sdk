@@ -10,11 +10,11 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		xDfR4TVJzIFKIjhCpT+VdgFROiI=
+		dFDymdEo9McFzaVRLQgTMuIUCdQ=
 		</data>
 		<key>Modules/ZTCoreKit.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		RprLP6Moj1GACIujovyEsf+6ivM=
+		vIAZV1TLZCkmz5MrGdZErlt/4F0=
 		</data>
 		<key>Modules/ZTCoreKit.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -30,11 +30,11 @@
 		</data>
 		<key>Modules/ZTCoreKit.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		Jp2TRhlh6SNsjDcQguRll7LUCIQ=
+		M0SBv1PpryE1QNFPYR3sGYLSUY8=
 		</data>
 		<key>Modules/ZTCoreKit.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		RprLP6Moj1GACIujovyEsf+6ivM=
+		vIAZV1TLZCkmz5MrGdZErlt/4F0=
 		</data>
 		<key>Modules/ZTCoreKit.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -50,7 +50,7 @@
 		</data>
 		<key>Modules/ZTCoreKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		eQlmxQ5JJrGaKuCbxpKj7aQPbD4=
+		kFrV5PvbQldpDzjXr9U6829JDYU=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -66,7 +66,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Ye9XVte9WO+HuQEKU4Jz4Lsk5EpW7QXE47B3O6CeHJI=
+			ogmViohii+MUggpt/IOFIDbZ7ZLlAEb9fcsEV1QuHQM=
 			</data>
 		</dict>
 		<key>Modules/ZTCoreKit.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
@@ -94,14 +94,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			oVm7UQQ2lH4w+ZIlenjuOtVCfJaCI1Ww3CScIk2bOx0=
+			KeXxhhUWf9a/H4hc4SmTXNSXnlFh5eC6zyq/wDdEvS0=
 			</data>
 		</dict>
 		<key>Modules/ZTCoreKit.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Ye9XVte9WO+HuQEKU4Jz4Lsk5EpW7QXE47B3O6CeHJI=
+			ogmViohii+MUggpt/IOFIDbZ7ZLlAEb9fcsEV1QuHQM=
 			</data>
 		</dict>
 		<key>Modules/ZTCoreKit.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
@@ -129,7 +129,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			mxdrJRB10AhFQUtTpxI3XwiZecnOeVjqS0vHcYKwnRA=
+			n+Ox1eK9NRS2hGQ9XI2Q1a2b/BGM3t8ON8unSibBQz8=
 			</data>
 		</dict>
 	</dict>
