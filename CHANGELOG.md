@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.1.75](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.75) (2023-03-31)
+
+- added algo commands as new enum
+
 ## [1.1.74](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.74) (2023-03-24)
 
 - new URL for ZC production for ZCloud

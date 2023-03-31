@@ -2406,6 +2406,20 @@ extension ZTCoreKit.DFUStreamZipError : Foundation.LocalizedError {
     get
   }
 }
+public enum ZTAlgoCommand : Swift.UInt8 {
+  case getStatus
+  case startNewChunk
+  case changeProductMode
+  case setPrecisionMode
+  case setMinimumNumberOfSteps
+  case enableStreamingOfValues
+  case setDisconnectionDelay
+  public init?(rawValue: Swift.UInt8)
+  public typealias RawValue = Swift.UInt8
+  public var rawValue: Swift.UInt8 {
+    get
+  }
+}
 public struct ZTMessageActivity : Swift.CustomStringConvertible, Swift.Codable {
   public init(bytes: [Swift.UInt8])
   public var isRight: Swift.Bool {
@@ -3435,6 +3449,9 @@ extension ZTCoreKit.DFUStreamHexError : Swift.Equatable {}
 extension ZTCoreKit.DFUStreamHexError : Swift.Hashable {}
 extension ZTCoreKit.DFUStreamZipError : Swift.Equatable {}
 extension ZTCoreKit.DFUStreamZipError : Swift.Hashable {}
+extension ZTCoreKit.ZTAlgoCommand : Swift.Equatable {}
+extension ZTCoreKit.ZTAlgoCommand : Swift.Hashable {}
+extension ZTCoreKit.ZTAlgoCommand : Swift.RawRepresentable {}
 extension ZTCoreKit.ZTSamplingMode : Swift.Equatable {}
 extension ZTCoreKit.ZTSamplingMode : Swift.Hashable {}
 extension ZTCoreKit.ZTSamplingMode : Swift.RawRepresentable {}
