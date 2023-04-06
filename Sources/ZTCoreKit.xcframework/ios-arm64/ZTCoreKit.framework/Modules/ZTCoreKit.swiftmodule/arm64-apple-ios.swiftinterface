@@ -1367,6 +1367,14 @@ extension ZTCoreKit.ZTSegmentData {
     case unknown
     case shoeWearOn
     case shoeWearOff
+    case walkingStart
+    case walkingStop
+    case runningStart
+    case runningStop
+    case cyclingStart
+    case cyclingStop
+    case transportStart
+    case transportStop
     public var description: Swift.String {
       get
     }

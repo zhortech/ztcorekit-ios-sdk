@@ -1,5 +1,10 @@
 # Changelog
 
+## [1.1.76](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.76) (2023-04-06)
+
+- added more cases for `BmTimestampType`
+- update `fWVersion` after DFU
+
 ## [1.1.75](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.75) (2023-03-31)
 
 - added algo commands as new enum
