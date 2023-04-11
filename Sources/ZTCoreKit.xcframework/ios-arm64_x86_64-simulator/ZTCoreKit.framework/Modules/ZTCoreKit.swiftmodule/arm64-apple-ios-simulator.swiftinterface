@@ -22,6 +22,17 @@ import _StringProcessing
 import os.log
 import os
 import zlib
+public enum ZTAlgoStatus : Swift.UInt8, ZTCoreKit.ZTEnum {
+  case timestamp
+  case modeId
+  case precisionMode
+  case numberOfSteps
+  public init?(rawValue: Swift.UInt8)
+  public typealias RawValue = Swift.UInt8
+  public var rawValue: Swift.UInt8 {
+    get
+  }
+}
 @_hasMissingDesignatedInitializers @objc open class DFUFirmwareSize : ObjectiveC.NSObject {
   @objc open var softdevice: Swift.UInt32 {
     get
@@ -383,6 +394,14 @@ public enum ZTModuleSide : Swift.String, Swift.Codable {
 }
 public func decodeData<T>(_ data: Foundation.Data, for type: T.Type) -> T? where T : Swift.Decodable, T : Swift.Encodable
 public func encodeData<T>(for type: T) -> Foundation.Data where T : Swift.Decodable, T : Swift.Encodable
+public protocol ZTEnum : Swift.Decodable, Swift.Encodable {
+  var description: Swift.String { get }
+}
+extension ZTCoreKit.ZTEnum {
+  public var description: Swift.String {
+    get
+  }
+}
 extension ZTCoreKit.ZTArchive {
   final public func totalUnitCountForRemoving(_ entry: ZTCoreKit.ZTEntry) -> Swift.Int64
   final public func totalUnitCountForReading(_ entry: ZTCoreKit.ZTEntry) -> Swift.Int64
@@ -643,6 +662,20 @@ extension ZTCoreKit.ZTServiceProtocol where Self : ZTCoreKit.ZTService {
     get
   }
 }
+public enum ZTPassthroughAlgo : ZTCoreKit.ZTEnum {
+  case status(id: ZTCoreKit.ZTAlgoStatus)
+  case startNewChunk
+  case changeProductMode(mode: ZTCoreKit.ZTAlgoMode)
+  case setPrecisionMode(mode: ZTCoreKit.ZTAlgoPrecisionMode)
+  case setMinimumStepsForAnalysis(activityType: ZTCoreKit.ZTActivityType, steps: Swift.Int)
+  case setMinimumStridesForAnalysis(activityType: ZTCoreKit.ZTActivityType, strides: Swift.Int)
+  case setStreamingMode(interval: Swift.UInt16, activityType: ZTCoreKit.ZTActivityType, metricsId: Swift.UInt8)
+  public var parameters: [Swift.UInt8] {
+    get
+  }
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
 @_inheritsConvenienceInitializers public class ZTDfuService : ZTCoreKit.ZTService, ZTCoreKit.ZTServiceProtocol {
   public static let uuid: Swift.String
   public static var characteristicTypes: [Swift.String : ZTCoreKit.ZTCharacteristic.Type]
@@ -846,6 +879,28 @@ extension ZTCoreKit.ZTPlist {
 }
 extension ZTCoreKit.ZTPlist.Error : Swift.Error, Foundation.LocalizedError {
   public var errorDescription: Swift.String? {
+    get
+  }
+}
+public enum ZTAlgoState : Swift.UInt8, ZTCoreKit.ZTEnum {
+  case undefined
+  case walking
+  case running
+  case pedaling
+  case jump
+  case stairsUp
+  case stairsDown
+  case standing
+  case sitting
+  case kneeling
+  case tiptoe
+  case vibration
+  case slip
+  case incident
+  case freewheel
+  public init?(rawValue: Swift.UInt8)
+  public typealias RawValue = Swift.UInt8
+  public var rawValue: Swift.UInt8 {
     get
   }
 }
@@ -1148,6 +1203,22 @@ extension ZTCoreKit.ZTDevice {
 }
 @_hasMissingDesignatedInitializers open class ZTServerTrustManager {
   @objc deinit
+}
+public enum ZTAlgoAcknowledgmentStatus : Swift.UInt8, ZTCoreKit.ZTEnum {
+  case success
+  case busy
+  case invalidParam
+  case invalidState
+  case fwResForbidden
+  case notSupported
+  case unknownCommand
+  case commandInProgress
+  case noPeerResponse
+  public init?(rawValue: Swift.UInt8)
+  public typealias RawValue = Swift.UInt8
+  public var rawValue: Swift.UInt8 {
+    get
+  }
 }
 @_inheritsConvenienceInitializers public class ZTBatteryCharacteristic : ZTCoreKit.ZTCharacteristic {
   public static let uuid: Swift.String
@@ -1953,6 +2024,32 @@ public enum ZTServices {
     }
   }
 }
+public enum ZTActivityType : Swift.UInt8, ZTCoreKit.ZTEnum {
+  case staticType
+  case dynamic
+  case walking
+  case running
+  case cycling
+  case jump
+  case stairsUp
+  case stairsDown
+  case staticOther
+  case kneel
+  case tiptoe
+  case vibration
+  case trampling
+  case crawling
+  case dynamicOther
+  case slip
+  case trip
+  case active
+  case inactive
+  public init?(rawValue: Swift.UInt8)
+  public typealias RawValue = Swift.UInt8
+  public var rawValue: Swift.UInt8 {
+    get
+  }
+}
 open class ZTTransformOf<ObjectType, JSONType> : ZTCoreKit.ZTTransformType {
   public typealias Object = ObjectType
   public typealias JSON = JSONType
@@ -1968,6 +2065,19 @@ public enum ZTActivityMode : Swift.UInt8, Swift.Codable {
   case cycling
   case mobility
   public var name: Swift.String {
+    get
+  }
+  public init?(rawValue: Swift.UInt8)
+  public typealias RawValue = Swift.UInt8
+  public var rawValue: Swift.UInt8 {
+    get
+  }
+}
+public enum ZTAlgoPrecisionMode : Swift.UInt8, ZTCoreKit.ZTEnum {
+  case defaultMode
+  case economicMode
+  case performanceMode
+  public var parameters: [Swift.UInt8] {
     get
   }
   public init?(rawValue: Swift.UInt8)
@@ -2419,9 +2529,21 @@ public enum ZTAlgoCommand : Swift.UInt8 {
   case startNewChunk
   case changeProductMode
   case setPrecisionMode
-  case setMinimumNumberOfSteps
+  case setMinimumNumberOfStrides
   case enableStreamingOfValues
   case setDisconnectionDelay
+  public init?(rawValue: Swift.UInt8)
+  public typealias RawValue = Swift.UInt8
+  public var rawValue: Swift.UInt8 {
+    get
+  }
+}
+public enum ZTAlgoMode : Swift.UInt8, ZTCoreKit.ZTEnum {
+  case monitoring
+  case gaming
+  public var parameters: [Swift.UInt8] {
+    get
+  }
   public init?(rawValue: Swift.UInt8)
   public typealias RawValue = Swift.UInt8
   public var rawValue: Swift.UInt8 {
@@ -3323,6 +3445,9 @@ public typealias ScanFinishedBlock = (Swift.Error?) -> Swift.Void
   open var downloadTaskDidResumeAtOffset: ((Foundation.URLSession, Foundation.URLSessionDownloadTask, Swift.Int64, Swift.Int64) -> Swift.Void)?
   @objc deinit
 }
+extension ZTCoreKit.ZTAlgoStatus : Swift.Equatable {}
+extension ZTCoreKit.ZTAlgoStatus : Swift.Hashable {}
+extension ZTCoreKit.ZTAlgoStatus : Swift.RawRepresentable {}
 extension ZTCoreKit.DFUUuidType : Swift.Equatable {}
 extension ZTCoreKit.DFUUuidType : Swift.Hashable {}
 extension ZTCoreKit.DFUUuidType : Swift.RawRepresentable {}
@@ -3350,12 +3475,18 @@ extension ZTCoreKit.DFUFirmwareError.FileType : Swift.Hashable {}
 extension ZTCoreKit.ZTCompressionMethod : Swift.Equatable {}
 extension ZTCoreKit.ZTCompressionMethod : Swift.Hashable {}
 extension ZTCoreKit.ZTCompressionMethod : Swift.RawRepresentable {}
+extension ZTCoreKit.ZTAlgoState : Swift.Equatable {}
+extension ZTCoreKit.ZTAlgoState : Swift.Hashable {}
+extension ZTCoreKit.ZTAlgoState : Swift.RawRepresentable {}
 extension ZTCoreKit.ZTCommand : Swift.Equatable {}
 extension ZTCoreKit.ZTCommand : Swift.Hashable {}
 extension ZTCoreKit.ZTCommand : Swift.RawRepresentable {}
 extension ZTCoreKit.ZTCommandStatus : Swift.Equatable {}
 extension ZTCoreKit.ZTCommandStatus : Swift.Hashable {}
 extension ZTCoreKit.ZTCommandStatus : Swift.RawRepresentable {}
+extension ZTCoreKit.ZTAlgoAcknowledgmentStatus : Swift.Equatable {}
+extension ZTCoreKit.ZTAlgoAcknowledgmentStatus : Swift.Hashable {}
+extension ZTCoreKit.ZTAlgoAcknowledgmentStatus : Swift.RawRepresentable {}
 extension ZTCoreKit.ZTProductType : Swift.Equatable {}
 extension ZTCoreKit.ZTProductType : Swift.Hashable {}
 extension ZTCoreKit.ZTProductType : Swift.RawRepresentable {}
@@ -3442,9 +3573,15 @@ extension ZTCoreKit.ZTServices.DeviceInformation.Characteristic : Swift.Equatabl
 extension ZTCoreKit.ZTServices.DeviceInformation.Characteristic : Swift.Hashable {}
 extension ZTCoreKit.ZTServices.DeviceDFU.Characteristic : Swift.Equatable {}
 extension ZTCoreKit.ZTServices.DeviceDFU.Characteristic : Swift.Hashable {}
+extension ZTCoreKit.ZTActivityType : Swift.Equatable {}
+extension ZTCoreKit.ZTActivityType : Swift.Hashable {}
+extension ZTCoreKit.ZTActivityType : Swift.RawRepresentable {}
 extension ZTCoreKit.ZTActivityMode : Swift.Equatable {}
 extension ZTCoreKit.ZTActivityMode : Swift.Hashable {}
 extension ZTCoreKit.ZTActivityMode : Swift.RawRepresentable {}
+extension ZTCoreKit.ZTAlgoPrecisionMode : Swift.Equatable {}
+extension ZTCoreKit.ZTAlgoPrecisionMode : Swift.Hashable {}
+extension ZTCoreKit.ZTAlgoPrecisionMode : Swift.RawRepresentable {}
 extension ZTCoreKit.LogLevel : Swift.Equatable {}
 extension ZTCoreKit.LogLevel : Swift.Hashable {}
 extension ZTCoreKit.LogLevel : Swift.RawRepresentable {}
@@ -3460,6 +3597,9 @@ extension ZTCoreKit.DFUStreamZipError : Swift.Hashable {}
 extension ZTCoreKit.ZTAlgoCommand : Swift.Equatable {}
 extension ZTCoreKit.ZTAlgoCommand : Swift.Hashable {}
 extension ZTCoreKit.ZTAlgoCommand : Swift.RawRepresentable {}
+extension ZTCoreKit.ZTAlgoMode : Swift.Equatable {}
+extension ZTCoreKit.ZTAlgoMode : Swift.Hashable {}
+extension ZTCoreKit.ZTAlgoMode : Swift.RawRepresentable {}
 extension ZTCoreKit.ZTSamplingMode : Swift.Equatable {}
 extension ZTCoreKit.ZTSamplingMode : Swift.Hashable {}
 extension ZTCoreKit.ZTSamplingMode : Swift.RawRepresentable {}

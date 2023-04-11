@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.1.77](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.77) (2023-04-07)
+
+- added algo related enums
+
 ## [1.1.76](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.76) (2023-04-06)
 
 - added more cases for `BmTimestampType`
