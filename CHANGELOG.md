@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.1.78](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.78) (2023-05-11)
+
+- updated generic method to get data array `ZTApi.shared.getdDataArray`
+
 ## [1.1.77](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.77) (2023-04-07)
 
 - added algo related enums
