@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.1.80](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.80) (2023-05-19)
+
+- updated flow for background DFU from FW 3.15.12 to use DFu mode and DFU install commands
+
 ## [1.1.78](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.78) (2023-05-11)
 
 - updated generic method to get data array `ZTApi.shared.getdDataArray`

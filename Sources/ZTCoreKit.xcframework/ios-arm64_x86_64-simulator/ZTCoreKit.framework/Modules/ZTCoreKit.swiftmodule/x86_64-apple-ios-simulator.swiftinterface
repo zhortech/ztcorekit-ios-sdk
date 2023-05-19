@@ -951,17 +951,23 @@ public class ZTPlist {
   public static func delete(_ plist: inout ZTCoreKit.ZTPlist?)
   @objc deinit
 }
-public enum ZTCommand : Swift.UInt8 {
+public enum ZTCommand : Swift.UInt8, Swift.CaseIterable, Swift.Identifiable {
+  public var id: Swift.UInt8 {
+    get
+  }
   case generalState
   case startNewActivity
   case stopNewActivity
   case resendData
+  case deepSleep
   case reboot
   case detailedBattery
   case hardwareInformation
   case firmwareInformation
   case bootloaderVersion
   case setInactivityTimeout
+  case setDFUInstall
+  case setDFUMode
   case setChunkMinutesInterval
   case setChunkSecondsInterval
   case selectAlgorithm
@@ -998,7 +1004,12 @@ public enum ZTCommand : Swift.UInt8 {
     get
   }
   public init?(rawValue: Swift.UInt8)
+  public typealias AllCases = [ZTCoreKit.ZTCommand]
+  public typealias ID = Swift.UInt8
   public typealias RawValue = Swift.UInt8
+  public static var allCases: [ZTCoreKit.ZTCommand] {
+    get
+  }
   public var rawValue: Swift.UInt8 {
     get
   }
@@ -1542,6 +1553,7 @@ extension ZTCoreKit.ZTError.Enums {
     case activityIsRunning
     case busy
     case dfu
+    case commandError
     public static func == (a: ZTCoreKit.ZTError.Enums.BleError, b: ZTCoreKit.ZTError.Enums.BleError) -> Swift.Bool
     public func hash(into hasher: inout Swift.Hasher)
     public var hashValue: Swift.Int {
@@ -1670,13 +1682,13 @@ extension ZTCoreKit.ZTError.Enums.DecodableError : Foundation.LocalizedError {
   }
 }
 @_hasMissingDesignatedInitializers public class ZTFirmwareRevision {
-  public var build: Swift.String? {
+  public var fwSystemVersion: Swift.String? {
     get
   }
   public var productType: ZTCoreKit.ZTProductCodeType? {
     get
   }
-  public var codeVersion: Swift.String? {
+  public var bmVersion: Swift.String? {
     get
   }
   public var date: Foundation.Date? {
@@ -1691,10 +1703,19 @@ extension ZTCoreKit.ZTError.Enums.DecodableError : Foundation.LocalizedError {
   @objc deinit
 }
 extension ZTCoreKit.ZTFirmwareRevision {
-  public var codeVersionNumber: Swift.Int {
+  public var fwSystemMajorVersion: Swift.Int {
     get
   }
-  public var buildNumber: Swift.Int {
+  public var fwSystemMinorVersion: Swift.Int {
+    get
+  }
+  public var fwSystemBuildVersion: Swift.Int {
+    get
+  }
+  public var bmMajorVersion: Swift.Int {
+    get
+  }
+  public var bmMinorVersion: Swift.Int {
     get
   }
 }
@@ -2120,8 +2141,8 @@ public enum ZTAlgoPrecisionMode : Swift.UInt8, ZTCoreKit.ZTEnum {
   @objc deinit
 }
 extension ZTCoreKit.ZTCore {
-  final public func initiateBackgroundDFU(isRestartRequired: Swift.Bool = false)
-  final public func initiateBackgroundDFU(path: Swift.String)
+  final public func initiateBackgroundDFU(isRestartRequired: Swift.Bool = false, isManualMode: Swift.Bool = false)
+  final public func initiateBackgroundDFU(path: Swift.String, isManualMode: Swift.Bool = false)
 }
 @objc public enum LogLevel : Swift.Int {
   case debug = 0
@@ -3377,6 +3398,7 @@ public typealias ScanFinishedBlock = (Swift.Error?) -> Swift.Void
   final public func getDeviceInfo(code: Swift.String, completion: @escaping (ZTCoreKit.ZTDeviceInfo?, Swift.Error?) -> Swift.Void)
   final public func tryReconnect(completion: ZTCoreKit.ConnectResultBlock? = nil)
   final public func checkConnectedDevice(completion: ZTCoreKit.ConnectResultBlock? = nil)
+  final public func setDeepSleepMode() throws
   @objc deinit
 }
 @_inheritsConvenienceInitializers public class ZTControlPointDfuCharacteristic : ZTCoreKit.ZTCharacteristic {
