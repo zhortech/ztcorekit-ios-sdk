@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.1.81](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.81) (2023-05-24)
+
+- bootloader is checked with general state update, if both sides received image - they are marked for install
+
 ## [1.1.80](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.80) (2023-05-19)
 
 - updated flow for background DFU from FW 3.15.12 to use DFu mode and DFU install commands

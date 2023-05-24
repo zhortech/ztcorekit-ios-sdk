@@ -288,6 +288,7 @@ public struct ZTMessageBootloaderInfo : Swift.CustomStringConvertible, Swift.Cod
   public enum DfuState : Swift.UInt8 {
     case none
     case inProgress
+    case received
     case readyForCopy
     case activation
     case done
