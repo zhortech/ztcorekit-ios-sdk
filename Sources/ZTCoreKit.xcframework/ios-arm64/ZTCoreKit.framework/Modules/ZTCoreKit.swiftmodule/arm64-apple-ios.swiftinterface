@@ -3439,12 +3439,13 @@ public typealias ScanFinishedBlock = (Swift.Error?) -> Swift.Void
   final public var enableEventLogging: Swift.Bool
   final public var shouldObtaineMissedChunks: Swift.Bool
   final public var enableRawDataCheck: Swift.Bool
-  final public var enableBackgroundDFU: Swift.Bool
   final public var shouldAutoResendData: Swift.Bool
   final public var activityDataSyncThreshold: Swift.Int
+  final public var enableBackgroundDFU: Swift.Bool
   final public var activityChunkStoreForFreeMemory: Swift.Int
   final public var checkFirmwareUpdatePeriod: Swift.Int
   final public var enableAnalyticsData: Swift.Bool
+  final public var autorestartBackgroundDfu: Swift.Bool
   final public var chunkDuration: Swift.Int? {
     get
     set

@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.1.82](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.82) (2023-05-31)
+
+- new property `autorestartBackgroundDfu` in `ZTSettings` to restart modules at once after firmware was copied to both modules
+
 ## [1.1.81](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.81) (2023-05-24)
 
 - bootloader is checked with general state update, if both sides received image - they are marked for install
