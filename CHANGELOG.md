@@ -1,5 +1,10 @@
 # Changelog
 
+## [1.1.83](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.83) (2023-06-01)
+
+- delay for DFU_INSTALL command
+- recover from different firmware versions for background DFU 
+
 ## [1.1.82](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.82) (2023-05-31)
 
 - new property `autorestartBackgroundDfu` in `ZTSettings` to restart modules at once after firmware was copied to both modules

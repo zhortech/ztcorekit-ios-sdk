@@ -1145,9 +1145,12 @@ extension ZTCoreKit.ZTArchive {
     get
     set
   }
-  public var softwareInfo: ZTCoreKit.ZTMessageSoftware? {
+  public var softwareInfo: (right: ZTCoreKit.ZTMessageSoftware?, left: ZTCoreKit.ZTMessageSoftware?) {
     get
     set
+  }
+  public var lowSoftwareInfo: Swift.String {
+    get
   }
   public var activityInfo: ZTCoreKit.ZTMessageActivity? {
     get
@@ -2324,10 +2327,28 @@ public struct ZTBatteryLevel : ZTCoreKit.ZTNotifyDataMessage {
 }
 public struct ZTMessageSoftware : Swift.CustomStringConvertible, Swift.Codable {
   public init(bytes: [Swift.UInt8])
-  public var isRight: Swift.Bool {
+  public var side: ZTCoreKit.ZTModuleSide {
     get
   }
-  public var isLeft: Swift.Bool {
+  public var baseMajor: Swift.UInt8 {
+    get
+  }
+  public var baseMinor: Swift.UInt8 {
+    get
+  }
+  public var baseBuild: Swift.UInt16 {
+    get
+  }
+  public var app: Swift.String {
+    get
+  }
+  public var appMajor: Swift.UInt8 {
+    get
+  }
+  public var appMinor: Swift.UInt8 {
+    get
+  }
+  public var version: Swift.String {
     get
   }
   public var description: Swift.String {
@@ -3446,6 +3467,7 @@ public typealias ScanFinishedBlock = (Swift.Error?) -> Swift.Void
   final public var checkFirmwareUpdatePeriod: Swift.Int
   final public var enableAnalyticsData: Swift.Bool
   final public var autorestartBackgroundDfu: Swift.Bool
+  final public var getChunksOnApplicationDidBecomeActive: Swift.Bool
   final public var chunkDuration: Swift.Int? {
     get
     set
