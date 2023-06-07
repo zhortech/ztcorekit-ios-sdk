@@ -2442,6 +2442,7 @@ open class ZTSegmentData : ZTCoreKit.ZTNotifyDataMessage {
   public static func loadUnsent(activityId: Swift.String) -> [ZTCoreKit.ZTSegmentData]
   public static func loadAll(activityId: Swift.String) -> [ZTCoreKit.ZTSegmentData]
   public static func loadPrevious(activityId: Swift.String?, chunkId: Swift.UInt16) -> ZTCoreKit.ZTSegmentData?
+  public static func loadLastFwVersionEvent(activityId: Swift.String?, chunkId: Swift.UInt16) -> ZTCoreKit.ZTSegmentData?
   public static func loadAllChunks<T>(activityId: Swift.String) -> [T] where T : ZTCoreKit.ZTSegmentData
   public static func loadAll(activityId: Swift.String, lastChunkId: Swift.UInt16?) -> [ZTCoreKit.ZTSegmentData]
   public static func loadAll(activityId: Swift.String, firstChunkId: Swift.UInt16?, lastChunkId: Swift.UInt16? = nil) -> [ZTCoreKit.ZTSegmentData]
@@ -3398,6 +3399,9 @@ public typealias ScanFinishedBlock = (Swift.Error?) -> Swift.Void
     get
   }
   weak final public var dfuDelegate: ZTCoreKit.ZTDfuDelegate?
+  final public var firmwareDfuState: ZTCoreKit.DFUState? {
+    get
+  }
   final public var currentDfuState: ZTCoreKit.ZTMessageBootloaderInfo.DfuState {
     get
     set

@@ -1,5 +1,10 @@
 # Changelog
 
+## [1.1.84](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.84) (2023-06-07)
+
+- resume backgrond DFU if it was interrupted because of disconnection
+- default value for `checkFirmwareUpdatePeriod` is set to 20 mins
+
 ## [1.1.83](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.83) (2023-06-01)
 
 - delay for DFU_INSTALL command
