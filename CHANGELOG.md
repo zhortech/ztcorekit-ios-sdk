@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.1.85](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.85) (2023-06-14)
+
+- update dynamic attributes for user
+
 ## [1.1.84](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.84) (2023-06-07)
 
 - resume backgrond DFU if it was interrupted because of disconnection

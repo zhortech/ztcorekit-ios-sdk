@@ -2452,6 +2452,7 @@ open class ZTSegmentData : ZTCoreKit.ZTNotifyDataMessage {
   public static func hasPreviousChunk(activityId: Swift.String, currentIndex: Swift.UInt16) -> Swift.Bool
   public static func hasMissedChunks(activityId: Swift.String, startIndex: Swift.UInt16?, endIndex: Swift.UInt16?) -> Swift.Bool
   public static func getMaxMissedChunk(activityId: Swift.String, chunkId: Swift.UInt16) -> Swift.UInt16?
+  public static func getMinMissedChunk(activityId: Swift.String, chunkId: Swift.UInt16) -> Swift.UInt16?
   public static func isChunkSaved(activityId: Swift.String?, chunkId: Swift.UInt16) -> Swift.Bool
   @objc deinit
 }
