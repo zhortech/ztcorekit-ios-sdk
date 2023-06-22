@@ -2285,6 +2285,8 @@ open class ZTActivity : Swift.Codable {
   public var lastChunkId: Swift.UInt16?
   public var chunkCount: Swift.UInt16?
   public var anchorTimestamp: Swift.Int64?
+  public var customActivityStartTimestamp: Swift.Int64?
+  public var customActivityFirstChunkId: Swift.UInt16?
   public var fwVersion: Swift.String?
   public init()
   open func save()

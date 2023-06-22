@@ -1,5 +1,10 @@
 # Changelog
 
+## [1.1.86](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.86) (2023-06-22)
+
+- added Timezone into dynamic attributes for user
+- updated activity model for mobility scan new flow 
+
 ## [1.1.85](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.85) (2023-06-14)
 
 - update dynamic attributes for user
