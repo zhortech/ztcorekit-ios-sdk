@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.1.87](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.87) (2023-06-23)
+
+- new public method to read chunks for activity
+
 ## [1.1.86](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.86) (2023-06-22)
 
 - added Timezone into dynamic attributes for user

@@ -2443,6 +2443,7 @@ open class ZTSegmentData : ZTCoreKit.ZTNotifyDataMessage {
   public static func segmentsCount(activityId: Swift.String) -> Swift.Int
   public static func loadUnsent(activityId: Swift.String) -> [ZTCoreKit.ZTSegmentData]
   public static func loadAll(activityId: Swift.String) -> [ZTCoreKit.ZTSegmentData]
+  public static func loadAll(activityId: Swift.String, startId: Swift.UInt16) -> [ZTCoreKit.ZTSegmentData]
   public static func loadPrevious(activityId: Swift.String?, chunkId: Swift.UInt16) -> ZTCoreKit.ZTSegmentData?
   public static func loadLastFwVersionEvent(activityId: Swift.String?, chunkId: Swift.UInt16) -> ZTCoreKit.ZTSegmentData?
   public static func loadAllChunks<T>(activityId: Swift.String) -> [T] where T : ZTCoreKit.ZTSegmentData
