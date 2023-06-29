@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.1.88](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.88) (2023-06-29)
+
+- added additional parameter `originalTimestamp` for public method `loadPrevious(activityId:chunkId:originalTimestamp:)`
+
 ## [1.1.87](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.87) (2023-06-23)
 
 - new public method to read chunks for activity
