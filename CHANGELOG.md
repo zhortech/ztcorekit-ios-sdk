@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.1.90](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.90) (2023-07-19)
+
+- added new internal method `ZTSegmentData.updateSegments` to update segments by id with new status
+
+## [1.1.89](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.89) (2023-07-14)
+
+- added new property `zcVesrion` to check ZCloud version
+- user's dynamic attributes are passed when `linkUser` is called
+
 ## [1.1.88](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.88) (2023-06-29)
 
 - added additional parameter `originalTimestamp` for public method `loadPrevious(activityId:chunkId:originalTimestamp:)`

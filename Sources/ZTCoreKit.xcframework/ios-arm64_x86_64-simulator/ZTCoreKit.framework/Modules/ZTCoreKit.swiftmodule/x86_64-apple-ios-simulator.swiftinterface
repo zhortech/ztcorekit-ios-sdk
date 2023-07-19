@@ -3377,6 +3377,7 @@ public typealias ScanResultBlock = (ZTCoreKit.ZTDevice?, Swift.Error?) -> Swift.
 public typealias ScanFinishedBlock = (Swift.Error?) -> Swift.Void
 @_hasMissingDesignatedInitializers final public class ZTCore {
   public static let version: Swift.String
+  final public var zcVersion: Swift.String
   public static let shared: ZTCoreKit.ZTCore
   final public let bleManager: ZTCoreKit.ZTBleManager
   final public var settings: ZTCoreKit.ZTSettings {
