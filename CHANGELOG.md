@@ -1,5 +1,10 @@
 # Changelog
 
+## [1.1.91](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.92) (2023-07-31)
+
+- new property `enablePacketsDataLogging` (default is `false`) in `ZTSettings` to print packet raw data
+- added additional logging
+
 ## [1.1.90](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.90) (2023-07-19)
 
 - added new internal method `ZTSegmentData.updateSegments` to update segments by id with new status
