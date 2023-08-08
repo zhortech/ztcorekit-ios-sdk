@@ -1,6 +1,11 @@
 # Changelog
 
-## [1.1.91](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.92) (2023-07-31)
+## [1.1.92](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.92) (2023-08-04)
+
+- updated `ZTAlgoCommand` with new cases
+- added delay for bootloader and general state commands
+
+## [1.1.91](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.91) (2023-07-31)
 
 - new property `enablePacketsDataLogging` (default is `false`) in `ZTSettings` to print packet raw data
 - added additional logging
