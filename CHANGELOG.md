@@ -1,5 +1,10 @@
 # Changelog
 
+## [1.1.93](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.93) (2023-08-16)
+
+- added realtime message `ZTRealtimeMessage` and all enums for it
+- added realtime metrics `ZTRealtimeMetric`
+
 ## [1.1.92](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.92) (2023-08-04)
 
 - updated `ZTAlgoCommand` with new cases

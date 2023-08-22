@@ -522,6 +522,42 @@ extension Foundation.Data {
     get
   }
 }
+extension ZTCoreKit.ZTRealtimeMessage.Event {
+  public enum EventType : Swift.UInt8, ZTCoreKit.ZTEnum {
+    case motion
+    case transition
+    public init?(rawValue: Swift.UInt8)
+    public typealias RawValue = Swift.UInt8
+    public var rawValue: Swift.UInt8 {
+      get
+    }
+  }
+  public enum MotionId : Swift.UInt8, ZTCoreKit.ZTEnum {
+    case undefined
+    case stepForward
+    case stepBackward
+    case stepSideLeft
+    case stepSideRight
+    case stepUp
+    case stepDown
+    public init?(rawValue: Swift.UInt8)
+    public typealias RawValue = Swift.UInt8
+    public var rawValue: Swift.UInt8 {
+      get
+    }
+  }
+  public enum MotionIntensity : Swift.UInt8, ZTCoreKit.ZTEnum {
+    case undefined
+    case low
+    case medium
+    case high
+    public init?(rawValue: Swift.UInt8)
+    public typealias RawValue = Swift.UInt8
+    public var rawValue: Swift.UInt8 {
+      get
+    }
+  }
+}
 public class ZTDateTransform : ZTCoreKit.ZTTransformType {
   public typealias Object = Foundation.Date
   public typealias JSON = Swift.String
@@ -686,6 +722,23 @@ public enum ZTPassthroughAlgo : ZTCoreKit.ZTEnum {
   required public init(device: ZTCoreKit.ZTDevice, service: CoreBluetooth.CBService)
   @objc deinit
 }
+public enum ZTRealtimeMetric : Swift.UInt8 {
+  case duration
+  case steps
+  case cycleDuration
+  case stepCadence
+  case stepSpeed
+  case distance
+  case energySum
+  case walkingQualityScore
+  case stairsClimbed
+  case intenseActivity
+  public init?(rawValue: Swift.UInt8)
+  public typealias RawValue = Swift.UInt8
+  public var rawValue: Swift.UInt8 {
+    get
+  }
+}
 public protocol ZTCBCentralManagerProtocol : AnyObject {
   var delegate: (any CoreBluetooth.CBCentralManagerDelegate)? { get set }
   var state: CoreBluetooth.CBManagerState { get }
@@ -789,6 +842,45 @@ extension ZTCoreKit.ZTPlist {
   public func data(_ key: Swift.String) -> Foundation.Data?
   public func null(_ key: Swift.String)
 }
+public struct ZTRealtimeMessage : Swift.CustomStringConvertible {
+  public var description: Swift.String {
+    get
+  }
+  public enum Side : Swift.UInt8 {
+    case left
+    case right
+    public init?(rawValue: Swift.UInt8)
+    public typealias RawValue = Swift.UInt8
+    public var rawValue: Swift.UInt8 {
+      get
+    }
+  }
+  public var senderSide: ZTCoreKit.ZTRealtimeMessage.Side? {
+    get
+  }
+  public var concernedSide: ZTCoreKit.ZTRealtimeMessage.Side? {
+    get
+  }
+  public var eventType: ZTCoreKit.ZTRealtimeMessageEventType? {
+    get
+  }
+  public var content: [Swift.UInt8] {
+    get
+  }
+  public init(bytes: [Swift.UInt8])
+  public var status: ZTCoreKit.ZTRealtimeMessage.Status? {
+    get
+  }
+  public var acknowledgment: ZTCoreKit.ZTRealtimeMessage.Acknowledgment? {
+    get
+  }
+  public var realtimeEvent: ZTCoreKit.ZTRealtimeMessage.Event? {
+    get
+  }
+  public var realtimeMetrics: ZTCoreKit.ZTRealtimeMessage.Metrics? {
+    get
+  }
+}
 @_inheritsConvenienceInitializers public class ZTPacketDfuCharacteristic : ZTCoreKit.ZTCharacteristic {
   public static let uuid: Swift.String
   open var data: Foundation.Data? {
@@ -808,6 +900,29 @@ public struct ZTMessageInactivityTimeout : Swift.CustomStringConvertible, Swift.
 extension ZTCoreKit.ZTMessageInactivityTimeout {
   public var description: Swift.String {
     get
+  }
+}
+extension ZTCoreKit.ZTRealtimeMessage {
+  public struct Status : Swift.CustomStringConvertible {
+    public var code: ZTCoreKit.ZTAlgoStatus? {
+      get
+    }
+    public var timestamp: Swift.UInt32? {
+      get
+    }
+    public var algoMode: ZTCoreKit.ZTAlgoMode? {
+      get
+    }
+    public var precisionMode: ZTCoreKit.ZTAlgoPrecisionMode? {
+      get
+    }
+    public var consecutiveSteps: Swift.UInt8? {
+      get
+    }
+    public var description: Swift.String {
+      get
+    }
+    public init(data: Foundation.Data)
   }
 }
 @_inheritsConvenienceInitializers public class ZTIndicateCharacteristic : ZTCoreKit.ZTCharacteristic {
@@ -1501,6 +1616,43 @@ extension ZTCoreKit.ZTSegmentData {
     }
   }
 }
+extension ZTCoreKit.ZTRealtimeMessage {
+  public struct Acknowledgment : Swift.CustomStringConvertible {
+    public var command: ZTCoreKit.ZTAlgoCommand? {
+      get
+    }
+    public var status: ZTCoreKit.ZTAlgoAcknowledgmentStatus? {
+      get
+    }
+    public var description: Swift.String {
+      get
+    }
+    public init(data: Foundation.Data)
+  }
+}
+extension ZTCoreKit.ZTRealtimeMessage {
+  public struct Event : Swift.CustomStringConvertible {
+    public var timestamp: Swift.UInt32? {
+      get
+    }
+    public var eventType: ZTCoreKit.ZTRealtimeMessage.Event.EventType? {
+      get
+    }
+    public var motionId: ZTCoreKit.ZTRealtimeMessage.Event.MotionId? {
+      get
+    }
+    public var intensity: ZTCoreKit.ZTRealtimeMessage.Event.MotionIntensity? {
+      get
+    }
+    public var arguments: [Swift.UInt8]? {
+      get
+    }
+    public var description: Swift.String {
+      get
+    }
+    public init(data: Foundation.Data)
+  }
+}
 public protocol ZTTransformType {
   associatedtype Object
   associatedtype JSON
@@ -1770,6 +1922,19 @@ public enum ZTLogCategory : Swift.String {
 }
 extension ZTCoreKit.ZTLogCategory : Swift.CustomStringConvertible {
   public var description: Swift.String {
+    get
+  }
+}
+public enum ZTRealtimeMessageEventType : Swift.UInt8, ZTCoreKit.ZTEnum {
+  case status
+  case acknowledgment
+  case realTimeEvent
+  case realTimeMetrics
+  case warning
+  case error
+  public init?(rawValue: Swift.UInt8)
+  public typealias RawValue = Swift.UInt8
+  public var rawValue: Swift.UInt8 {
     get
   }
 }
@@ -3441,6 +3606,26 @@ public typealias ScanFinishedBlock = ((any Swift.Error)?) -> Swift.Void
   final public func setDeepSleepMode() throws
   @objc deinit
 }
+extension ZTCoreKit.ZTRealtimeMessage {
+  public struct Metrics : Swift.CustomStringConvertible {
+    public var activityType: ZTCoreKit.ZTActivityType? {
+      get
+    }
+    public var metricId: Swift.UInt8? {
+      get
+    }
+    public var metric: ZTCoreKit.ZTRealtimeMetric? {
+      get
+    }
+    public var value: [Swift.UInt8]? {
+      get
+    }
+    public var description: Swift.String {
+      get
+    }
+    public init(data: Foundation.Data)
+  }
+}
 @_inheritsConvenienceInitializers public class ZTControlPointDfuCharacteristic : ZTCoreKit.ZTCharacteristic {
   public static let uuid: Swift.String
   open var data: Foundation.Data? {
@@ -3532,11 +3717,26 @@ extension ZTCoreKit.ZTArchive.ArchiveError : Swift.Hashable {}
 extension ZTCoreKit.ZTArchive.AccessMode : Swift.Equatable {}
 extension ZTCoreKit.ZTArchive.AccessMode : Swift.Hashable {}
 extension ZTCoreKit.ZTArchive.AccessMode : Swift.RawRepresentable {}
+extension ZTCoreKit.ZTRealtimeMessage.Event.EventType : Swift.Equatable {}
+extension ZTCoreKit.ZTRealtimeMessage.Event.EventType : Swift.Hashable {}
+extension ZTCoreKit.ZTRealtimeMessage.Event.EventType : Swift.RawRepresentable {}
+extension ZTCoreKit.ZTRealtimeMessage.Event.MotionId : Swift.Equatable {}
+extension ZTCoreKit.ZTRealtimeMessage.Event.MotionId : Swift.Hashable {}
+extension ZTCoreKit.ZTRealtimeMessage.Event.MotionId : Swift.RawRepresentable {}
+extension ZTCoreKit.ZTRealtimeMessage.Event.MotionIntensity : Swift.Equatable {}
+extension ZTCoreKit.ZTRealtimeMessage.Event.MotionIntensity : Swift.Hashable {}
+extension ZTCoreKit.ZTRealtimeMessage.Event.MotionIntensity : Swift.RawRepresentable {}
 extension ZTCoreKit.DFUFirmwareType : Swift.Equatable {}
 extension ZTCoreKit.DFUFirmwareType : Swift.Hashable {}
 extension ZTCoreKit.DFUFirmwareType : Swift.RawRepresentable {}
 extension ZTCoreKit.DFUFirmwareError.FileType : Swift.Equatable {}
 extension ZTCoreKit.DFUFirmwareError.FileType : Swift.Hashable {}
+extension ZTCoreKit.ZTRealtimeMetric : Swift.Equatable {}
+extension ZTCoreKit.ZTRealtimeMetric : Swift.Hashable {}
+extension ZTCoreKit.ZTRealtimeMetric : Swift.RawRepresentable {}
+extension ZTCoreKit.ZTRealtimeMessage.Side : Swift.Equatable {}
+extension ZTCoreKit.ZTRealtimeMessage.Side : Swift.Hashable {}
+extension ZTCoreKit.ZTRealtimeMessage.Side : Swift.RawRepresentable {}
 extension ZTCoreKit.ZTCompressionMethod : Swift.Equatable {}
 extension ZTCoreKit.ZTCompressionMethod : Swift.Hashable {}
 extension ZTCoreKit.ZTCompressionMethod : Swift.RawRepresentable {}
@@ -3606,6 +3806,9 @@ extension ZTCoreKit.ZTLogLevel : Swift.RawRepresentable {}
 extension ZTCoreKit.ZTLogCategory : Swift.Equatable {}
 extension ZTCoreKit.ZTLogCategory : Swift.Hashable {}
 extension ZTCoreKit.ZTLogCategory : Swift.RawRepresentable {}
+extension ZTCoreKit.ZTRealtimeMessageEventType : Swift.Equatable {}
+extension ZTCoreKit.ZTRealtimeMessageEventType : Swift.Hashable {}
+extension ZTCoreKit.ZTRealtimeMessageEventType : Swift.RawRepresentable {}
 extension ZTCoreKit.ZTNotifyData.GroupID : Swift.Equatable {}
 extension ZTCoreKit.ZTNotifyData.GroupID : Swift.Hashable {}
 extension ZTCoreKit.ZTNotifyData.GroupID : Swift.RawRepresentable {}
