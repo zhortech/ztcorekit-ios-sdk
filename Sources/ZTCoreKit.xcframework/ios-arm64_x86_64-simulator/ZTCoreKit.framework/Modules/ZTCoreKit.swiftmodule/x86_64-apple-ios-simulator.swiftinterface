@@ -1119,6 +1119,7 @@ public enum ZTCommand : Swift.UInt8, Swift.CaseIterable, Swift.Identifiable {
   case startDFURight
   case startDFULeft
   case enablePeerConnection
+  case factoryReset
   public var description: Swift.String {
     get
   }
@@ -2459,7 +2460,7 @@ open class ZTActivity : Swift.Codable {
   public init()
   open func save()
   public func loadAll(firstChunkId: Swift.UInt16?, lastChunkId: Swift.UInt16? = nil) -> [ZTCoreKit.ZTSegmentData]
-  public func lastSavedChunkId() -> Swift.UInt16?
+  public func lastSavedChunkId(startId: Swift.UInt16? = 0) -> Swift.UInt16
   @objc deinit
   open func encode(to encoder: any Swift.Encoder) throws
   required public init(from decoder: any Swift.Decoder) throws
@@ -2577,6 +2578,7 @@ open class ZTSegmentData : ZTCoreKit.ZTNotifyDataMessage {
     get
   }
   public var fwVersion: Swift.String?
+  public var retryCount: Swift.Int
   public enum CodingKeys : Swift.CodingKey {
     case id
     case activityId
@@ -2589,6 +2591,7 @@ open class ZTSegmentData : ZTCoreKit.ZTNotifyDataMessage {
     case originalTimestamp
     case packetsNumber
     case fwVersion
+    case retryCount
     public static func == (a: ZTCoreKit.ZTSegmentData.CodingKeys, b: ZTCoreKit.ZTSegmentData.CodingKeys) -> Swift.Bool
     public func hash(into hasher: inout Swift.Hasher)
     public init?(stringValue: Swift.String)
@@ -2612,7 +2615,9 @@ open class ZTSegmentData : ZTCoreKit.ZTNotifyDataMessage {
   public static func loadUnsent(activityId: Swift.String) -> [ZTCoreKit.ZTSegmentData]
   public static func loadAll(activityId: Swift.String) -> [ZTCoreKit.ZTSegmentData]
   public static func loadAll(activityId: Swift.String, startId: Swift.UInt16) -> [ZTCoreKit.ZTSegmentData]
+  public static func loadAllIds(activityId: Swift.String, startId: Swift.UInt16) -> [Swift.Int]
   public static func loadPrevious(activityId: Swift.String?, chunkId: Swift.UInt16, originalTimestamp: Swift.Int64) -> ZTCoreKit.ZTSegmentData?
+  public static func loadPacket(activityId: Swift.String?, id: Swift.UInt16) -> ZTCoreKit.ZTSegmentData?
   public static func loadLastFwVersionEvent(activityId: Swift.String?, chunkId: Swift.UInt16) -> ZTCoreKit.ZTSegmentData?
   public static func loadAllChunks<T>(activityId: Swift.String) -> [T] where T : ZTCoreKit.ZTSegmentData
   public static func loadAll(activityId: Swift.String, lastChunkId: Swift.UInt16?) -> [ZTCoreKit.ZTSegmentData]
@@ -2623,8 +2628,11 @@ open class ZTSegmentData : ZTCoreKit.ZTNotifyDataMessage {
   public static func hasPreviousChunk(activityId: Swift.String, currentIndex: Swift.UInt16) -> Swift.Bool
   public static func hasMissedChunks(activityId: Swift.String, startIndex: Swift.UInt16?, endIndex: Swift.UInt16?) -> Swift.Bool
   public static func getMaxMissedChunk(activityId: Swift.String, chunkId: Swift.UInt16) -> Swift.UInt16?
+  public static func getMissedPackets(activityId: Swift.String, startId: Swift.UInt16) -> [Swift.UInt16]?
   public static func getMinMissedChunk(activityId: Swift.String, chunkId: Swift.UInt16) -> Swift.UInt16?
+  public static func getMinMissedPacketId(activityId: Swift.String, startId: Swift.UInt16) -> Swift.UInt16?
   public static func isChunkSaved(activityId: Swift.String?, chunkId: Swift.UInt16) -> Swift.Bool
+  public static func isChunkEmpty(activityId: Swift.String?, chunkId: Swift.UInt16) -> Swift.Bool
   @objc deinit
 }
 public enum ZTActivitySummaryStatus : Swift.String {
@@ -3103,6 +3111,7 @@ extension ZTCoreKit.ZTSegmentData {
   public func save()
   public func saveWithResult(_ allowOverwrite: Swift.Bool = false) -> Swift.Bool
   public static func forceSegmentsUpload(activityId: Swift.String)
+  public func updateSegment(_ activityId: Swift.String?, segment: ZTCoreKit.ZTSegmentData)
 }
 extension Foundation.FileManager {
   public func zipItem(at sourceURL: Foundation.URL, to destinationURL: Foundation.URL, shouldKeepParent: Swift.Bool = true, compressionMethod: ZTCoreKit.ZTCompressionMethod = .none, progress: Foundation.Progress? = nil) throws
@@ -3667,6 +3676,7 @@ extension ZTCoreKit.ZTRealtimeMessage {
   final public var activityDataSyncThreshold: Swift.Int
   final public var enableBackgroundDFU: Swift.Bool
   final public var activityChunkStoreForFreeMemory: Swift.Int
+  final public var activityChunkRetryLimit: Swift.Int
   final public var checkFirmwareUpdatePeriod: Swift.Int
   final public var enableAnalyticsData: Swift.Bool
   final public var autorestartBackgroundDfu: Swift.Bool
