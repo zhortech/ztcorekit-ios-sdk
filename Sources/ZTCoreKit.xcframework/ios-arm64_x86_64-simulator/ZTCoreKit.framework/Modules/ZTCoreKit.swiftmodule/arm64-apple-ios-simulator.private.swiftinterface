@@ -2457,6 +2457,7 @@ open class ZTActivity : Swift.Codable {
   public var customActivityStartTimestamp: Swift.Int64?
   public var customActivityFirstChunkId: Swift.UInt16?
   public var fwVersion: Swift.String?
+  public var shoesSerial: Swift.String?
   public init()
   open func save()
   public func loadAll(firstChunkId: Swift.UInt16?, lastChunkId: Swift.UInt16? = nil) -> [ZTCoreKit.ZTSegmentData]

@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.1.95](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.95) (2023-09-08)
+
+- added `shoesSerial` property to activity
+
 ## [1.1.94](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.94) (2023-09-04)
 
 - new property `activityChunkRetryLimit` (default is `3`) in `ZTSettings` as maximum retry count to download packet before erasing it with `memory free` flow
