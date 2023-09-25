@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.1.97](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.97) (2023-09-25)
+
+- new property `enableBackgroundDataStreaming` (default is `false`) in `ZTSettings` to allow background streaming for realtime data
+
+## [1.1.96](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.96) (2023-09-19)
+
+- added recovery from DFU mode for left side if it is not connected after reconnection and for right side during connection with code flow
+
 ## [1.1.95](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.95) (2023-09-08)
 
 - added `shoesSerial` property to activity

@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.8.1 (swiftlang-5.8.0.124.5 clang-1403.0.22.11.100)
+// swift-compiler-version: Apple Swift version 5.9 (swiftlang-5.9.0.128.108 clang-1500.0.40.1)
 // swift-module-flags: -target arm64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name ZTCoreKit
 // swift-module-flags-ignorable: -enable-bare-slash-regex
 import Combine
@@ -19,6 +19,7 @@ import SystemConfiguration
 import UIKit
 import _Concurrency
 import _StringProcessing
+import _SwiftConcurrencyShims
 import os.log
 import os
 import zlib
@@ -312,8 +313,14 @@ extension Swift.String {
   public var toBase64: Swift.String {
     get
   }
+  public func substring(from: Swift.Int, to: Swift.Int) -> Swift.String
+  public func substring(range: Foundation.NSRange) -> Swift.String
+  public func matches(regex: Swift.String) -> [Swift.String]
+  public static func random(length: Swift.Int = 9) -> Swift.String
+  public func split(usingRegex pattern: Swift.String) -> [Swift.String]
   public func serialNumber() -> Swift.String
   public func fileName() -> Swift.String
+  public func incrementedMacAddress() -> Swift.String
 }
 extension Swift.Int {
   public func toByteArray(size: Swift.Int = 4) -> [Swift.UInt8]
@@ -819,7 +826,7 @@ extension CoreBluetooth.CBPeripheral : ZTCoreKit.ZTCBPeripheralProtocol {
 }
 @_inheritsConvenienceInitializers @objc public class LegacyDFUServiceInitiator : ZTCoreKit.DFUServiceInitiator {
   @objc override public func start(targetWithIdentifier uuid: Foundation.UUID) -> ZTCoreKit.DFUServiceController?
-  @available(*, deprecated)
+  @available(*, deprecated, message: "Use init(queue: DispatchQueue?) instead.")
   @objc override public init(centralManager: CoreBluetooth.CBCentralManager, target: CoreBluetooth.CBPeripheral)
   @objc override public init(queue: Dispatch.DispatchQueue? = nil, delegateQueue: Dispatch.DispatchQueue = super, progressQueue: Dispatch.DispatchQueue = super, loggerQueue: Dispatch.DispatchQueue = super, centralManagerOptions: [Swift.String : Any]? = nil)
   @objc deinit
@@ -1732,6 +1739,7 @@ extension ZTCoreKit.ZTError.Enums {
     case memsError
     case leftNoConnected
     case restartRequired
+    case recoverFromDfu
     public static func == (a: ZTCoreKit.ZTError.Enums.FirmwareError, b: ZTCoreKit.ZTError.Enums.FirmwareError) -> Swift.Bool
     public func hash(into hasher: inout Swift.Hasher)
     public var hashValue: Swift.Int {
@@ -2422,6 +2430,7 @@ extension ZTCoreKit.ZTCore : ZTCoreKit.DFUServiceDelegate, ZTCoreKit.DFUProgress
   @objc final public func dfuStateDidChange(to state: ZTCoreKit.DFUState)
   @objc final public func dfuError(_ error: ZTCoreKit.DFUError, didOccurWithMessage message: Swift.String)
   @objc final public func dfuProgressDidChange(for part: Swift.Int, outOf totalParts: Swift.Int, to progress: Swift.Int, currentSpeedBytesPerSecond: Swift.Double, avgSpeedBytesPerSecond: Swift.Double)
+  final public func checkDfuState()
 }
 @_hasMissingDesignatedInitializers open class ZTWebSocket {
   @objc deinit
@@ -2461,7 +2470,7 @@ open class ZTActivity : Swift.Codable {
   public init()
   open func save()
   public func loadAll(firstChunkId: Swift.UInt16?, lastChunkId: Swift.UInt16? = nil) -> [ZTCoreKit.ZTSegmentData]
-  public func lastSavedChunkId(startId: Swift.UInt16? = 0) -> Swift.UInt16
+  public func lastSavedChunkId(startId: Swift.UInt16? = 0, lastId: Swift.UInt16? = 0) -> Swift.UInt16
   @objc deinit
   open func encode(to encoder: any Swift.Encoder) throws
   required public init(from decoder: any Swift.Decoder) throws
@@ -2616,6 +2625,7 @@ open class ZTSegmentData : ZTCoreKit.ZTNotifyDataMessage {
   public static func loadUnsent(activityId: Swift.String) -> [ZTCoreKit.ZTSegmentData]
   public static func loadAll(activityId: Swift.String) -> [ZTCoreKit.ZTSegmentData]
   public static func loadAll(activityId: Swift.String, startId: Swift.UInt16) -> [ZTCoreKit.ZTSegmentData]
+  public static func loadAllPackets(activityId: Swift.String, startId: Swift.UInt16? = nil, lastId: Swift.UInt16? = nil) -> [ZTCoreKit.ZTSegmentData]
   public static func loadAllIds(activityId: Swift.String, startId: Swift.UInt16) -> [Swift.Int]
   public static func loadPrevious(activityId: Swift.String?, chunkId: Swift.UInt16, originalTimestamp: Swift.Int64) -> ZTCoreKit.ZTSegmentData?
   public static func loadPacket(activityId: Swift.String?, id: Swift.UInt16) -> ZTCoreKit.ZTSegmentData?
@@ -2631,7 +2641,7 @@ open class ZTSegmentData : ZTCoreKit.ZTNotifyDataMessage {
   public static func getMaxMissedChunk(activityId: Swift.String, chunkId: Swift.UInt16) -> Swift.UInt16?
   public static func getMissedPackets(activityId: Swift.String, startId: Swift.UInt16) -> [Swift.UInt16]?
   public static func getMinMissedChunk(activityId: Swift.String, chunkId: Swift.UInt16) -> Swift.UInt16?
-  public static func getMinMissedPacketId(activityId: Swift.String, startId: Swift.UInt16) -> Swift.UInt16?
+  public static func getMinMissedPacketId(activityId: Swift.String, startId: Swift.UInt16, lastId: Swift.UInt16?) -> Swift.UInt16?
   public static func isChunkSaved(activityId: Swift.String?, chunkId: Swift.UInt16) -> Swift.Bool
   public static func isChunkEmpty(activityId: Swift.String?, chunkId: Swift.UInt16) -> Swift.Bool
   @objc deinit
@@ -3547,7 +3557,7 @@ extension Swift.Set where Element : ZTCoreKit.ZTBaseMappable {
 }
 @_inheritsConvenienceInitializers @objc public class SecureDFUServiceInitiator : ZTCoreKit.DFUServiceInitiator {
   @objc override public func start(targetWithIdentifier uuid: Foundation.UUID) -> ZTCoreKit.DFUServiceController?
-  @available(*, deprecated)
+  @available(*, deprecated, message: "Use init(queue: DispatchQueue?) instead.")
   @objc override public init(centralManager: CoreBluetooth.CBCentralManager, target: CoreBluetooth.CBPeripheral)
   @objc override public init(queue: Dispatch.DispatchQueue? = nil, delegateQueue: Dispatch.DispatchQueue = super, progressQueue: Dispatch.DispatchQueue = super, loggerQueue: Dispatch.DispatchQueue = super, centralManagerOptions: [Swift.String : Any]? = nil)
   @objc deinit
@@ -3584,6 +3594,9 @@ public typealias ScanFinishedBlock = ((any Swift.Error)?) -> Swift.Void
   final public var lastDeviceQRCode: Swift.String? {
     get
   }
+  final public var lastQRCode: Swift.String? {
+    get
+  }
   final public var isDfuInProgress: Swift.Bool {
     get
   }
@@ -3607,6 +3620,7 @@ public typealias ScanFinishedBlock = ((any Swift.Error)?) -> Swift.Void
   @available(*, deprecated, message: "Use scan(product:, timeout:, deviceDiscovered:, completion:) instead")
   final public func scan(for product: ZTCoreKit.ZTProductType? = nil, timeout: Swift.Double? = 15, completion: ZTCoreKit.ConnectResultBlock? = nil)
   final public func scan(for product: ZTCoreKit.ZTProductType? = nil, timeout: Swift.Double? = 15, deviceDiscovered: ZTCoreKit.ScanResultBlock? = nil, completion: ZTCoreKit.ScanFinishedBlock? = nil)
+  final public func scan(macAddress: Swift.String, timeout: Swift.Double? = 15, deviceDiscovered: ZTCoreKit.ScanResultBlock? = nil, completion: ZTCoreKit.ScanFinishedBlock? = nil)
   final public func stopScan()
   final public func connectWithDevice(_ device: ZTCoreKit.ZTDevice?, timeout: Swift.Double? = 5, isDfu: Swift.Bool = false, completion: @escaping ZTCoreKit.ConnectResultBlock)
   final public func connectWithCode(_ code: Swift.String, timeout: Swift.Double? = 20, completion: @escaping ZTCoreKit.ConnectResultBlock)
@@ -3676,6 +3690,7 @@ extension ZTCoreKit.ZTRealtimeMessage {
   final public var shouldAutoResendData: Swift.Bool
   final public var activityDataSyncThreshold: Swift.Int
   final public var enableBackgroundDFU: Swift.Bool
+  final public var enableBackgroundDataStreaming: Swift.Bool
   final public var activityChunkStoreForFreeMemory: Swift.Int
   final public var activityChunkRetryLimit: Swift.Int
   final public var checkFirmwareUpdatePeriod: Swift.Int
