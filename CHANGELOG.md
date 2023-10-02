@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.2.0](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.2.0) (2023-10-02)
+
+- new public func `isFirmwareUpdateRequired((firmwareRevision:completion:)` to check and validate fimware version
+- updated `ZTError.Enums.FirmwareError` cases
+- send static attributes when user is updated
+
 ## [1.1.97](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.97) (2023-09-25)
 
 - new property `enableBackgroundDataStreaming` (default is `false`) in `ZTSettings` to allow background streaming for realtime data
@@ -48,7 +54,7 @@
 
 ## [1.1.87](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.87) (2023-06-23)
 
-- new public method to read chunks for activity
+- new public method to read chunks for activity 
 
 ## [1.1.86](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.86) (2023-06-22)
 
@@ -135,18 +141,18 @@
 - added `enableBackgroundDFU` into ZTSettings
 - embedded activity chunks with PacketType 0 are sent to ZCloud
 
-## [1.1.66](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.66) (2023-02-03)
+## [1.1.66](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.65) (2023-02-03)
 - added `activityChunkStoreForFreeMemory` into ZTSettings so it can be changed
 
 ## [1.1.65](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.65) (2023-01-26)
 - Secure DFU background DFU support
 - bootloader DFU state observer `ZTCore.shared.onDfuStateUpdated` and current state `ZTCore.shared.currentDfuState`
-- added `activityDataSyncThreshold` in `ZTSettings` to confugure number of chunks stored before uploading them to ZCloud 
+- added `activityDataSyncThreshold` in `ZTSettings` to confugure number of chunks stored before uploading them to ZCloud
 
 ## [1.1.64](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.64) (2023-01-25)
 - `ZTDFUState` added
 - updated method `checkBattery` for battery levels
-- `isReady` property updated for connected device
+- `isReady` property updated for connected device 
 
 ## [1.1.63](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.63) (2023-01-17)
 - new command for hardware info added

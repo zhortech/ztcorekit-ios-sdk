@@ -1740,6 +1740,10 @@ extension ZTCoreKit.ZTError.Enums {
     case leftNoConnected
     case restartRequired
     case recoverFromDfu
+    case minimumFwVersion
+    case updateRequired
+    case unsupported
+    case wrongProductType
     public static func == (a: ZTCoreKit.ZTError.Enums.FirmwareError, b: ZTCoreKit.ZTError.Enums.FirmwareError) -> Swift.Bool
     public func hash(into hasher: inout Swift.Hasher)
     public var hashValue: Swift.Int {
@@ -1764,6 +1768,8 @@ extension ZTCoreKit.ZTError.Enums {
     case unsupported
     case lowBattery
     case inProgress
+    case updateRequired
+    case wrongProductType
     public static func == (a: ZTCoreKit.ZTError.Enums.DfuError, b: ZTCoreKit.ZTError.Enums.DfuError) -> Swift.Bool
     public func hash(into hasher: inout Swift.Hasher)
     public var hashValue: Swift.Int {
@@ -1849,7 +1855,7 @@ extension ZTCoreKit.ZTError.Enums.DecodableError : Foundation.LocalizedError {
     get
   }
 }
-@_hasMissingDesignatedInitializers public class ZTFirmwareRevision {
+public class ZTFirmwareRevision {
   public var fwSystemVersion: Swift.String? {
     get
   }
@@ -1868,7 +1874,23 @@ extension ZTCoreKit.ZTError.Enums.DecodableError : Foundation.LocalizedError {
   public var fwVersion: Swift.String {
     get
   }
+  public var versions: ZTCoreKit.ZTFwBmVersion? {
+    get
+  }
+  public init(code: Swift.String)
   @objc deinit
+}
+extension ZTCoreKit.ZTFirmwareRevision : Swift.Equatable {
+  public static func == (lhs: ZTCoreKit.ZTFirmwareRevision, rhs: ZTCoreKit.ZTFirmwareRevision) -> Swift.Bool
+  public static func < (lhs: ZTCoreKit.ZTFirmwareRevision, rhs: ZTCoreKit.ZTFirmwareRevision) -> Swift.Bool
+  public static func >= (lhs: ZTCoreKit.ZTFirmwareRevision, rhs: ZTCoreKit.ZTFirmwareRevision) -> Swift.Bool
+}
+public struct ZTFwBmVersion {
+  public var fwSystemMajorVersion: Swift.Int
+  public var fwSystemMinorVersion: Swift.Int
+  public var fwSystemBuildVersion: Swift.Int
+  public var bmMajorVersion: Swift.Int
+  public var bmMinorVersion: Swift.Int
 }
 extension ZTCoreKit.ZTFirmwareRevision {
   public var fwSystemMajorVersion: Swift.Int {
@@ -2324,6 +2346,7 @@ public enum ZTAlgoPrecisionMode : Swift.UInt8, ZTCoreKit.ZTEnum {
 extension ZTCoreKit.ZTCore {
   final public func initiateBackgroundDFU(isRestartRequired: Swift.Bool = false, isManualMode: Swift.Bool = false)
   final public func initiateBackgroundDFU(path: Swift.String, isManualMode: Swift.Bool = false)
+  final public func isFirmwareUpdateRequired(firmwareRevision: ZTCoreKit.ZTFirmwareRevision, completion: @escaping ((Swift.Bool, ZTCoreKit.ZTError?) -> Swift.Void))
 }
 @objc public enum LogLevel : Swift.Int {
   case debug = 0
@@ -2629,7 +2652,7 @@ open class ZTSegmentData : ZTCoreKit.ZTNotifyDataMessage {
   public static func loadAllIds(activityId: Swift.String, startId: Swift.UInt16) -> [Swift.Int]
   public static func loadPrevious(activityId: Swift.String?, chunkId: Swift.UInt16, originalTimestamp: Swift.Int64) -> ZTCoreKit.ZTSegmentData?
   public static func loadPacket(activityId: Swift.String?, id: Swift.UInt16) -> ZTCoreKit.ZTSegmentData?
-  public static func loadLastFwVersionEvent(activityId: Swift.String?, chunkId: Swift.UInt16) -> ZTCoreKit.ZTSegmentData?
+  public static func loadLastFwVersionEvent(activityId: Swift.String?, chunkId: Swift.UInt16, startId: Swift.UInt16? = nil) -> ZTCoreKit.ZTSegmentData?
   public static func loadAllChunks<T>(activityId: Swift.String) -> [T] where T : ZTCoreKit.ZTSegmentData
   public static func loadAll(activityId: Swift.String, lastChunkId: Swift.UInt16?) -> [ZTCoreKit.ZTSegmentData]
   public static func loadAll(activityId: Swift.String, firstChunkId: Swift.UInt16?, lastChunkId: Swift.UInt16? = nil) -> [ZTCoreKit.ZTSegmentData]
@@ -2644,6 +2667,7 @@ open class ZTSegmentData : ZTCoreKit.ZTNotifyDataMessage {
   public static func getMinMissedPacketId(activityId: Swift.String, startId: Swift.UInt16, lastId: Swift.UInt16?) -> Swift.UInt16?
   public static func isChunkSaved(activityId: Swift.String?, chunkId: Swift.UInt16) -> Swift.Bool
   public static func isChunkEmpty(activityId: Swift.String?, chunkId: Swift.UInt16) -> Swift.Bool
+  public static func checkPacketToRemove(activityId: Swift.String?, packetId: Swift.UInt16)
   @objc deinit
 }
 public enum ZTActivitySummaryStatus : Swift.String {
