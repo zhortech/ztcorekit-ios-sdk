@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.2.1](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.2.1) (2023-11-08)
+
+- updated `ZTError.Enums.FirmwareError` cases
+
 ## [1.2.0](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.2.0) (2023-10-02)
 
 - new public func `isFirmwareUpdateRequired((firmwareRevision:completion:)` to check and validate fimware version

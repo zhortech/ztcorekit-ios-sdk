@@ -1744,6 +1744,8 @@ extension ZTCoreKit.ZTError.Enums {
     case updateRequired
     case unsupported
     case wrongProductType
+    case firstChunkIdIsGreater
+    case startTimeZero
     public static func == (a: ZTCoreKit.ZTError.Enums.FirmwareError, b: ZTCoreKit.ZTError.Enums.FirmwareError) -> Swift.Bool
     public func hash(into hasher: inout Swift.Hasher)
     public var hashValue: Swift.Int {
@@ -1808,6 +1810,7 @@ extension ZTCoreKit.ZTError.Enums {
     case rawDataFlowIsRunning
     case invalidMobilityScanResults
     case outsideActivityDetected
+    case anomalyDetected
     public static func == (a: ZTCoreKit.ZTError.Enums.ActivityError, b: ZTCoreKit.ZTError.Enums.ActivityError) -> Swift.Bool
     public func hash(into hasher: inout Swift.Hasher)
     public var hashValue: Swift.Int {
