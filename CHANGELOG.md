@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.2.2](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.2.2) (2023-11-16)
+
+- updated realtime metrics `ZTRealtimeMetric` enums
+
 ## [1.2.1](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.2.1) (2023-11-08)
 
 - updated `ZTError.Enums.FirmwareError` cases

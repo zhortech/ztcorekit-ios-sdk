@@ -740,6 +740,13 @@ public enum ZTRealtimeMetric : Swift.UInt8 {
   case walkingQualityScore
   case stairsClimbed
   case intenseActivity
+  case accelerationFoot
+  case strideLength
+  case relativePronationAngleFoot
+  case pronationAngleFFI
+  case pronationAngleFFO
+  case plantarFlexionAngularSpeedMaxPropulsion
+  case symmetry
   public init?(rawValue: Swift.UInt8)
   public typealias RawValue = Swift.UInt8
   public var rawValue: Swift.UInt8 {
@@ -854,8 +861,10 @@ public struct ZTRealtimeMessage : Swift.CustomStringConvertible {
     get
   }
   public enum Side : Swift.UInt8 {
+    case none
     case left
     case right
+    case both
     public init?(rawValue: Swift.UInt8)
     public typealias RawValue = Swift.UInt8
     public var rawValue: Swift.UInt8 {
