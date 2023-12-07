@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.2.3](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.2.3) (2023-11-24)
+
+- added activity type for realtime metrics
+
 ## [1.2.2](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.2.2) (2023-11-16)
 
 - updated realtime metrics `ZTRealtimeMetric` enums
