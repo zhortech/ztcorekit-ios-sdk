@@ -1,5 +1,10 @@
 # Changelog
 
+## [1.2.4](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.2.4) (2023-12-11)
+
+- added gravity calibration command
+- added new real time metric `slope`
+
 ## [1.2.3](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.2.3) (2023-11-24)
 
 - added activity type for realtime metrics

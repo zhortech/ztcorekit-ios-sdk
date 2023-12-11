@@ -740,6 +740,7 @@ public enum ZTRealtimeMetric : Swift.UInt8 {
   case walkingQualityScore
   case stairsClimbed
   case intenseActivity
+  case slope
   case accelerationFoot
   case strideLength
   case relativePronationAngleFoot
@@ -2812,6 +2813,7 @@ public enum ZTAlgoCommand : Swift.UInt8 {
   case enableSpecificPacket
   case holdRealtimeStreaming
   case getSingleTimeMetrics
+  case calibrateGravity
   public init?(rawValue: Swift.UInt8)
   public typealias RawValue = Swift.UInt8
   public var rawValue: Swift.UInt8 {
