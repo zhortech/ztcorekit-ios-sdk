@@ -13,6 +13,9 @@ let package = Package(
             targets: ["ZTCoreKit"]
         )
     ],
+    dependencies: [
+        .package(name: "NordicDFU", url: "https://github.com/NordicSemiconductor/IOS-DFU-Library", .upToNextMajor(from: "4.14.0"))
+    ],
     targets: [
         .binaryTarget(
             name: "ZTCoreKit",

@@ -1,5 +1,10 @@
 # Changelog
 
+## [1.2.5](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.2.5) (2024-01-04)
+
+- added `ZTChunkSendStatusMessage`
+- using latest dependency for `NordicDFU` / `iOSDFULibrary`
+
 ## [1.2.4](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.2.4) (2023-12-11)
 
 - added gravity calibration command

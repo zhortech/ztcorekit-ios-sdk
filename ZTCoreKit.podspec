@@ -25,4 +25,5 @@ Pod::Spec.new do |s|
   s.ios.weak_frameworks = 'CoreBluetooth', 'Security', 'UIKit', 'Foundation', 'CFNetwork'
   
   s.exclude_files = 'readme-images/', 'docs/'
+  s.dependency 'iOSDFULibrary', '~> 4.14.0'
 end
