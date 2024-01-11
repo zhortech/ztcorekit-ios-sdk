@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.2.6](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.2.6) (2024-01-10)
+
+- changed `ZTRealtimeMetric` enum
+- updated `ZTChunkSendStatusMessage`
+- added `appUserId` as public property
+
 ## [1.2.5](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.2.5) (2024-01-04)
 
 - added `ZTChunkSendStatusMessage`

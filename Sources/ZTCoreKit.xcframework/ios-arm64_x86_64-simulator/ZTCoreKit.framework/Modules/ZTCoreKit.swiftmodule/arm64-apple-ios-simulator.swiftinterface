@@ -603,13 +603,14 @@ public enum ZTPassthroughAlgo : ZTCoreKit.ZTEnum {
   required public init(device: ZTCoreKit.ZTDevice, service: CoreBluetooth.CBService)
   @objc deinit
 }
-public enum ZTRealtimeMetric : Swift.UInt8 {
+public enum ZTRealtimeMetric : Swift.String {
   case duration
   case steps
   case cycleDuration
   case stepCadence
   case stepSpeed
   case distance
+  case footDistance
   case energySum
   case walkingQualityScore
   case stairsClimbed
@@ -622,14 +623,19 @@ public enum ZTRealtimeMetric : Swift.UInt8 {
   case pronationAngleFFO
   case plantarFlexionAngularSpeedMaxPropulsion
   case symmetry
+  public func value() -> Swift.UInt8
   public var activityType: ZTCoreKit.ZTActivityType {
     get
   }
-  public init?(rawValue: Swift.UInt8)
-  public typealias RawValue = Swift.UInt8
-  public var rawValue: Swift.UInt8 {
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
     get
   }
+}
+extension ZTCoreKit.ZTRealtimeMetric {
+  public init?(value: Swift.UInt8, activityType: ZTCoreKit.ZTActivityType? = nil)
+  public init?(name: Swift.String)
 }
 public protocol ZTCBCentralManagerProtocol : AnyObject {
   var delegate: (any CoreBluetooth.CBCentralManagerDelegate)? { get set }
@@ -3089,12 +3095,14 @@ public struct ZTChunkSendStatusMessage : Swift.CustomStringConvertible {
     case errorSendFailed
     case errorUnexpected
     case errorNotFound
+    case unknown
     public init?(rawValue: Swift.UInt8)
     public typealias RawValue = Swift.UInt8
     public var rawValue: Swift.UInt8 {
       get
     }
   }
+  public let bytes: [Swift.UInt8]
   public var status: ZTCoreKit.ZTChunkSendStatusMessage.Status?
   public var chunkId: Swift.UInt16?
   public init(bytes: [Swift.UInt8])
@@ -3333,6 +3341,9 @@ public typealias ScanFinishedBlock = ((any Swift.Error)?) -> Swift.Void
   public static let shared: ZTCoreKit.ZTCore
   final public let bleManager: ZTCoreKit.ZTBleManager
   final public var settings: ZTCoreKit.ZTSettings {
+    get
+  }
+  final public var appUserId: Swift.String? {
     get
   }
   final public var lastCommand: ZTCoreKit.ZTCommand?
