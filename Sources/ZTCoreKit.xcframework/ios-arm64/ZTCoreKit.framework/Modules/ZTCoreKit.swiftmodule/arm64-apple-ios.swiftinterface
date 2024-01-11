@@ -928,6 +928,21 @@ public protocol ZTNotifyDataMessage : Swift.Decodable, Swift.Encodable {
   required public init(service: ZTCoreKit.ZTService, characteristic: CoreBluetooth.CBCharacteristic)
   @objc deinit
 }
+public enum ZTTXPower : Swift.UInt8 {
+  case dBm0
+  case dBm2
+  case dBm3
+  case dBm4
+  case dBm5
+  case dBm6
+  case dBm7
+  case dBm8
+  public init?(rawValue: Swift.UInt8)
+  public typealias RawValue = Swift.UInt8
+  public var rawValue: Swift.UInt8 {
+    get
+  }
+}
 public class ZTPlist {
   public static let folderName: Swift.String
   final public let url: Foundation.URL
@@ -1008,6 +1023,8 @@ public enum ZTCommand : Swift.UInt8, Swift.CaseIterable, Swift.Identifiable {
   case getCalibrateStaticData
   case testCalibrateStatic
   case memsConfig
+  case updateTxPower
+  case updatePhy
   case disconnect
   case startDFURight
   case startDFULeft
@@ -3517,6 +3534,9 @@ extension ZTCoreKit.ZTCompressionMethod : Swift.RawRepresentable {}
 extension ZTCoreKit.ZTAlgoState : Swift.Equatable {}
 extension ZTCoreKit.ZTAlgoState : Swift.Hashable {}
 extension ZTCoreKit.ZTAlgoState : Swift.RawRepresentable {}
+extension ZTCoreKit.ZTTXPower : Swift.Equatable {}
+extension ZTCoreKit.ZTTXPower : Swift.Hashable {}
+extension ZTCoreKit.ZTTXPower : Swift.RawRepresentable {}
 extension ZTCoreKit.ZTCommand : Swift.Equatable {}
 extension ZTCoreKit.ZTCommand : Swift.Hashable {}
 extension ZTCoreKit.ZTCommand : Swift.RawRepresentable {}
