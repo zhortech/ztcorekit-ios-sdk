@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.2.8](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.2.8) (2024-01-15)
+
+- updated DFU library
+
 ## [1.2.7](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.2.7) (2024-01-11)
 
 - added `ZTTXPower` enum

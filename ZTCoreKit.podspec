@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = 'ZTCoreKit'
-  s.version = '1.2.7'
+  s.version = '1.2.8'
   s.license = { :type => "MIT", :file => "LICENSE" }
   s.summary = 'Official Zhortech ZTCoreKit SDK for iOS to access core features.'
   s.homepage = 'https://zhortech.com/'
@@ -25,5 +25,4 @@ Pod::Spec.new do |s|
   s.ios.weak_frameworks = 'CoreBluetooth', 'Security', 'UIKit', 'Foundation', 'CFNetwork'
   
   s.exclude_files = 'readme-images/', 'docs/'
-  s.dependency 'iOSDFULibrary', '~> 4.14.0'
 end
