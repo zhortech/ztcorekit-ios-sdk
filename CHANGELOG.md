@@ -1,5 +1,10 @@
 # Changelog
 
+## [1.2.9](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.2.9) (2024-02-21)
+
+- added additional logging for commands
+- filter packets with less than 3 tries for missed packets
+
 ## [1.2.8](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.2.8) (2024-01-15)
 
 - updated DFU library
