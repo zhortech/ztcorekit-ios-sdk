@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.2.10](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.2.10) (2024-02-26)
+
+- deals with short data packets
+
 ## [1.2.9](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.2.9) (2024-02-21)
 
 - added additional logging for commands
