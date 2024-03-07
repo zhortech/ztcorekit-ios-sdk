@@ -1,7 +1,6 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.9.2 (swiftlang-5.9.2.2.56 clang-1500.1.0.2.5)
-// swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name ZTCoreKit
-// swift-module-flags-ignorable: -enable-bare-slash-regex
+// swift-compiler-version: Apple Swift version 5.10 (swiftlang-5.10.0.13 clang-1500.3.9.4)
+// swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name ZTCoreKit
 import Combine
 import CommonCrypto
 import Compression
@@ -2874,7 +2873,7 @@ open class ZTSegmentData : ZTCoreKit.ZTNotifyDataMessage {
   public static func hasPreviousChunk(activityId: Swift.String, currentIndex: Swift.UInt16) -> Swift.Bool
   public static func hasMissedChunks(activityId: Swift.String, startIndex: Swift.UInt16?, endIndex: Swift.UInt16?) -> Swift.Bool
   public static func getMaxMissedChunk(activityId: Swift.String, chunkId: Swift.UInt16) -> Swift.UInt16?
-  public static func getMissedPackets(activityId: Swift.String, startId: Swift.UInt16) -> [Swift.UInt16]?
+  public static func getMissedPackets(activityId: Swift.String, startId: Swift.UInt16, endId: Swift.UInt16? = nil) -> [Swift.UInt16]?
   public static func getMinMissedChunk(activityId: Swift.String, chunkId: Swift.UInt16) -> Swift.UInt16?
   public static func getMinMissedPacketId(activityId: Swift.String, startId: Swift.UInt16, lastId: Swift.UInt16?) -> Swift.UInt16?
   public static func isChunkSaved(activityId: Swift.String?, chunkId: Swift.UInt16) -> Swift.Bool

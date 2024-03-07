@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.2.11](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.2.11) (2024-03-07)
+
+- optimization for cheking missed packets
+
 ## [1.2.10](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.2.10) (2024-02-26)
 
 - deals with short data packets
