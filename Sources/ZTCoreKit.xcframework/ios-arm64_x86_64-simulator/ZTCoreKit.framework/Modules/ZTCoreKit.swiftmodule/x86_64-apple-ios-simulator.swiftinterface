@@ -2860,7 +2860,7 @@ open class ZTSegmentData : ZTCoreKit.ZTNotifyDataMessage {
   public static func loadAll(activityId: Swift.String) -> [ZTCoreKit.ZTSegmentData]
   public static func loadAll(activityId: Swift.String, startId: Swift.UInt16) -> [ZTCoreKit.ZTSegmentData]
   public static func loadAllPackets(activityId: Swift.String, startId: Swift.UInt16? = nil, lastId: Swift.UInt16? = nil) -> [ZTCoreKit.ZTSegmentData]
-  public static func loadAllIds(activityId: Swift.String, startId: Swift.UInt16) -> [Swift.Int]
+  public static func loadAllIds(activityId: Swift.String, startId: Swift.UInt16, endId: Swift.UInt16? = nil) -> [Swift.Int]
   public static func loadPrevious(activityId: Swift.String?, chunkId: Swift.UInt16, originalTimestamp: Swift.Int64) -> ZTCoreKit.ZTSegmentData?
   public static func loadPacket(activityId: Swift.String?, id: Swift.UInt16) -> ZTCoreKit.ZTSegmentData?
   public static func loadLastFwVersionEvent(activityId: Swift.String?, chunkId: Swift.UInt16, startId: Swift.UInt16? = nil) -> ZTCoreKit.ZTSegmentData?
@@ -2876,7 +2876,8 @@ open class ZTSegmentData : ZTCoreKit.ZTNotifyDataMessage {
   public static func getMissedPackets(activityId: Swift.String, startId: Swift.UInt16, endId: Swift.UInt16? = nil) -> [Swift.UInt16]?
   public static func getMinMissedChunk(activityId: Swift.String, chunkId: Swift.UInt16) -> Swift.UInt16?
   public static func getMinMissedPacketId(activityId: Swift.String, startId: Swift.UInt16, lastId: Swift.UInt16?) -> Swift.UInt16?
-  public static func isChunkSaved(activityId: Swift.String?, chunkId: Swift.UInt16) -> Swift.Bool
+  public static func isChunkSaved(activityId: Swift.String?, chunkId: Swift.UInt16, startId: Swift.UInt16? = nil) -> Swift.Bool
+  public static func isSaved(activityId: Swift.String?, chunkId: Swift.UInt16, startId: Swift.UInt16?, endId: Swift.UInt16?) -> Swift.Bool
   public static func isChunkEmpty(activityId: Swift.String?, chunkId: Swift.UInt16) -> Swift.Bool
   public static func checkPacketToRemove(activityId: Swift.String?, packetId: Swift.UInt16)
   @objc deinit
