@@ -1,4 +1,7 @@
 # Changelog
+## [1.2.13](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.2.13) (2024-03-16)
+
+- help methods to check packets integrity
 
 ## [1.2.12](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.2.12) (2024-03-15)
 

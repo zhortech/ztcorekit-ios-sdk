@@ -2854,6 +2854,9 @@ open class ZTSegmentData : ZTCoreKit.ZTNotifyDataMessage {
   public init(data: Foundation.Data, activityId: Swift.String, fwversion: Swift.String? = nil)
   required public init(from decoder: any Swift.Decoder) throws
   public func encode(to encoder: any Swift.Encoder) throws
+  @objc deinit
+}
+extension ZTCoreKit.ZTSegmentData {
   public static func lastSegmentId(activityId: Swift.String) -> Swift.Int
   public static func segmentsCount(activityId: Swift.String) -> Swift.Int
   public static func loadUnsent(activityId: Swift.String) -> [ZTCoreKit.ZTSegmentData]
@@ -2868,19 +2871,21 @@ open class ZTSegmentData : ZTCoreKit.ZTNotifyDataMessage {
   public static func loadAll(activityId: Swift.String, lastChunkId: Swift.UInt16?) -> [ZTCoreKit.ZTSegmentData]
   public static func loadAll(activityId: Swift.String, firstChunkId: Swift.UInt16?, lastChunkId: Swift.UInt16? = nil) -> [ZTCoreKit.ZTSegmentData]
   public static func clear(activityId: Swift.String?)
-  public static func checkMissedChunks(activityId: Swift.String) -> Swift.Bool
   public static func getMissedChunk(activity: ZTCoreKit.ZTActivity?) -> Swift.UInt16?
-  public static func hasPreviousChunk(activityId: Swift.String, currentIndex: Swift.UInt16) -> Swift.Bool
-  public static func hasMissedChunks(activityId: Swift.String, startIndex: Swift.UInt16?, endIndex: Swift.UInt16?) -> Swift.Bool
   public static func getMaxMissedChunk(activityId: Swift.String, chunkId: Swift.UInt16) -> Swift.UInt16?
   public static func getMissedPackets(activityId: Swift.String, startId: Swift.UInt16, endId: Swift.UInt16? = nil) -> [Swift.UInt16]?
   public static func getMinMissedChunk(activityId: Swift.String, chunkId: Swift.UInt16) -> Swift.UInt16?
   public static func getMinMissedPacketId(activityId: Swift.String, startId: Swift.UInt16, lastId: Swift.UInt16?) -> Swift.UInt16?
+  public static func updateSegmentsTimestamp(activityId: Swift.String, startId: Swift.UInt16, anchorTime: Swift.Int64?)
+}
+extension ZTCoreKit.ZTSegmentData {
+  public static func checkMissedChunks(activityId: Swift.String) -> Swift.Bool
+  public static func hasMissedChunks(activityId: Swift.String, startIndex: Swift.UInt16?, endIndex: Swift.UInt16?) -> Swift.Bool
+  public static func checkPacketToRemove(activityId: Swift.String?, packetId: Swift.UInt16)
+  public static func hasPreviousChunk(activityId: Swift.String, currentIndex: Swift.UInt16) -> Swift.Bool
   public static func isChunkSaved(activityId: Swift.String?, chunkId: Swift.UInt16, startId: Swift.UInt16? = nil) -> Swift.Bool
   public static func isSaved(activityId: Swift.String?, chunkId: Swift.UInt16, startId: Swift.UInt16?, endId: Swift.UInt16?) -> Swift.Bool
   public static func isChunkEmpty(activityId: Swift.String?, chunkId: Swift.UInt16) -> Swift.Bool
-  public static func checkPacketToRemove(activityId: Swift.String?, packetId: Swift.UInt16)
-  @objc deinit
 }
 public enum ZTActivitySummaryStatus : Swift.String {
   case started
