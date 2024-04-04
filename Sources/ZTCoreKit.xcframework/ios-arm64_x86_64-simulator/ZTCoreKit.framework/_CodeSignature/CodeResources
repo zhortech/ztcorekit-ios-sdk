@@ -10,11 +10,11 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		QA4qNvXMjTwOkSn7ecdCtbmgp84=
+		7jyMDObB6suw+VxQ/ONmqQ5/gp4=
 		</data>
 		<key>Modules/ZTCoreKit.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		jBQucQUYPEcMT+igg5IliiqGjJc=
+		527G6XqmAuf1tdpfmWmXPN20i4Y=
 		</data>
 		<key>Modules/ZTCoreKit.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -30,11 +30,11 @@
 		</data>
 		<key>Modules/ZTCoreKit.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		YrpjtTMzFhEq46Kzb5C8GVhoXAo=
+		B2+IXDwrHr7jp0K8wsRvOWDq9DY=
 		</data>
 		<key>Modules/ZTCoreKit.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		jBQucQUYPEcMT+igg5IliiqGjJc=
+		527G6XqmAuf1tdpfmWmXPN20i4Y=
 		</data>
 		<key>Modules/ZTCoreKit.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -50,7 +50,7 @@
 		</data>
 		<key>Modules/ZTCoreKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		6UhQRLl16A3Fx/ppPPI5f5h+cFM=
+		LX+lu1aNDHZKsNRE2VY9sZNXY+I=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -66,7 +66,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			6KOPrQw+zJzIQ5pWtd/lwOXtdjAt0DEK6FpIgsxXhD4=
+			IHaAmJCKOu6Ezq7b06OKt/613PvNm/IRumMk8uyQ4CE=
 			</data>
 		</dict>
 		<key>Modules/ZTCoreKit.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
@@ -94,14 +94,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			K/Q4LqqxqFZ3FFFUnDhacKlPVbm/qzkBW26ZwlsIZyQ=
+			i7DI0szYr84iEoeDhAjHpHnqQV9+df3Tt8ZTtLejMF0=
 			</data>
 		</dict>
 		<key>Modules/ZTCoreKit.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			6KOPrQw+zJzIQ5pWtd/lwOXtdjAt0DEK6FpIgsxXhD4=
+			IHaAmJCKOu6Ezq7b06OKt/613PvNm/IRumMk8uyQ4CE=
 			</data>
 		</dict>
 		<key>Modules/ZTCoreKit.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
@@ -129,7 +129,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			EZK4jBy2L1KYgCq3o/KAxx7M51PGb2MInrrbg6wKdUc=
+			wdU4lS1ci311GXV02cvy9ttG3C0YAFlSLnwmJlHmXsw=
 			</data>
 		</dict>
 	</dict>
