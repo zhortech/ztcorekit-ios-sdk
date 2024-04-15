@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.15](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.2.15) (2024-04-15)
+
+- added ble logging
+- fix for cache saving
+- saving data speedup
+- retry upload old packets with .sending status 
+
 ## [1.2.14](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.2.14) (2024-03-26)
 
 - send all packet types to backend

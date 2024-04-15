@@ -310,6 +310,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 
 
 
+
 /// A DFU error enumeration.
 typedef SWIFT_ENUM(NSInteger, DFUError, open) {
 /// Legacy DFU bootloader reported success.
@@ -1386,10 +1387,14 @@ SWIFT_CLASS("_TtC9ZTCoreKit8ZTDevice")
 @end
 
 
+@class CBDescriptor;
 @class CBService;
 @class CBCharacteristic;
+@class CBL2CAPChannel;
 
 @interface ZTDevice (SWIFT_EXTENSION(ZTCoreKit)) <CBPeripheralDelegate>
+/// :nodoc:
+- (void)peripheral:(CBPeripheral * _Nonnull)peripheral didWriteValueForDescriptor:(CBDescriptor * _Nonnull)descriptor error:(NSError * _Nullable)error;
 /// :nodoc:
 - (void)peripheral:(CBPeripheral * _Nonnull)peripheral didDiscoverServices:(NSError * _Nullable)error;
 /// :nodoc:
@@ -1402,6 +1407,20 @@ SWIFT_CLASS("_TtC9ZTCoreKit8ZTDevice")
 - (void)peripheral:(CBPeripheral * _Nonnull)peripheral didUpdateNotificationStateForCharacteristic:(CBCharacteristic * _Nonnull)characteristic error:(NSError * _Nullable)error;
 /// :nodoc:
 - (void)peripheral:(CBPeripheral * _Nonnull)peripheral didReadRSSI:(NSNumber * _Nonnull)RSSI error:(NSError * _Nullable)error;
+/// :nodoc:
+- (void)peripheralDidUpdateName:(CBPeripheral * _Nonnull)peripheral;
+/// :nodoc:
+- (void)peripheral:(CBPeripheral * _Nonnull)peripheral didModifyServices:(NSArray<CBService *> * _Nonnull)invalidatedServices;
+/// :nodoc:
+- (void)peripheral:(CBPeripheral * _Nonnull)peripheral didDiscoverIncludedServicesForService:(CBService * _Nonnull)service error:(NSError * _Nullable)error;
+/// :nodoc:
+- (void)peripheral:(CBPeripheral * _Nonnull)peripheral didDiscoverDescriptorsForCharacteristic:(CBCharacteristic * _Nonnull)characteristic error:(NSError * _Nullable)error;
+/// :nodoc:
+- (void)peripheral:(CBPeripheral * _Nonnull)peripheral didUpdateValueForDescriptor:(CBDescriptor * _Nonnull)descriptor error:(NSError * _Nullable)error;
+/// :nodoc:
+- (void)peripheralIsReadyToSendWriteWithoutResponse:(CBPeripheral * _Nonnull)peripheral;
+/// :nodoc:
+- (void)peripheral:(CBPeripheral * _Nonnull)peripheral didOpenL2CAPChannel:(CBL2CAPChannel * _Nullable)channel error:(NSError * _Nullable)error;
 @end
 
 
@@ -1772,6 +1791,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 
 
 
+
 /// A DFU error enumeration.
 typedef SWIFT_ENUM(NSInteger, DFUError, open) {
 /// Legacy DFU bootloader reported success.
@@ -2848,10 +2868,14 @@ SWIFT_CLASS("_TtC9ZTCoreKit8ZTDevice")
 @end
 
 
+@class CBDescriptor;
 @class CBService;
 @class CBCharacteristic;
+@class CBL2CAPChannel;
 
 @interface ZTDevice (SWIFT_EXTENSION(ZTCoreKit)) <CBPeripheralDelegate>
+/// :nodoc:
+- (void)peripheral:(CBPeripheral * _Nonnull)peripheral didWriteValueForDescriptor:(CBDescriptor * _Nonnull)descriptor error:(NSError * _Nullable)error;
 /// :nodoc:
 - (void)peripheral:(CBPeripheral * _Nonnull)peripheral didDiscoverServices:(NSError * _Nullable)error;
 /// :nodoc:
@@ -2864,6 +2888,20 @@ SWIFT_CLASS("_TtC9ZTCoreKit8ZTDevice")
 - (void)peripheral:(CBPeripheral * _Nonnull)peripheral didUpdateNotificationStateForCharacteristic:(CBCharacteristic * _Nonnull)characteristic error:(NSError * _Nullable)error;
 /// :nodoc:
 - (void)peripheral:(CBPeripheral * _Nonnull)peripheral didReadRSSI:(NSNumber * _Nonnull)RSSI error:(NSError * _Nullable)error;
+/// :nodoc:
+- (void)peripheralDidUpdateName:(CBPeripheral * _Nonnull)peripheral;
+/// :nodoc:
+- (void)peripheral:(CBPeripheral * _Nonnull)peripheral didModifyServices:(NSArray<CBService *> * _Nonnull)invalidatedServices;
+/// :nodoc:
+- (void)peripheral:(CBPeripheral * _Nonnull)peripheral didDiscoverIncludedServicesForService:(CBService * _Nonnull)service error:(NSError * _Nullable)error;
+/// :nodoc:
+- (void)peripheral:(CBPeripheral * _Nonnull)peripheral didDiscoverDescriptorsForCharacteristic:(CBCharacteristic * _Nonnull)characteristic error:(NSError * _Nullable)error;
+/// :nodoc:
+- (void)peripheral:(CBPeripheral * _Nonnull)peripheral didUpdateValueForDescriptor:(CBDescriptor * _Nonnull)descriptor error:(NSError * _Nullable)error;
+/// :nodoc:
+- (void)peripheralIsReadyToSendWriteWithoutResponse:(CBPeripheral * _Nonnull)peripheral;
+/// :nodoc:
+- (void)peripheral:(CBPeripheral * _Nonnull)peripheral didOpenL2CAPChannel:(CBL2CAPChannel * _Nullable)channel error:(NSError * _Nullable)error;
 @end
 
 
