@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.2.16](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.2.16) (2024-04-17)
+
+- fix for chunks upload condition
+
 ## [1.2.15](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.2.15) (2024-04-15)
 
 - added ble logging
