@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.3.0](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.3.0) (2024-04-19)
+
+- use notify characteristic to gather data
+
 ## [1.2.16](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.2.16) (2024-04-17)
 
 - fix for chunks upload condition

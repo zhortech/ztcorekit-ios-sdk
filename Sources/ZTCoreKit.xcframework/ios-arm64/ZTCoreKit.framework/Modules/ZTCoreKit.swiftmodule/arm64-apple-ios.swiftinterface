@@ -566,6 +566,28 @@ open class ZTCharacteristic {
   required public init(service: ZTCoreKit.ZTService, characteristic: CoreBluetooth.CBCharacteristic)
   @objc deinit
 }
+public struct ZTMessageChunkConfig : Swift.CustomStringConvertible, Swift.Codable {
+  public var byte0: Swift.UInt8? {
+    get
+  }
+  public var byte1: Swift.UInt8? {
+    get
+  }
+  public init(bytes: [Swift.UInt8])
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+extension ZTCoreKit.ZTMessageChunkConfig {
+  public var side: ZTCoreKit.ZTModuleSide {
+    get
+  }
+  public var flag: Swift.UInt8 {
+    get
+  }
+  public var description: Swift.String {
+    get
+  }
+}
 @_hasMissingDesignatedInitializers open class ZTSession {
   @objc deinit
 }
@@ -1102,6 +1124,7 @@ public enum ZTCommand : Swift.UInt8, Swift.CaseIterable, Swift.Identifiable {
   case setInactivityTimeout
   case setDFUInstall
   case setDFUMode
+  case setChunkConfig
   case setChunkMinutesInterval
   case setChunkSecondsInterval
   case selectAlgorithm
@@ -1336,6 +1359,9 @@ extension ZTCoreKit.ZTArchive {
   final public let onCommandAck: ZTCoreKit.ZTSignal<(ZTCoreKit.ZTCommandResponse?)>
   final public let onIndicateValueUpdated: ZTCoreKit.ZTSignal<(Foundation.Data?)>
   final public let onBootloaderInfoUpdated: ZTCoreKit.ZTSignal<(ZTCoreKit.ZTMessageBootloaderInfo?)>
+  final public let onNotifyChunkSendStatusUpdated: ZTCoreKit.ZTSignal<(ZTCoreKit.ZTMessageChunkSendStatus?)>
+  final public let onNotifyChunkConfigUpdated: ZTCoreKit.ZTSignal<(ZTCoreKit.ZTMessageChunkConfig?)>
+  final public let onNotifyChunkDataUpdated: ZTCoreKit.ZTSignal<(ZTCoreKit.ZTMessageChunkData?)>
   required public init(peripheral: CoreBluetooth.CBPeripheral)
   public init(cbPeripheral: any ZTCoreKit.ZTCBPeripheralProtocol)
   public func connect()
@@ -1837,6 +1863,7 @@ extension ZTCoreKit.ZTError.Enums {
     case invalidMobilityScanResults
     case outsideActivityDetected
     case anomalyDetected
+    case mobility
     public static func == (a: ZTCoreKit.ZTError.Enums.ActivityError, b: ZTCoreKit.ZTError.Enums.ActivityError) -> Swift.Bool
     public func hash(into hasher: inout Swift.Hasher)
     public var hashValue: Swift.Int {
@@ -1935,6 +1962,49 @@ extension ZTCoreKit.ZTFirmwareRevision {
     get
   }
   public var bmMinorVersion: Swift.Int {
+    get
+  }
+}
+public struct ZTMessageChunkData : Swift.CustomStringConvertible, Swift.Codable {
+  public enum Mode : Swift.UInt8 {
+    case manual
+    case automatic
+    public init?(rawValue: Swift.UInt8)
+    public typealias RawValue = Swift.UInt8
+    public var rawValue: Swift.UInt8 {
+      get
+    }
+  }
+  public var byte0: Swift.UInt8? {
+    get
+  }
+  public var byte1: Swift.UInt8? {
+    get
+  }
+  public var byte2: Swift.UInt8? {
+    get
+  }
+  public var byte3: Swift.UInt8? {
+    get
+  }
+  public init(bytes: [Swift.UInt8])
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+extension ZTCoreKit.ZTMessageChunkData {
+  public var side: ZTCoreKit.ZTModuleSide {
+    get
+  }
+  public var mode: ZTCoreKit.ZTMessageChunkData.Mode {
+    get
+  }
+  public var length: Swift.UInt8 {
+    get
+  }
+  public var payload: Foundation.Data? {
+    get
+  }
+  public var description: Swift.String {
     get
   }
 }
@@ -2071,6 +2141,8 @@ public enum ZTNotifyData {
     case MSG_BTLOADER_INFO
     case MSG_INACTIVITY_TIMEOUT
     case MSG_CHUNK_SEND_STATUS
+    case MSG_CHUNK_DATA
+    case MSG_CHUNK_CONFIG
     case MSG_DEBUG
     public var description: Swift.String {
       get
@@ -2575,6 +2647,8 @@ open class ZTActivity : Swift.Codable {
     get
     set
   }
+  public var packetsIds: [Swift.UInt16]
+  public var cachedPackets: [ZTCoreKit.ZTSegmentData]
   public var metaData: ZTCoreKit.ZTMessageActivityMetadata?
   public var stopReason: ZTCoreKit.ZTActivityLastStopReason?
   public var isRawDataMode: Swift.Bool
@@ -2593,6 +2667,8 @@ open class ZTActivity : Swift.Codable {
   open func save()
   public func loadAll(firstChunkId: Swift.UInt16?, lastChunkId: Swift.UInt16? = nil) -> [ZTCoreKit.ZTSegmentData]
   public func lastSavedChunkId(startId: Swift.UInt16? = 0, lastId: Swift.UInt16? = 0) -> Swift.UInt16
+  public func addToCache(_ segment: ZTCoreKit.ZTSegmentData)
+  public func uploadCache(completion: @escaping ZTCoreKit.ZTCompletion)
   @objc deinit
   open func encode(to encoder: any Swift.Encoder) throws
   required public init(from decoder: any Swift.Decoder) throws
@@ -2865,6 +2941,7 @@ extension ZTCoreKit.ZTSegmentData {
   public static func loadAll(activityId: Swift.String, startId: Swift.UInt16) -> [ZTCoreKit.ZTSegmentData]
   public static func loadAllPackets(activityId: Swift.String, startId: Swift.UInt16? = nil, lastId: Swift.UInt16? = nil) -> [ZTCoreKit.ZTSegmentData]
   public static func loadAllIds(activityId: Swift.String, startId: Swift.UInt16, endId: Swift.UInt16? = nil) -> [Swift.Int]
+  public static func loadAllPacketsIds(activityId: Swift.String, startId: Swift.UInt16, endId: Swift.UInt16? = nil) -> [Swift.UInt16]
   public static func loadPrevious(activityId: Swift.String?, chunkId: Swift.UInt16, originalTimestamp: Swift.Int64) -> ZTCoreKit.ZTSegmentData?
   public static func loadPacket(activityId: Swift.String?, id: Swift.UInt16) -> ZTCoreKit.ZTSegmentData?
   public static func loadLastFwVersionEvent(activityId: Swift.String?, chunkId: Swift.UInt16, startId: Swift.UInt16? = nil) -> ZTCoreKit.ZTSegmentData?
@@ -3459,7 +3536,7 @@ extension ZTCoreKit.ZTMapper where N : Swift.Hashable {
   final public func toJSONSet(_ set: Swift.Set<N>) -> [[Swift.String : Any]]
   final public func toJSONString(_ set: Swift.Set<N>, prettyPrint: Swift.Bool = false) -> Swift.String?
 }
-public struct ZTChunkSendStatusMessage : Swift.CustomStringConvertible {
+public struct ZTMessageChunkSendStatus : Swift.CustomStringConvertible {
   public enum Status : Swift.UInt8 {
     case success
     case errorOutOfRange
@@ -3474,7 +3551,7 @@ public struct ZTChunkSendStatusMessage : Swift.CustomStringConvertible {
     }
   }
   public let bytes: [Swift.UInt8]
-  public var status: ZTCoreKit.ZTChunkSendStatusMessage.Status?
+  public var status: ZTCoreKit.ZTMessageChunkSendStatus.Status?
   public var chunkId: Swift.UInt16?
   public init(bytes: [Swift.UInt8])
   public var description: Swift.String {
@@ -3614,6 +3691,7 @@ open class ZTDateDefaultTransform : ZTCoreKit.ZTTransformType {
 public typealias ZTBaseResult = (_ error: (any Swift.Error)?) -> ()
 public typealias ZTResultObject<T> = (T?, (any Swift.Error)?) -> ()
 public typealias ZTResultArray<T> = ([T]?, (any Swift.Error)?) -> ()
+public typealias ZTCompletion = (() -> Swift.Void)
 public protocol ZTBaseMappable {
   mutating func mapping(map: ZTCoreKit.ZTMap)
 }
@@ -3833,6 +3911,7 @@ extension ZTCoreKit.ZTRealtimeMessage {
   final public var autorestartBackgroundDfu: Swift.Bool
   final public var getChunksOnApplicationDidBecomeActive: Swift.Bool
   final public var enablePacketsDataLogging: Swift.Bool
+  final public var cachedPacketsBatchUploadSize: Swift.Int
   final public var chunkDuration: Swift.Int? {
     get
     set
@@ -3968,6 +4047,9 @@ extension ZTCoreKit.ZTError.Enums.ActivityError : Swift.Equatable {}
 extension ZTCoreKit.ZTError.Enums.ActivityError : Swift.Hashable {}
 extension ZTCoreKit.ZTError.Enums.DecodableError : Swift.Equatable {}
 extension ZTCoreKit.ZTError.Enums.DecodableError : Swift.Hashable {}
+extension ZTCoreKit.ZTMessageChunkData.Mode : Swift.Equatable {}
+extension ZTCoreKit.ZTMessageChunkData.Mode : Swift.Hashable {}
+extension ZTCoreKit.ZTMessageChunkData.Mode : Swift.RawRepresentable {}
 extension ZTCoreKit.ZTLogLevel : Swift.Equatable {}
 extension ZTCoreKit.ZTLogLevel : Swift.Hashable {}
 extension ZTCoreKit.ZTLogLevel : Swift.RawRepresentable {}
@@ -4060,9 +4142,9 @@ extension ZTCoreKit.ZTLoggerSeverity : Swift.Hashable {}
 extension ZTCoreKit.ZTLoggerSeverity : Swift.RawRepresentable {}
 extension ZTCoreKit.ZTMappingType : Swift.Equatable {}
 extension ZTCoreKit.ZTMappingType : Swift.Hashable {}
-extension ZTCoreKit.ZTChunkSendStatusMessage.Status : Swift.Equatable {}
-extension ZTCoreKit.ZTChunkSendStatusMessage.Status : Swift.Hashable {}
-extension ZTCoreKit.ZTChunkSendStatusMessage.Status : Swift.RawRepresentable {}
+extension ZTCoreKit.ZTMessageChunkSendStatus.Status : Swift.Equatable {}
+extension ZTCoreKit.ZTMessageChunkSendStatus.Status : Swift.Hashable {}
+extension ZTCoreKit.ZTMessageChunkSendStatus.Status : Swift.RawRepresentable {}
 extension ZTCoreKit.ZTActivityLastStopReason : Swift.Equatable {}
 extension ZTCoreKit.ZTActivityLastStopReason : Swift.Hashable {}
 extension ZTCoreKit.ZTActivityLastStopReason : Swift.RawRepresentable {}
