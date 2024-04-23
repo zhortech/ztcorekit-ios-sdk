@@ -2669,6 +2669,7 @@ open class ZTActivity : Swift.Codable {
   public func lastSavedChunkId(startId: Swift.UInt16? = 0, lastId: Swift.UInt16? = 0) -> Swift.UInt16
   public func addToCache(_ segment: ZTCoreKit.ZTSegmentData)
   public func uploadCache(completion: @escaping ZTCoreKit.ZTCompletion)
+  public func saveCachedPackets()
   @objc deinit
   open func encode(to encoder: any Swift.Encoder) throws
   required public init(from decoder: any Swift.Decoder) throws
@@ -3595,6 +3596,7 @@ extension ZTCoreKit.ZTDevice : CoreBluetooth.CBPeripheralDelegate {
   @objc dynamic public func peripheral(_ peripheral: CoreBluetooth.CBPeripheral, didOpen channel: CoreBluetooth.CBL2CAPChannel?, error: (any Swift.Error)?)
   public func sendCommand(_ command: ZTCoreKit.ZTCommand, parameters: [Swift.UInt8]? = nil, completion: ((Swift.Bool) -> Swift.Void)? = nil)
   public func sendCommandWithAck(command: ZTCoreKit.ZTCommand, parameters: [Swift.UInt8]? = nil, completion: @escaping ZTCoreKit.ZTBaseResult)
+  public func sendCommandWithRightAck(command: ZTCoreKit.ZTCommand, parameters: [Swift.UInt8]? = nil, completion: @escaping ZTCoreKit.ZTBaseResult)
 }
 extension Foundation.DateFormatter {
   convenience public init(withFormat format: Swift.String, locale: Swift.String)

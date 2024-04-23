@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.3.1](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.3.1) (2024-04-23)
+
+- public method to save cached packets
+
 ## [1.3.0](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.3.0) (2024-04-19)
 
 - use notify characteristic to gather data
