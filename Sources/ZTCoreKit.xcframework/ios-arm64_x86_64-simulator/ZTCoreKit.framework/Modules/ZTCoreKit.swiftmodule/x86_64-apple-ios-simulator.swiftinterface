@@ -285,7 +285,7 @@ extension Swift.Array where Element == Swift.UInt8 {
   }
 }
 extension Swift.Dictionary {
-  public func merge(dict: Swift.Dictionary<Key, Value>) -> Swift.Dictionary<Key, Value>
+  public func merge(dict: [Key : Value]) -> [Key : Value]
 }
 extension Foundation.Date {
   public var timestamp: Swift.Int64 {
@@ -612,7 +612,7 @@ extension ZTCoreKit.ZTService : Swift.Equatable {
 public protocol ZTServiceProtocol : AnyObject {
   static var uuid: Swift.String { get }
   static var serviceType: ZTCoreKit.ZTService.Type { get }
-  static var characteristicTypes: Swift.Dictionary<Swift.String, ZTCoreKit.ZTCharacteristic.Type> { get }
+  static var characteristicTypes: [Swift.String : ZTCoreKit.ZTCharacteristic.Type] { get }
 }
 extension ZTCoreKit.ZTServiceProtocol where Self : ZTCoreKit.ZTService {
   public static var serviceType: ZTCoreKit.ZTService.Type {
@@ -931,22 +931,22 @@ public func <<- <T>(left: inout T, right: ZTCoreKit.ZTMap) where T : ZTCoreKit.Z
 public func ->> <T>(left: T, right: ZTCoreKit.ZTMap) where T : ZTCoreKit.ZTBaseMappable
 public func <<- <T>(left: inout T?, right: ZTCoreKit.ZTMap) where T : ZTCoreKit.ZTBaseMappable
 public func ->> <T>(left: T?, right: ZTCoreKit.ZTMap) where T : ZTCoreKit.ZTBaseMappable
-public func <<- <T>(left: inout Swift.Dictionary<Swift.String, T>, right: ZTCoreKit.ZTMap) where T : ZTCoreKit.ZTBaseMappable
-public func ->> <T>(left: Swift.Dictionary<Swift.String, T>, right: ZTCoreKit.ZTMap) where T : ZTCoreKit.ZTBaseMappable
-public func <<- <T>(left: inout Swift.Dictionary<Swift.String, T>?, right: ZTCoreKit.ZTMap) where T : ZTCoreKit.ZTBaseMappable
-public func ->> <T>(left: Swift.Dictionary<Swift.String, T>?, right: ZTCoreKit.ZTMap) where T : ZTCoreKit.ZTBaseMappable
-public func <<- <T>(left: inout Swift.Dictionary<Swift.String, [T]>, right: ZTCoreKit.ZTMap) where T : ZTCoreKit.ZTBaseMappable
-public func ->> <T>(left: Swift.Dictionary<Swift.String, [T]>, right: ZTCoreKit.ZTMap) where T : ZTCoreKit.ZTBaseMappable
-public func <<- <T>(left: inout Swift.Dictionary<Swift.String, [T]>?, right: ZTCoreKit.ZTMap) where T : ZTCoreKit.ZTBaseMappable
-public func ->> <T>(left: Swift.Dictionary<Swift.String, [T]>?, right: ZTCoreKit.ZTMap) where T : ZTCoreKit.ZTBaseMappable
-public func <<- <T>(left: inout Swift.Array<T>, right: ZTCoreKit.ZTMap) where T : ZTCoreKit.ZTBaseMappable
-public func ->> <T>(left: Swift.Array<T>, right: ZTCoreKit.ZTMap) where T : ZTCoreKit.ZTBaseMappable
-public func <<- <T>(left: inout Swift.Array<T>?, right: ZTCoreKit.ZTMap) where T : ZTCoreKit.ZTBaseMappable
-public func ->> <T>(left: Swift.Array<T>?, right: ZTCoreKit.ZTMap) where T : ZTCoreKit.ZTBaseMappable
-public func <<- <T>(left: inout Swift.Array<Swift.Array<T>>, right: ZTCoreKit.ZTMap) where T : ZTCoreKit.ZTBaseMappable
-public func ->> <T>(left: Swift.Array<Swift.Array<T>>, right: ZTCoreKit.ZTMap) where T : ZTCoreKit.ZTBaseMappable
-public func <<- <T>(left: inout Swift.Array<Swift.Array<T>>?, right: ZTCoreKit.ZTMap) where T : ZTCoreKit.ZTBaseMappable
-public func ->> <T>(left: Swift.Array<Swift.Array<T>>?, right: ZTCoreKit.ZTMap) where T : ZTCoreKit.ZTBaseMappable
+public func <<- <T>(left: inout [Swift.String : T], right: ZTCoreKit.ZTMap) where T : ZTCoreKit.ZTBaseMappable
+public func ->> <T>(left: [Swift.String : T], right: ZTCoreKit.ZTMap) where T : ZTCoreKit.ZTBaseMappable
+public func <<- <T>(left: inout [Swift.String : T]?, right: ZTCoreKit.ZTMap) where T : ZTCoreKit.ZTBaseMappable
+public func ->> <T>(left: [Swift.String : T]?, right: ZTCoreKit.ZTMap) where T : ZTCoreKit.ZTBaseMappable
+public func <<- <T>(left: inout [Swift.String : [T]], right: ZTCoreKit.ZTMap) where T : ZTCoreKit.ZTBaseMappable
+public func ->> <T>(left: [Swift.String : [T]], right: ZTCoreKit.ZTMap) where T : ZTCoreKit.ZTBaseMappable
+public func <<- <T>(left: inout [Swift.String : [T]]?, right: ZTCoreKit.ZTMap) where T : ZTCoreKit.ZTBaseMappable
+public func ->> <T>(left: [Swift.String : [T]]?, right: ZTCoreKit.ZTMap) where T : ZTCoreKit.ZTBaseMappable
+public func <<- <T>(left: inout [T], right: ZTCoreKit.ZTMap) where T : ZTCoreKit.ZTBaseMappable
+public func ->> <T>(left: [T], right: ZTCoreKit.ZTMap) where T : ZTCoreKit.ZTBaseMappable
+public func <<- <T>(left: inout [T]?, right: ZTCoreKit.ZTMap) where T : ZTCoreKit.ZTBaseMappable
+public func ->> <T>(left: [T]?, right: ZTCoreKit.ZTMap) where T : ZTCoreKit.ZTBaseMappable
+public func <<- <T>(left: inout [[T]], right: ZTCoreKit.ZTMap) where T : ZTCoreKit.ZTBaseMappable
+public func ->> <T>(left: [[T]], right: ZTCoreKit.ZTMap) where T : ZTCoreKit.ZTBaseMappable
+public func <<- <T>(left: inout [[T]]?, right: ZTCoreKit.ZTMap) where T : ZTCoreKit.ZTBaseMappable
+public func ->> <T>(left: [[T]]?, right: ZTCoreKit.ZTMap) where T : ZTCoreKit.ZTBaseMappable
 public func <<- <T>(left: inout Swift.Set<T>, right: ZTCoreKit.ZTMap) where T : Swift.Hashable, T : ZTCoreKit.ZTBaseMappable
 public func ->> <T>(left: Swift.Set<T>, right: ZTCoreKit.ZTMap) where T : Swift.Hashable, T : ZTCoreKit.ZTBaseMappable
 public func <<- <T>(left: inout Swift.Set<T>?, right: ZTCoreKit.ZTMap) where T : Swift.Hashable, T : ZTCoreKit.ZTBaseMappable
@@ -2966,6 +2966,9 @@ extension ZTCoreKit.ZTSegmentData {
   public static func isSaved(activityId: Swift.String?, chunkId: Swift.UInt16, startId: Swift.UInt16?, endId: Swift.UInt16?) -> Swift.Bool
   public static func isChunkEmpty(activityId: Swift.String?, chunkId: Swift.UInt16) -> Swift.Bool
 }
+extension ZTCoreKit.ZTSegmentData : Swift.Equatable {
+  public static func == (lhs: ZTCoreKit.ZTSegmentData, rhs: ZTCoreKit.ZTSegmentData) -> Swift.Bool
+}
 public enum ZTActivitySummaryStatus : Swift.String {
   case started
   case complete
@@ -3158,18 +3161,18 @@ public func <<- <Transform>(left: inout Transform.Object, right: (ZTCoreKit.ZTMa
 public func ->> <Transform>(left: Transform.Object, right: (ZTCoreKit.ZTMap, Transform)) where Transform : ZTCoreKit.ZTTransformType, Transform.Object : ZTCoreKit.ZTBaseMappable
 public func <<- <Transform>(left: inout Transform.Object?, right: (ZTCoreKit.ZTMap, Transform)) where Transform : ZTCoreKit.ZTTransformType, Transform.Object : ZTCoreKit.ZTBaseMappable
 public func ->> <Transform>(left: Transform.Object?, right: (ZTCoreKit.ZTMap, Transform)) where Transform : ZTCoreKit.ZTTransformType, Transform.Object : ZTCoreKit.ZTBaseMappable
-public func <<- <Transform>(left: inout Swift.Dictionary<Swift.String, Transform.Object>, right: (ZTCoreKit.ZTMap, Transform)) where Transform : ZTCoreKit.ZTTransformType, Transform.Object : ZTCoreKit.ZTBaseMappable
-public func ->> <Transform>(left: Swift.Dictionary<Swift.String, Transform.Object>, right: (ZTCoreKit.ZTMap, Transform)) where Transform : ZTCoreKit.ZTTransformType, Transform.Object : ZTCoreKit.ZTBaseMappable
-public func <<- <Transform>(left: inout Swift.Dictionary<Swift.String, Transform.Object>?, right: (ZTCoreKit.ZTMap, Transform)) where Transform : ZTCoreKit.ZTTransformType, Transform.Object : ZTCoreKit.ZTBaseMappable
-public func ->> <Transform>(left: Swift.Dictionary<Swift.String, Transform.Object>?, right: (ZTCoreKit.ZTMap, Transform)) where Transform : ZTCoreKit.ZTTransformType, Transform.Object : ZTCoreKit.ZTBaseMappable
-public func <<- <Transform>(left: inout Swift.Dictionary<Swift.String, [Transform.Object]>, right: (ZTCoreKit.ZTMap, Transform)) where Transform : ZTCoreKit.ZTTransformType, Transform.Object : ZTCoreKit.ZTBaseMappable
-public func ->> <Transform>(left: Swift.Dictionary<Swift.String, [Transform.Object]>, right: (ZTCoreKit.ZTMap, Transform)) where Transform : ZTCoreKit.ZTTransformType, Transform.Object : ZTCoreKit.ZTBaseMappable
-public func <<- <Transform>(left: inout Swift.Dictionary<Swift.String, [Transform.Object]>?, right: (ZTCoreKit.ZTMap, Transform)) where Transform : ZTCoreKit.ZTTransformType, Transform.Object : ZTCoreKit.ZTBaseMappable
-public func ->> <Transform>(left: Swift.Dictionary<Swift.String, [Transform.Object]>?, right: (ZTCoreKit.ZTMap, Transform)) where Transform : ZTCoreKit.ZTTransformType, Transform.Object : ZTCoreKit.ZTBaseMappable
-public func <<- <Transform>(left: inout Swift.Array<Transform.Object>, right: (ZTCoreKit.ZTMap, Transform)) where Transform : ZTCoreKit.ZTTransformType, Transform.Object : ZTCoreKit.ZTBaseMappable
-public func ->> <Transform>(left: Swift.Array<Transform.Object>, right: (ZTCoreKit.ZTMap, Transform)) where Transform : ZTCoreKit.ZTTransformType, Transform.Object : ZTCoreKit.ZTBaseMappable
-public func <<- <Transform>(left: inout Swift.Array<Transform.Object>?, right: (ZTCoreKit.ZTMap, Transform)) where Transform : ZTCoreKit.ZTTransformType, Transform.Object : ZTCoreKit.ZTBaseMappable
-public func ->> <Transform>(left: Swift.Array<Transform.Object>?, right: (ZTCoreKit.ZTMap, Transform)) where Transform : ZTCoreKit.ZTTransformType, Transform.Object : ZTCoreKit.ZTBaseMappable
+public func <<- <Transform>(left: inout [Swift.String : Transform.Object], right: (ZTCoreKit.ZTMap, Transform)) where Transform : ZTCoreKit.ZTTransformType, Transform.Object : ZTCoreKit.ZTBaseMappable
+public func ->> <Transform>(left: [Swift.String : Transform.Object], right: (ZTCoreKit.ZTMap, Transform)) where Transform : ZTCoreKit.ZTTransformType, Transform.Object : ZTCoreKit.ZTBaseMappable
+public func <<- <Transform>(left: inout [Swift.String : Transform.Object]?, right: (ZTCoreKit.ZTMap, Transform)) where Transform : ZTCoreKit.ZTTransformType, Transform.Object : ZTCoreKit.ZTBaseMappable
+public func ->> <Transform>(left: [Swift.String : Transform.Object]?, right: (ZTCoreKit.ZTMap, Transform)) where Transform : ZTCoreKit.ZTTransformType, Transform.Object : ZTCoreKit.ZTBaseMappable
+public func <<- <Transform>(left: inout [Swift.String : [Transform.Object]], right: (ZTCoreKit.ZTMap, Transform)) where Transform : ZTCoreKit.ZTTransformType, Transform.Object : ZTCoreKit.ZTBaseMappable
+public func ->> <Transform>(left: [Swift.String : [Transform.Object]], right: (ZTCoreKit.ZTMap, Transform)) where Transform : ZTCoreKit.ZTTransformType, Transform.Object : ZTCoreKit.ZTBaseMappable
+public func <<- <Transform>(left: inout [Swift.String : [Transform.Object]]?, right: (ZTCoreKit.ZTMap, Transform)) where Transform : ZTCoreKit.ZTTransformType, Transform.Object : ZTCoreKit.ZTBaseMappable
+public func ->> <Transform>(left: [Swift.String : [Transform.Object]]?, right: (ZTCoreKit.ZTMap, Transform)) where Transform : ZTCoreKit.ZTTransformType, Transform.Object : ZTCoreKit.ZTBaseMappable
+public func <<- <Transform>(left: inout [Transform.Object], right: (ZTCoreKit.ZTMap, Transform)) where Transform : ZTCoreKit.ZTTransformType, Transform.Object : ZTCoreKit.ZTBaseMappable
+public func ->> <Transform>(left: [Transform.Object], right: (ZTCoreKit.ZTMap, Transform)) where Transform : ZTCoreKit.ZTTransformType, Transform.Object : ZTCoreKit.ZTBaseMappable
+public func <<- <Transform>(left: inout [Transform.Object]?, right: (ZTCoreKit.ZTMap, Transform)) where Transform : ZTCoreKit.ZTTransformType, Transform.Object : ZTCoreKit.ZTBaseMappable
+public func ->> <Transform>(left: [Transform.Object]?, right: (ZTCoreKit.ZTMap, Transform)) where Transform : ZTCoreKit.ZTTransformType, Transform.Object : ZTCoreKit.ZTBaseMappable
 public func <<- <Transform>(left: inout [[Transform.Object]], right: (ZTCoreKit.ZTMap, Transform)) where Transform : ZTCoreKit.ZTTransformType
 public func ->> <Transform>(left: [[Transform.Object]], right: (ZTCoreKit.ZTMap, Transform)) where Transform : ZTCoreKit.ZTTransformType
 public func <<- <Transform>(left: inout [[Transform.Object]]?, right: (ZTCoreKit.ZTMap, Transform)) where Transform : ZTCoreKit.ZTTransformType
@@ -3627,6 +3630,7 @@ open class ZTISO8601DateTransform : ZTCoreKit.ZTDateFormatterTransform {
   final public let keyPath: Swift.String?
   final public let context: (any ZTCoreKit.ZTMapContext)?
   final public let serializeCallback: (Foundation.URLRequest?, Foundation.HTTPURLResponse?, Foundation.Data?, (any Swift.Error)?) throws -> [T]
+  @available(*, deprecated, message: "This method will be deleted in a future version of the SDK.")
   final public func serialize(request: Foundation.URLRequest?, response: Foundation.HTTPURLResponse?, data: Foundation.Data?, error: (any Swift.Error)?) throws -> [T]
   @objc deinit
 }
@@ -3644,8 +3648,8 @@ public class ZTReachability {
     get
     set
   }
-  public typealias ZTConnectionReachable = (ZTCoreKit.ZTReachability) -> ()
-  public typealias ZTConnectionUnReachable = (ZTCoreKit.ZTReachability) -> ()
+  public typealias ZTConnectionReachable = (ZTCoreKit.ZTReachability) -> Swift.Void
+  public typealias ZTConnectionUnReachable = (ZTCoreKit.ZTReachability) -> Swift.Void
   public var onConnectionReachable: ZTCoreKit.ZTReachability.ZTConnectionReachable?
   public var onConnectionUnReachable: ZTCoreKit.ZTReachability.ZTConnectionUnReachable?
   public var managerStarted: Swift.Bool
@@ -3690,9 +3694,9 @@ open class ZTDateDefaultTransform : ZTCoreKit.ZTTransformType {
   open func transformToJSON(_ value: Foundation.Date?) -> Swift.Double?
   @objc deinit
 }
-public typealias ZTBaseResult = (_ error: (any Swift.Error)?) -> ()
-public typealias ZTResultObject<T> = (T?, (any Swift.Error)?) -> ()
-public typealias ZTResultArray<T> = ([T]?, (any Swift.Error)?) -> ()
+public typealias ZTBaseResult = (_ error: (any Swift.Error)?) -> Swift.Void
+public typealias ZTResultObject<T> = (T?, (any Swift.Error)?) -> Swift.Void
+public typealias ZTResultArray<T> = ([T]?, (any Swift.Error)?) -> Swift.Void
 public typealias ZTCompletion = (() -> Swift.Void)
 public protocol ZTBaseMappable {
   mutating func mapping(map: ZTCoreKit.ZTMap)
@@ -3738,24 +3742,24 @@ extension Swift.Set where Element : ZTCoreKit.ZTBaseMappable {
   final public func updateUserShoe(code: Swift.String, attributes: [Swift.String : Any], completion: @escaping ZTCoreKit.ZTResultObject<ZTCoreKit.ZTUserShoe>)
   final public func deleteUserShoe(code: Swift.String, completion: @escaping ZTCoreKit.ZTBaseResult)
   final public func uploadProfileImage(_ image: Foundation.Data, completion: (ZTCoreKit.ZTBaseResult)? = nil)
-  final public func getUserProfile(completion: @escaping (([Swift.String : Any]?, (any Swift.Error)?) -> ()))
-  final public func getActivities<T>(code: Swift.String?, start: Foundation.Date, end: Foundation.Date, fields: [Swift.String] = [], include: [Swift.String]? = nil, completion: (([T]?, (any Swift.Error)?) -> ())? = nil) where T : ZTCoreKit.ZTMappable
-  final public func getActivities<T>(code: Swift.String?, offset: Swift.Int, limit: Swift.Int, fields: [Swift.String] = [], include: [Swift.String]? = nil, whereOptions: [Swift.String : Any]? = nil, duration: [Swift.String : Any]? = nil, start: Foundation.Date? = nil, end: Foundation.Date? = nil, completion: (([T]?, (any Swift.Error)?) -> ())? = nil) where T : ZTCoreKit.ZTMappable
-  final public func getActivity<T>(id: Swift.String, fields: [Swift.String] = [], include: [Swift.String]? = nil, whereOptions: [Swift.String : Any]? = nil, duration: [Swift.String : Any]? = nil, start: Foundation.Date? = nil, end: Foundation.Date? = nil, completion: ((T?, (any Swift.Error)?) -> ())? = nil) where T : ZTCoreKit.ZTMappable
-  final public func startActivity(id: Swift.String, code: Swift.String, startTime: Swift.Int64 = Date().timestamp, attributes: [Swift.String : Any]? = nil, completion: ((Swift.String?, (any Swift.Error)?) -> ())?)
+  final public func getUserProfile(completion: @escaping (([Swift.String : Any]?, (any Swift.Error)?) -> Swift.Void))
+  final public func getActivities<T>(code: Swift.String?, start: Foundation.Date, end: Foundation.Date, fields: [Swift.String] = [], include: [Swift.String]? = nil, completion: (([T]?, (any Swift.Error)?) -> Swift.Void)? = nil) where T : ZTCoreKit.ZTMappable
+  final public func getActivities<T>(code: Swift.String?, offset: Swift.Int, limit: Swift.Int, fields: [Swift.String] = [], include: [Swift.String]? = nil, whereOptions: [Swift.String : Any]? = nil, duration: [Swift.String : Any]? = nil, start: Foundation.Date? = nil, end: Foundation.Date? = nil, completion: (([T]?, (any Swift.Error)?) -> Swift.Void)? = nil) where T : ZTCoreKit.ZTMappable
+  final public func getActivity<T>(id: Swift.String, fields: [Swift.String] = [], include: [Swift.String]? = nil, whereOptions: [Swift.String : Any]? = nil, duration: [Swift.String : Any]? = nil, start: Foundation.Date? = nil, end: Foundation.Date? = nil, completion: ((T?, (any Swift.Error)?) -> Swift.Void)? = nil) where T : ZTCoreKit.ZTMappable
+  final public func startActivity(id: Swift.String, code: Swift.String, startTime: Swift.Int64 = Date().timestamp, attributes: [Swift.String : Any]? = nil, completion: ((Swift.String?, (any Swift.Error)?) -> Swift.Void)?)
   final public func addActivitySegments(activityId: Swift.String, duration: Swift.Int? = nil, segments: [ZTCoreKit.ZTSegmentData]?, completion: ZTCoreKit.ZTBaseResult? = nil)
   final public func addChunk(code: Swift.String, chunk: ZTCoreKit.ZTSegmentData, attributes: [Swift.String : Any]? = nil, completion: ZTCoreKit.ZTBaseResult? = nil)
   final public func addActivityChunks(code: Swift.String, chunks: [ZTCoreKit.ZTSegmentData], attributes: [Swift.String : Any]? = nil, completion: ZTCoreKit.ZTBaseResult? = nil)
   final public func deleteActivity(id: Swift.String, completion: ZTCoreKit.ZTBaseResult? = nil)
-  final public func stopActivity<T>(id: Swift.String, duration: Swift.Int? = nil, data: [Swift.String]?, completion: ((T?, (any Swift.Error)?) -> ())? = nil) where T : ZTCoreKit.ZTMappable
-  final public func stopActivity<T>(id: Swift.String, duration: Swift.Int? = nil, timestamp: Swift.Int64? = nil, segments: [ZTCoreKit.ZTSegmentData]?, completion: ((T?, (any Swift.Error)?) -> ())? = nil) where T : ZTCoreKit.ZTMappable
-  final public func getData<T>(path: Swift.String, parameters: [Swift.String : Any]? = nil, completion: ((T?, (any Swift.Error)?) -> ())? = nil) where T : ZTCoreKit.ZTMappable
-  final public func getData(path: Swift.String, parameters: [Swift.String : Any]? = nil, completion: @escaping (([Swift.String : Any]?, Foundation.Data?, (any Swift.Error)?) -> ()))
-  final public func getData(path: Swift.String, parameters: [Swift.String : Any]? = nil, completion: @escaping (([[Swift.String : Any]]?, (any Swift.Error)?) -> ()))
+  final public func stopActivity<T>(id: Swift.String, duration: Swift.Int? = nil, data: [Swift.String]?, completion: ((T?, (any Swift.Error)?) -> Swift.Void)? = nil) where T : ZTCoreKit.ZTMappable
+  final public func stopActivity<T>(id: Swift.String, duration: Swift.Int? = nil, timestamp: Swift.Int64? = nil, segments: [ZTCoreKit.ZTSegmentData]?, completion: ((T?, (any Swift.Error)?) -> Swift.Void)? = nil) where T : ZTCoreKit.ZTMappable
+  final public func getData<T>(path: Swift.String, parameters: [Swift.String : Any]? = nil, completion: ((T?, (any Swift.Error)?) -> Swift.Void)? = nil) where T : ZTCoreKit.ZTMappable
+  final public func getData(path: Swift.String, parameters: [Swift.String : Any]? = nil, completion: @escaping (([Swift.String : Any]?, Foundation.Data?, (any Swift.Error)?) -> Swift.Void))
+  final public func getData(path: Swift.String, parameters: [Swift.String : Any]? = nil, completion: @escaping (([[Swift.String : Any]]?, (any Swift.Error)?) -> Swift.Void))
   final public func getAppAttributes(completion: @escaping ([Swift.String : Any]?, (any Swift.Error)?) -> Swift.Void)
-  final public func checkFirmwareUpdate(completion: @escaping ((_ updatable: Swift.Bool, _ error: (any Swift.Error)?) -> ()))
-  final public func checkFirmwareUpdate(completion: @escaping ((_ updatable: Swift.Bool, _ version: Swift.String?, _ error: (any Swift.Error)?) -> ()))
-  final public func getDataArray(path: Swift.String, parameters: [Swift.String : Any]? = nil, completion: @escaping (([[Swift.String : Any]]?, (any Swift.Error)?) -> ()))
+  final public func checkFirmwareUpdate(completion: @escaping ((_ updatable: Swift.Bool, _ error: (any Swift.Error)?) -> Swift.Void))
+  final public func checkFirmwareUpdate(completion: @escaping ((_ updatable: Swift.Bool, _ version: Swift.String?, _ error: (any Swift.Error)?) -> Swift.Void))
+  final public func getDataArray(path: Swift.String, parameters: [Swift.String : Any]? = nil, completion: @escaping (([[Swift.String : Any]]?, (any Swift.Error)?) -> Swift.Void))
   final public func postData(path: Swift.String, parameters: [Swift.String : Any], completion: @escaping (ZTCoreKit.ZTBaseResult))
   final public func postData<T>(path: Swift.String, parameters: [Swift.String : Any]? = nil, completion: @escaping (ZTCoreKit.ZTResultObject<T>)) where T : ZTCoreKit.ZTMappable
   final public func postDataGenericResult(path: Swift.String, parameters: [Swift.String : Any], completion: @escaping ((Any?, (any Swift.Error)?) -> Swift.Void))
@@ -3851,6 +3855,10 @@ public typealias ScanFinishedBlock = ((any Swift.Error)?) -> Swift.Void
   final public func scan(macAddress: Swift.String, timeout: Swift.Double? = 15, deviceDiscovered: ZTCoreKit.ScanResultBlock? = nil, completion: ZTCoreKit.ScanFinishedBlock? = nil)
   final public func stopScan()
   final public func connectWithDevice(_ device: ZTCoreKit.ZTDevice?, timeout: Swift.Double? = 5, isDfu: Swift.Bool = false, completion: @escaping ZTCoreKit.ConnectResultBlock)
+  #if compiler(>=5.3) && $AsyncAwait
+  final public func connect(withCode code: Swift.String, timeout: Swift.Double? = 20) async throws -> ZTCoreKit.ZTDevice
+  #endif
+  @available(*, deprecated, renamed: "connect(withCode:)", message: "Use Swift Concurrency compliant (Async/Await) method instead.")
   final public func connectWithCode(_ code: Swift.String, timeout: Swift.Double? = 20, completion: @escaping ZTCoreKit.ConnectResultBlock)
   final public func getDeviceInfo(code: Swift.String, completion: @escaping (ZTCoreKit.ZTDeviceInfo?, (any Swift.Error)?) -> Swift.Void)
   final public func tryReconnect(completion: ZTCoreKit.ConnectResultBlock? = nil)

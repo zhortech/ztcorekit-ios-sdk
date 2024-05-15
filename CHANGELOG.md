@@ -1,8 +1,12 @@
 # Changelog
 
+## [1.3.2](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.3.2) (2024-05-14)
+
+- fixed an issue where packet were not cached when network was not reachable to add them to database 
+
 ## [1.3.1](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.3.1) (2024-04-23)
 
-- public method to save cached packets
+- ability to save cached packets
 
 ## [1.3.0](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.3.0) (2024-04-19)
 
@@ -79,7 +83,7 @@
 
 ## [1.2.1](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.2.1) (2023-11-08)
 
-- updated `ZTError.Enums.FirmwareError` cases
+- updated `ZTError.Enums.FirmwareError` enum
 
 ## [1.2.0](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.2.0) (2023-10-02)
 
