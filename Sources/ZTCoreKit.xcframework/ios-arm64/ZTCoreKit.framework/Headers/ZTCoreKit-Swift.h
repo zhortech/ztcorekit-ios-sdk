@@ -278,6 +278,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #pragma clang diagnostic ignored "-Watimport-in-framework-header"
 #endif
 @import CoreBluetooth;
+@import CoreData;
 @import Dispatch;
 @import Foundation;
 @import ObjectiveC;
@@ -1246,10 +1247,6 @@ typedef SWIFT_ENUM(NSInteger, DFUUuidType, open) {
 
 
 
-
-
-
-
 /// This converter converts Intel HEX file to BIN.
 /// The <a href="https://en.wikipedia.org/wiki/Intel_HEX">Intel HEX</a> specification can be found here:
 /// <a href="http://www.interlog.com/~speff/usefulinfo/Hexfrmt.pdf">link</a>.
@@ -1268,7 +1265,6 @@ SWIFT_CLASS("_TtC9ZTCoreKit21IntelHex2BinConverter")
 @interface IntelHex2BinConverter : NSObject
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
-
 
 
 
@@ -1318,9 +1314,6 @@ SWIFT_PROTOCOL("_TtP9ZTCoreKit14LoggerDelegate_")
 
 
 
-
-
-
 /// This initiator can be used to start a DFU process using Secure DFU service.
 /// The default <code>DFUServiceInitiator</code> will select the proper executor based
 /// on the discovered services. If you know your device supports the Secure DFU you may
@@ -1332,6 +1325,74 @@ SWIFT_CLASS("_TtC9ZTCoreKit25SecureDFUServiceInitiator")
 - (nonnull instancetype)initWithQueue:(dispatch_queue_t _Nullable)queue delegateQueue:(dispatch_queue_t _Nonnull)delegateQueue progressQueue:(dispatch_queue_t _Nonnull)progressQueue loggerQueue:(dispatch_queue_t _Nonnull)loggerQueue centralManagerOptions:(NSDictionary<NSString *, id> * _Nullable)centralManagerOptions OBJC_DESIGNATED_INITIALIZER;
 @end
 
+
+
+@class NSDate;
+@class NSMutableOrderedSet;
+@class NSEntityDescription;
+@class NSManagedObjectContext;
+
+/// Activity. It represents activity running on modules.
+SWIFT_CLASS_NAMED("ZTActivity")
+@interface ZTActivity : NSManagedObject
+/// Activity Id
+@property (nonatomic, copy) NSString * _Nonnull id;
+/// Activity identifier
+@property (nonatomic, copy) NSString * _Nonnull activityIdentifier;
+/// Application Id
+@property (nonatomic, copy) NSString * _Nullable appId;
+/// Activity type
+@property (nonatomic, copy) NSString * _Nonnull activityType;
+/// Start date
+@property (nonatomic, copy) NSDate * _Nullable startDate;
+/// End date
+@property (nonatomic, copy) NSDate * _Nullable endDate;
+/// Start timestamp in ms from firmware
+@property (nonatomic) int64_t startTimestamp;
+/// End timestamp in ms from firmware
+@property (nonatomic) int64_t endTimestamp;
+/// Timezone abbreviation
+@property (nonatomic, copy) NSString * _Nullable tz;
+/// Activity status
+@property (nonatomic, copy) NSString * _Nullable status;
+/// Temporary cached packets
+@property (nonatomic, strong) NSMutableOrderedSet * _Nullable packets;
+/// Information about the current activity
+@property (nonatomic, copy) NSData * _Nullable metaDataRawValue;
+/// Stop reason obtained from firmware
+@property (nonatomic, copy) NSData * _Nullable stopReasonRawValue;
+/// Is raw data enabled
+/// Used for Universal firmware
+@property (nonatomic) BOOL isRawDataMode;
+/// Is automatic activity
+/// Used for Safety
+@property (nonatomic) BOOL isAutomatic;
+/// Force stop for automatic activity
+/// Used for Safety
+@property (nonatomic) BOOL forceStop;
+/// Activity was interrupted e.g. in case of mobility scan
+@property (nonatomic) BOOL isInterrupted;
+/// Id of first chunk
+/// Used for Safety
+@property (nonatomic) int16_t firstChunkId;
+/// Id of last chunk
+/// Used for Safety
+@property (nonatomic) int16_t lastChunkId;
+/// Number of chunks for activity stored in firmware
+@property (nonatomic) int16_t chunkCount;
+/// Anchor timestamp defined with firmware MSG_TIME
+@property (nonatomic) int64_t anchorTimestamp;
+/// Start timestamp for custom activity
+@property (nonatomic) int64_t customActivityStartTimestamp;
+/// Start chunk id for custom activity
+@property (nonatomic) int16_t customActivityFirstChunkId;
+/// Firmware version for activity
+@property (nonatomic, copy) NSString * _Nullable fwVersion;
+/// Shoes serial number
+@property (nonatomic, copy) NSString * _Nullable shoesSerial;
+/// Initializer
+- (nonnull instancetype)initWithEntity:(NSEntityDescription * _Nonnull)entity insertIntoManagedObjectContext:(NSManagedObjectContext * _Nullable)context OBJC_DESIGNATED_INITIALIZER;
+@end
 
 
 
@@ -1424,52 +1485,40 @@ SWIFT_CLASS("_TtC9ZTCoreKit8ZTDevice")
 @end
 
 
-/// Class which implements the various <code>URLSessionDelegate</code> methods to connect various Alamofire features.
-SWIFT_CLASS("_TtC9ZTCoreKit17ZTSessionDelegate")
-@interface ZTSessionDelegate : NSObject
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+/// Activity segment data
+SWIFT_CLASS_NAMED("ZTPacket")
+@interface ZTPacket : NSManagedObject
+/// Packet identifier.
+@property (nonatomic) int16_t id;
+@property (nonatomic, copy) NSDate * _Nonnull createdAt;
+@property (nonatomic, copy) NSDate * _Nonnull fulfilledAt;
+@property (nonatomic, copy) NSDate * _Nullable scheduledDeleted;
+@property (nonatomic, copy) NSDate * _Nonnull sentAt;
+/// Raw data representing packet.
+@property (nonatomic, copy) NSData * _Nullable rawData;
+/// Activity to which packet belongs to.
+@property (nonatomic, strong) ZTActivity * _Nullable activity;
+/// Timestamp for packet.
+@property (nonatomic) int64_t timestamp;
+/// Packet’s duration/
+@property (nonatomic) int16_t duration;
+/// As CoreData can’t handle UInt8, we use Int16 to store all positive possible values of an UInt8.
+@property (nonatomic) int16_t statusRawValue;
+/// Original timestamp from packet data in millisecondss.
+@property (nonatomic) int64_t originalTimestamp;
+/// Number of packets.
+@property (nonatomic) int16_t packetsNumber;
+/// Firmware version.
+@property (nonatomic, copy) NSString * _Nullable fwVersion;
+/// Number of tries to download packet
+@property (nonatomic) int16_t retryCount;
+- (nonnull instancetype)initWithEntity:(NSEntityDescription * _Nonnull)entity insertIntoManagedObjectContext:(NSManagedObjectContext * _Nullable)context OBJC_DESIGNATED_INITIALIZER;
 @end
 
-@class NSURLSession;
 
-@interface ZTSessionDelegate (SWIFT_EXTENSION(ZTCoreKit)) <NSURLSessionDelegate>
-- (void)URLSession:(NSURLSession * _Nonnull)session didBecomeInvalidWithError:(NSError * _Nullable)error;
-@end
 
-@class NSURLSessionDataTask;
-@class NSCachedURLResponse;
 
-@interface ZTSessionDelegate (SWIFT_EXTENSION(ZTCoreKit)) <NSURLSessionDataDelegate>
-- (void)URLSession:(NSURLSession * _Nonnull)session dataTask:(NSURLSessionDataTask * _Nonnull)dataTask didReceiveData:(NSData * _Nonnull)data;
-- (void)URLSession:(NSURLSession * _Nonnull)session dataTask:(NSURLSessionDataTask * _Nonnull)dataTask willCacheResponse:(NSCachedURLResponse * _Nonnull)proposedResponse completionHandler:(void (^ _Nonnull)(NSCachedURLResponse * _Nullable))completionHandler;
-@end
 
-@class NSURLSessionDownloadTask;
-
-@interface ZTSessionDelegate (SWIFT_EXTENSION(ZTCoreKit)) <NSURLSessionDownloadDelegate>
-- (void)URLSession:(NSURLSession * _Nonnull)session downloadTask:(NSURLSessionDownloadTask * _Nonnull)downloadTask didResumeAtOffset:(int64_t)fileOffset expectedTotalBytes:(int64_t)expectedTotalBytes;
-- (void)URLSession:(NSURLSession * _Nonnull)session downloadTask:(NSURLSessionDownloadTask * _Nonnull)downloadTask didWriteData:(int64_t)bytesWritten totalBytesWritten:(int64_t)totalBytesWritten totalBytesExpectedToWrite:(int64_t)totalBytesExpectedToWrite;
-- (void)URLSession:(NSURLSession * _Nonnull)session downloadTask:(NSURLSessionDownloadTask * _Nonnull)downloadTask didFinishDownloadingToURL:(NSURL * _Nonnull)location;
-@end
-
-@class NSURLSessionTask;
-@class NSURLAuthenticationChallenge;
-@class NSURLCredential;
-@class NSInputStream;
-@class NSHTTPURLResponse;
-@class NSURLRequest;
-@class NSURLSessionTaskMetrics;
-
-@interface ZTSessionDelegate (SWIFT_EXTENSION(ZTCoreKit)) <NSURLSessionTaskDelegate>
-- (void)URLSession:(NSURLSession * _Nonnull)session task:(NSURLSessionTask * _Nonnull)task didReceiveChallenge:(NSURLAuthenticationChallenge * _Nonnull)challenge completionHandler:(void (^ _Nonnull)(NSURLSessionAuthChallengeDisposition, NSURLCredential * _Nullable))completionHandler;
-- (void)URLSession:(NSURLSession * _Nonnull)session task:(NSURLSessionTask * _Nonnull)task didSendBodyData:(int64_t)bytesSent totalBytesSent:(int64_t)totalBytesSent totalBytesExpectedToSend:(int64_t)totalBytesExpectedToSend;
-- (void)URLSession:(NSURLSession * _Nonnull)session task:(NSURLSessionTask * _Nonnull)task needNewBodyStream:(void (^ _Nonnull)(NSInputStream * _Nullable))completionHandler;
-- (void)URLSession:(NSURLSession * _Nonnull)session task:(NSURLSessionTask * _Nonnull)task willPerformHTTPRedirection:(NSHTTPURLResponse * _Nonnull)response newRequest:(NSURLRequest * _Nonnull)request completionHandler:(void (^ _Nonnull)(NSURLRequest * _Nullable))completionHandler;
-- (void)URLSession:(NSURLSession * _Nonnull)session task:(NSURLSessionTask * _Nonnull)task didFinishCollectingMetrics:(NSURLSessionTaskMetrics * _Nonnull)metrics;
-- (void)URLSession:(NSURLSession * _Nonnull)session task:(NSURLSessionTask * _Nonnull)task didCompleteWithError:(NSError * _Nullable)error;
-- (void)URLSession:(NSURLSession * _Nonnull)session taskIsWaitingForConnectivity:(NSURLSessionTask * _Nonnull)task SWIFT_AVAILABILITY(watchos,introduced=4.0) SWIFT_AVAILABILITY(tvos,introduced=11.0) SWIFT_AVAILABILITY(ios,introduced=11.0) SWIFT_AVAILABILITY(macos,introduced=10.13);
-@end
 
 #endif
 #if __has_attribute(external_source_symbol)

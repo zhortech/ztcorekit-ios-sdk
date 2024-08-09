@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.0](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.4.0) (2024-08-08)
+
+- Required version of iOS is now iOS 15
+- Refactored chunck dowload/upload mechanims, now using CoreData for effiency
+- Updated dependencies injection + updated to latest dependencies releases
+- Fixed Loggin mechanism, which was causing some crashes
+
 ## [1.3.2](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.3.2) (2024-05-14)
 
 - fixed an issue where packet were not cached when network was not reachable to add them to database 
@@ -126,7 +133,7 @@
 
 ## [1.1.90](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.90) (2023-07-19)
 
-- added new internal method `ZTSegmentData.updateSegments` to update segments by id with new status
+- added new internal method `ZTPacket.updateSegments` to update segments by id with new status
 
 ## [1.1.89](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.1.89) (2023-07-14)
 
