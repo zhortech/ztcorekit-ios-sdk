@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.4.1](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.4.1) (2024-08-13)
+
+-  Add privacy-impacting signature file. 
+
 ## [1.4.0](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.4.0) (2024-08-08)
 
 - Required version of iOS is now iOS 15
