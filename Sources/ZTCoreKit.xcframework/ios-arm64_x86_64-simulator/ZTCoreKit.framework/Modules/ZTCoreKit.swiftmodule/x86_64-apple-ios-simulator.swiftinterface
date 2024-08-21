@@ -654,7 +654,7 @@ public class ZTDatabaseService<Packet, Activity> where Packet : ZTCoreKit.ZTPack
   public func updateActivity(id: Swift.String, updateBlock: @escaping (Activity) -> Swift.Void, completion: (((any Swift.Error)?) -> Swift.Void)? = nil)
   public func deleteActivity(withId id: Swift.String, completion: (((any Swift.Error)?) -> Swift.Void)? = nil)
   #if compiler(>=5.3) && $AsyncAwait
-  public func createPacket(data: Foundation.Data, activity: (any ZTCoreKit.ZTActivityCachable)?, fwVersion: Swift.String?, updateBlock: ((Packet) -> Swift.Void)? = nil) async -> Packet
+  public func createPacket(data: Foundation.Data, activity: (any ZTCoreKit.ZTActivityCachable)?, fwVersion: Swift.String?, updateBlock: ((Packet) -> Swift.Void)? = nil) async -> Packet?
   #endif
   public func fetchPackets(for activityId: Swift.String, completion: @escaping (Swift.Result<[Packet], any Swift.Error>) -> Swift.Void)
   #if compiler(>=5.3) && $AsyncAwait
