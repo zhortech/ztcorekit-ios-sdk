@@ -1935,7 +1935,7 @@ public protocol ZTActivityCachable : CoreData.NSManagedObject {
   var packets: Foundation.NSMutableOrderedSet? { get set }
   var startDate: Foundation.Date? { get set }
   #if compiler(>=5.3) && $AsyncAwait
-  func upload<Packet>(_ packets: [Packet]) async throws where Packet : ZTCoreKit.ZTPacketCachable
+  func upload<Packet>(_ packets: [Packet], context: CoreData.NSManagedObjectContext) async throws where Packet : ZTCoreKit.ZTPacketCachable
   #endif
 }
 extension ZTCoreKit.ZTActivityCachable {
@@ -3248,7 +3248,7 @@ public let ztActivityKey: Swift.String
   public func uploadCache(completion: @escaping ZTCoreKit.ZTCompletion)
   public func saveCachedPackets()
   #if compiler(>=5.3) && $AsyncAwait
-  open func upload<Packet>(_ packets: [Packet]) async throws where Packet : ZTCoreKit.ZTPacketCachable
+  open func upload<Packet>(_ packets: [Packet], context: CoreData.NSManagedObjectContext) async throws where Packet : ZTCoreKit.ZTPacketCachable
   #endif
   @objc deinit
 }

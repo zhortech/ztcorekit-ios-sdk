@@ -1,6 +1,10 @@
 # Changelog
 
-## [1.4.2](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.4.1) (2024-08-21)
+## [1.4.3](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.4.3) (2024-08-22)
+
+-  Fixed a crash
+
+## [1.4.2](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.4.2) (2024-08-21)
 
 -  Fixed a bug with duplicate packets
 
