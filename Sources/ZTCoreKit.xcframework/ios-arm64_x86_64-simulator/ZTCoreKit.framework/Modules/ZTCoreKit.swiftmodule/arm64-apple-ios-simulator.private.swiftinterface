@@ -639,9 +639,10 @@ public typealias ScanFinishedBlock = ((any Swift.Error)?) -> Swift.Void
   @objc deinit
 }
 public class ZTDatabaseService<Packet, Activity> where Packet : ZTCoreKit.ZTPacketCachable, Activity : ZTCoreKit.ZTActivityCachable {
-  public var currentActivityId: Swift.String?
-  public init(context: CoreData.NSManagedObjectContext = ZTCoreDataStack.shared.context)
-  @objc deinit
+  public init(context: CoreData.NSManagedObjectContext)
+  #if compiler(>=5.3) && $AsyncAwait
+  final public func checkUnsentPackets(packetThreshold: Swift.Int) async throws
+  #endif
   #if compiler(>=5.3) && $AsyncAwait
   public func fetchActivity(withId activityId: Swift.String) async throws -> Activity?
   #endif
@@ -652,23 +653,25 @@ public class ZTDatabaseService<Packet, Activity> where Packet : ZTCoreKit.ZTPack
   public func createActivity(withId id: Swift.String, updateBlock: ((Activity) -> Swift.Void)? = nil) async throws -> Activity?
   #endif
   public func updateActivity(id: Swift.String, updateBlock: @escaping (Activity) -> Swift.Void, completion: (((any Swift.Error)?) -> Swift.Void)? = nil)
-  public func deleteActivity(withId id: Swift.String, completion: (((any Swift.Error)?) -> Swift.Void)? = nil)
+  public func deleteActivity(withId id: Swift.String) throws
   #if compiler(>=5.3) && $AsyncAwait
   public func createPacket(data: Foundation.Data, activity: (any ZTCoreKit.ZTActivityCachable)?, fwVersion: Swift.String?, updateBlock: ((Packet) -> Swift.Void)? = nil) async -> Packet?
   #endif
   public func fetchPackets(for activityId: Swift.String, completion: @escaping (Swift.Result<[Packet], any Swift.Error>) -> Swift.Void)
   #if compiler(>=5.3) && $AsyncAwait
-  public func fetchPackets(forActivityId activityId: Swift.String, from startId: Swift.Int16? = nil, to lastId: Swift.Int16? = nil, in managedObjectContext: CoreData.NSManagedObjectContext) async throws -> [Packet]
+  public func fetchPackets(forActivityId activityId: Swift.String, from startId: Swift.Int16? = nil, to lastId: Swift.Int16? = nil) async throws -> [Packet]
   #endif
   public func trashOldPackets()
   public func updatePackets(for activityId: Swift.String, from startId: Swift.Int16, to endId: Swift.Int16, withStatus newStatus: ZTCoreKit.ZTPacket.Status, completion: @escaping ((any Swift.Error)?) -> Swift.Void)
   #if compiler(>=5.3) && $AsyncAwait
-  public func add(_ packet: Packet, to activityId: Swift.String, in managedContext: CoreData.NSManagedObjectContext) async throws
+  public func add(_ packet: Packet, to activityId: Swift.String) async throws
   #endif
   #if compiler(>=5.3) && $AsyncAwait
-  public func update(_ packets: [Packet], withNewStatus newStatus: ZTCoreKit.ZTPacket.Status, in managedContext: CoreData.NSManagedObjectContext) async
+  public func update(_ packets: [Packet], withNewStatus newStatus: ZTCoreKit.ZTPacket.Status) async
   #endif
   public func update(packet: Packet, updateBlock: @escaping (Packet) -> Swift.Void, completion: (((any Swift.Error)?) -> Swift.Void)? = nil)
+  public func saveContext() throws
+  @objc deinit
 }
 public class ZTUser : ZTCoreKit.ZTMappable {
   public var attributes: [Swift.String : Any]
@@ -2572,6 +2575,20 @@ public enum ZTEnvironment {
   case zcdev
   case zcstaging
   case zcproduction
+  case cnzcdev
+  case cnzcproduction
+  public var name: Swift.String {
+    get
+  }
+  public var isDEV: Swift.Bool {
+    get
+  }
+  public var isZC: Swift.Bool {
+    get
+  }
+  public var needPut: Swift.Bool {
+    get
+  }
   public static func == (a: ZTCoreKit.ZTEnvironment, b: ZTCoreKit.ZTEnvironment) -> Swift.Bool
   public func hash(into hasher: inout Swift.Hasher)
   public var hashValue: Swift.Int {
@@ -2845,12 +2862,11 @@ extension ZTCoreKit.ZTFirmwareRevision {
 }
 @_hasMissingDesignatedInitializers public class ZTCoreDataStack {
   public static let shared: ZTCoreKit.ZTCoreDataStack
-  public var context: CoreData.NSManagedObjectContext {
+  public var mainContext: CoreData.NSManagedObjectContext {
     get
     set
   }
-  public func oneTimeBackgroundContext() -> CoreData.NSManagedObjectContext
-  public func saveOneTimeBackgroundContext(_ oneTimeBackgroundContext: CoreData.NSManagedObjectContext) throws
+  public func backgroundContext() -> CoreData.NSManagedObjectContext
   public func saveContext() throws
   @objc deinit
 }
@@ -3389,7 +3405,7 @@ extension ZTCoreKit.ZTCore : ZTCoreKit.DFUServiceDelegate, ZTCoreKit.DFUProgress
       get
     }
   }
-  public init(data: Foundation.Data)
+  public init(data: Foundation.Data, insertInto context: CoreData.NSManagedObjectContext)
   @objc override dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
   required public init(data: Foundation.Data, activity: (any ZTCoreKit.ZTActivityCachable)?, fwVersion: Swift.String? = nil, context: CoreData.NSManagedObjectContext, name: Swift.String)
   required public init(from decoder: any Swift.Decoder) throws
