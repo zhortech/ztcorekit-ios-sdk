@@ -3260,7 +3260,6 @@ public let ztActivityKey: Swift.String
   @objc override dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
   public func loadAll(firstChunkId: Swift.Int16?, lastChunkId: Swift.Int16? = nil) -> [ZTCoreKit.ZTPacket]
   public func lastSavedChunkId(startId: Swift.Int16? = 0, lastId: Swift.Int16? = 0) -> Swift.Int16
-  public func addToCache(_ segment: ZTCoreKit.ZTPacket)
   public func uploadCache(completion: @escaping ZTCoreKit.ZTCompletion)
   public func saveCachedPackets()
   #if compiler(>=5.3) && $AsyncAwait
@@ -3272,9 +3271,7 @@ extension ZTCoreKit.ZTActivity {
   @nonobjc public class func fetchRequest() -> CoreData.NSFetchRequest<ZTCoreKit.ZTActivity>
   public func getPacketIds() -> [Swift.Int16]
   @discardableResult
-  public func setPackets(ids: [Swift.Int16]) -> [Swift.Int16]
-  @discardableResult
-  public func addPacket(id: Swift.Int16) -> [Swift.Int16]
+  public func addPacket(packet: ZTCoreKit.ZTPacket) -> [ZTCoreKit.ZTPacket]
   public func getActulState() -> ZTCoreKit.ZTDeviceActualState
   public func update(actualState: ZTCoreKit.ZTDeviceActualState)
 }

@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.4.5](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.4.5) (2024-08-28)
+
+-  Fixed a bug with progress reporting
+
 ## [1.4.4](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.4.4) (2024-08-26)
 
 -  Fixed a crash
