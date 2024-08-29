@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.4.6](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.4.6 (2024-08-29)
+
+-  Fixed a bug with realtime
+
 ## [1.4.5](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.4.5) (2024-08-28)
 
 -  Fixed a bug with progress reporting

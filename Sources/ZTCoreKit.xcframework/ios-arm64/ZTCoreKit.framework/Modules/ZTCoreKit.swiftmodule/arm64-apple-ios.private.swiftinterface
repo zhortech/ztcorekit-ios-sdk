@@ -3402,8 +3402,8 @@ extension ZTCoreKit.ZTCore : ZTCoreKit.DFUServiceDelegate, ZTCoreKit.DFUProgress
       get
     }
   }
-  public init(data: Foundation.Data, insertInto context: CoreData.NSManagedObjectContext)
   @objc override dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+  public init(data: Foundation.Data, insertInto context: CoreData.NSManagedObjectContext)
   required public init(data: Foundation.Data, activity: (any ZTCoreKit.ZTActivityCachable)?, fwVersion: Swift.String? = nil, context: CoreData.NSManagedObjectContext, name: Swift.String)
   required public init(from decoder: any Swift.Decoder) throws
   public func encode(to encoder: any Swift.Encoder) throws
