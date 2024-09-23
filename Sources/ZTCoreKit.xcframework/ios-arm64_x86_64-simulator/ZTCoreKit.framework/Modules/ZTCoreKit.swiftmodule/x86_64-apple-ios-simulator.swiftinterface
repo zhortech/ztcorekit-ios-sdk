@@ -1,6 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.10 (swiftlang-5.10.0.13 clang-1500.3.9.4)
+// swift-compiler-version: Apple Swift version 6.0 effective-5.10 (swiftlang-6.0.0.9.11 clang-1600.0.26.2)
 // swift-module-flags: -target x86_64-apple-ios15.6-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name ZTCoreKit
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface
 import CoreBluetooth
 import CoreData
 import CoreTelephony
@@ -627,9 +628,7 @@ public typealias ScanFinishedBlock = ((any Swift.Error)?) -> Swift.Void
   final public func scan(macAddress: Swift.String, timeout: Swift.Double? = 15, deviceDiscovered: ZTCoreKit.ScanResultBlock? = nil, completion: ZTCoreKit.ScanFinishedBlock? = nil)
   final public func stopScan()
   final public func connectWithDevice(_ device: ZTCoreKit.ZTDevice?, timeout: Swift.Double? = 5, isDfu: Swift.Bool = false, completion: @escaping ZTCoreKit.ConnectResultBlock)
-  #if compiler(>=5.3) && $AsyncAwait
   final public func connect(withCode code: Swift.String, timeout: Swift.Double? = 20) async throws -> ZTCoreKit.ZTDevice
-  #endif
   @available(*, deprecated, renamed: "connect(withCode:)", message: "Use Swift Concurrency compliant (Async/Await) method instead.")
   final public func connectWithCode(_ code: Swift.String, timeout: Swift.Double? = 20, completion: @escaping ZTCoreKit.ConnectResultBlock)
   final public func getDeviceInfo(code: Swift.String, completion: @escaping (ZTCoreKit.ZTDeviceInfo?, (any Swift.Error)?) -> Swift.Void)
@@ -640,35 +639,19 @@ public typealias ScanFinishedBlock = ((any Swift.Error)?) -> Swift.Void
 }
 public class ZTDatabaseService<Packet, Activity> where Packet : ZTCoreKit.ZTPacketCachable, Activity : ZTCoreKit.ZTActivityCachable {
   public init(context: CoreData.NSManagedObjectContext)
-  #if compiler(>=5.3) && $AsyncAwait
   final public func checkUnsentPackets(packetThreshold: Swift.Int) async throws
-  #endif
-  #if compiler(>=5.3) && $AsyncAwait
   public func fetchActivity(withId activityId: Swift.String) async throws -> Activity?
-  #endif
-  #if compiler(>=5.3) && $AsyncAwait
   public func fetchActivity(withSerial serial: Swift.String) async throws -> Activity?
-  #endif
-  #if compiler(>=5.3) && $AsyncAwait
   public func createActivity(withId id: Swift.String, updateBlock: ((Activity) -> Swift.Void)? = nil) async throws -> Activity?
-  #endif
   public func updateActivity(id: Swift.String, updateBlock: @escaping (Activity) -> Swift.Void, completion: (((any Swift.Error)?) -> Swift.Void)? = nil)
   public func deleteActivity(withId id: Swift.String) throws
-  #if compiler(>=5.3) && $AsyncAwait
-  public func createPacket(data: Foundation.Data, activity: (any ZTCoreKit.ZTActivityCachable)?, fwVersion: Swift.String?, updateBlock: ((Packet) -> Swift.Void)? = nil) async -> Packet?
-  #endif
+  public func createPacket(data: Foundation.Data, in context: CoreData.NSManagedObjectContext, activity: (any ZTCoreKit.ZTActivityCachable)?, fwVersion: Swift.String?, updateBlock: ((Packet) -> Swift.Void)? = nil) async -> Packet?
   public func fetchPackets(for activityId: Swift.String, completion: @escaping (Swift.Result<[Packet], any Swift.Error>) -> Swift.Void)
-  #if compiler(>=5.3) && $AsyncAwait
   public func fetchPackets(forActivityId activityId: Swift.String, from startId: Swift.Int16? = nil, to lastId: Swift.Int16? = nil) async throws -> [Packet]
-  #endif
   public func trashOldPackets()
   public func updatePackets(for activityId: Swift.String, from startId: Swift.Int16, to endId: Swift.Int16, withStatus newStatus: ZTCoreKit.ZTPacket.Status, completion: @escaping ((any Swift.Error)?) -> Swift.Void)
-  #if compiler(>=5.3) && $AsyncAwait
   public func add(_ packet: Packet, to activityId: Swift.String) async throws
-  #endif
-  #if compiler(>=5.3) && $AsyncAwait
   public func update(_ packets: [Packet], withNewStatus newStatus: ZTCoreKit.ZTPacket.Status) async
-  #endif
   public func update(packet: Packet, updateBlock: @escaping (Packet) -> Swift.Void, completion: (((any Swift.Error)?) -> Swift.Void)? = nil)
   public func saveContext() throws
   @objc deinit
@@ -1398,9 +1381,10 @@ public enum ZTCommand : Swift.UInt8, Swift.CaseIterable, Swift.Identifiable {
   }
   public init?(rawValue: Swift.UInt8)
   public typealias AllCases = [ZTCoreKit.ZTCommand]
+  @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
   public typealias ID = Swift.UInt8
   public typealias RawValue = Swift.UInt8
-  public static var allCases: [ZTCoreKit.ZTCommand] {
+  nonisolated public static var allCases: [ZTCoreKit.ZTCommand] {
     get
   }
   public var rawValue: Swift.UInt8 {
@@ -1937,9 +1921,7 @@ public protocol ZTActivityCachable : CoreData.NSManagedObject {
   var id: Swift.String { get set }
   var packets: Foundation.NSMutableOrderedSet? { get set }
   var startDate: Foundation.Date? { get set }
-  #if compiler(>=5.3) && $AsyncAwait
   func upload<Packet>(_ packets: [Packet], context: CoreData.NSManagedObjectContext) async throws where Packet : ZTCoreKit.ZTPacketCachable
-  #endif
 }
 extension ZTCoreKit.ZTActivityCachable {
   public static func == (lhs: Self, rhs: Self) -> Swift.Bool
@@ -2867,7 +2849,7 @@ extension ZTCoreKit.ZTFirmwareRevision {
     set
   }
   public func backgroundContext() -> CoreData.NSManagedObjectContext
-  public func saveContext() throws
+  public func saveMainContext() throws
   @objc deinit
 }
 public protocol ZTNotifyDataMessage : Swift.Decodable, Swift.Encodable {
@@ -3262,9 +3244,7 @@ public let ztActivityKey: Swift.String
   public func lastSavedChunkId(startId: Swift.Int16? = 0, lastId: Swift.Int16? = 0) -> Swift.Int16
   public func uploadCache(completion: @escaping ZTCoreKit.ZTCompletion)
   public func saveCachedPackets()
-  #if compiler(>=5.3) && $AsyncAwait
   open func upload<Packet>(_ packets: [Packet], context: CoreData.NSManagedObjectContext) async throws where Packet : ZTCoreKit.ZTPacketCachable
-  #endif
   @objc deinit
 }
 extension ZTCoreKit.ZTActivity {

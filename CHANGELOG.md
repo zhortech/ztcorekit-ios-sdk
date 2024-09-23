@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.4.7](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.4.7 (2024-09-23)
+
+-  Fixed crashes
+
 ## [1.4.6](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.4.6 (2024-08-29)
 
 -  Fixed a bug with realtime
