@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.0 effective-5.10 (swiftlang-6.0.0.9.10 clang-1600.0.26.2)
+// swift-compiler-version: Apple Swift version 6.0.2 effective-5.10 (swiftlang-6.0.2.1.2 clang-1600.0.26.4)
 // swift-module-flags: -target arm64-apple-ios15.6 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name ZTCoreKit
 // swift-module-flags-ignorable: -no-verify-emitted-module-interface
 import CoreBluetooth
@@ -575,7 +575,10 @@ public typealias ScanFinishedBlock = ((any Swift.Error)?) -> Swift.Void
   public static let version: Swift.String
   final public var zcVersion: Swift.String
   public static let shared: ZTCoreKit.ZTCore
-  final public let bleManager: ZTCoreKit.ZTBleManager
+  final public var bleManager: ZTCoreKit.ZTBleManager? {
+    get
+    set
+  }
   final public var settings: ZTCoreKit.ZTSettings {
     get
   }
@@ -636,6 +639,7 @@ public typealias ScanFinishedBlock = ((any Swift.Error)?) -> Swift.Void
   final public func checkConnectedDevice(completion: ZTCoreKit.ConnectResultBlock? = nil)
   final public func setDeepSleepMode() throws
   @objc deinit
+  final public func subscribeEvents()
 }
 public class ZTDatabaseService<Packet, Activity> where Packet : ZTCoreKit.ZTPacketCachable, Activity : ZTCoreKit.ZTActivityCachable {
   public init(context: CoreData.NSManagedObjectContext)
@@ -869,6 +873,7 @@ extension ZTCoreKit.ZTPacket {
   final public var isDfuMode: Swift.Bool {
     get
   }
+  final public let onAuthorizationChange: ZTCoreKit.ZTSignal<CoreBluetooth.CBManagerAuthorization>
   final public let onBluetoothStateChange: ZTCoreKit.ZTSignal<CoreBluetooth.CBManagerState>
   final public let onDeviceStateChange: ZTCoreKit.ZTSignal<(ZTCoreKit.ZTDevice?, (any Swift.Error)?)>
   final public let onDeviceDiscovered: ZTCoreKit.ZTSignal<ZTCoreKit.ZTDevice>
@@ -1381,7 +1386,6 @@ public enum ZTCommand : Swift.UInt8, Swift.CaseIterable, Swift.Identifiable {
   }
   public init?(rawValue: Swift.UInt8)
   public typealias AllCases = [ZTCoreKit.ZTCommand]
-  @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
   public typealias ID = Swift.UInt8
   public typealias RawValue = Swift.UInt8
   nonisolated public static var allCases: [ZTCoreKit.ZTCommand] {

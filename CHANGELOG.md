@@ -1,5 +1,10 @@
 # Changelog
-## [1.4.8](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.4.7 (2024-09-23)
+# Changelog
+## [1.4.9](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.4.9 (2024-10-28)
+
+-  Build with XCode 16
+
+## [1.4.8](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.4.8 (2024-09-23)
 
 -  Build with XCode 16
 
