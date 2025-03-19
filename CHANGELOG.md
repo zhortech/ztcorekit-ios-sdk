@@ -1,4 +1,9 @@
 # Changelog
+
+## [1.5.1](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.5.1 (2025-03-19)
+
+- Fixed bad linking
+
 ## [1.5.0](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.5.0 (2025-03-19)
 
 - Bug fix with first connection
