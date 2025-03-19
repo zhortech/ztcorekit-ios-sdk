@@ -35,8 +35,8 @@ To get started with the ZTCoreKit SDK for iOS, check out the [Developer Guide fo
 
 To use the ZTCoreKit SDK for iOS, you will need the following installed on your development machine:
 
-* Xcode 11.0 or later
-* iOS 13 or later
+* Xcode 14.0 or later
+* iOS 15 or later
 
 ## Include the SDK for iOS in an Existing Application
 

@@ -1,7 +1,8 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.0.2 effective-5.10 (swiftlang-6.0.2.1.2 clang-1600.0.26.4)
+// swift-compiler-version: Apple Swift version 6.0.3 effective-5.10 (swiftlang-6.0.3.1.10 clang-1600.0.30.1)
 // swift-module-flags: -target arm64-apple-ios15.6 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name ZTCoreKit
 // swift-module-flags-ignorable: -no-verify-emitted-module-interface
+import Alamofire
 import CoreBluetooth
 import CoreData
 import CoreTelephony
@@ -577,7 +578,6 @@ public typealias ScanFinishedBlock = ((any Swift.Error)?) -> Swift.Void
   public static let shared: ZTCoreKit.ZTCore
   final public var bleManager: ZTCoreKit.ZTBleManager? {
     get
-    set
   }
   final public var settings: ZTCoreKit.ZTSettings {
     get
@@ -3013,6 +3013,7 @@ public enum ZTActivityMode : Swift.UInt8, Swift.Codable {
   case running
   case cycling
   case mobility
+  case swing
   public var name: Swift.String {
     get
   }
@@ -3172,6 +3173,7 @@ public let ztActivityKey: Swift.String
     @objc get
     @objc set
   }
+  public var state: ZTCoreKit.ZTDeviceActualState
   @objc @NSManaged dynamic public var packets: Foundation.NSMutableOrderedSet? {
     @objc get
     @objc set
@@ -3483,7 +3485,7 @@ extension ZTCoreKit.ZTPacket {
   final public func postData<T>(path: Swift.String, parameters: [Swift.String : Any]? = nil, completion: @escaping (ZTCoreKit.ZTResultObject<T>)) where T : ZTCoreKit.ZTMappable
   final public func postDataGenericResult(path: Swift.String, parameters: [Swift.String : Any], completion: @escaping ((Any?, (any Swift.Error)?) -> Swift.Void))
   final public func postDataResult(path: Swift.String, parameters: [Swift.String : Any], completion: @escaping (([Swift.String : Any]?, (any Swift.Error)?) -> Swift.Void))
-  final public func postDataResultArray(path: Swift.String, parameters: [Swift.String : Any], completion: @escaping (([[Swift.String : Any]]?, (any Swift.Error)?) -> Swift.Void))
+  final public func postDataResultArray(path: Swift.String, parameters: [Swift.String : Any], encoding: any Alamofire.ParameterEncoding = JSONEncoding.default, completion: @escaping (([[Swift.String : Any]]?, (any Swift.Error)?) -> Swift.Void))
   final public func deleteData(path: Swift.String, parameters: [Swift.String : Any]? = nil, completion: @escaping (ZTCoreKit.ZTBaseResult))
   final public func addActivityData(activityId: Swift.String, timestamp: Foundation.TimeInterval, data: [Any], completion: @escaping (ZTCoreKit.ZTBaseResult))
   final public func updateActivityAttributes(activityId: Swift.String, attributes: [Swift.String : Any], completion: @escaping ZTCoreKit.ZTBaseResult)

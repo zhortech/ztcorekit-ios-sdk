@@ -1,5 +1,9 @@
 # Changelog
-# Changelog
+## [1.5.0](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.5.0 (2025-03-19)
+
+- Bug fix with first connection
+- Added Raw Data Flow
+
 ## [1.4.9](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.4.9 (2024-10-28)
 
 -  Build with XCode 16
