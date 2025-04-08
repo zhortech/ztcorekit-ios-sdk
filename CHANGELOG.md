@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.5.2](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.5.2 (2025-04-08)
+
+- Alternative Raw Data Flow, using `ZTBaseRaw`
+
 ## [1.5.1](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.5.1 (2025-03-19)
 
 - Fixed bad linking
