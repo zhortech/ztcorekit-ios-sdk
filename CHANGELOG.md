@@ -1,7 +1,9 @@
 # Changelog
 
-## [1.5.3](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.5.3 (2025-04-10)
+## [1.5.4](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.5.4 (2025-04-10)
+- Fixed Linkage issue. TAdded Private ZhortechBase.xcframework
 
+## [1.5.3](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.5.3 (2025-04-10)
 - Fixed Linkage issue. The Framwork shoudl work as expected now
 
 ## [1.5.2](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.5.2 (2025-04-08)

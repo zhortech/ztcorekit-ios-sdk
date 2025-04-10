@@ -10,13 +10,17 @@ let package = Package(
     products: [
         .library(
             name: "ZTCoreKit",
-            targets: ["ZTCoreKit"]
+            targets: ["ZTCoreKit", "ZhortechBase"]
         )
     ],
     targets: [
         .binaryTarget(
             name: "ZTCoreKit",
             path: "Sources/ZTCoreKit.xcframework"
+        ),
+        .binaryTarget(
+            name: "ZhortechBase",
+            path: "Sources/ZhortechBase.xcframework"
         )
     ],
     swiftLanguageVersions: [.v5]
