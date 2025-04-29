@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.5.5](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.5.5 (2025-04-29)
+- Better Error Handling for ZhortechBase.xcframework
+- Antenna commands / Quality of service with `needImprovedConnectivity` flag
+
 ## [1.5.4](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.5.4 (2025-04-10)
 - Fixed Linkage issue. TAdded Private ZhortechBase.xcframework
 

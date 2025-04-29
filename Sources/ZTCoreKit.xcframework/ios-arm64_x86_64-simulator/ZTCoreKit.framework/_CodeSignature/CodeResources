@@ -18,7 +18,11 @@
 		</data>
 		<key>Frameworks/ZhortechBase.framework/ZhortechBase</key>
 		<data>
-		0t4dkh6tHGJ0BASqGAY0a2G4lPo=
+		u1KxRUZpVFAeQ8QEMP4z/pzGdOk=
+		</data>
+		<key>Frameworks/ZhortechBase.framework/_CodeSignature/CodeResources</key>
+		<data>
+		QnPVTtc9MkWIThaARmTqUpqRGtw=
 		</data>
 		<key>Headers/ZTCoreKit-Swift.h</key>
 		<data>
@@ -26,47 +30,47 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		vnc193YlYcubmi6WHGtNx9+gGdY=
+		Qef+/Cv7n11SmR+VSbNw3isuFwA=
 		</data>
 		<key>Modules/ZTCoreKit.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		EW0pgVwlmXwdmM3ZSAqhKnZPwzg=
+		fFT4I9XTcH2pu7Y4sj/Kef2+ROQ=
 		</data>
 		<key>Modules/ZTCoreKit.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		t3ZgK4+f7yhyVjip1sz5Lnqof9A=
+		H8gUnEwtpfVmNUU7ArfoJGy5SZc=
 		</data>
 		<key>Modules/ZTCoreKit.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		1a6gQaR2ZqCUJURjpdaMw3jwX7M=
+		ZB152iVD+CR3GKihcGoSCAmV/Js=
 		</data>
 		<key>Modules/ZTCoreKit.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		t3ZgK4+f7yhyVjip1sz5Lnqof9A=
+		H8gUnEwtpfVmNUU7ArfoJGy5SZc=
 		</data>
 		<key>Modules/ZTCoreKit.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		GXM6TuHhFwE2ouV6XyOm1SFzxBk=
+		yTSOHUVFk/fZ0Q/vwu4LCXZ2IOI=
 		</data>
 		<key>Modules/ZTCoreKit.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		EW0pgVwlmXwdmM3ZSAqhKnZPwzg=
+		fFT4I9XTcH2pu7Y4sj/Kef2+ROQ=
 		</data>
 		<key>Modules/ZTCoreKit.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		uIQS0ACLXFNbnQ1hB4jAHmOo5J0=
+		x0o8uVik7/5joKRLtdYMNDsq0vI=
 		</data>
 		<key>Modules/ZTCoreKit.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		41p/JvJnJWhJvz4qwNG7X7G6z9s=
+		kjoPf4CjDxKPix7FmHkDRncV6zw=
 		</data>
 		<key>Modules/ZTCoreKit.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		uIQS0ACLXFNbnQ1hB4jAHmOo5J0=
+		x0o8uVik7/5joKRLtdYMNDsq0vI=
 		</data>
 		<key>Modules/ZTCoreKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		RDUCXefjs8mZNOt49oMXZbT4isw=
+		9z76hL/zinquvjguSRtN41x8T8w=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -96,7 +100,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			vwZTqqMjDqEylBg3y6JVaY8wbfgRCrn3lLaBhYMZE5E=
+			jJovr2Xp4B1a4VLxwbORCYQLYtFz36y+rFyHdnt/CXA=
+			</data>
+		</dict>
+		<key>Frameworks/ZhortechBase.framework/_CodeSignature/CodeResources</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			6ul1Vie+tdVu1Olv4somWelxtKsqBHBbAiDtPvhkeCo=
 			</data>
 		</dict>
 		<key>Headers/ZTCoreKit-Swift.h</key>
@@ -110,70 +121,70 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			bpdgKd38RaLYyGq/HWr+lriH8fDQs1OJypbI64T5jh0=
+			OY6wbrEW2pZ/J0bSpjj+PiQcX9s7/mCjqmM7tpgDTAQ=
 			</data>
 		</dict>
 		<key>Modules/ZTCoreKit.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			VeWE2LaOLqW71Rh384bFsvTaeQkVnPhmWfpLBvoN7mI=
+			4BWDOH9llOthlDNn/hCVpn2wCQr4URoB6N7yw0X6e7A=
 			</data>
 		</dict>
 		<key>Modules/ZTCoreKit.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Cx/uhJ3wr0PGBHI1Kt0gfccWO+CDWGSrOEfYtmYVxAg=
+			+wFH1Axtl2T17f52me0yENG+sL2viEG4KdKpQK+g3vw=
 			</data>
 		</dict>
 		<key>Modules/ZTCoreKit.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			VeWE2LaOLqW71Rh384bFsvTaeQkVnPhmWfpLBvoN7mI=
+			4BWDOH9llOthlDNn/hCVpn2wCQr4URoB6N7yw0X6e7A=
 			</data>
 		</dict>
 		<key>Modules/ZTCoreKit.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			lvof9NmpMhR5FxcBgQooeiWyIOX8Tp6xKxeMEGjbHYQ=
+			JhfM16Mjn4p1ZUtcZaW5Uc04tR1UF1WNIkeLmIwSXYI=
 			</data>
 		</dict>
 		<key>Modules/ZTCoreKit.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			bpdgKd38RaLYyGq/HWr+lriH8fDQs1OJypbI64T5jh0=
+			OY6wbrEW2pZ/J0bSpjj+PiQcX9s7/mCjqmM7tpgDTAQ=
 			</data>
 		</dict>
 		<key>Modules/ZTCoreKit.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			xtJsZRJsUs16R6FP1Nv7j9GP+dNx44hZrrOenEdH4Ks=
+			zHIduXdIrUATMRLTowkAPGULfBZ0+VMNyOvYk6t4AwA=
 			</data>
 		</dict>
 		<key>Modules/ZTCoreKit.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			S9CgBEhMJxlSuJgL13p0lEXFPbqD/1tweQtUxPKxHBk=
+			ym/Nfsq51bXtG5kXJ7sEiR9zvCTzp64ptVEBbgFYhi8=
 			</data>
 		</dict>
 		<key>Modules/ZTCoreKit.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			xtJsZRJsUs16R6FP1Nv7j9GP+dNx44hZrrOenEdH4Ks=
+			zHIduXdIrUATMRLTowkAPGULfBZ0+VMNyOvYk6t4AwA=
 			</data>
 		</dict>
 		<key>Modules/ZTCoreKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			D4hQPm0GtAiPSO3psbkzZXqSgLmI9yNKnpnANEGByiU=
+			v2oohBEBT3qwgV5zHNv7q+NxBW0oek4LMtjjVrZuRiA=
 			</data>
 		</dict>
 	</dict>
