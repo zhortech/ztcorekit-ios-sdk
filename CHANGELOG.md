@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.5.6](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.5.6 (2025-05-06)
+- Quality of service with has changed to `.improvedConnectivity(true, for: 600)` allowing for a delay before it get back to normal
+- Experimental - User Data Management (To Be tested)
+
 ## [1.5.5](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.5.5 (2025-04-29)
 - Better Error Handling for ZhortechBase.xcframework
 - Antenna commands / Quality of service with `needImprovedConnectivity` flag
