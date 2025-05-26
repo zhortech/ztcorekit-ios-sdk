@@ -1,6 +1,9 @@
 # Changelog
 
-## [1.5.7](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.5.6 (2025-05-07)
+## [1.5.8](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.5.8 (2025-05-26)
+- update Antenna commands
+
+## [1.5.7](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.5.7 (2025-05-07)
 - User Data Management - Fonctional
 
 ## [1.5.6](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.5.6 (2025-05-06)
