@@ -1,5 +1,8 @@
 # Changelog
 
+## [1.5.9](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.5.9 (2025-06-06)
+- Bug Fixes
+
 ## [1.5.8](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.5.8 (2025-05-26)
 - update Antenna commands
 
