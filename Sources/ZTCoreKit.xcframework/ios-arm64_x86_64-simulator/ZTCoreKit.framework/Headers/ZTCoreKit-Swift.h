@@ -1302,70 +1302,50 @@ SWIFT_CLASS("_TtC9ZTCoreKit25SecureDFUServiceInitiator")
 - (nonnull instancetype)initWithQueue:(dispatch_queue_t _Nullable)queue delegateQueue:(dispatch_queue_t _Nonnull)delegateQueue progressQueue:(dispatch_queue_t _Nonnull)progressQueue loggerQueue:(dispatch_queue_t _Nonnull)loggerQueue centralManagerOptions:(NSDictionary<NSString *, id> * _Nullable)centralManagerOptions OBJC_DESIGNATED_INITIALIZER;
 @end
 
-@class NSDate;
-@class NSMutableOrderedSet;
 @class NSEntityDescription;
 @class NSManagedObjectContext;
-/// Activity. It represents activity running on modules.
 SWIFT_CLASS_NAMED("ZTActivity")
 @interface ZTActivity : NSManagedObject
-/// Activity Id
-@property (nonatomic, copy) NSString * _Nonnull id;
-/// Activity identifier
-@property (nonatomic, copy) NSString * _Nonnull activityIdentifier;
-/// Application Id
-@property (nonatomic, copy) NSString * _Nullable appId;
-/// Activity type
-@property (nonatomic, copy) NSString * _Nonnull activityType;
-/// Start date
-@property (nonatomic, copy) NSDate * _Nullable startDate;
-/// End date
-@property (nonatomic, copy) NSDate * _Nullable endDate;
-/// Start timestamp in ms from firmware
-@property (nonatomic) int64_t startTimestamp;
-/// End timestamp in ms from firmware
-@property (nonatomic) int64_t endTimestamp;
-/// Timezone abbreviation
-@property (nonatomic, copy) NSString * _Nullable tz;
-/// Activity status
-@property (nonatomic, copy) NSString * _Nullable status;
-/// Temporary cached packets
-@property (nonatomic, strong) NSMutableOrderedSet * _Nullable packets;
-/// Information about the current activity
-@property (nonatomic, copy) NSData * _Nullable metaDataRawValue;
-/// Stop reason obtained from firmware
-@property (nonatomic, copy) NSData * _Nullable stopReasonRawValue;
-/// Is raw data enabled
-/// Used for Universal firmware
-@property (nonatomic) BOOL isRawDataMode;
-/// Is automatic activity
-/// Used for Safety
-@property (nonatomic) BOOL isAutomatic;
-/// Force stop for automatic activity
-/// Used for Safety
-@property (nonatomic) BOOL forceStop;
-/// Activity was interrupted e.g. in case of mobility scan
-@property (nonatomic) BOOL isInterrupted;
-/// Id of first chunk
-/// Used for Safety
-@property (nonatomic) int16_t firstChunkId;
-/// Id of last chunk
-/// Used for Safety
-@property (nonatomic) int16_t lastChunkId;
-/// Number of chunks for activity stored in firmware
-@property (nonatomic) int16_t chunkCount;
-/// Anchor timestamp defined with firmware MSG_TIME
-@property (nonatomic) int64_t anchorTimestamp;
-/// Start timestamp for custom activity
-@property (nonatomic) int64_t customActivityStartTimestamp;
-/// Start chunk id for custom activity
-@property (nonatomic) int16_t customActivityFirstChunkId;
-/// Firmware version for activity
-@property (nonatomic, copy) NSString * _Nullable fwVersion;
-/// Shoes serial number
-@property (nonatomic, copy) NSString * _Nullable shoesSerial;
-/// Initializer
 - (nonnull instancetype)initWithEntity:(NSEntityDescription * _Nonnull)entity insertIntoManagedObjectContext:(NSManagedObjectContext * _Nullable)context OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@class ZTPacket;
+@class NSSet;
+@interface ZTActivity (SWIFT_EXTENSION(ZTCoreKit))
+- (void)addPacketsObject:(ZTPacket * _Nonnull)value;
+- (void)removePacketsObject:(ZTPacket * _Nonnull)value;
+- (void)addPackets:(NSSet * _Nonnull)values;
+- (void)removePackets:(NSSet * _Nonnull)values;
+@end
+
+@class NSDate;
+@interface ZTActivity (SWIFT_EXTENSION(ZTCoreKit))
+@property (nonatomic, copy) NSString * _Nullable activityIdentifier;
+@property (nonatomic, copy) NSString * _Nullable activityType;
+@property (nonatomic) int64_t anchorTimestamp;
+@property (nonatomic, copy) NSString * _Nullable appId;
+@property (nonatomic) int16_t chunkCount;
+@property (nonatomic) int16_t customActivityFirstChunkId;
+@property (nonatomic) int64_t customActivityStartTimestamp;
+@property (nonatomic, copy) NSDate * _Nullable endDate;
+@property (nonatomic) int64_t endTimestamp;
+@property (nonatomic) int16_t firstChunkId;
+@property (nonatomic) BOOL forceStop;
+@property (nonatomic, copy) NSString * _Nullable fwVersion;
+@property (nonatomic, copy) NSString * _Nullable id;
+@property (nonatomic) BOOL invalid;
+@property (nonatomic) BOOL isAutomatic;
+@property (nonatomic) BOOL isInterrupted;
+@property (nonatomic) BOOL isRawDataMode;
+@property (nonatomic) int16_t lastChunkId;
+@property (nonatomic, copy) NSData * _Nullable metaDataRawValue;
+@property (nonatomic, copy) NSString * _Nullable shoesSerial;
+@property (nonatomic, copy) NSDate * _Nullable startDate;
+@property (nonatomic) int64_t startTimestamp;
+@property (nonatomic) int16_t status;
+@property (nonatomic, copy) NSData * _Nullable stopReasonRawValue;
+@property (nonatomic, copy) NSString * _Nullable tz;
+@property (nonatomic, strong) NSSet * _Nullable packets;
 @end
 
 /// BLE Manager responsible for finding and connecting to peripherals. It can be subscribed to be notified about
@@ -1449,34 +1429,30 @@ SWIFT_CLASS("_TtC9ZTCoreKit8ZTDevice")
 - (void)peripheral:(CBPeripheral * _Nonnull)peripheral didOpenL2CAPChannel:(CBL2CAPChannel * _Nullable)channel error:(NSError * _Nullable)error;
 @end
 
-/// Activity segment data
 SWIFT_CLASS_NAMED("ZTPacket")
 @interface ZTPacket : NSManagedObject
-/// Packet identifier.
-@property (nonatomic) int16_t id;
-@property (nonatomic, copy) NSDate * _Nonnull createdAt;
-@property (nonatomic, copy) NSDate * _Nonnull fulfilledAt;
-@property (nonatomic, copy) NSDate * _Nullable scheduledDeleted;
-@property (nonatomic, copy) NSDate * _Nonnull sentAt;
-/// Raw data representing packet.
-@property (nonatomic, copy) NSData * _Nullable rawData;
-/// Activity to which packet belongs to.
-@property (nonatomic, strong) ZTActivity * _Nullable activity;
-/// Timestamp for packet.
-@property (nonatomic) int64_t timestamp;
-/// Packet’s duration/
-@property (nonatomic) int16_t duration;
-/// As CoreData can’t handle UInt8, we use Int16 to store all positive possible values of an UInt8.
-@property (nonatomic) int16_t statusRawValue;
-/// Original timestamp from packet data in millisecondss.
-@property (nonatomic) int64_t originalTimestamp;
-/// Number of packets.
-@property (nonatomic) int16_t packetsNumber;
-/// Firmware version.
-@property (nonatomic, copy) NSString * _Nullable fwVersion;
-/// Number of tries to download packet
-@property (nonatomic) int16_t retryCount;
 - (nonnull instancetype)initWithEntity:(NSEntityDescription * _Nonnull)entity insertIntoManagedObjectContext:(NSManagedObjectContext * _Nullable)context OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@interface ZTPacket (SWIFT_EXTENSION(ZTCoreKit))
+@property (nonatomic) int16_t activityTypeRawValue;
+@property (nonatomic) int16_t bmTimestampTypeRawValue;
+@property (nonatomic, copy) NSDate * _Nullable createdAt;
+@property (nonatomic) int16_t duration;
+@property (nonatomic, copy) NSDate * _Nullable fulfilledAt;
+@property (nonatomic, copy) NSString * _Nullable fwVersion;
+@property (nonatomic) int16_t id;
+@property (nonatomic) int64_t originalTimestamp;
+@property (nonatomic) int16_t packetsNumber;
+@property (nonatomic) int16_t packetTypeRawValue;
+@property (nonatomic, copy) NSData * _Nullable rawData;
+@property (nonatomic) int16_t retryCount;
+@property (nonatomic, copy) NSDate * _Nullable scheduledDeleted;
+@property (nonatomic, copy) NSDate * _Nullable sentAt;
+@property (nonatomic) int16_t statusRawValue;
+@property (nonatomic) int64_t timestamp;
+@property (nonatomic) int16_t timestampTypeRawValue;
+@property (nonatomic, strong) ZTActivity * _Nullable activity;
 @end
 
 #endif
@@ -2791,70 +2767,50 @@ SWIFT_CLASS("_TtC9ZTCoreKit25SecureDFUServiceInitiator")
 - (nonnull instancetype)initWithQueue:(dispatch_queue_t _Nullable)queue delegateQueue:(dispatch_queue_t _Nonnull)delegateQueue progressQueue:(dispatch_queue_t _Nonnull)progressQueue loggerQueue:(dispatch_queue_t _Nonnull)loggerQueue centralManagerOptions:(NSDictionary<NSString *, id> * _Nullable)centralManagerOptions OBJC_DESIGNATED_INITIALIZER;
 @end
 
-@class NSDate;
-@class NSMutableOrderedSet;
 @class NSEntityDescription;
 @class NSManagedObjectContext;
-/// Activity. It represents activity running on modules.
 SWIFT_CLASS_NAMED("ZTActivity")
 @interface ZTActivity : NSManagedObject
-/// Activity Id
-@property (nonatomic, copy) NSString * _Nonnull id;
-/// Activity identifier
-@property (nonatomic, copy) NSString * _Nonnull activityIdentifier;
-/// Application Id
-@property (nonatomic, copy) NSString * _Nullable appId;
-/// Activity type
-@property (nonatomic, copy) NSString * _Nonnull activityType;
-/// Start date
-@property (nonatomic, copy) NSDate * _Nullable startDate;
-/// End date
-@property (nonatomic, copy) NSDate * _Nullable endDate;
-/// Start timestamp in ms from firmware
-@property (nonatomic) int64_t startTimestamp;
-/// End timestamp in ms from firmware
-@property (nonatomic) int64_t endTimestamp;
-/// Timezone abbreviation
-@property (nonatomic, copy) NSString * _Nullable tz;
-/// Activity status
-@property (nonatomic, copy) NSString * _Nullable status;
-/// Temporary cached packets
-@property (nonatomic, strong) NSMutableOrderedSet * _Nullable packets;
-/// Information about the current activity
-@property (nonatomic, copy) NSData * _Nullable metaDataRawValue;
-/// Stop reason obtained from firmware
-@property (nonatomic, copy) NSData * _Nullable stopReasonRawValue;
-/// Is raw data enabled
-/// Used for Universal firmware
-@property (nonatomic) BOOL isRawDataMode;
-/// Is automatic activity
-/// Used for Safety
-@property (nonatomic) BOOL isAutomatic;
-/// Force stop for automatic activity
-/// Used for Safety
-@property (nonatomic) BOOL forceStop;
-/// Activity was interrupted e.g. in case of mobility scan
-@property (nonatomic) BOOL isInterrupted;
-/// Id of first chunk
-/// Used for Safety
-@property (nonatomic) int16_t firstChunkId;
-/// Id of last chunk
-/// Used for Safety
-@property (nonatomic) int16_t lastChunkId;
-/// Number of chunks for activity stored in firmware
-@property (nonatomic) int16_t chunkCount;
-/// Anchor timestamp defined with firmware MSG_TIME
-@property (nonatomic) int64_t anchorTimestamp;
-/// Start timestamp for custom activity
-@property (nonatomic) int64_t customActivityStartTimestamp;
-/// Start chunk id for custom activity
-@property (nonatomic) int16_t customActivityFirstChunkId;
-/// Firmware version for activity
-@property (nonatomic, copy) NSString * _Nullable fwVersion;
-/// Shoes serial number
-@property (nonatomic, copy) NSString * _Nullable shoesSerial;
-/// Initializer
 - (nonnull instancetype)initWithEntity:(NSEntityDescription * _Nonnull)entity insertIntoManagedObjectContext:(NSManagedObjectContext * _Nullable)context OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@class ZTPacket;
+@class NSSet;
+@interface ZTActivity (SWIFT_EXTENSION(ZTCoreKit))
+- (void)addPacketsObject:(ZTPacket * _Nonnull)value;
+- (void)removePacketsObject:(ZTPacket * _Nonnull)value;
+- (void)addPackets:(NSSet * _Nonnull)values;
+- (void)removePackets:(NSSet * _Nonnull)values;
+@end
+
+@class NSDate;
+@interface ZTActivity (SWIFT_EXTENSION(ZTCoreKit))
+@property (nonatomic, copy) NSString * _Nullable activityIdentifier;
+@property (nonatomic, copy) NSString * _Nullable activityType;
+@property (nonatomic) int64_t anchorTimestamp;
+@property (nonatomic, copy) NSString * _Nullable appId;
+@property (nonatomic) int16_t chunkCount;
+@property (nonatomic) int16_t customActivityFirstChunkId;
+@property (nonatomic) int64_t customActivityStartTimestamp;
+@property (nonatomic, copy) NSDate * _Nullable endDate;
+@property (nonatomic) int64_t endTimestamp;
+@property (nonatomic) int16_t firstChunkId;
+@property (nonatomic) BOOL forceStop;
+@property (nonatomic, copy) NSString * _Nullable fwVersion;
+@property (nonatomic, copy) NSString * _Nullable id;
+@property (nonatomic) BOOL invalid;
+@property (nonatomic) BOOL isAutomatic;
+@property (nonatomic) BOOL isInterrupted;
+@property (nonatomic) BOOL isRawDataMode;
+@property (nonatomic) int16_t lastChunkId;
+@property (nonatomic, copy) NSData * _Nullable metaDataRawValue;
+@property (nonatomic, copy) NSString * _Nullable shoesSerial;
+@property (nonatomic, copy) NSDate * _Nullable startDate;
+@property (nonatomic) int64_t startTimestamp;
+@property (nonatomic) int16_t status;
+@property (nonatomic, copy) NSData * _Nullable stopReasonRawValue;
+@property (nonatomic, copy) NSString * _Nullable tz;
+@property (nonatomic, strong) NSSet * _Nullable packets;
 @end
 
 /// BLE Manager responsible for finding and connecting to peripherals. It can be subscribed to be notified about
@@ -2938,34 +2894,30 @@ SWIFT_CLASS("_TtC9ZTCoreKit8ZTDevice")
 - (void)peripheral:(CBPeripheral * _Nonnull)peripheral didOpenL2CAPChannel:(CBL2CAPChannel * _Nullable)channel error:(NSError * _Nullable)error;
 @end
 
-/// Activity segment data
 SWIFT_CLASS_NAMED("ZTPacket")
 @interface ZTPacket : NSManagedObject
-/// Packet identifier.
-@property (nonatomic) int16_t id;
-@property (nonatomic, copy) NSDate * _Nonnull createdAt;
-@property (nonatomic, copy) NSDate * _Nonnull fulfilledAt;
-@property (nonatomic, copy) NSDate * _Nullable scheduledDeleted;
-@property (nonatomic, copy) NSDate * _Nonnull sentAt;
-/// Raw data representing packet.
-@property (nonatomic, copy) NSData * _Nullable rawData;
-/// Activity to which packet belongs to.
-@property (nonatomic, strong) ZTActivity * _Nullable activity;
-/// Timestamp for packet.
-@property (nonatomic) int64_t timestamp;
-/// Packet’s duration/
-@property (nonatomic) int16_t duration;
-/// As CoreData can’t handle UInt8, we use Int16 to store all positive possible values of an UInt8.
-@property (nonatomic) int16_t statusRawValue;
-/// Original timestamp from packet data in millisecondss.
-@property (nonatomic) int64_t originalTimestamp;
-/// Number of packets.
-@property (nonatomic) int16_t packetsNumber;
-/// Firmware version.
-@property (nonatomic, copy) NSString * _Nullable fwVersion;
-/// Number of tries to download packet
-@property (nonatomic) int16_t retryCount;
 - (nonnull instancetype)initWithEntity:(NSEntityDescription * _Nonnull)entity insertIntoManagedObjectContext:(NSManagedObjectContext * _Nullable)context OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@interface ZTPacket (SWIFT_EXTENSION(ZTCoreKit))
+@property (nonatomic) int16_t activityTypeRawValue;
+@property (nonatomic) int16_t bmTimestampTypeRawValue;
+@property (nonatomic, copy) NSDate * _Nullable createdAt;
+@property (nonatomic) int16_t duration;
+@property (nonatomic, copy) NSDate * _Nullable fulfilledAt;
+@property (nonatomic, copy) NSString * _Nullable fwVersion;
+@property (nonatomic) int16_t id;
+@property (nonatomic) int64_t originalTimestamp;
+@property (nonatomic) int16_t packetsNumber;
+@property (nonatomic) int16_t packetTypeRawValue;
+@property (nonatomic, copy) NSData * _Nullable rawData;
+@property (nonatomic) int16_t retryCount;
+@property (nonatomic, copy) NSDate * _Nullable scheduledDeleted;
+@property (nonatomic, copy) NSDate * _Nullable sentAt;
+@property (nonatomic) int16_t statusRawValue;
+@property (nonatomic) int64_t timestamp;
+@property (nonatomic) int16_t timestampTypeRawValue;
+@property (nonatomic, strong) ZTActivity * _Nullable activity;
 @end
 
 #endif
