@@ -1,6 +1,9 @@
 # Changelog
 
-## [2.0.2](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/2.0.2 (2025-06-24)
+## [2.0.3](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/2.0.3 (2025-06-24)
+- Initial public release
+
+## [2.0.2](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/2.0.3 (2025-06-24)
 - Initial public release
 
 ## [2.0.1](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/2.0.1 (2025-06-23)
