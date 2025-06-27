@@ -1,5 +1,8 @@
 # Changelog
 
+## [2.0.5](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/2.0.5 (2025-06-27)
+- Bug Fixes
+
 ## [2.0.4](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/2.0.4 (2025-06-24)
 - Introduce RealTime only setting: `ZTSettings`.realTimeOnly 
 
