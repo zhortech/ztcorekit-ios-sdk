@@ -1,10 +1,13 @@
 # Changelog
 
+## [2.0.12](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/2.0.12 (2025-07-19)
+- BLE Improvment
+
 ## [2.0.11](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/2.0.11 (2025-07-10)
 - Updates BLE device discovery and connection
 
 ## [2.0.10](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/2.0.10 (2025-07-07)
-- Imporved Stability
+- Improved Stability
 
 ## [2.0.8](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/2.0.8 (2025-07-02)
 - Bug Fixes

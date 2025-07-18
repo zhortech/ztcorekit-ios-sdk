@@ -1370,18 +1370,41 @@ SWIFT_CLASS("_TtC9ZTCoreKit12ZTBleManager")
 @end
 
 @interface ZTBleManager (SWIFT_EXTENSION(ZTCoreKit)) <CBCentralManagerDelegate>
-/// :nodoc:
+/// Called when the system restores the central manager’s state.
+/// Restores cached peripherals and cancels connections to them for cleanup.
+/// \param dict Restoration dictionary containing peripherals and other info.
+///
 - (void)centralManager:(CBCentralManager * _Nonnull)central willRestoreState:(NSDictionary<NSString *, id> * _Nonnull)dict;
+/// Called when a connection event occurs for a peripheral.
+/// \param event The connection event
+///
+/// \param peripheral The peripheral involved
+///
 - (void)centralManager:(CBCentralManager * _Nonnull)central connectionEventDidOccur:(CBConnectionEvent)event forPeripheral:(CBPeripheral * _Nonnull)peripheral;
-/// :nodoc:
+/// Called when a peripheral is discovered during scanning.
+/// Handles caching, filtering, and connection logic including DFU mode adjustments.
 - (void)centralManager:(CBCentralManager * _Nonnull)central didDiscoverPeripheral:(CBPeripheral * _Nonnull)peripheral advertisementData:(NSDictionary<NSString *, id> * _Nonnull)advertisementData RSSI:(NSNumber * _Nonnull)RSSI;
-/// :nodoc:
+/// Called when the central manager failed to connect to a peripheral.
+/// Logs the failure, notifies observers, and stops scanning.
+/// \param peripheral The peripheral which failed connection.
+///
+/// \param error The error that occurred.
+///
 - (void)centralManager:(CBCentralManager * _Nonnull)central didFailToConnectPeripheral:(CBPeripheral * _Nonnull)peripheral error:(NSError * _Nullable)error;
-/// :nodoc:
+/// Called when the central manager successfully connected to a peripheral.
+/// Sets up device information, triggers characteristic reads, and notifies observers.
+/// \param peripheral The connected peripheral.
+///
 - (void)centralManager:(CBCentralManager * _Nonnull)central didConnectPeripheral:(CBPeripheral * _Nonnull)peripheral;
-/// :nodoc:
+/// Called when a peripheral disconnects.
+/// Handles user-initiated vs unexpected disconnection and attempts reconnection if not in DFU mode.
+/// \param peripheral The disconnected peripheral.
+///
+/// \param error Optional error describing the reason for disconnection.
+///
 - (void)centralManager:(CBCentralManager * _Nonnull)central didDisconnectPeripheral:(CBPeripheral * _Nonnull)peripheral error:(NSError * _Nullable)error;
-/// :nodoc:
+/// Updates internal manager state on Bluetooth state changes.
+/// Also triggers appropriate notifications about Bluetooth state and authorization.
 - (void)centralManagerDidUpdateState:(CBCentralManager * _Nonnull)central;
 @end
 
