@@ -1,7 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.9 (swiftlang-5.9.0.128.108 clang-1500.0.40.1)
-// swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name ZTCoreKit
-// swift-module-flags-ignorable: -enable-bare-slash-regex
+// swift-compiler-version: Apple Swift version 6.1.2 effective-5.10 (swiftlang-6.1.2.1.2 clang-1700.0.13.5)
+// swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name ZTCoreKit
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -interface-compiler-version 6.1.2
 import Combine
 import CommonCrypto
 import Compression
@@ -1134,7 +1134,7 @@ public enum ZTCommand : Swift.UInt8, Swift.CaseIterable, Swift.Identifiable {
   public typealias AllCases = [ZTCoreKit.ZTCommand]
   public typealias ID = Swift.UInt8
   public typealias RawValue = Swift.UInt8
-  public static var allCases: [ZTCoreKit.ZTCommand] {
+  nonisolated public static var allCases: [ZTCoreKit.ZTCommand] {
     get
   }
   public var rawValue: Swift.UInt8 {
@@ -1299,33 +1299,33 @@ extension ZTCoreKit.ZTArchive {
   final public let onRSSIChanged: ZTCoreKit.ZTSignal<(ZTCoreKit.ZTDevice, Swift.Int)>
   final public let onServiceDiscovered: ZTCoreKit.ZTSignal<(ZTCoreKit.ZTDevice, ZTCoreKit.ZTService)>
   final public let onServiceFeaturesIdentified: ZTCoreKit.ZTSignal<(ZTCoreKit.ZTDevice, ZTCoreKit.ZTService)>
-  final public let onCharacteristicDiscovered: ZTCoreKit.ZTSignal<(ZTCoreKit.ZTCharacteristic?)>
+  final public let onCharacteristicDiscovered: ZTCoreKit.ZTSignal<ZTCoreKit.ZTCharacteristic?>
   final public let onAllCharacteristicsDiscovered: ZTCoreKit.ZTSignal<()>
   final public let onAllCharacteristicsRead: ZTCoreKit.ZTSignal<()>
-  final public let onCharacteristicValueUpdated: ZTCoreKit.ZTSignal<(ZTCoreKit.ZTCharacteristic?)>
-  final public let onCharacteristicValueWritten: ZTCoreKit.ZTSignal<(ZTCoreKit.ZTCharacteristic?)>
-  final public let onCommandCharacteristicDiscovered: ZTCoreKit.ZTSignal<(ZTCoreKit.ZTCharacteristic?)>
+  final public let onCharacteristicValueUpdated: ZTCoreKit.ZTSignal<ZTCoreKit.ZTCharacteristic?>
+  final public let onCharacteristicValueWritten: ZTCoreKit.ZTSignal<ZTCoreKit.ZTCharacteristic?>
+  final public let onCommandCharacteristicDiscovered: ZTCoreKit.ZTSignal<ZTCoreKit.ZTCharacteristic?>
   final public let onNotifyValueUpdated: ZTCoreKit.ZTSignal<(ZTCoreKit.ZTNotifyData.GroupID, Swift.UInt8, [Swift.UInt8]?)>
   final public let onBatteryValueUpdated: ZTCoreKit.ZTSignal<()>
-  final public let onGeneralStateUpdated: ZTCoreKit.ZTSignal<(ZTCoreKit.ZTDeviceActualState)>
-  final public let onActivityInfoUpdated: ZTCoreKit.ZTSignal<(ZTCoreKit.ZTMessageActivity?)>
-  final public let onSoftwareUpdated: ZTCoreKit.ZTSignal<(ZTCoreKit.ZTMessageSoftware?)>
-  final public let onTimeUpdated: ZTCoreKit.ZTSignal<(ZTCoreKit.ZTMessageTime?)>
-  final public let onActivityMetadataUpdated: ZTCoreKit.ZTSignal<(ZTCoreKit.ZTMessageActivityMetadata?)>
-  final public let onRawDataHeaderUpdated: ZTCoreKit.ZTSignal<(Foundation.Data?)>
-  final public let onRawDataFrameUpdated: ZTCoreKit.ZTSignal<(Foundation.Data?)>
-  final public let onInactivityTimeoutUpdated: ZTCoreKit.ZTSignal<(ZTCoreKit.ZTMessageInactivityTimeout?)>
-  final public let onFirmwareError: ZTCoreKit.ZTSignal<(ZTCoreKit.ZTError.Enums.FirmwareError)>
+  final public let onGeneralStateUpdated: ZTCoreKit.ZTSignal<ZTCoreKit.ZTDeviceActualState>
+  final public let onActivityInfoUpdated: ZTCoreKit.ZTSignal<ZTCoreKit.ZTMessageActivity?>
+  final public let onSoftwareUpdated: ZTCoreKit.ZTSignal<ZTCoreKit.ZTMessageSoftware?>
+  final public let onTimeUpdated: ZTCoreKit.ZTSignal<ZTCoreKit.ZTMessageTime?>
+  final public let onActivityMetadataUpdated: ZTCoreKit.ZTSignal<ZTCoreKit.ZTMessageActivityMetadata?>
+  final public let onRawDataHeaderUpdated: ZTCoreKit.ZTSignal<Foundation.Data?>
+  final public let onRawDataFrameUpdated: ZTCoreKit.ZTSignal<Foundation.Data?>
+  final public let onInactivityTimeoutUpdated: ZTCoreKit.ZTSignal<ZTCoreKit.ZTMessageInactivityTimeout?>
+  final public let onFirmwareError: ZTCoreKit.ZTSignal<ZTCoreKit.ZTError.Enums.FirmwareError>
   final public let onNotifyCommonGroupUpdated: ZTCoreKit.ZTSignal<(ZTCoreKit.ZTNotifyData.CommonMessageId, [Swift.UInt8]?)>
   final public let onNotifyWarmGroupUpdated: ZTCoreKit.ZTSignal<(ZTCoreKit.ZTNotifyData.WarmMessageId, Foundation.Data?)>
   final public let onNotifyRunningGroupUpdated: ZTCoreKit.ZTSignal<(ZTCoreKit.ZTNotifyData.RunningMessageId, [Swift.UInt8]?)>
   final public let onNotifyCyclingGroupUpdated: ZTCoreKit.ZTSignal<(ZTCoreKit.ZTNotifyData.CyclingMessageId, [Swift.UInt8]?)>
   final public let onNotifySafetyGroupUpdated: ZTCoreKit.ZTSignal<(ZTCoreKit.ZTNotifyData.SafetyMessageId, [Swift.UInt8]?)>
   final public let onNotifyGenericGroupUpdated: ZTCoreKit.ZTSignal<(ZTCoreKit.ZTNotifyData.GenericMessageId, [Swift.UInt8]?)>
-  final public let onCommandUpdated: ZTCoreKit.ZTSignal<(ZTCoreKit.ZTCommandResponse?)>
-  final public let onCommandAck: ZTCoreKit.ZTSignal<(ZTCoreKit.ZTCommandResponse?)>
-  final public let onIndicateValueUpdated: ZTCoreKit.ZTSignal<(Foundation.Data?)>
-  final public let onBootloaderInfoUpdated: ZTCoreKit.ZTSignal<(ZTCoreKit.ZTMessageBootloaderInfo?)>
+  final public let onCommandUpdated: ZTCoreKit.ZTSignal<ZTCoreKit.ZTCommandResponse?>
+  final public let onCommandAck: ZTCoreKit.ZTSignal<ZTCoreKit.ZTCommandResponse?>
+  final public let onIndicateValueUpdated: ZTCoreKit.ZTSignal<Foundation.Data?>
+  final public let onBootloaderInfoUpdated: ZTCoreKit.ZTSignal<ZTCoreKit.ZTMessageBootloaderInfo?>
   required public init(peripheral: CoreBluetooth.CBPeripheral)
   public init(cbPeripheral: any ZTCoreKit.ZTCBPeripheralProtocol)
   public func connect()
@@ -1333,7 +1333,7 @@ extension ZTCoreKit.ZTArchive {
   @objc deinit
   @objc override dynamic open func observeValue(forKeyPath keyPath: Swift.String?, of object: Any?, change: [Foundation.NSKeyValueChangeKey : Any]?, context: Swift.UnsafeMutableRawPointer?)
   public func service<T>(_ uuid: Swift.String? = nil) -> T? where T : ZTCoreKit.ZTService
-  public func checkBattery(completion: @escaping ((Swift.UInt8, Swift.UInt8, Swift.Bool) -> Swift.Void))
+  public func checkBattery(completion: @escaping (Swift.UInt8, Swift.UInt8, Swift.Bool) -> Swift.Void)
   public func readGeneralState()
 }
 extension ZTCoreKit.ZTDevice {
@@ -2346,7 +2346,7 @@ public enum ZTAlgoPrecisionMode : Swift.UInt8, ZTCoreKit.ZTEnum {
 extension ZTCoreKit.ZTCore {
   final public func initiateBackgroundDFU(isRestartRequired: Swift.Bool = false, isManualMode: Swift.Bool = false)
   final public func initiateBackgroundDFU(path: Swift.String, isManualMode: Swift.Bool = false)
-  final public func isFirmwareUpdateRequired(firmwareRevision: ZTCoreKit.ZTFirmwareRevision, completion: @escaping ((Swift.Bool, ZTCoreKit.ZTError?) -> Swift.Void))
+  final public func isFirmwareUpdateRequired(firmwareRevision: ZTCoreKit.ZTFirmwareRevision, completion: @escaping (Swift.Bool, ZTCoreKit.ZTError?) -> Swift.Void)
 }
 @objc public enum LogLevel : Swift.Int {
   case debug = 0
@@ -2625,10 +2625,10 @@ open class ZTSegmentData : ZTCoreKit.ZTNotifyDataMessage {
     case packetsNumber
     case fwVersion
     case retryCount
-    public static func == (a: ZTCoreKit.ZTSegmentData.CodingKeys, b: ZTCoreKit.ZTSegmentData.CodingKeys) -> Swift.Bool
-    public func hash(into hasher: inout Swift.Hasher)
     public init?(stringValue: Swift.String)
     public init?(intValue: Swift.Int)
+    public static func == (a: ZTCoreKit.ZTSegmentData.CodingKeys, b: ZTCoreKit.ZTSegmentData.CodingKeys) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
     public var hashValue: Swift.Int {
       get
     }
@@ -2714,7 +2714,9 @@ open class ZTDateFormatterTransform : ZTCoreKit.ZTTransformType {
   @objc deinit
 }
 @objc @_hasMissingDesignatedInitializers final public class ZTBleManager : ObjectiveC.NSObject {
-  final public var advertisingServices: [CoreBluetooth.CBUUID]?
+  final public var advertisingServices: [CoreBluetooth.CBUUID]? {
+    get
+  }
   final public var managerState: ZTCoreKit.ZTBleManagerState {
     get
     set
@@ -2752,10 +2754,10 @@ open class ZTDateFormatterTransform : ZTCoreKit.ZTTransformType {
   final public let onDeviceStateChange: ZTCoreKit.ZTSignal<(ZTCoreKit.ZTDevice?, (any Swift.Error)?)>
   final public let onDeviceDiscovered: ZTCoreKit.ZTSignal<ZTCoreKit.ZTDevice>
   final public let onDeviceConnectionFailed: ZTCoreKit.ZTSignal<(ZTCoreKit.ZTDevice?, (any Swift.Error)?)>
-  final public let onScanFinished: ZTCoreKit.ZTSignal<((any Swift.Error)?)>
-  final public let onReconnectFailed: ZTCoreKit.ZTSignal<((any Swift.Error)?)>
-  final public let onGeneralStateUpdated: ZTCoreKit.ZTSignal<(ZTCoreKit.ZTMessageGeneralState)>
-  final public let onCommandAck: ZTCoreKit.ZTSignal<(ZTCoreKit.ZTCommandResponse?)>
+  final public let onScanFinished: ZTCoreKit.ZTSignal<(any Swift.Error)?>
+  final public let onReconnectFailed: ZTCoreKit.ZTSignal<(any Swift.Error)?>
+  final public let onGeneralStateUpdated: ZTCoreKit.ZTSignal<ZTCoreKit.ZTMessageGeneralState>
+  final public let onCommandAck: ZTCoreKit.ZTSignal<ZTCoreKit.ZTCommandResponse?>
   @objc deinit
 }
 extension ZTCoreKit.ZTBleManager : CoreBluetooth.CBCentralManagerDelegate {
@@ -3448,8 +3450,8 @@ public class ZTReachability {
       get
     }
     public func getInterfaceType() -> Network.NWInterface.InterfaceType
-    public func hash(into hasher: inout Swift.Hasher)
     public static func == (a: ZTCoreKit.ZTReachability.Adapter, b: ZTCoreKit.ZTReachability.Adapter) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
     public var hashValue: Swift.Int {
       get
     }
@@ -3517,20 +3519,20 @@ extension Swift.Set where Element : ZTCoreKit.ZTBaseMappable {
 }
 @_hasMissingDesignatedInitializers final public class ZTApi {
   public static let shared: ZTCoreKit.ZTApi
-  final public let onSavedRequestSent: ZTCoreKit.ZTSignal<(Swift.String?)>
-  final public let onActivityStopRequestSent: ZTCoreKit.ZTSignal<((any Swift.Error)?)>
-  final public let onSocketDataReceived: ZTCoreKit.ZTSignal<(Foundation.Data?)>
-  final public let onSocketTextReceived: ZTCoreKit.ZTSignal<(Swift.String?)>
+  final public let onSavedRequestSent: ZTCoreKit.ZTSignal<Swift.String?>
+  final public let onActivityStopRequestSent: ZTCoreKit.ZTSignal<(any Swift.Error)?>
+  final public let onSocketDataReceived: ZTCoreKit.ZTSignal<Foundation.Data?>
+  final public let onSocketTextReceived: ZTCoreKit.ZTSignal<Swift.String?>
   final public var appAttributes: [Swift.String : Any]? {
     get
   }
-  final public func linkUser(userId: Swift.String, attributes: [Swift.String : Any], completion: @escaping ((Swift.String?, (any Swift.Error)?) -> Swift.Void))
-  final public func getUserShoes(completion: @escaping (ZTCoreKit.ZTResultArray<ZTCoreKit.ZTUserShoe>))
+  final public func linkUser(userId: Swift.String, attributes: [Swift.String : Any], completion: @escaping (Swift.String?, (any Swift.Error)?) -> Swift.Void)
+  final public func getUserShoes(completion: @escaping ZTCoreKit.ZTResultArray<ZTCoreKit.ZTUserShoe>)
   final public func getUserShoe(code: Swift.String, completion: @escaping ZTCoreKit.ZTResultObject<ZTCoreKit.ZTUserShoe>)
   final public func updateUserShoe(code: Swift.String, attributes: [Swift.String : Any], completion: @escaping ZTCoreKit.ZTResultObject<ZTCoreKit.ZTUserShoe>)
   final public func deleteUserShoe(code: Swift.String, completion: @escaping ZTCoreKit.ZTBaseResult)
-  final public func uploadProfileImage(_ image: Foundation.Data, completion: (ZTCoreKit.ZTBaseResult)? = nil)
-  final public func getUserProfile(completion: @escaping (([Swift.String : Any]?, (any Swift.Error)?) -> ()))
+  final public func uploadProfileImage(_ image: Foundation.Data, completion: ZTCoreKit.ZTBaseResult? = nil)
+  final public func getUserProfile(completion: @escaping ([Swift.String : Any]?, (any Swift.Error)?) -> ())
   final public func getActivities<T>(code: Swift.String?, start: Foundation.Date, end: Foundation.Date, fields: [Swift.String] = [], include: [Swift.String]? = nil, completion: (([T]?, (any Swift.Error)?) -> ())? = nil) where T : ZTCoreKit.ZTMappable
   final public func getActivities<T>(code: Swift.String?, offset: Swift.Int, limit: Swift.Int, fields: [Swift.String] = [], include: [Swift.String]? = nil, whereOptions: [Swift.String : Any]? = nil, duration: [Swift.String : Any]? = nil, start: Foundation.Date? = nil, end: Foundation.Date? = nil, completion: (([T]?, (any Swift.Error)?) -> ())? = nil) where T : ZTCoreKit.ZTMappable
   final public func getActivity<T>(id: Swift.String, fields: [Swift.String] = [], include: [Swift.String]? = nil, whereOptions: [Swift.String : Any]? = nil, duration: [Swift.String : Any]? = nil, start: Foundation.Date? = nil, end: Foundation.Date? = nil, completion: ((T?, (any Swift.Error)?) -> ())? = nil) where T : ZTCoreKit.ZTMappable
@@ -3542,19 +3544,19 @@ extension Swift.Set where Element : ZTCoreKit.ZTBaseMappable {
   final public func stopActivity<T>(id: Swift.String, duration: Swift.Int? = nil, data: [Swift.String]?, completion: ((T?, (any Swift.Error)?) -> ())? = nil) where T : ZTCoreKit.ZTMappable
   final public func stopActivity<T>(id: Swift.String, duration: Swift.Int? = nil, timestamp: Swift.Int64? = nil, segments: [ZTCoreKit.ZTSegmentData]?, completion: ((T?, (any Swift.Error)?) -> ())? = nil) where T : ZTCoreKit.ZTMappable
   final public func getData<T>(path: Swift.String, parameters: [Swift.String : Any]? = nil, completion: ((T?, (any Swift.Error)?) -> ())? = nil) where T : ZTCoreKit.ZTMappable
-  final public func getData(path: Swift.String, parameters: [Swift.String : Any]? = nil, completion: @escaping (([Swift.String : Any]?, Foundation.Data?, (any Swift.Error)?) -> ()))
-  final public func getData(path: Swift.String, parameters: [Swift.String : Any]? = nil, completion: @escaping (([[Swift.String : Any]]?, (any Swift.Error)?) -> ()))
+  final public func getData(path: Swift.String, parameters: [Swift.String : Any]? = nil, completion: @escaping ([Swift.String : Any]?, Foundation.Data?, (any Swift.Error)?) -> ())
+  final public func getData(path: Swift.String, parameters: [Swift.String : Any]? = nil, completion: @escaping ([[Swift.String : Any]]?, (any Swift.Error)?) -> ())
   final public func getAppAttributes(completion: @escaping ([Swift.String : Any]?, (any Swift.Error)?) -> Swift.Void)
-  final public func checkFirmwareUpdate(completion: @escaping ((_ updatable: Swift.Bool, _ error: (any Swift.Error)?) -> ()))
-  final public func checkFirmwareUpdate(completion: @escaping ((_ updatable: Swift.Bool, _ version: Swift.String?, _ error: (any Swift.Error)?) -> ()))
-  final public func getDataArray(path: Swift.String, parameters: [Swift.String : Any]? = nil, completion: @escaping (([[Swift.String : Any]]?, (any Swift.Error)?) -> ()))
-  final public func postData(path: Swift.String, parameters: [Swift.String : Any], completion: @escaping (ZTCoreKit.ZTBaseResult))
-  final public func postData<T>(path: Swift.String, parameters: [Swift.String : Any]? = nil, completion: @escaping (ZTCoreKit.ZTResultObject<T>)) where T : ZTCoreKit.ZTMappable
-  final public func postDataGenericResult(path: Swift.String, parameters: [Swift.String : Any], completion: @escaping ((Any?, (any Swift.Error)?) -> Swift.Void))
-  final public func postDataResult(path: Swift.String, parameters: [Swift.String : Any], completion: @escaping (([Swift.String : Any]?, (any Swift.Error)?) -> Swift.Void))
-  final public func postDataResultArray(path: Swift.String, parameters: [Swift.String : Any], completion: @escaping (([[Swift.String : Any]]?, (any Swift.Error)?) -> Swift.Void))
-  final public func deleteData(path: Swift.String, parameters: [Swift.String : Any]? = nil, completion: @escaping (ZTCoreKit.ZTBaseResult))
-  final public func addActivityData(activityId: Swift.String, timestamp: Foundation.TimeInterval, data: [Any], completion: @escaping (ZTCoreKit.ZTBaseResult))
+  final public func checkFirmwareUpdate(completion: @escaping (_ updatable: Swift.Bool, _ error: (any Swift.Error)?) -> ())
+  final public func checkFirmwareUpdate(completion: @escaping (_ updatable: Swift.Bool, _ version: Swift.String?, _ error: (any Swift.Error)?) -> ())
+  final public func getDataArray(path: Swift.String, parameters: [Swift.String : Any]? = nil, completion: @escaping ([[Swift.String : Any]]?, (any Swift.Error)?) -> ())
+  final public func postData(path: Swift.String, parameters: [Swift.String : Any], completion: @escaping ZTCoreKit.ZTBaseResult)
+  final public func postData<T>(path: Swift.String, parameters: [Swift.String : Any]? = nil, completion: @escaping ZTCoreKit.ZTResultObject<T>) where T : ZTCoreKit.ZTMappable
+  final public func postDataGenericResult(path: Swift.String, parameters: [Swift.String : Any], completion: @escaping (Any?, (any Swift.Error)?) -> Swift.Void)
+  final public func postDataResult(path: Swift.String, parameters: [Swift.String : Any], completion: @escaping ([Swift.String : Any]?, (any Swift.Error)?) -> Swift.Void)
+  final public func postDataResultArray(path: Swift.String, parameters: [Swift.String : Any], completion: @escaping ([[Swift.String : Any]]?, (any Swift.Error)?) -> Swift.Void)
+  final public func deleteData(path: Swift.String, parameters: [Swift.String : Any]? = nil, completion: @escaping ZTCoreKit.ZTBaseResult)
+  final public func addActivityData(activityId: Swift.String, timestamp: Foundation.TimeInterval, data: [Any], completion: @escaping ZTCoreKit.ZTBaseResult)
   final public func updateActivityAttributes(activityId: Swift.String, attributes: [Swift.String : Any], completion: @escaping ZTCoreKit.ZTBaseResult)
   final public func updatePushNotificationToken(_ token: Swift.String, completion: ZTCoreKit.ZTBaseResult? = nil)
   final public func deleteUser(completion: @escaping ZTCoreKit.ZTBaseResult)
@@ -3566,14 +3568,14 @@ extension Swift.Set where Element : ZTCoreKit.ZTBaseMappable {
   final public func saveActivityComment(commentId: Swift.String, text: Swift.String, completion: @escaping ZTCoreKit.ZTBaseResult)
   final public func getActivityComments(activityId: Swift.String, completion: @escaping ZTCoreKit.ZTResultArray<ZTCoreKit.ZTActivityComment>)
   final public func getActivityComment(commentId: Swift.String, completion: @escaping ZTCoreKit.ZTResultObject<ZTCoreKit.ZTActivityComment>)
-  final public func getActivityRealtimeData(activityId: Swift.String, fields: [Swift.String], completion: @escaping (([Swift.String : Any]?, (any Swift.Error)?) -> Swift.Void))
+  final public func getActivityRealtimeData(activityId: Swift.String, fields: [Swift.String], completion: @escaping ([Swift.String : Any]?, (any Swift.Error)?) -> Swift.Void)
   final public func addMediaFileToActivityComment(commentId: Swift.String, mediaFileTemplate: ZTCoreKit.ZTMediaFileTemplate, completion: @escaping ZTCoreKit.ZTBaseResult)
   final public func deleteActivityComment(commentId: Swift.String, completion: @escaping ZTCoreKit.ZTBaseResult)
   final public func deleteMediaFile(mediaFileId: Swift.String, completion: @escaping ZTCoreKit.ZTBaseResult)
   final public func uploadActivityRawData(activityId: Swift.String, filePath: Foundation.URL, completion: @escaping ZTCoreKit.ZTBaseResult)
   final public func getAchievements(completion: @escaping ZTCoreKit.ZTResultArray<ZTCoreKit.ZTAchievement>)
-  final public func complianceTestRetry(timeout: Swift.Int, attempts: Swift.Int, statusCode: Swift.Int, completion: @escaping ((Foundation.Data?, (any Swift.Error)?) -> Swift.Void))
-  final public func startListenMessages(onMessageReceived: @escaping ((Swift.String?) -> Swift.Void), onDataReceived: @escaping ((Foundation.Data?) -> Swift.Void))
+  final public func complianceTestRetry(timeout: Swift.Int, attempts: Swift.Int, statusCode: Swift.Int, completion: @escaping (Foundation.Data?, (any Swift.Error)?) -> Swift.Void)
+  final public func startListenMessages(onMessageReceived: @escaping (Swift.String?) -> Swift.Void, onDataReceived: @escaping (Foundation.Data?) -> Swift.Void)
   final public func stopListenMessages()
   final public func getLogFilesList(date: Foundation.Date? = nil) -> [Foundation.URL]?
   final public func resendSavedRequests()
@@ -3632,11 +3634,11 @@ public typealias ScanFinishedBlock = ((any Swift.Error)?) -> Swift.Void
     get
     set
   }
-  final public let onDfuStateUpdated: ZTCoreKit.ZTSignal<(ZTCoreKit.ZTMessageBootloaderInfo.DfuState)>
-  final public let onDfuUploadProgress: ZTCoreKit.ZTSignal<(Swift.Float?)>
-  final public let onDfuFinishedLeft: ZTCoreKit.ZTSignal<(ZTCoreKit.ZTError?)>
-  final public let onDfuFinishedRight: ZTCoreKit.ZTSignal<(ZTCoreKit.ZTError?)>
-  final public let onDfuFinished: ZTCoreKit.ZTSignal<(ZTCoreKit.ZTError?)>
+  final public let onDfuStateUpdated: ZTCoreKit.ZTSignal<ZTCoreKit.ZTMessageBootloaderInfo.DfuState>
+  final public let onDfuUploadProgress: ZTCoreKit.ZTSignal<Swift.Float?>
+  final public let onDfuFinishedLeft: ZTCoreKit.ZTSignal<ZTCoreKit.ZTError?>
+  final public let onDfuFinishedRight: ZTCoreKit.ZTSignal<ZTCoreKit.ZTError?>
+  final public let onDfuFinished: ZTCoreKit.ZTSignal<ZTCoreKit.ZTError?>
   final public let onDfuCopied: ZTCoreKit.ZTSignal<()>
   final public func setup(apiKey: Swift.String, secret: Swift.String, appId: Swift.String, completion: (((any Swift.Error)?) -> Swift.Void)? = nil)
   final public func clearUser()
