@@ -2714,9 +2714,7 @@ open class ZTDateFormatterTransform : ZTCoreKit.ZTTransformType {
   @objc deinit
 }
 @objc @_hasMissingDesignatedInitializers final public class ZTBleManager : ObjectiveC.NSObject {
-  final public var advertisingServices: [CoreBluetooth.CBUUID]? {
-    get
-  }
+  final public var advertisingServices: [CoreBluetooth.CBUUID]?
   final public var managerState: ZTCoreKit.ZTBleManagerState {
     get
     set

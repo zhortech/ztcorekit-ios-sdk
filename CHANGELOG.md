@@ -1,4 +1,7 @@
 # Changelog
+## [1.2.21](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.2.21) (2025-08-06)
+
+- Improved connectivity and discovery of modules
 
 ## [1.2.020](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/1.2.020) (2025-08-05)
 
