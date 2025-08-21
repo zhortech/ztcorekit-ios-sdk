@@ -1,5 +1,8 @@
 # Changelog
 
+## [2.0.14](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/2.0.14 (2025-08-10)
+- BSupport for Secure Keying and DFU update on new ZT6
+
 ## [2.0.13](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/2.0.13 (2025-08-08)
 - Bugfix
 
@@ -7,7 +10,7 @@
 - Updates BLE device discovery and connection
 
 ## [2.0.10](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/2.0.10 (2025-07-07)
-- Improved Stability
+- Imporved Stability
 
 ## [2.0.8](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/2.0.8 (2025-07-02)
 - Bug Fixes
