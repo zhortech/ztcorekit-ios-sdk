@@ -1,7 +1,10 @@
 # Changelog
 
-## [2.0.14](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/2.0.14 (2025-08-10)
-- BSupport for Secure Keying and DFU update on new ZT6
+## [2.0.15](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/2.0.15 (2025-08-23)
+- Improved Secure Keying and DFU update on new ZT6
+
+## [2.0.14](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/2.0.14 (2025-08-19)
+- Support for Secure Keying and DFU update on new ZT6
 
 ## [2.0.13](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/2.0.13 (2025-08-08)
 - Bugfix
