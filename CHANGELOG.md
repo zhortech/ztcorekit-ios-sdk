@@ -1,5 +1,8 @@
 # Changelog
 
+## [2.0.17](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/2.0.17 (2025-08-25)
+- Improved Chunck Data handling. 
+
 ## [2.0.16](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/2.0.16 (2025-08-25)
 - Improved Raw Data switching mode. 
 
