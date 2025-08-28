@@ -1,5 +1,8 @@
 # Changelog
 
+## [2.0.19](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/2.0.19 (2025-08-28)
+- Realign mobility scan with 2.0.11. 
+
 ## [2.0.18](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/2.0.18 (2025-08-26)
 - Realign mobility scan with 2.0.11. 
 
