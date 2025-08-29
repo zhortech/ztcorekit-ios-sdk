@@ -1,5 +1,8 @@
 # Changelog
 
+## [2.0.20](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/2.0.20 (2025-08-29)
+- Improve ZTBase switching
+
 ## [2.0.19](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/2.0.19 (2025-08-28)
 - Realign mobility scan with 2.0.11. 
 
