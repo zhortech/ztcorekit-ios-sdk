@@ -18,7 +18,7 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/ZhortechBase.framework/ZhortechBase</key>
 		<data>
-		u1KxRUZpVFAeQ8QEMP4z/pzGdOk=
+		Kch6JW+LJJ3l0iYVoA2CMnh0TJI=
 		</data>
 		<key>ios-arm64_x86_64-simulator/ZhortechBase.framework/_CodeSignature/CodeResources</key>
 		<data>
@@ -29,10 +29,6 @@
 	<dict>
 		<key>ios-arm64/ZhortechBase.framework/Info.plist</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			3guNRXfTeJ7teB7NPU9qMHeAb9g=
-			</data>
 			<key>hash2</key>
 			<data>
 			dmkM08r2X73Fa8B1bK81BVmrblvhyLHc4aPaaxkZ5ZY=
@@ -40,10 +36,6 @@
 		</dict>
 		<key>ios-arm64/ZhortechBase.framework/ZhortechBase</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			5o7yX6iV+ZET0Y10lWIuewOwGCQ=
-			</data>
 			<key>hash2</key>
 			<data>
 			CmWywg3E6ASrHFvH2K0nl5n3GWCji0BO2YiMv9RmaIY=
@@ -51,10 +43,6 @@
 		</dict>
 		<key>ios-arm64_x86_64-simulator/ZhortechBase.framework/Info.plist</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			779+fcdrwCxHcDKlUeZYvWNqTig=
-			</data>
 			<key>hash2</key>
 			<data>
 			U/gihlr6HuvxXG73pzlDHh0Wo9u8DqP+/Szl/yKfwow=
@@ -62,21 +50,13 @@
 		</dict>
 		<key>ios-arm64_x86_64-simulator/ZhortechBase.framework/ZhortechBase</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			u1KxRUZpVFAeQ8QEMP4z/pzGdOk=
-			</data>
 			<key>hash2</key>
 			<data>
-			jJovr2Xp4B1a4VLxwbORCYQLYtFz36y+rFyHdnt/CXA=
+			jb1i1tQM0ghuYPAy0Rko96DViNM9tSNSfzso7k32wd8=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/ZhortechBase.framework/_CodeSignature/CodeResources</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			QnPVTtc9MkWIThaARmTqUpqRGtw=
-			</data>
 			<key>hash2</key>
 			<data>
 			6ul1Vie+tdVu1Olv4somWelxtKsqBHBbAiDtPvhkeCo=
