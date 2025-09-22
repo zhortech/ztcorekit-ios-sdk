@@ -4857,6 +4857,12 @@ public typealias ScanFinishedBlock = ((any Swift.Error)?) -> Swift.Void
   final public func setDeepSleepMode() throws
   @objc deinit
   final public func subscribeEvents()
+  final public var hasPerformSecureDFU: Swift.Bool {
+    get
+  }
+  final public var needForceStartActivty: Swift.Bool {
+    get
+  }
 }
 extension ZTCoreKit.ZTCore {
   #if compiler(>=5.3) && $NonescapableTypes
