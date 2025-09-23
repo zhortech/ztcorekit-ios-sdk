@@ -1,5 +1,9 @@
 # Changelog
 
+## [2.0.26](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/2.0.26 (2025-09-23)
+- Fix Critical connection bug
+
+
 ## [2.0.25](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/2.0.25 (2025-09-23)
 - Bugfixes
 

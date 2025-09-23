@@ -30,11 +30,11 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		MR4PdgCWAVZWtvmGZTKRW8V3vmI=
+		0NqJ/uZM7crRLn2e9ClcsyhyeSk=
 		</data>
 		<key>Modules/ZTCoreKit.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		Hg3jY6Mjqb3ns/1RZnDSaZMWrR8=
+		y2ASNzQq8o2e23C98C4thkJJgek=
 		</data>
 		<key>Modules/ZTCoreKit.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -50,11 +50,11 @@
 		</data>
 		<key>Modules/ZTCoreKit.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		H7yBVgr1dIbaCWjBKsduQzPEczs=
+		cyTLwE0VZ3Men7fN5rBbx0aAIxo=
 		</data>
 		<key>Modules/ZTCoreKit.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		Hg3jY6Mjqb3ns/1RZnDSaZMWrR8=
+		y2ASNzQq8o2e23C98C4thkJJgek=
 		</data>
 		<key>Modules/ZTCoreKit.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -70,7 +70,7 @@
 		</data>
 		<key>Modules/ZTCoreKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		6UDZfshvoauTndhq/tuu2y+Qonw=
+		nJUlFUxcCXOr0fJkR40fZQV6seQ=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -121,7 +121,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			9RHhcSREQAUyJ3JMPO7jWnNqJLmt4zfnhhvxzYRHEJw=
+			+jKknIknKbPZ+6psGHDQ4nzKnmU4AdlIfL7F3VZGgIo=
 			</data>
 		</dict>
 		<key>Modules/ZTCoreKit.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
@@ -149,14 +149,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			EyLj5ORzbkLmpoNQgYTSEPz9M3TMmw5dPUMffmXvqKo=
+			qFKCNKwHBT5AkOr4DSVx8B+NhetchGrCSr7OZH2VCNo=
 			</data>
 		</dict>
 		<key>Modules/ZTCoreKit.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			9RHhcSREQAUyJ3JMPO7jWnNqJLmt4zfnhhvxzYRHEJw=
+			+jKknIknKbPZ+6psGHDQ4nzKnmU4AdlIfL7F3VZGgIo=
 			</data>
 		</dict>
 		<key>Modules/ZTCoreKit.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
@@ -184,7 +184,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			f9w1+iJncOb7TsgvO3rxDVrslKSClESQrScEZn1amg4=
+			d3z59CE+Bly9J/HRApv7r9VTDIO7nGwwSs9CE+Hjj/s=
 			</data>
 		</dict>
 	</dict>
