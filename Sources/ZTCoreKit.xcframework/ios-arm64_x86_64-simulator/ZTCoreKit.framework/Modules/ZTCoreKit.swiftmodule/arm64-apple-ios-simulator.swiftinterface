@@ -1685,6 +1685,7 @@ public enum ZTEnvironment {
   case zcstaging
   case zcproduction
   case cnzcdev
+  case cnzcqa
   case cnzcproduction
   public var name: Swift.String {
     get
