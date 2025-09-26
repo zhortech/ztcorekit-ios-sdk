@@ -5,7 +5,7 @@
     <key>CFBundleExecutable</key>
     <string>ZhortechBase</string>
     <key>CFBundleIdentifier</key>
-    <string>ZhortechBase</string>
+    <string>com.zhortech.sdk</string>
     <key>CFBundleInfoDictionaryVersion</key>
     <string>6.0</string>
     <key>CFBundleName</key>
@@ -21,7 +21,7 @@
     <key>CFBundleVersion</key>
     <string>1</string>
     <key>MinimumOSVersion</key>
-    <string>13.0</string>
+    <string>15.0</string>
     <key>UIDeviceFamily</key>
     <array>
         <integer>1</integer>
