@@ -1,5 +1,9 @@
 # Changelog
 
+## [2.0.28](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/2.0.28 (2025-09-26)
+- Not provided
+
+
 ## [2.0.27](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/2.0.27 (2025-09-26)
 - Improve connection stability
 

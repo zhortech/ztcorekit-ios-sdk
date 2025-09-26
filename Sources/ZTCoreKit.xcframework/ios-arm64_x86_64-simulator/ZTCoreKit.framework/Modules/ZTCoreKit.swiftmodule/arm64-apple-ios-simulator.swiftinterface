@@ -255,6 +255,7 @@ extension ZTCoreKit.ZhortechActivityActor {
 }
 extension ZTCoreKit.ZhortechActivityActor {
   public typealias FetchConfiguration = ZTCoreKit.ZhortechActivityFetchConfiguration
+  public func checkUnsentPackets(packetThreshold: Swift.Int, sentHandler: ([ZTCoreKit.ZhortechActivityActor.Packet]) async throws -> [ZTCoreKit.ZhortechActivityActor.Packet]) async throws
   @discardableResult
   public func send(packets: [ZTCoreKit.ZhortechActivityActor.Packet], sentHandler: ([ZTCoreKit.ZhortechActivityActor.Packet]) async throws -> [ZTCoreKit.ZhortechActivityActor.Packet]) async throws -> [ZTCoreKit.ZhortechActivityActor.Packet]
   public func startFetchTimer(configuration: ZTCoreKit.ZhortechActivityActor.FetchConfiguration = .default, sentHandler: @escaping ([ZTCoreKit.ZhortechActivityActor.Packet]) async throws -> [ZTCoreKit.ZhortechActivityActor.Packet])
