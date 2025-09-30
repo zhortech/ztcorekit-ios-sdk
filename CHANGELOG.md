@@ -1,5 +1,9 @@
 # Changelog
 
+## [2.0.31](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/2.0.31 (2025-09-30)
+- Added CN QA Environment support
+
+
 ## [2.0.30](https://github.com/zhortech/ztcorekit-ios-sdk/-/tags/2.0.30 (2025-09-27)
 - Imporve mobility scan
 
