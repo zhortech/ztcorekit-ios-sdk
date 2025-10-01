@@ -18,11 +18,11 @@
 		</data>
 		<key>ios-arm64/ZTCoreKit.framework/Info.plist</key>
 		<data>
-		GbwdKQ0LmUedAMqCd7nrKppNdz0=
+		KruTIlI9HKKyt5zA/uErFP8lo5w=
 		</data>
 		<key>ios-arm64/ZTCoreKit.framework/Modules/ZTCoreKit.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		IA+113UYaRSiyUM72RlU93mpuQA=
+		SWKrgY2/LNju6lDVkswrh1U99+0=
 		</data>
 		<key>ios-arm64/ZTCoreKit.framework/Modules/ZTCoreKit.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
@@ -38,7 +38,7 @@
 		</data>
 		<key>ios-arm64/ZTCoreKit.framework/ZTCoreKit</key>
 		<data>
-		+0esspKdmkCr0ovvbRAeFW5WVxk=
+		zb+dZDaQyGj9kV7hfesghyIoAq0=
 		</data>
 		<key>ios-arm64_x86_64-simulator/ZTCoreKit.framework/Database.momd/Database.mom</key>
 		<data>
@@ -54,11 +54,11 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/ZTCoreKit.framework/Info.plist</key>
 		<data>
-		5lkKWpQiUm5CN5sIMHj6dkF/Lu4=
+		viOjgmR3n6HZqftAguT1iwQtfzE=
 		</data>
 		<key>ios-arm64_x86_64-simulator/ZTCoreKit.framework/Modules/ZTCoreKit.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		tEDYVqCSs1dm0yKUR3Sbs/fN9Mo=
+		xOKEEnRtXZyE7D9xEeWVHrAqAYk=
 		</data>
 		<key>ios-arm64_x86_64-simulator/ZTCoreKit.framework/Modules/ZTCoreKit.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -74,7 +74,7 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/ZTCoreKit.framework/Modules/ZTCoreKit.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		tEDYVqCSs1dm0yKUR3Sbs/fN9Mo=
+		xOKEEnRtXZyE7D9xEeWVHrAqAYk=
 		</data>
 		<key>ios-arm64_x86_64-simulator/ZTCoreKit.framework/Modules/ZTCoreKit.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -90,11 +90,11 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/ZTCoreKit.framework/ZTCoreKit</key>
 		<data>
-		pfrACFt/rxfD0jPgYhZUHSeQKzM=
+		kzpZiAmNVYjZR0H/3qSqMY82hnk=
 		</data>
 		<key>ios-arm64_x86_64-simulator/ZTCoreKit.framework/_CodeSignature/CodeResources</key>
 		<data>
-		mAz3Jn4E9ra6FpvwHvqKG2ACu4Q=
+		mNa0wtho1qE1xlJ1llJo5+/7xQc=
 		</data>
 		<key>strip-frameworks.sh</key>
 		<data>
@@ -128,14 +128,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			3WGfSkDxo4aOcw6q3vevAQKNPGiaxIKzh4ktZiv8HkM=
+			UIsVVZUd6OQTxdbdwrs6YKp6sJ4OO5bSrkpzhIz15GU=
 			</data>
 		</dict>
 		<key>ios-arm64/ZTCoreKit.framework/Modules/ZTCoreKit.swiftmodule/arm64-apple-ios.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			mzkt0S4skoZaStrxbJDI5d7zRK0aUfzuT+SrF/s8W1U=
+			qO7G2M7GXsyayaRD5xgmXspZuT7r/yU8w0FSwEQz1ew=
 			</data>
 		</dict>
 		<key>ios-arm64/ZTCoreKit.framework/Modules/ZTCoreKit.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
@@ -163,7 +163,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			6Xpi6tF78TpMIOicWAir4v93OGOzx1f+MkvpsY4qLcg=
+			YjMJ457XHTlm6SwouBhw5AFL/h8bX9Uvb1BinMX0jsg=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/ZTCoreKit.framework/Database.momd/Database.mom</key>
@@ -191,14 +191,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			8djqpBP6oODYY96tjtAUeyr3umBouNK048CJS1A3eXo=
+			4J/ZzEoOTPJKPmT/lnADm07VNk0GWDK55WWvFXAUOXU=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/ZTCoreKit.framework/Modules/ZTCoreKit.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			dcJWjNonPkxe/vGVTSu3m/SHDg2UPUE/XvjK1o2Yybc=
+			SbtRN2hUQQaBktmlL8/Ar87VGE5UgK5brz9bXlp9Q/s=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/ZTCoreKit.framework/Modules/ZTCoreKit.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
@@ -226,7 +226,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			dcJWjNonPkxe/vGVTSu3m/SHDg2UPUE/XvjK1o2Yybc=
+			SbtRN2hUQQaBktmlL8/Ar87VGE5UgK5brz9bXlp9Q/s=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/ZTCoreKit.framework/Modules/ZTCoreKit.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
@@ -254,14 +254,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			1WFJzGhtOxqGZDyPIxufAp0BejUKV81ehFYR1jbb5z8=
+			0iUgujUZO+QjB41ystJaOkAGgRg2ZSpdZfSJkgyP3W4=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/ZTCoreKit.framework/_CodeSignature/CodeResources</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			mBwJfI/aqrpeCmLmvRDROr0KLyzVUffXRejuPXKX974=
+			6w5Ulh5CZWYrzn/W2aIZ0pl7QNjstfvLWoIySQjTP7E=
 			</data>
 		</dict>
 		<key>strip-frameworks.sh</key>
