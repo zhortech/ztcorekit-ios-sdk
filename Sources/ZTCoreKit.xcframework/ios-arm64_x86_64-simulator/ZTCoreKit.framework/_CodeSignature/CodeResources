@@ -30,11 +30,11 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		viOjgmR3n6HZqftAguT1iwQtfzE=
+		JWkyJR85WDiDq0QAPWZtrQTnnnc=
 		</data>
 		<key>Modules/ZTCoreKit.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		xOKEEnRtXZyE7D9xEeWVHrAqAYk=
+		qY2fqO9IZXU1CHqdDuBP401smQw=
 		</data>
 		<key>Modules/ZTCoreKit.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -50,11 +50,11 @@
 		</data>
 		<key>Modules/ZTCoreKit.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		SCrHIBV2nB4b/Cmv5PJ3BtFwxv0=
+		Ir2zFblhrL4FOABvU33YmVanZEw=
 		</data>
 		<key>Modules/ZTCoreKit.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		xOKEEnRtXZyE7D9xEeWVHrAqAYk=
+		qY2fqO9IZXU1CHqdDuBP401smQw=
 		</data>
 		<key>Modules/ZTCoreKit.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -70,7 +70,7 @@
 		</data>
 		<key>Modules/ZTCoreKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		B02YgSvJQ4Osod4XYZCKf1MMz/Q=
+		kUaINJwH+qr0wTatRX5kkvT5zKk=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -121,7 +121,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			SbtRN2hUQQaBktmlL8/Ar87VGE5UgK5brz9bXlp9Q/s=
+			ERkcnpj60ElJQ8Hylr5AZKnElidWvhi7u3O4tWXwFcM=
 			</data>
 		</dict>
 		<key>Modules/ZTCoreKit.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
@@ -149,14 +149,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			WcGCpnpNlIBT0NBObCZyYv2a090nLhPnVz/hPDw2Gko=
+			F1m+TOXpHQS8wRTxoLcRHPoMWE9kEddyQsQgnQ4R1Sk=
 			</data>
 		</dict>
 		<key>Modules/ZTCoreKit.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			SbtRN2hUQQaBktmlL8/Ar87VGE5UgK5brz9bXlp9Q/s=
+			ERkcnpj60ElJQ8Hylr5AZKnElidWvhi7u3O4tWXwFcM=
 			</data>
 		</dict>
 		<key>Modules/ZTCoreKit.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
@@ -184,7 +184,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			vyeK3RQM/PE9XqiJVxp44fCoEkNbGkaHaMKvIqR6HU8=
+			mwbWnjqaB1Lp0iCX4IHhXlkJEEDOseyHgp/JksE3iQQ=
 			</data>
 		</dict>
 	</dict>
