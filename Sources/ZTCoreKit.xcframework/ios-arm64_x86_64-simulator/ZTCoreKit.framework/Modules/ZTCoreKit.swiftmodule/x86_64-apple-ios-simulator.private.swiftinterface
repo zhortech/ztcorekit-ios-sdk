@@ -273,6 +273,7 @@ extension ZTCoreKit.ZhortechActivityActor {
   public func customActivityStartTimestamp(_ value: Swift.Int64) async throws
   public func customActivityFirstChunkId(_ value: Swift.Int16) async throws
   public func isAutomatic(_ value: Swift.Bool) async throws
+  public func chunkCache(_ value: Foundation.TimeInterval) async throws
 }
 extension ZTCoreKit.ZhorthechPacket {
   public var rawDescription: Swift.String {
@@ -1381,6 +1382,10 @@ extension ZTCoreKit.ZTDevice : CoreBluetooth.CBPeripheralDelegate {
   #if compiler(>=5.3) && $NonescapableTypes
   @discardableResult
   public func sendCommandWithUpdate<T>(_ command: ZTCoreKit.ZTCommand, parameters: [Swift.UInt8]? = nil, timeout: Swift.Double = 15, name: Swift.String?, signal: ZTCoreKit.ZTSignal<T>) async throws -> T?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @discardableResult
+  public func sendCommandWithUpdateV2<T>(_ command: ZTCoreKit.ZTCommand, parameters: [Swift.UInt8]? = nil, timeout: Swift.Double = 15, name: Swift.String?, signal: ZTCoreKit.ZTSignal<T>) async throws -> T?
   #endif
   #if compiler(>=5.3) && $NonescapableTypes
   public func commandWithAck(_ command: ZTCoreKit.ZTCommand, parameters: [Swift.UInt8]? = nil, timeout: Foundation.TimeInterval) async throws -> Swift.Bool
@@ -4944,6 +4949,7 @@ extension ZTCoreKit.ZTCore {
   }
   #endif
   final public var disableAutomaticActivity: Swift.Bool
+  final public var enableRealtimeStreaming: Swift.Bool
   final public var allowAntennaOptimization: Swift.Bool
   final public var realTimeOnly: Swift.Bool
   final public func clear()
