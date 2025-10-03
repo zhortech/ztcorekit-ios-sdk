@@ -263,7 +263,7 @@ extension ZTCoreKit.ZhortechActivityActor {
 extension ZTCoreKit.ZhortechActivityActor {
   public func stop(force: Swift.Bool = false) async throws
   public func anchorTimestamp(_ value: Swift.Int64) async throws
-  public func resetAnchorTimestamp() async throws
+  public func resetAnchorTimestamp(reason: Swift.String) async throws
   #if compiler(>=5.3) && $NonescapableTypes
   public func fwVersion(_ value: Swift.String?) async throws
   #endif
@@ -272,6 +272,7 @@ extension ZTCoreKit.ZhortechActivityActor {
   public func activityType(_ value: Swift.String) async throws
   public func customActivityStartTimestamp(_ value: Swift.Int64) async throws
   public func customActivityFirstChunkId(_ value: Swift.Int16) async throws
+  public func isAutomatic(_ value: Swift.Bool) async throws
 }
 extension ZTCoreKit.ZhorthechPacket {
   public var rawDescription: Swift.String {
@@ -432,7 +433,7 @@ extension ZTCoreKit.ZhortechActivity {
     get
   }
   public mutating func anchorTimestamp(_ value: Swift.Int64)
-  public mutating func resetAnchorTimestamp()
+  public mutating func resetAnchorTimestamp(reason: Swift.String)
   public mutating func forceStop(_ value: Swift.Bool)
   public mutating func isAutomatic(_ value: Swift.Bool)
   #if compiler(>=5.3) && $NonescapableTypes
@@ -491,7 +492,7 @@ public actor ZhortechActivityActor : Swift.Sendable {
   public func fetchActivity(withId activtyId: Swift.String) async throws -> ZTCoreKit.ZhortechActivity?
   #endif
   public func deleteActivity(withID activtyId: Swift.String) async throws
-  public func resetActivity() async throws
+  public func resetActivity(hardDelete: Swift.Bool = false) async throws
   @objc deinit
   @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
   @_semantics("defaultActor") nonisolated final public var unownedExecutor: _Concurrency.UnownedSerialExecutor {
