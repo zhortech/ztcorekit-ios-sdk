@@ -252,9 +252,12 @@ extension ZTCoreKit.ZhortechActivityActor {
   #if compiler(>=5.3) && $NonescapableTypes
   public func createActivity(serialNumber: Swift.String, activityType: Swift.String, fwVersion: Swift.String?, appId: Swift.String) async throws -> ZTCoreKit.ZhortechActivity
   #endif
+  @discardableResult
+  public func validatedPackets(_ packets: [ZTCoreKit.ZhortechActivityActor.Packet]) async throws -> [ZTCoreKit.ZhortechActivityActor.Packet]
 }
 extension ZTCoreKit.ZhortechActivityActor {
   public typealias FetchConfiguration = ZTCoreKit.ZhortechActivityFetchConfiguration
+  public func getAllPackets() async throws -> [ZTCoreKit.ZhortechActivityActor.Packet]
   public func checkUnsentPackets(packetThreshold: Swift.Int, sentHandler: ([ZTCoreKit.ZhortechActivityActor.Packet]) async throws -> [ZTCoreKit.ZhortechActivityActor.Packet]) async throws
   @discardableResult
   public func send(packets: [ZTCoreKit.ZhortechActivityActor.Packet], sentHandler: ([ZTCoreKit.ZhortechActivityActor.Packet]) async throws -> [ZTCoreKit.ZhortechActivityActor.Packet]) async throws -> [ZTCoreKit.ZhortechActivityActor.Packet]
