@@ -2156,6 +2156,17 @@ public enum ZTAlgoCommand : Swift.UInt8 {
     get
   }
 }
+public enum ZTAlgoMobilityType : Swift.UInt8 {
+  case walk
+  case run
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init?(rawValue: Swift.UInt8)
+  #endif
+  public typealias RawValue = Swift.UInt8
+  public var rawValue: Swift.UInt8 {
+    get
+  }
+}
 public enum ZTAlgoMode : Swift.UInt8, ZTCoreKit.ZTEnum {
   case monitoring
   case gaming
@@ -5282,6 +5293,9 @@ extension ZTCoreKit.ZTAlgoAcknowledgmentStatus : Swift.RawRepresentable {}
 extension ZTCoreKit.ZTAlgoCommand : Swift.Equatable {}
 extension ZTCoreKit.ZTAlgoCommand : Swift.Hashable {}
 extension ZTCoreKit.ZTAlgoCommand : Swift.RawRepresentable {}
+extension ZTCoreKit.ZTAlgoMobilityType : Swift.Equatable {}
+extension ZTCoreKit.ZTAlgoMobilityType : Swift.Hashable {}
+extension ZTCoreKit.ZTAlgoMobilityType : Swift.RawRepresentable {}
 extension ZTCoreKit.ZTAlgoMode : Swift.Equatable {}
 extension ZTCoreKit.ZTAlgoMode : Swift.Hashable {}
 extension ZTCoreKit.ZTAlgoMode : Swift.RawRepresentable {}
