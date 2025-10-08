@@ -30,11 +30,11 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		Ej2BFDZu6B6lXHZJCN0g8pnjzic=
+		8/aoLgND1BjI2k9Crx/4B8L4msQ=
 		</data>
 		<key>Modules/ZTCoreKit.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		8bB07i3Gnr66tgJxj/0DFzBXrs4=
+		wv1D2hT7z3R8Lei9uCn+l0LcZmA=
 		</data>
 		<key>Modules/ZTCoreKit.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -50,11 +50,11 @@
 		</data>
 		<key>Modules/ZTCoreKit.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		GOVjBg8cQUP603ECkkbvBk2fPco=
+		HzgOTmyJwJdaHgh9Vd25IMCDF5Q=
 		</data>
 		<key>Modules/ZTCoreKit.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		8bB07i3Gnr66tgJxj/0DFzBXrs4=
+		wv1D2hT7z3R8Lei9uCn+l0LcZmA=
 		</data>
 		<key>Modules/ZTCoreKit.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -70,7 +70,7 @@
 		</data>
 		<key>Modules/ZTCoreKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		V7QFgKAiPs0Te5FekLNaGecUoFM=
+		pMw9Dg1eQ1/VxcfKTojZ0tD+X3c=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -121,7 +121,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			2WRMv3ncRopYjtep09nSi4UfHyp5msARRWVLL4nWwL0=
+			7TjxSECsqr/WYLTmqgehjfTDl/bM4c5sZ+f1gELQH2k=
 			</data>
 		</dict>
 		<key>Modules/ZTCoreKit.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
@@ -149,14 +149,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			+hVwpaCo+BwqAzUohDaI0+egRgqwF6XYyLri5FbfEDg=
+			sXPil6+eke1bY97Qt0nQ0KO5prRTDE4uzDQTUSPsK6Y=
 			</data>
 		</dict>
 		<key>Modules/ZTCoreKit.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			2WRMv3ncRopYjtep09nSi4UfHyp5msARRWVLL4nWwL0=
+			7TjxSECsqr/WYLTmqgehjfTDl/bM4c5sZ+f1gELQH2k=
 			</data>
 		</dict>
 		<key>Modules/ZTCoreKit.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
@@ -184,7 +184,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			3XVYlkmXuHpxeZIKxc0UlFzH91c6S5dFDxb8S/1cGsY=
+			kS7LYENAdl9pSEWWKuwi+2IlcyAzAM5/a+mlA54NZvQ=
 			</data>
 		</dict>
 	</dict>
