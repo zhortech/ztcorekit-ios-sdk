@@ -30,11 +30,11 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		uKH1nJII9e4z7O9zIAmk6PwuzZk=
+		Ej2BFDZu6B6lXHZJCN0g8pnjzic=
 		</data>
 		<key>Modules/ZTCoreKit.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		+XluOK6jLQakgu5ISjOtpCCRjVw=
+		8bB07i3Gnr66tgJxj/0DFzBXrs4=
 		</data>
 		<key>Modules/ZTCoreKit.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -50,11 +50,11 @@
 		</data>
 		<key>Modules/ZTCoreKit.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		rJ5YFXwck7zLPcvav5/soA4bgtI=
+		GOVjBg8cQUP603ECkkbvBk2fPco=
 		</data>
 		<key>Modules/ZTCoreKit.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		+XluOK6jLQakgu5ISjOtpCCRjVw=
+		8bB07i3Gnr66tgJxj/0DFzBXrs4=
 		</data>
 		<key>Modules/ZTCoreKit.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -70,7 +70,7 @@
 		</data>
 		<key>Modules/ZTCoreKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		tKSy2m8NgFyfXadKi8rvU5M5xu0=
+		V7QFgKAiPs0Te5FekLNaGecUoFM=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -121,7 +121,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			CrVKND3IAnIFy3nJquW23jG3l5AoZf4t/JJw6k3RCOI=
+			2WRMv3ncRopYjtep09nSi4UfHyp5msARRWVLL4nWwL0=
 			</data>
 		</dict>
 		<key>Modules/ZTCoreKit.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
@@ -149,14 +149,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			z2BGImQphM31e0U4v49Th8qF/ppo6DxAqmgCG7wGmeo=
+			+hVwpaCo+BwqAzUohDaI0+egRgqwF6XYyLri5FbfEDg=
 			</data>
 		</dict>
 		<key>Modules/ZTCoreKit.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			CrVKND3IAnIFy3nJquW23jG3l5AoZf4t/JJw6k3RCOI=
+			2WRMv3ncRopYjtep09nSi4UfHyp5msARRWVLL4nWwL0=
 			</data>
 		</dict>
 		<key>Modules/ZTCoreKit.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
@@ -184,7 +184,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			ic8dWwwC65etIA2Qhn5rTevIQEYtdcutZo4YMnn3f8E=
+			3XVYlkmXuHpxeZIKxc0UlFzH91c6S5dFDxb8S/1cGsY=
 			</data>
 		</dict>
 	</dict>
