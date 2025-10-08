@@ -30,11 +30,11 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		tulM5316rTcX74Jc+Q54I7VqJ00=
+		uKH1nJII9e4z7O9zIAmk6PwuzZk=
 		</data>
 		<key>Modules/ZTCoreKit.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		bEoFVnvbQ2v/pQck/BvMHrgb9is=
+		+XluOK6jLQakgu5ISjOtpCCRjVw=
 		</data>
 		<key>Modules/ZTCoreKit.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -50,11 +50,11 @@
 		</data>
 		<key>Modules/ZTCoreKit.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		uYqIdrUEP7tJDI1/Wgpn3Y/L9UU=
+		rJ5YFXwck7zLPcvav5/soA4bgtI=
 		</data>
 		<key>Modules/ZTCoreKit.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		bEoFVnvbQ2v/pQck/BvMHrgb9is=
+		+XluOK6jLQakgu5ISjOtpCCRjVw=
 		</data>
 		<key>Modules/ZTCoreKit.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -70,7 +70,7 @@
 		</data>
 		<key>Modules/ZTCoreKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		MUOBkZoVwsLFtRxu6Npp1JnxUUY=
+		tKSy2m8NgFyfXadKi8rvU5M5xu0=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -121,7 +121,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			O4NLfj3CK2jKXR62sxO+008mtC/4jTlbCHlzDLDkDGs=
+			CrVKND3IAnIFy3nJquW23jG3l5AoZf4t/JJw6k3RCOI=
 			</data>
 		</dict>
 		<key>Modules/ZTCoreKit.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
@@ -149,14 +149,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			X54Gx+riyvRw/DkdrRKNh1nyeuQO5hev8xlbS625jHo=
+			z2BGImQphM31e0U4v49Th8qF/ppo6DxAqmgCG7wGmeo=
 			</data>
 		</dict>
 		<key>Modules/ZTCoreKit.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			O4NLfj3CK2jKXR62sxO+008mtC/4jTlbCHlzDLDkDGs=
+			CrVKND3IAnIFy3nJquW23jG3l5AoZf4t/JJw6k3RCOI=
 			</data>
 		</dict>
 		<key>Modules/ZTCoreKit.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
@@ -184,7 +184,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			GrwthUtaXdj9cx0JwJvKsNUyGH8J7JxPQPpv3ylpI1M=
+			ic8dWwwC65etIA2Qhn5rTevIQEYtdcutZo4YMnn3f8E=
 			</data>
 		</dict>
 	</dict>
