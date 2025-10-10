@@ -30,11 +30,11 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		BltpW3TE6SCyjoiPVy3A/+WBt/0=
+		8m96O7HapQxIsl1pMc4lbfw9UEc=
 		</data>
 		<key>Modules/ZTCoreKit.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		Tqnwi/Et4n73PoO5YYWa+NGEzxI=
+		0qiqlJouiHi2LIfAYAZ68A4Fyws=
 		</data>
 		<key>Modules/ZTCoreKit.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -50,11 +50,11 @@
 		</data>
 		<key>Modules/ZTCoreKit.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		jpK8jZt0AKD0gF6pjIhxHdxQCVo=
+		GpzggzJ8ywfZRlPRIv/On+7wFpY=
 		</data>
 		<key>Modules/ZTCoreKit.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		Tqnwi/Et4n73PoO5YYWa+NGEzxI=
+		0qiqlJouiHi2LIfAYAZ68A4Fyws=
 		</data>
 		<key>Modules/ZTCoreKit.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -70,7 +70,7 @@
 		</data>
 		<key>Modules/ZTCoreKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		zxeJ8r66a50VuT9jqbA5zhkVajU=
+		aYvC+YNfyjgwjBkkMmYszNBA9CU=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -121,7 +121,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			mlWGtS04p2rPHOMGFF6CkMZuiUb8nJK8Aj+KsHb997U=
+			MQzMrKxEVo50SwDtKWez3dMjxNaCnqbygPthtcjNTMs=
 			</data>
 		</dict>
 		<key>Modules/ZTCoreKit.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
@@ -149,14 +149,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			nmV20CISCrMZ94P3UitmiDcSThGSEERtCUFPEmqjL2E=
+			wsgcu4mgNBkzV09tFjqOZdpF00y/uePOsCFVytepbig=
 			</data>
 		</dict>
 		<key>Modules/ZTCoreKit.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			mlWGtS04p2rPHOMGFF6CkMZuiUb8nJK8Aj+KsHb997U=
+			MQzMrKxEVo50SwDtKWez3dMjxNaCnqbygPthtcjNTMs=
 			</data>
 		</dict>
 		<key>Modules/ZTCoreKit.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
@@ -184,7 +184,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			oUnxUHou0Jiyk5ijbQmfm6gCE+qjSGxEp4rl6EqxZm0=
+			7oi/+fFooaHpGHpnFMCDhmh2A8b38sXi2x/3PtzeDw0=
 			</data>
 		</dict>
 	</dict>
