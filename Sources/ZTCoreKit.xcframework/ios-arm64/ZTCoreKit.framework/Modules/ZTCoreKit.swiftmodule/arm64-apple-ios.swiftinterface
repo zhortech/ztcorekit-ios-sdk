@@ -254,6 +254,8 @@ extension ZTCoreKit.ZhortechActivityActor {
   #endif
   @discardableResult
   public func validatedPackets(_ packets: [ZTCoreKit.ZhortechActivityActor.Packet]) async throws -> [ZTCoreKit.ZhortechActivityActor.Packet]
+  @discardableResult
+  public func validatedPacketsNewVersion(_ allPackets: [ZTCoreKit.ZhortechActivityActor.Packet]) async throws -> [ZTCoreKit.ZhortechActivityActor.Packet]
 }
 extension ZTCoreKit.ZhortechActivityActor {
   public typealias FetchConfiguration = ZTCoreKit.ZhortechActivityFetchConfiguration
@@ -291,6 +293,10 @@ extension ZTCoreKit.ZhortechActivityActor {
   #if compiler(>=5.3) && $NonescapableTypes
   @discardableResult
   public func contextualUpdated(packet: ZTCoreKit.ZhortechActivityActor.Packet, for activity: ZTCoreKit.ZhortechActivityActor.Activity?) async throws -> ZTCoreKit.ZhortechActivityActor.Packet
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @discardableResult
+  public func contextualUpdated(packets: [ZTCoreKit.ZhortechActivityActor.Packet], for activity: ZTCoreKit.ZhortechActivityActor.Activity?) async throws -> [ZTCoreKit.ZhortechActivityActor.Packet]
   #endif
   #if compiler(>=5.3) && $NonescapableTypes
   public func createPacket(data: Foundation.Data, name: Swift.String, activity: ZTCoreKit.ZhortechActivityActor.Activity?, fwVersion: Swift.String?, updateBlock: ((ZTCoreKit.ZhortechActivityActor.Packet) -> ZTCoreKit.ZhortechActivityActor.Packet)? = nil) async throws -> ZTCoreKit.ZhortechActivityActor.Packet
@@ -4963,6 +4969,7 @@ extension ZTCoreKit.ZTCore {
   }
   #endif
   final public var disableAutomaticActivity: Swift.Bool
+  final public var monitoringActivityApp: Swift.Bool
   final public var enableRealtimeStreaming: Swift.Bool
   final public var allowAntennaOptimization: Swift.Bool
   final public var realTimeOnly: Swift.Bool
