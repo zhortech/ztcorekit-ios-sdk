@@ -1,0 +1,1692 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.1 effective-5.10 (swiftlang-6.1.0.110.21 clang-1700.0.13.3)
+// swift-module-flags: -target x86_64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -O -module-name ZhortechBase
+// swift-module-flags-ignorable:  -interface-compiler-version 6.1
+import Foundation
+import Swift
+@_exported import ZhortechBase
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+public enum Skie {
+  public enum RuntimeKotlin {
+    public enum SkieColdFlowIterator {
+      public typealias __Kotlin = ZhortechBase.SkieColdFlowIterator
+    }
+    public enum SkieKotlinFlow {
+      public typealias __Kotlin = ZhortechBase.SkieKotlinFlow
+    }
+    public enum SkieKotlinMutableSharedFlow {
+      public typealias __Kotlin = ZhortechBase.SkieKotlinMutableSharedFlow
+    }
+    public enum SkieKotlinMutableStateFlow {
+      public typealias __Kotlin = ZhortechBase.SkieKotlinMutableStateFlow
+    }
+    public enum SkieKotlinOptionalFlow {
+      public typealias __Kotlin = ZhortechBase.SkieKotlinOptionalFlow
+    }
+    public enum SkieKotlinOptionalMutableSharedFlow {
+      public typealias __Kotlin = ZhortechBase.SkieKotlinOptionalMutableSharedFlow
+    }
+    public enum SkieKotlinOptionalMutableStateFlow {
+      public typealias __Kotlin = ZhortechBase.SkieKotlinOptionalMutableStateFlow
+    }
+    public enum SkieKotlinOptionalSharedFlow {
+      public typealias __Kotlin = ZhortechBase.SkieKotlinOptionalSharedFlow
+    }
+    public enum SkieKotlinOptionalStateFlow {
+      public typealias __Kotlin = ZhortechBase.SkieKotlinOptionalStateFlow
+    }
+    public enum SkieKotlinSharedFlow {
+      public typealias __Kotlin = ZhortechBase.SkieKotlinSharedFlow
+    }
+    public enum SkieKotlinStateFlow {
+      public typealias __Kotlin = ZhortechBase.SkieKotlinStateFlow
+    }
+    public enum Skie_CancellationHandler {
+      public typealias __Kotlin = ZhortechBase.Skie_CancellationHandler
+    }
+    public enum Skie_DispatcherDelegate {
+      public typealias __Kotlin = ZhortechBase.Skie_DispatcherDelegate
+    }
+    public enum Skie_SuspendHandler {
+      public typealias __Kotlin = ZhortechBase.Skie_SuspendHandler
+    }
+    public enum Skie_SuspendResult {
+      public typealias __Kotlin = ZhortechBase.Skie_SuspendResult
+      public enum Success {
+        public typealias __Kotlin = ZhortechBase.Skie_SuspendResult.Success
+      }
+      public enum Error {
+        public typealias __Kotlin = ZhortechBase.Skie_SuspendResult.Error
+      }
+      public enum Canceled {
+        public typealias __Kotlin = ZhortechBase.Skie_SuspendResult.Canceled
+      }
+    }
+  }
+  public typealias co_touchlab_skie__runtime_kotlin = ZhortechBase.Skie.RuntimeKotlin
+  public enum KotlinxCoroutinesCore {
+    public enum Flow {
+      public typealias __Kotlin = ZhortechBase.Kotlinx_coroutines_coreFlow
+    }
+    public enum StateFlow {
+      public typealias __Kotlin = ZhortechBase.Kotlinx_coroutines_coreStateFlow
+    }
+    public enum SharedFlow {
+      public typealias __Kotlin = ZhortechBase.Kotlinx_coroutines_coreSharedFlow
+    }
+    public enum MutableSharedFlow {
+      public typealias __Kotlin = ZhortechBase.Kotlinx_coroutines_coreMutableSharedFlow
+    }
+    public enum MutableStateFlow {
+      public typealias __Kotlin = ZhortechBase.Kotlinx_coroutines_coreMutableStateFlow
+    }
+    public enum Runnable {
+      public typealias __Kotlin = ZhortechBase.Kotlinx_coroutines_coreRunnable
+    }
+    public enum SelectClause0 {
+    }
+    public enum SelectClause {
+    }
+    public enum SelectInstance {
+    }
+    public enum SelectClause1 {
+    }
+    public enum SelectClause2 {
+    }
+  }
+  public typealias org_jetbrains_kotlinx__kotlinx_coroutines_core = ZhortechBase.Skie.KotlinxCoroutinesCore
+  public enum zt_android_sdk__zhortech_base {
+    public enum BleConfig {
+      public enum Phy {
+      }
+    }
+    public enum DeviceModel {
+    }
+    public enum DeviceSide {
+    }
+    public enum ConnectionState {
+    }
+    public enum ConnectorIdentifier {
+    }
+    public enum DisconnectionReason {
+    }
+    public enum ConnectingStage {
+    }
+    public enum RawData {
+      public enum Sensor {
+      }
+      public enum Format {
+      }
+    }
+    public enum SampleRate {
+    }
+    public enum GyroscopeResolution {
+    }
+    public enum AccelerometerResolution {
+    }
+    public enum TransferCacheType {
+    }
+    public enum DeviceRegistry {
+      public enum DeviceEvent {
+      }
+    }
+    public enum MotionEvent {
+      public enum Motion {
+      }
+    }
+    public enum Decimation {
+    }
+    public enum InternalRange {
+    }
+    public enum InternalTransferType {
+    }
+    public enum Command {
+      public enum ResponseSource {
+      }
+      public enum Ack {
+      }
+    }
+    public enum ByteOrder {
+    }
+    public enum LogLevel {
+    }
+    public enum AlgoEventChunkSegment {
+      public enum EventType {
+      }
+    }
+    public enum FirmwareEventChunkSegment {
+      public enum EventType {
+      }
+    }
+    public enum ChunkDataMessage {
+      public enum Mode {
+      }
+    }
+    public enum GeneralStateMessage {
+      public enum State {
+      }
+    }
+    public enum MetadataMessage {
+      public enum StopReason {
+      }
+    }
+  }
+  public typealias zt_android_sdk__zhortech_base_ = ZhortechBase.Skie.zt_android_sdk__zhortech_base
+  public enum Runtime {
+    public enum QueryResult {
+    }
+    public enum TransacterBase {
+    }
+  }
+  public typealias app_cash_sqldelight__runtime = ZhortechBase.Skie.Runtime
+}
+@_hasMissingDesignatedInitializers public class SkieSwiftFlowIterator<T> : _Concurrency.AsyncIteratorProtocol {
+  @available(iOS 13, macOS 10.15, watchOS 6, tvOS 13, *)
+  public func next() async -> T?
+  @objc deinit
+  public typealias Element = T
+  @available(iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, macOS 15.0, *)
+  @_implements(_Concurrency.AsyncIteratorProtocol, Failure) public typealias __AsyncIteratorProtocol_Failure = Swift.Never
+}
+public protocol SkieSwiftFlowProtocol<Element> : _Concurrency.AsyncSequence {
+  associatedtype Element
+  associatedtype Delegate : ZhortechBase.Kotlinx_coroutines_coreFlow
+}
+@_hasMissingDesignatedInitializers final public class SkieSwiftFlow<T> : ZhortechBase.SkieSwiftFlowProtocol, Swift._ObjectiveCBridgeable {
+  public static func _forceBridgeFromObjectiveC(_ source: ZhortechBase.SkieKotlinFlow<Swift.AnyObject>, result: inout ZhortechBase.SkieSwiftFlow<T>?)
+  public static func _conditionallyBridgeFromObjectiveC(_ source: ZhortechBase.SkieKotlinFlow<Swift.AnyObject>, result: inout ZhortechBase.SkieSwiftFlow<T>?) -> Swift.Bool
+  public static func _unconditionallyBridgeFromObjectiveC(_ source: ZhortechBase.SkieKotlinFlow<Swift.AnyObject>?) -> Self
+  final public func _bridgeToObjectiveC() -> ZhortechBase.SkieKotlinFlow<Swift.AnyObject>
+  final public func makeAsyncIterator() -> ZhortechBase.SkieSwiftFlowIterator<T>
+  public typealias AsyncIterator = ZhortechBase.SkieSwiftFlowIterator<T>
+  public typealias Element = T
+  public typealias _ObjectiveCType = ZhortechBase.SkieKotlinFlow<Swift.AnyObject>
+  public typealias Delegate = any ZhortechBase.Kotlinx_coroutines_coreFlow
+  @available(iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, macOS 15.0, *)
+  @_implements(_Concurrency.AsyncSequence, Failure) public typealias __AsyncSequence_Failure = Swift.Never
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers final public class SkieSwiftOptionalFlow<T> : ZhortechBase.SkieSwiftFlowProtocol, Swift._ObjectiveCBridgeable {
+  public static func _forceBridgeFromObjectiveC(_ source: ZhortechBase.SkieKotlinOptionalFlow<Swift.AnyObject>, result: inout ZhortechBase.SkieSwiftOptionalFlow<T>?)
+  public static func _conditionallyBridgeFromObjectiveC(_ source: ZhortechBase.SkieKotlinOptionalFlow<Swift.AnyObject>, result: inout ZhortechBase.SkieSwiftOptionalFlow<T>?) -> Swift.Bool
+  public static func _unconditionallyBridgeFromObjectiveC(_ source: ZhortechBase.SkieKotlinOptionalFlow<Swift.AnyObject>?) -> Self
+  final public func _bridgeToObjectiveC() -> ZhortechBase.SkieKotlinOptionalFlow<Swift.AnyObject>
+  final public func makeAsyncIterator() -> ZhortechBase.SkieSwiftFlowIterator<T?>
+  public typealias AsyncIterator = ZhortechBase.SkieSwiftFlowIterator<T?>
+  public typealias Element = T?
+  public typealias _ObjectiveCType = ZhortechBase.SkieKotlinOptionalFlow<Swift.AnyObject>
+  public typealias Delegate = any ZhortechBase.Kotlinx_coroutines_coreFlow
+  @available(iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, macOS 15.0, *)
+  @_implements(_Concurrency.AsyncSequence, Failure) public typealias __AsyncSequence_Failure = Swift.Never
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers final public class SkieSwiftSharedFlow<T> : ZhortechBase.SkieSwiftFlowProtocol, Swift._ObjectiveCBridgeable {
+  final public var replayCache: [T] {
+    get
+  }
+  public static func _forceBridgeFromObjectiveC(_ source: ZhortechBase.SkieKotlinSharedFlow<Swift.AnyObject>, result: inout ZhortechBase.SkieSwiftSharedFlow<T>?)
+  public static func _conditionallyBridgeFromObjectiveC(_ source: ZhortechBase.SkieKotlinSharedFlow<Swift.AnyObject>, result: inout ZhortechBase.SkieSwiftSharedFlow<T>?) -> Swift.Bool
+  public static func _unconditionallyBridgeFromObjectiveC(_ source: ZhortechBase.SkieKotlinSharedFlow<Swift.AnyObject>?) -> Self
+  final public func _bridgeToObjectiveC() -> ZhortechBase.SkieKotlinSharedFlow<Swift.AnyObject>
+  final public func makeAsyncIterator() -> ZhortechBase.SkieSwiftFlowIterator<T>
+  public typealias AsyncIterator = ZhortechBase.SkieSwiftFlowIterator<T>
+  public typealias Element = T
+  public typealias _ObjectiveCType = ZhortechBase.SkieKotlinSharedFlow<Swift.AnyObject>
+  public typealias Delegate = any ZhortechBase.Kotlinx_coroutines_coreSharedFlow
+  @available(iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, macOS 15.0, *)
+  @_implements(_Concurrency.AsyncSequence, Failure) public typealias __AsyncSequence_Failure = Swift.Never
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers final public class SkieSwiftOptionalSharedFlow<T> : ZhortechBase.SkieSwiftFlowProtocol, Swift._ObjectiveCBridgeable {
+  final public var replayCache: [T?] {
+    get
+  }
+  public static func _forceBridgeFromObjectiveC(_ source: ZhortechBase.SkieKotlinOptionalSharedFlow<Swift.AnyObject>, result: inout ZhortechBase.SkieSwiftOptionalSharedFlow<T>?)
+  public static func _conditionallyBridgeFromObjectiveC(_ source: ZhortechBase.SkieKotlinOptionalSharedFlow<Swift.AnyObject>, result: inout ZhortechBase.SkieSwiftOptionalSharedFlow<T>?) -> Swift.Bool
+  public static func _unconditionallyBridgeFromObjectiveC(_ source: ZhortechBase.SkieKotlinOptionalSharedFlow<Swift.AnyObject>?) -> Self
+  final public func _bridgeToObjectiveC() -> ZhortechBase.SkieKotlinOptionalSharedFlow<Swift.AnyObject>
+  final public func makeAsyncIterator() -> ZhortechBase.SkieSwiftFlowIterator<T?>
+  public typealias AsyncIterator = ZhortechBase.SkieSwiftFlowIterator<T?>
+  public typealias Element = T?
+  public typealias _ObjectiveCType = ZhortechBase.SkieKotlinOptionalSharedFlow<Swift.AnyObject>
+  public typealias Delegate = any ZhortechBase.Kotlinx_coroutines_coreSharedFlow
+  @available(iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, macOS 15.0, *)
+  @_implements(_Concurrency.AsyncSequence, Failure) public typealias __AsyncSequence_Failure = Swift.Never
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers final public class SkieSwiftMutableSharedFlow<T> : ZhortechBase.SkieSwiftFlowProtocol, Swift._ObjectiveCBridgeable {
+  final public var subscriptionCount: ZhortechBase.SkieSwiftStateFlow<ZhortechBase.KotlinInt> {
+    get
+  }
+  final public var replayCache: [T] {
+    get
+  }
+  @available(iOS 13, macOS 10.15, watchOS 6, tvOS 13, *)
+  final public func emit(value: T) async throws
+  final public func tryEmit(value: T) -> Swift.Bool
+  final public func resetReplayCache()
+  public static func _forceBridgeFromObjectiveC(_ source: ZhortechBase.SkieKotlinMutableSharedFlow<Swift.AnyObject>, result: inout ZhortechBase.SkieSwiftMutableSharedFlow<T>?)
+  public static func _conditionallyBridgeFromObjectiveC(_ source: ZhortechBase.SkieKotlinMutableSharedFlow<Swift.AnyObject>, result: inout ZhortechBase.SkieSwiftMutableSharedFlow<T>?) -> Swift.Bool
+  public static func _unconditionallyBridgeFromObjectiveC(_ source: ZhortechBase.SkieKotlinMutableSharedFlow<Swift.AnyObject>?) -> Self
+  final public func _bridgeToObjectiveC() -> ZhortechBase.SkieKotlinMutableSharedFlow<Swift.AnyObject>
+  final public func makeAsyncIterator() -> ZhortechBase.SkieSwiftFlowIterator<T>
+  public typealias AsyncIterator = ZhortechBase.SkieSwiftFlowIterator<T>
+  public typealias Element = T
+  public typealias _ObjectiveCType = ZhortechBase.SkieKotlinMutableSharedFlow<Swift.AnyObject>
+  public typealias Delegate = any ZhortechBase.Kotlinx_coroutines_coreMutableSharedFlow
+  @available(iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, macOS 15.0, *)
+  @_implements(_Concurrency.AsyncSequence, Failure) public typealias __AsyncSequence_Failure = Swift.Never
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers final public class SkieSwiftOptionalMutableSharedFlow<T> : ZhortechBase.SkieSwiftFlowProtocol, Swift._ObjectiveCBridgeable {
+  final public var subscriptionCount: ZhortechBase.SkieSwiftStateFlow<ZhortechBase.KotlinInt> {
+    get
+  }
+  final public var replayCache: [T?] {
+    get
+  }
+  @available(iOS 13, macOS 10.15, watchOS 6, tvOS 13, *)
+  final public func emit(value: T?) async throws
+  final public func tryEmit(value: T?) -> Swift.Bool
+  final public func resetReplayCache()
+  public static func _forceBridgeFromObjectiveC(_ source: ZhortechBase.SkieKotlinOptionalMutableSharedFlow<Swift.AnyObject>, result: inout ZhortechBase.SkieSwiftOptionalMutableSharedFlow<T>?)
+  public static func _conditionallyBridgeFromObjectiveC(_ source: ZhortechBase.SkieKotlinOptionalMutableSharedFlow<Swift.AnyObject>, result: inout ZhortechBase.SkieSwiftOptionalMutableSharedFlow<T>?) -> Swift.Bool
+  public static func _unconditionallyBridgeFromObjectiveC(_ source: ZhortechBase.SkieKotlinOptionalMutableSharedFlow<Swift.AnyObject>?) -> Self
+  final public func _bridgeToObjectiveC() -> ZhortechBase.SkieKotlinOptionalMutableSharedFlow<Swift.AnyObject>
+  final public func makeAsyncIterator() -> ZhortechBase.SkieSwiftFlowIterator<T?>
+  public typealias AsyncIterator = ZhortechBase.SkieSwiftFlowIterator<T?>
+  public typealias Element = T?
+  public typealias _ObjectiveCType = ZhortechBase.SkieKotlinOptionalMutableSharedFlow<Swift.AnyObject>
+  public typealias Delegate = any ZhortechBase.Kotlinx_coroutines_coreMutableSharedFlow
+  @available(iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, macOS 15.0, *)
+  @_implements(_Concurrency.AsyncSequence, Failure) public typealias __AsyncSequence_Failure = Swift.Never
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers final public class SkieSwiftStateFlow<T> : ZhortechBase.SkieSwiftFlowProtocol, Swift._ObjectiveCBridgeable {
+  final public var value: T {
+    get
+  }
+  final public var replayCache: [T] {
+    get
+  }
+  public static func _forceBridgeFromObjectiveC(_ source: ZhortechBase.SkieKotlinStateFlow<Swift.AnyObject>, result: inout ZhortechBase.SkieSwiftStateFlow<T>?)
+  public static func _conditionallyBridgeFromObjectiveC(_ source: ZhortechBase.SkieKotlinStateFlow<Swift.AnyObject>, result: inout ZhortechBase.SkieSwiftStateFlow<T>?) -> Swift.Bool
+  public static func _unconditionallyBridgeFromObjectiveC(_ source: ZhortechBase.SkieKotlinStateFlow<Swift.AnyObject>?) -> Self
+  final public func _bridgeToObjectiveC() -> ZhortechBase.SkieKotlinStateFlow<Swift.AnyObject>
+  final public func makeAsyncIterator() -> ZhortechBase.SkieSwiftFlowIterator<T>
+  public typealias AsyncIterator = ZhortechBase.SkieSwiftFlowIterator<T>
+  public typealias Element = T
+  public typealias _ObjectiveCType = ZhortechBase.SkieKotlinStateFlow<Swift.AnyObject>
+  public typealias Delegate = any ZhortechBase.Kotlinx_coroutines_coreStateFlow
+  @available(iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, macOS 15.0, *)
+  @_implements(_Concurrency.AsyncSequence, Failure) public typealias __AsyncSequence_Failure = Swift.Never
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers final public class SkieSwiftOptionalStateFlow<T> : ZhortechBase.SkieSwiftFlowProtocol, Swift._ObjectiveCBridgeable {
+  final public var value: T? {
+    get
+  }
+  final public var replayCache: [T?] {
+    get
+  }
+  public static func _forceBridgeFromObjectiveC(_ source: ZhortechBase.SkieKotlinOptionalStateFlow<Swift.AnyObject>, result: inout ZhortechBase.SkieSwiftOptionalStateFlow<T>?)
+  public static func _conditionallyBridgeFromObjectiveC(_ source: ZhortechBase.SkieKotlinOptionalStateFlow<Swift.AnyObject>, result: inout ZhortechBase.SkieSwiftOptionalStateFlow<T>?) -> Swift.Bool
+  public static func _unconditionallyBridgeFromObjectiveC(_ source: ZhortechBase.SkieKotlinOptionalStateFlow<Swift.AnyObject>?) -> Self
+  final public func _bridgeToObjectiveC() -> ZhortechBase.SkieKotlinOptionalStateFlow<Swift.AnyObject>
+  final public func makeAsyncIterator() -> ZhortechBase.SkieSwiftFlowIterator<T?>
+  public typealias AsyncIterator = ZhortechBase.SkieSwiftFlowIterator<T?>
+  public typealias Element = T?
+  public typealias _ObjectiveCType = ZhortechBase.SkieKotlinOptionalStateFlow<Swift.AnyObject>
+  public typealias Delegate = any ZhortechBase.Kotlinx_coroutines_coreStateFlow
+  @available(iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, macOS 15.0, *)
+  @_implements(_Concurrency.AsyncSequence, Failure) public typealias __AsyncSequence_Failure = Swift.Never
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers final public class SkieSwiftMutableStateFlow<T> : ZhortechBase.SkieSwiftFlowProtocol, Swift._ObjectiveCBridgeable {
+  final public var value: T {
+    get
+    set(value)
+  }
+  final public var replayCache: [T] {
+    get
+  }
+  final public var subscriptionCount: ZhortechBase.SkieSwiftStateFlow<ZhortechBase.KotlinInt> {
+    get
+  }
+  final public func compareAndSet(expect: T, update: T) -> Swift.Bool
+  @available(iOS 13, macOS 10.15, watchOS 6, tvOS 13, *)
+  final public func emit(value: T) async throws
+  final public func tryEmit(value: T) -> Swift.Bool
+  final public func resetReplayCache()
+  public static func _forceBridgeFromObjectiveC(_ source: ZhortechBase.SkieKotlinMutableStateFlow<Swift.AnyObject>, result: inout ZhortechBase.SkieSwiftMutableStateFlow<T>?)
+  public static func _conditionallyBridgeFromObjectiveC(_ source: ZhortechBase.SkieKotlinMutableStateFlow<Swift.AnyObject>, result: inout ZhortechBase.SkieSwiftMutableStateFlow<T>?) -> Swift.Bool
+  public static func _unconditionallyBridgeFromObjectiveC(_ source: ZhortechBase.SkieKotlinMutableStateFlow<Swift.AnyObject>?) -> Self
+  final public func _bridgeToObjectiveC() -> ZhortechBase.SkieKotlinMutableStateFlow<Swift.AnyObject>
+  final public func makeAsyncIterator() -> ZhortechBase.SkieSwiftFlowIterator<T>
+  public typealias AsyncIterator = ZhortechBase.SkieSwiftFlowIterator<T>
+  public typealias Element = T
+  public typealias _ObjectiveCType = ZhortechBase.SkieKotlinMutableStateFlow<Swift.AnyObject>
+  public typealias Delegate = any ZhortechBase.Kotlinx_coroutines_coreMutableStateFlow
+  @available(iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, macOS 15.0, *)
+  @_implements(_Concurrency.AsyncSequence, Failure) public typealias __AsyncSequence_Failure = Swift.Never
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers final public class SkieSwiftOptionalMutableStateFlow<T> : ZhortechBase.SkieSwiftFlowProtocol, Swift._ObjectiveCBridgeable {
+  final public var value: T? {
+    get
+    set(value)
+  }
+  final public var replayCache: [T?] {
+    get
+  }
+  final public var subscriptionCount: ZhortechBase.SkieSwiftStateFlow<ZhortechBase.KotlinInt> {
+    get
+  }
+  final public func compareAndSet(expect: T?, update: T?) -> Swift.Bool
+  @available(iOS 13, macOS 10.15, watchOS 6, tvOS 13, *)
+  final public func emit(value: T?) async throws
+  final public func tryEmit(value: T?) -> Swift.Bool
+  final public func resetReplayCache()
+  public static func _forceBridgeFromObjectiveC(_ source: ZhortechBase.SkieKotlinOptionalMutableStateFlow<Swift.AnyObject>, result: inout ZhortechBase.SkieSwiftOptionalMutableStateFlow<T>?)
+  public static func _conditionallyBridgeFromObjectiveC(_ source: ZhortechBase.SkieKotlinOptionalMutableStateFlow<Swift.AnyObject>, result: inout ZhortechBase.SkieSwiftOptionalMutableStateFlow<T>?) -> Swift.Bool
+  public static func _unconditionallyBridgeFromObjectiveC(_ source: ZhortechBase.SkieKotlinOptionalMutableStateFlow<Swift.AnyObject>?) -> Self
+  final public func _bridgeToObjectiveC() -> ZhortechBase.SkieKotlinOptionalMutableStateFlow<Swift.AnyObject>
+  final public func makeAsyncIterator() -> ZhortechBase.SkieSwiftFlowIterator<T?>
+  public typealias AsyncIterator = ZhortechBase.SkieSwiftFlowIterator<T?>
+  public typealias Element = T?
+  public typealias _ObjectiveCType = ZhortechBase.SkieKotlinOptionalMutableStateFlow<Swift.AnyObject>
+  public typealias Delegate = any ZhortechBase.Kotlinx_coroutines_coreMutableStateFlow
+  @available(iOS 18.0, tvOS 18.0, watchOS 11.0, visionOS 2.0, macOS 15.0, *)
+  @_implements(_Concurrency.AsyncSequence, Failure) public typealias __AsyncSequence_Failure = Swift.Never
+  @objc deinit
+}
+extension ZhortechBase.DeviceKt {
+  @available(iOS 13, macOS 10.15, watchOS 6, tvOS 13, *)
+  public static func withModule(deviceSide: ZhortechBase.DeviceSide, block: @escaping () -> Swift.Void) async throws
+  @available(iOS 13, macOS 10.15, watchOS 6, tvOS 13, *)
+  public static func execute(_ receiver: any ZhortechBase.Device, command: ZhortechBase.Command) async throws
+  @available(iOS 13, macOS 10.15, watchOS 6, tvOS 13, *)
+  public static func request(_ receiver: any ZhortechBase.Device, command: ZhortechBase.Command, responseType: ZhortechBase.MessageType, timeout: Swift.Int64) async throws -> ZhortechBase.Data<ZhortechBase.ModuleMessage>
+  @available(iOS 13, macOS 10.15, watchOS 6, tvOS 13, *)
+  public static func requestSingle(_ receiver: any ZhortechBase.Device, command: ZhortechBase.Command, responseType: ZhortechBase.MessageType, timeout: Swift.Int64) async throws -> ZhortechBase.ModuleMessage
+  @available(iOS 13, macOS 10.15, watchOS 6, tvOS 13, *)
+  public static func clearTransferCache(_ receiver: any ZhortechBase.Device) async throws
+  @available(iOS 13, macOS 10.15, watchOS 6, tvOS 13, *)
+  public static func request(_ receiver: any ZhortechBase.Device, command: ZhortechBase.Command, responseType: ZhortechBase.MessageType) async throws -> ZhortechBase.Data<ZhortechBase.ModuleMessage>
+  @available(iOS 13, macOS 10.15, watchOS 6, tvOS 13, *)
+  public static func requestSingle(_ receiver: any ZhortechBase.Device, command: ZhortechBase.Command, responseType: ZhortechBase.MessageType) async throws -> ZhortechBase.ModuleMessage
+}
+public func __withModule(deviceSide: ZhortechBase.DeviceSide, block: @escaping () -> Swift.Void, completionHandler: @escaping ((any Swift.Error)?) -> Swift.Void)
+@available(iOS 13, macOS 10.15, watchOS 6, tvOS 13, *)
+public func withModule(deviceSide: ZhortechBase.DeviceSide, block: @escaping () -> Swift.Void) async throws
+public func createDevice(model: ZhortechBase.DeviceModel, connections: [ZhortechBase.DeviceSide : ZhortechBase.Connection], deviceConfig: ZhortechBase.DeviceConfig) -> any ZhortechBase.Device
+public func createDevice(model: ZhortechBase.DeviceModel, mainConnection: ZhortechBase.Connection, deviceConfig: ZhortechBase.DeviceConfig) -> any ZhortechBase.Device
+public func createDevice(model: ZhortechBase.DeviceModel, mainModuleDescriptor: ZhortechBase.ModuleDescriptor, connectionConfig: any ZhortechBase.ConnectionConfig, deviceConfig: ZhortechBase.DeviceConfig) -> any ZhortechBase.Device
+public func deviceConfig(builder: @escaping (ZhortechBase.DeviceConfig.Builder) -> Swift.Void) -> ZhortechBase.DeviceConfig
+public func createDevice(model: ZhortechBase.DeviceModel, connections: [ZhortechBase.DeviceSide : ZhortechBase.Connection]) -> any ZhortechBase.Device
+public func createDevice(model: ZhortechBase.DeviceModel, mainConnection: ZhortechBase.Connection) -> any ZhortechBase.Device
+public func createDevice(model: ZhortechBase.DeviceModel, mainModuleDescriptor: ZhortechBase.ModuleDescriptor) -> any ZhortechBase.Device
+public func createDevice(model: ZhortechBase.DeviceModel, mainModuleDescriptor: ZhortechBase.ModuleDescriptor, connectionConfig: any ZhortechBase.ConnectionConfig) -> any ZhortechBase.Device
+public func createDevice(model: ZhortechBase.DeviceModel, mainModuleDescriptor: ZhortechBase.ModuleDescriptor, deviceConfig: ZhortechBase.DeviceConfig) -> any ZhortechBase.Device
+extension ZhortechBase.CoroutineScopeKt {
+  @available(iOS 13, macOS 10.15, watchOS 6, tvOS 13, *)
+  public static func withModule(deviceSide: ZhortechBase.DeviceSide, block: any ZhortechBase.KotlinSuspendFunction0) async throws -> Any?
+}
+public func __withModule(deviceSide: ZhortechBase.DeviceSide, block: any ZhortechBase.KotlinSuspendFunction0, completionHandler: @escaping (Any?, (any Swift.Error)?) -> Swift.Void)
+@available(iOS 13, macOS 10.15, watchOS 6, tvOS 13, *)
+public func withModule(deviceSide: ZhortechBase.DeviceSide, block: any ZhortechBase.KotlinSuspendFunction0) async throws -> Any?
+extension ZhortechBase.ScannerKt {
+  @available(iOS 13, macOS 10.15, watchOS 6, tvOS 13, *)
+  public static func scanSingle(scanFilter: ZhortechBase.ScanFilter?, lowLatency: Swift.Bool) async throws -> ZhortechBase.ModuleDescriptor
+  @available(iOS 13, macOS 10.15, watchOS 6, tvOS 13, *)
+  public static func scanSingle(lowLatency: Swift.Bool, builder: @escaping (ZhortechBase.ScanFilter.Builder) -> Swift.Void) async throws -> ZhortechBase.ModuleDescriptor
+  @available(iOS 13, macOS 10.15, watchOS 6, tvOS 13, *)
+  public static func scanSingle() async throws -> ZhortechBase.ModuleDescriptor
+  @available(iOS 13, macOS 10.15, watchOS 6, tvOS 13, *)
+  public static func scanSingle(scanFilter: ZhortechBase.ScanFilter?) async throws -> ZhortechBase.ModuleDescriptor
+  @available(iOS 13, macOS 10.15, watchOS 6, tvOS 13, *)
+  public static func scanSingle(lowLatency: Swift.Bool) async throws -> ZhortechBase.ModuleDescriptor
+  @available(iOS 13, macOS 10.15, watchOS 6, tvOS 13, *)
+  public static func scanSingle(builder: @escaping (ZhortechBase.ScanFilter.Builder) -> Swift.Void) async throws -> ZhortechBase.ModuleDescriptor
+}
+public func scanContinuous(scanFilter: ZhortechBase.ScanFilter?, lowLatency: Swift.Bool) -> ZhortechBase.SkieSwiftFlow<ZhortechBase.ModuleDescriptor>
+public func scanContinuous(lowLatency: Swift.Bool, builder: @escaping (ZhortechBase.ScanFilter.Builder) -> Swift.Void) -> ZhortechBase.SkieSwiftFlow<ZhortechBase.ModuleDescriptor>
+public func __scanSingle(scanFilter: ZhortechBase.ScanFilter?, lowLatency: Swift.Bool, completionHandler: @escaping (ZhortechBase.ModuleDescriptor?, (any Swift.Error)?) -> Swift.Void)
+@available(iOS 13, macOS 10.15, watchOS 6, tvOS 13, *)
+public func scanSingle(scanFilter: ZhortechBase.ScanFilter?, lowLatency: Swift.Bool) async throws -> ZhortechBase.ModuleDescriptor
+public func __scanSingle(lowLatency: Swift.Bool, builder: @escaping (ZhortechBase.ScanFilter.Builder) -> Swift.Void, completionHandler: @escaping (ZhortechBase.ModuleDescriptor?, (any Swift.Error)?) -> Swift.Void)
+@available(iOS 13, macOS 10.15, watchOS 6, tvOS 13, *)
+public func scanSingle(lowLatency: Swift.Bool, builder: @escaping (ZhortechBase.ScanFilter.Builder) -> Swift.Void) async throws -> ZhortechBase.ModuleDescriptor
+public func scanContinuous() -> ZhortechBase.SkieSwiftFlow<ZhortechBase.ModuleDescriptor>
+public func scanContinuous(scanFilter: ZhortechBase.ScanFilter?) -> ZhortechBase.SkieSwiftFlow<ZhortechBase.ModuleDescriptor>
+public func scanContinuous(lowLatency: Swift.Bool) -> ZhortechBase.SkieSwiftFlow<ZhortechBase.ModuleDescriptor>
+public func scanContinuous(builder: @escaping (ZhortechBase.ScanFilter.Builder) -> Swift.Void) -> ZhortechBase.SkieSwiftFlow<ZhortechBase.ModuleDescriptor>
+public func __scanSingle(completionHandler: @escaping (ZhortechBase.ModuleDescriptor?, (any Swift.Error)?) -> Swift.Void)
+@available(iOS 13, macOS 10.15, watchOS 6, tvOS 13, *)
+public func scanSingle() async throws -> ZhortechBase.ModuleDescriptor
+public func __scanSingle(scanFilter: ZhortechBase.ScanFilter?, completionHandler: @escaping (ZhortechBase.ModuleDescriptor?, (any Swift.Error)?) -> Swift.Void)
+@available(iOS 13, macOS 10.15, watchOS 6, tvOS 13, *)
+public func scanSingle(scanFilter: ZhortechBase.ScanFilter?) async throws -> ZhortechBase.ModuleDescriptor
+public func __scanSingle(lowLatency: Swift.Bool, completionHandler: @escaping (ZhortechBase.ModuleDescriptor?, (any Swift.Error)?) -> Swift.Void)
+@available(iOS 13, macOS 10.15, watchOS 6, tvOS 13, *)
+public func scanSingle(lowLatency: Swift.Bool) async throws -> ZhortechBase.ModuleDescriptor
+public func __scanSingle(builder: @escaping (ZhortechBase.ScanFilter.Builder) -> Swift.Void, completionHandler: @escaping (ZhortechBase.ModuleDescriptor?, (any Swift.Error)?) -> Swift.Void)
+@available(iOS 13, macOS 10.15, watchOS 6, tvOS 13, *)
+public func scanSingle(builder: @escaping (ZhortechBase.ScanFilter.Builder) -> Swift.Void) async throws -> ZhortechBase.ModuleDescriptor
+extension ZhortechBase.TransferDataKt {
+  @available(iOS 13, macOS 10.15, watchOS 6, tvOS 13, *)
+  public static func asBytes(_ receiver: ZhortechBase.SkieSwiftFlow<ZhortechBase.TransferData>) async throws -> ZhortechBase.KotlinByteArray
+}
+extension ZhortechBase.Skie.RuntimeKotlin.SkieColdFlowIterator {
+  public struct __Suspend<E> where E : AnyObject {
+    public let __kotlinObject: ZhortechBase.SkieColdFlowIterator<E>
+    public init(_ __kotlinObject: ZhortechBase.SkieColdFlowIterator<E>)
+  }
+}
+public func skie<E>(_ kotlinObject: ZhortechBase.SkieColdFlowIterator<E>) -> ZhortechBase.Skie.RuntimeKotlin.SkieColdFlowIterator.__Suspend<E> where E : AnyObject
+extension ZhortechBase.Skie.RuntimeKotlin.SkieColdFlowIterator.__Suspend {
+  @available(iOS 13, macOS 10.15, watchOS 6, tvOS 13, *)
+  public func hasNext() async throws -> ZhortechBase.KotlinBoolean
+}
+extension ZhortechBase.Kotlinx_coroutines_coreFlow {
+  @available(iOS 13, macOS 10.15, watchOS 6, tvOS 13, *)
+  public func collect(collector: any ZhortechBase.Kotlinx_coroutines_coreFlowCollector) async throws
+}
+extension ZhortechBase.Kotlinx_coroutines_coreFlowCollector {
+  @available(iOS 13, macOS 10.15, watchOS 6, tvOS 13, *)
+  public func emit(value: Any?) async throws
+}
+extension ZhortechBase.RuntimeQueryResult {
+  @available(iOS 13, macOS 10.15, watchOS 6, tvOS 13, *)
+  public func await() async throws -> Any?
+}
+extension ZhortechBase.Skie.Runtime.QueryResult {
+  @frozen public enum __Sealed : Swift.Hashable {
+    case `else`
+    public static func == (a: ZhortechBase.Skie.Runtime.QueryResult.__Sealed, b: ZhortechBase.Skie.Runtime.QueryResult.__Sealed) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+}
+public func onEnum<__Sealed>(of sealed: __Sealed) -> ZhortechBase.Skie.Runtime.QueryResult.__Sealed where __Sealed : ZhortechBase.RuntimeQueryResult
+@_disfavoredOverload public func onEnum<__Sealed>(of sealed: __Sealed?) -> ZhortechBase.Skie.Runtime.QueryResult.__Sealed? where __Sealed : ZhortechBase.RuntimeQueryResult
+extension ZhortechBase.ReconnectionStrategy {
+  @available(iOS 13, macOS 10.15, watchOS 6, tvOS 13, *)
+  public func onCanceled() async throws
+}
+extension ZhortechBase.KotlinSuspendFunction0 {
+  @available(iOS 13, macOS 10.15, watchOS 6, tvOS 13, *)
+  public func invoke() async throws -> Any?
+}
+extension ZhortechBase.Connection {
+  @available(iOS 13, macOS 10.15, watchOS 6, tvOS 13, *)
+  public func connect() async throws
+  @available(iOS 13, macOS 10.15, watchOS 6, tvOS 13, *)
+  public func disconnect() async throws
+  @available(iOS 13, macOS 10.15, watchOS 6, tvOS 13, *)
+  public func getConnector(identifier: ZhortechBase.ConnectorIdentifier) async throws -> any ZhortechBase.ServiceConnector
+  @available(iOS 13, macOS 10.15, watchOS 6, tvOS 13, *)
+  public func getLastConnectionState() async throws -> ZhortechBase.ConnectionState
+}
+extension ZhortechBase.ServiceConnector {
+  @available(iOS 13, macOS 10.15, watchOS 6, tvOS 13, *)
+  public func write(byteArray: ZhortechBase.KotlinByteArray) async throws
+}
+extension ZhortechBase.Resource {
+  @available(iOS 13, macOS 10.15, watchOS 6, tvOS 13, *)
+  public func close() async throws
+  @available(iOS 13, macOS 10.15, watchOS 6, tvOS 13, *)
+  public func open() async throws
+}
+extension ZhortechBase.Device {
+  @available(iOS 13, macOS 10.15, watchOS 6, tvOS 13, *)
+  public func connect() async throws
+  @available(iOS 13, macOS 10.15, watchOS 6, tvOS 13, *)
+  public func disconnect() async throws
+  @available(iOS 13, macOS 10.15, watchOS 6, tvOS 13, *)
+  public func enablePeerConnection(enabled: Swift.Bool) async throws
+  @available(iOS 13, macOS 10.15, watchOS 6, tvOS 13, *)
+  public func getDeviceDescriptor() async throws -> ZhortechBase.ModuleDescriptor
+  @available(iOS 13, macOS 10.15, watchOS 6, tvOS 13, *)
+  public func getLastConnectionState() async throws -> ZhortechBase.ConnectionState
+  @available(iOS 13, macOS 10.15, watchOS 6, tvOS 13, *)
+  public func observeConnectionState() async throws -> any ZhortechBase.Kotlinx_coroutines_coreFlow
+  @available(iOS 13, macOS 10.15, watchOS 6, tvOS 13, *)
+  public func reboot() async throws
+  @available(iOS 13, macOS 10.15, watchOS 6, tvOS 13, *)
+  public func requestDisconnection() async throws
+  public func downloadMain(type: any ZhortechBase.TransferType, transferRange: any ZhortechBase.TransferRange) throws -> ZhortechBase.SkieSwiftOptionalFlow<ZhortechBase.TransferData>
+  public func downloadPeer(type: any ZhortechBase.TransferType, transferRange: any ZhortechBase.TransferRange) throws -> ZhortechBase.SkieSwiftOptionalFlow<ZhortechBase.TransferData>
+  public func __execute(command: ZhortechBase.Command, completionHandler: @escaping ((any Swift.Error)?) -> Swift.Void)
+  @available(iOS 13, macOS 10.15, watchOS 6, tvOS 13, *)
+  public func execute(command: ZhortechBase.Command) async throws
+  public func __request(command: ZhortechBase.Command, responseType: ZhortechBase.MessageType, timeout: Swift.Int64, completionHandler: @escaping (ZhortechBase.Data<ZhortechBase.ModuleMessage>?, (any Swift.Error)?) -> Swift.Void)
+  @available(iOS 13, macOS 10.15, watchOS 6, tvOS 13, *)
+  public func request(command: ZhortechBase.Command, responseType: ZhortechBase.MessageType, timeout: Swift.Int64) async throws -> ZhortechBase.Data<ZhortechBase.ModuleMessage>
+  public func __requestSingle(command: ZhortechBase.Command, responseType: ZhortechBase.MessageType, timeout: Swift.Int64, completionHandler: @escaping (ZhortechBase.ModuleMessage?, (any Swift.Error)?) -> Swift.Void)
+  @available(iOS 13, macOS 10.15, watchOS 6, tvOS 13, *)
+  public func requestSingle(command: ZhortechBase.Command, responseType: ZhortechBase.MessageType, timeout: Swift.Int64) async throws -> ZhortechBase.ModuleMessage
+  public func __clearTransferCache(completionHandler: @escaping ((any Swift.Error)?) -> Swift.Void)
+  @available(iOS 13, macOS 10.15, watchOS 6, tvOS 13, *)
+  public func clearTransferCache() async throws
+  public func download(type: any ZhortechBase.TransferType, transferRange: any ZhortechBase.TransferRange) -> ZhortechBase.SkieSwiftFlow<ZhortechBase.TransferData>
+  public func downloadMain(type: any ZhortechBase.TransferType) throws -> ZhortechBase.SkieSwiftOptionalFlow<ZhortechBase.TransferData>
+  public func downloadPeer(type: any ZhortechBase.TransferType) throws -> ZhortechBase.SkieSwiftOptionalFlow<ZhortechBase.TransferData>
+  public func __request(command: ZhortechBase.Command, responseType: ZhortechBase.MessageType, completionHandler: @escaping (ZhortechBase.Data<ZhortechBase.ModuleMessage>?, (any Swift.Error)?) -> Swift.Void)
+  @available(iOS 13, macOS 10.15, watchOS 6, tvOS 13, *)
+  public func request(command: ZhortechBase.Command, responseType: ZhortechBase.MessageType) async throws -> ZhortechBase.Data<ZhortechBase.ModuleMessage>
+  public func __requestSingle(command: ZhortechBase.Command, responseType: ZhortechBase.MessageType, completionHandler: @escaping (ZhortechBase.ModuleMessage?, (any Swift.Error)?) -> Swift.Void)
+  @available(iOS 13, macOS 10.15, watchOS 6, tvOS 13, *)
+  public func requestSingle(command: ZhortechBase.Command, responseType: ZhortechBase.MessageType) async throws -> ZhortechBase.ModuleMessage
+  public func download(type: any ZhortechBase.TransferType) -> ZhortechBase.SkieSwiftFlow<ZhortechBase.TransferData>
+}
+extension ZhortechBase.DeviceRegistry {
+  @available(iOS 13, macOS 10.15, watchOS 6, tvOS 13, *)
+  public func register(device: any ZhortechBase.Device) async throws
+  @available(iOS 13, macOS 10.15, watchOS 6, tvOS 13, *)
+  public func unregister(device: any ZhortechBase.Device) async throws
+}
+extension ZhortechBase.DeviceInfoService {
+  @available(iOS 13, macOS 10.15, watchOS 6, tvOS 13, *)
+  public func getBatteryInfo() async throws -> ZhortechBase.Data<ZhortechBase.BatteryInfo>
+  @available(iOS 13, macOS 10.15, watchOS 6, tvOS 13, *)
+  public func getFirmwareInfo() async throws -> ZhortechBase.Data<ZhortechBase.FirmwareInfo>
+  @available(iOS 13, macOS 10.15, watchOS 6, tvOS 13, *)
+  public func getHardwareInfo() async throws -> ZhortechBase.Data<ZhortechBase.HardwareInfo>
+}
+extension ZhortechBase.RawDataService {
+  @available(iOS 13, macOS 10.15, watchOS 6, tvOS 13, *)
+  public func getRawDataPayload(progressListener: @escaping (ZhortechBase.DeviceSide, ZhortechBase.KotlinInt, ZhortechBase.KotlinInt) -> Swift.Void) async throws -> ZhortechBase.Data<ZhortechBase.Payload<ZhortechBase.KotlinByteArray>>
+}
+extension ZhortechBase.DeviceTransferManager {
+  @available(iOS 13, macOS 10.15, watchOS 6, tvOS 13, *)
+  public func clearCache() async throws
+}
+extension ZhortechBase.Kotlinx_coroutines_coreJob {
+  @available(iOS 13, macOS 10.15, watchOS 6, tvOS 13, *)
+  public func join() async throws
+}
+extension ZhortechBase.ChunkAccessor {
+  @available(iOS 13, macOS 10.15, watchOS 6, tvOS 13, *)
+  public func get(filter: @escaping (any ZhortechBase.ChunkSegment) -> ZhortechBase.KotlinBoolean) async throws -> any ZhortechBase.ChunkSegment
+  @available(iOS 13, macOS 10.15, watchOS 6, tvOS 13, *)
+  public func observe() async throws -> any ZhortechBase.Kotlinx_coroutines_coreFlow
+  @available(iOS 13, macOS 10.15, watchOS 6, tvOS 13, *)
+  public func get() async throws -> any ZhortechBase.ChunkSegment
+}
+extension ZhortechBase.RuntimeSuspendingTransacter {
+  @available(iOS 13, macOS 10.15, watchOS 6, tvOS 13, *)
+  public func transaction(noEnclosing: Swift.Bool, body: any ZhortechBase.KotlinSuspendFunction1) async throws
+  @available(iOS 13, macOS 10.15, watchOS 6, tvOS 13, *)
+  public func transactionWithResult(noEnclosing: Swift.Bool, bodyWithReturn: any ZhortechBase.KotlinSuspendFunction1) async throws -> Any?
+}
+extension ZhortechBase.KotlinSuspendFunction1 {
+  @available(iOS 13, macOS 10.15, watchOS 6, tvOS 13, *)
+  public func invoke(p1: Any?) async throws -> Any?
+}
+public func SkieKotlinFlow<T>(_ flow: ZhortechBase.SkieSwiftFlow<T>) -> ZhortechBase.SkieKotlinFlow<T> where T : AnyObject
+public func SkieKotlinFlow<T>(_ flow: ZhortechBase.SkieSwiftSharedFlow<T>) -> ZhortechBase.SkieKotlinFlow<T> where T : AnyObject
+public func SkieKotlinFlow<T>(_ flow: ZhortechBase.SkieSwiftMutableSharedFlow<T>) -> ZhortechBase.SkieKotlinFlow<T> where T : AnyObject
+public func SkieKotlinFlow<T>(_ flow: ZhortechBase.SkieSwiftStateFlow<T>) -> ZhortechBase.SkieKotlinFlow<T> where T : AnyObject
+public func SkieKotlinFlow<T>(_ flow: ZhortechBase.SkieSwiftMutableStateFlow<T>) -> ZhortechBase.SkieKotlinFlow<T> where T : AnyObject
+public func SkieKotlinFlow<T>(_ flow: ZhortechBase.SkieSwiftFlow<T>) -> ZhortechBase.SkieKotlinFlow<T._ObjectiveCType> where T : Swift._ObjectiveCBridgeable
+public func SkieKotlinFlow<T>(_ flow: ZhortechBase.SkieSwiftSharedFlow<T>) -> ZhortechBase.SkieKotlinFlow<T._ObjectiveCType> where T : Swift._ObjectiveCBridgeable
+public func SkieKotlinFlow<T>(_ flow: ZhortechBase.SkieSwiftMutableSharedFlow<T>) -> ZhortechBase.SkieKotlinFlow<T._ObjectiveCType> where T : Swift._ObjectiveCBridgeable
+public func SkieKotlinFlow<T>(_ flow: ZhortechBase.SkieSwiftStateFlow<T>) -> ZhortechBase.SkieKotlinFlow<T._ObjectiveCType> where T : Swift._ObjectiveCBridgeable
+public func SkieKotlinFlow<T>(_ flow: ZhortechBase.SkieSwiftMutableStateFlow<T>) -> ZhortechBase.SkieKotlinFlow<T._ObjectiveCType> where T : Swift._ObjectiveCBridgeable
+extension ZhortechBase.SkieSwiftFlow where T : AnyObject {
+  convenience public init(_ flow: ZhortechBase.SkieKotlinFlow<T>)
+  convenience public init(_ flow: ZhortechBase.SkieKotlinSharedFlow<T>)
+  convenience public init(_ flow: ZhortechBase.SkieKotlinMutableSharedFlow<T>)
+  convenience public init(_ flow: ZhortechBase.SkieKotlinStateFlow<T>)
+  convenience public init(_ flow: ZhortechBase.SkieKotlinMutableStateFlow<T>)
+  convenience public init(_ flow: ZhortechBase.SkieSwiftFlow<T>)
+  convenience public init(_ flow: ZhortechBase.SkieSwiftSharedFlow<T>)
+  convenience public init(_ flow: ZhortechBase.SkieSwiftMutableSharedFlow<T>)
+  convenience public init(_ flow: ZhortechBase.SkieSwiftStateFlow<T>)
+  convenience public init(_ flow: ZhortechBase.SkieSwiftMutableStateFlow<T>)
+}
+extension ZhortechBase.SkieSwiftFlow where T : Swift._ObjectiveCBridgeable {
+  convenience public init(_ flow: ZhortechBase.SkieKotlinFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: ZhortechBase.SkieKotlinSharedFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: ZhortechBase.SkieKotlinMutableSharedFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: ZhortechBase.SkieKotlinStateFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: ZhortechBase.SkieKotlinMutableStateFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: ZhortechBase.SkieSwiftFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: ZhortechBase.SkieSwiftSharedFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: ZhortechBase.SkieSwiftMutableSharedFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: ZhortechBase.SkieSwiftStateFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: ZhortechBase.SkieSwiftMutableStateFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: ZhortechBase.SkieSwiftFlow<T>)
+  convenience public init(_ flow: ZhortechBase.SkieSwiftSharedFlow<T>)
+  convenience public init(_ flow: ZhortechBase.SkieSwiftMutableSharedFlow<T>)
+  convenience public init(_ flow: ZhortechBase.SkieSwiftStateFlow<T>)
+  convenience public init(_ flow: ZhortechBase.SkieSwiftMutableStateFlow<T>)
+}
+public func SkieKotlinOptionalFlow<T>(_ flow: ZhortechBase.SkieSwiftFlow<T>) -> ZhortechBase.SkieKotlinOptionalFlow<T> where T : AnyObject
+public func SkieKotlinOptionalFlow<T>(_ flow: ZhortechBase.SkieSwiftOptionalFlow<T>) -> ZhortechBase.SkieKotlinOptionalFlow<T> where T : AnyObject
+public func SkieKotlinOptionalFlow<T>(_ flow: ZhortechBase.SkieSwiftSharedFlow<T>) -> ZhortechBase.SkieKotlinOptionalFlow<T> where T : AnyObject
+public func SkieKotlinOptionalFlow<T>(_ flow: ZhortechBase.SkieSwiftOptionalSharedFlow<T>) -> ZhortechBase.SkieKotlinOptionalFlow<T> where T : AnyObject
+public func SkieKotlinOptionalFlow<T>(_ flow: ZhortechBase.SkieSwiftMutableSharedFlow<T>) -> ZhortechBase.SkieKotlinOptionalFlow<T> where T : AnyObject
+public func SkieKotlinOptionalFlow<T>(_ flow: ZhortechBase.SkieSwiftOptionalMutableSharedFlow<T>) -> ZhortechBase.SkieKotlinOptionalFlow<T> where T : AnyObject
+public func SkieKotlinOptionalFlow<T>(_ flow: ZhortechBase.SkieSwiftStateFlow<T>) -> ZhortechBase.SkieKotlinOptionalFlow<T> where T : AnyObject
+public func SkieKotlinOptionalFlow<T>(_ flow: ZhortechBase.SkieSwiftOptionalStateFlow<T>) -> ZhortechBase.SkieKotlinOptionalFlow<T> where T : AnyObject
+public func SkieKotlinOptionalFlow<T>(_ flow: ZhortechBase.SkieSwiftMutableStateFlow<T>) -> ZhortechBase.SkieKotlinOptionalFlow<T> where T : AnyObject
+public func SkieKotlinOptionalFlow<T>(_ flow: ZhortechBase.SkieSwiftOptionalMutableStateFlow<T>) -> ZhortechBase.SkieKotlinOptionalFlow<T> where T : AnyObject
+public func SkieKotlinOptionalFlow<T>(_ flow: ZhortechBase.SkieSwiftFlow<T>) -> ZhortechBase.SkieKotlinOptionalFlow<T._ObjectiveCType> where T : Swift._ObjectiveCBridgeable
+public func SkieKotlinOptionalFlow<T>(_ flow: ZhortechBase.SkieSwiftOptionalFlow<T>) -> ZhortechBase.SkieKotlinOptionalFlow<T._ObjectiveCType> where T : Swift._ObjectiveCBridgeable
+public func SkieKotlinOptionalFlow<T>(_ flow: ZhortechBase.SkieSwiftSharedFlow<T>) -> ZhortechBase.SkieKotlinOptionalFlow<T._ObjectiveCType> where T : Swift._ObjectiveCBridgeable
+public func SkieKotlinOptionalFlow<T>(_ flow: ZhortechBase.SkieSwiftOptionalSharedFlow<T>) -> ZhortechBase.SkieKotlinOptionalFlow<T._ObjectiveCType> where T : Swift._ObjectiveCBridgeable
+public func SkieKotlinOptionalFlow<T>(_ flow: ZhortechBase.SkieSwiftMutableSharedFlow<T>) -> ZhortechBase.SkieKotlinOptionalFlow<T._ObjectiveCType> where T : Swift._ObjectiveCBridgeable
+public func SkieKotlinOptionalFlow<T>(_ flow: ZhortechBase.SkieSwiftOptionalMutableSharedFlow<T>) -> ZhortechBase.SkieKotlinOptionalFlow<T._ObjectiveCType> where T : Swift._ObjectiveCBridgeable
+public func SkieKotlinOptionalFlow<T>(_ flow: ZhortechBase.SkieSwiftStateFlow<T>) -> ZhortechBase.SkieKotlinOptionalFlow<T._ObjectiveCType> where T : Swift._ObjectiveCBridgeable
+public func SkieKotlinOptionalFlow<T>(_ flow: ZhortechBase.SkieSwiftOptionalStateFlow<T>) -> ZhortechBase.SkieKotlinOptionalFlow<T._ObjectiveCType> where T : Swift._ObjectiveCBridgeable
+public func SkieKotlinOptionalFlow<T>(_ flow: ZhortechBase.SkieSwiftMutableStateFlow<T>) -> ZhortechBase.SkieKotlinOptionalFlow<T._ObjectiveCType> where T : Swift._ObjectiveCBridgeable
+public func SkieKotlinOptionalFlow<T>(_ flow: ZhortechBase.SkieSwiftOptionalMutableStateFlow<T>) -> ZhortechBase.SkieKotlinOptionalFlow<T._ObjectiveCType> where T : Swift._ObjectiveCBridgeable
+extension ZhortechBase.SkieSwiftOptionalFlow where T : AnyObject {
+  convenience public init(_ flow: ZhortechBase.SkieKotlinFlow<T>)
+  convenience public init(_ flow: ZhortechBase.SkieKotlinOptionalFlow<T>)
+  convenience public init(_ flow: ZhortechBase.SkieKotlinSharedFlow<T>)
+  convenience public init(_ flow: ZhortechBase.SkieKotlinOptionalSharedFlow<T>)
+  convenience public init(_ flow: ZhortechBase.SkieKotlinMutableSharedFlow<T>)
+  convenience public init(_ flow: ZhortechBase.SkieKotlinOptionalMutableSharedFlow<T>)
+  convenience public init(_ flow: ZhortechBase.SkieKotlinStateFlow<T>)
+  convenience public init(_ flow: ZhortechBase.SkieKotlinOptionalStateFlow<T>)
+  convenience public init(_ flow: ZhortechBase.SkieKotlinMutableStateFlow<T>)
+  convenience public init(_ flow: ZhortechBase.SkieKotlinOptionalMutableStateFlow<T>)
+  convenience public init(_ flow: ZhortechBase.SkieSwiftFlow<T>)
+  convenience public init(_ flow: ZhortechBase.SkieSwiftOptionalFlow<T>)
+  convenience public init(_ flow: ZhortechBase.SkieSwiftSharedFlow<T>)
+  convenience public init(_ flow: ZhortechBase.SkieSwiftOptionalSharedFlow<T>)
+  convenience public init(_ flow: ZhortechBase.SkieSwiftMutableSharedFlow<T>)
+  convenience public init(_ flow: ZhortechBase.SkieSwiftOptionalMutableSharedFlow<T>)
+  convenience public init(_ flow: ZhortechBase.SkieSwiftStateFlow<T>)
+  convenience public init(_ flow: ZhortechBase.SkieSwiftOptionalStateFlow<T>)
+  convenience public init(_ flow: ZhortechBase.SkieSwiftMutableStateFlow<T>)
+  convenience public init(_ flow: ZhortechBase.SkieSwiftOptionalMutableStateFlow<T>)
+}
+extension ZhortechBase.SkieSwiftOptionalFlow where T : Swift._ObjectiveCBridgeable {
+  convenience public init(_ flow: ZhortechBase.SkieKotlinFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: ZhortechBase.SkieKotlinOptionalFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: ZhortechBase.SkieKotlinSharedFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: ZhortechBase.SkieKotlinOptionalSharedFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: ZhortechBase.SkieKotlinMutableSharedFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: ZhortechBase.SkieKotlinOptionalMutableSharedFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: ZhortechBase.SkieKotlinStateFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: ZhortechBase.SkieKotlinOptionalStateFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: ZhortechBase.SkieKotlinMutableStateFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: ZhortechBase.SkieKotlinOptionalMutableStateFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: ZhortechBase.SkieSwiftFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: ZhortechBase.SkieSwiftOptionalFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: ZhortechBase.SkieSwiftSharedFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: ZhortechBase.SkieSwiftOptionalSharedFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: ZhortechBase.SkieSwiftMutableSharedFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: ZhortechBase.SkieSwiftOptionalMutableSharedFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: ZhortechBase.SkieSwiftStateFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: ZhortechBase.SkieSwiftOptionalStateFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: ZhortechBase.SkieSwiftMutableStateFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: ZhortechBase.SkieSwiftOptionalMutableStateFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: ZhortechBase.SkieSwiftFlow<T>)
+  convenience public init(_ flow: ZhortechBase.SkieSwiftOptionalFlow<T>)
+  convenience public init(_ flow: ZhortechBase.SkieSwiftSharedFlow<T>)
+  convenience public init(_ flow: ZhortechBase.SkieSwiftOptionalSharedFlow<T>)
+  convenience public init(_ flow: ZhortechBase.SkieSwiftMutableSharedFlow<T>)
+  convenience public init(_ flow: ZhortechBase.SkieSwiftOptionalMutableSharedFlow<T>)
+  convenience public init(_ flow: ZhortechBase.SkieSwiftStateFlow<T>)
+  convenience public init(_ flow: ZhortechBase.SkieSwiftOptionalStateFlow<T>)
+  convenience public init(_ flow: ZhortechBase.SkieSwiftMutableStateFlow<T>)
+  convenience public init(_ flow: ZhortechBase.SkieSwiftOptionalMutableStateFlow<T>)
+}
+public func SkieKotlinSharedFlow<T>(_ flow: ZhortechBase.SkieSwiftSharedFlow<T>) -> ZhortechBase.SkieKotlinSharedFlow<T> where T : AnyObject
+public func SkieKotlinSharedFlow<T>(_ flow: ZhortechBase.SkieSwiftMutableSharedFlow<T>) -> ZhortechBase.SkieKotlinSharedFlow<T> where T : AnyObject
+public func SkieKotlinSharedFlow<T>(_ flow: ZhortechBase.SkieSwiftStateFlow<T>) -> ZhortechBase.SkieKotlinSharedFlow<T> where T : AnyObject
+public func SkieKotlinSharedFlow<T>(_ flow: ZhortechBase.SkieSwiftMutableStateFlow<T>) -> ZhortechBase.SkieKotlinSharedFlow<T> where T : AnyObject
+public func SkieKotlinSharedFlow<T>(_ flow: ZhortechBase.SkieSwiftSharedFlow<T>) -> ZhortechBase.SkieKotlinSharedFlow<T._ObjectiveCType> where T : Swift._ObjectiveCBridgeable
+public func SkieKotlinSharedFlow<T>(_ flow: ZhortechBase.SkieSwiftMutableSharedFlow<T>) -> ZhortechBase.SkieKotlinSharedFlow<T._ObjectiveCType> where T : Swift._ObjectiveCBridgeable
+public func SkieKotlinSharedFlow<T>(_ flow: ZhortechBase.SkieSwiftStateFlow<T>) -> ZhortechBase.SkieKotlinSharedFlow<T._ObjectiveCType> where T : Swift._ObjectiveCBridgeable
+public func SkieKotlinSharedFlow<T>(_ flow: ZhortechBase.SkieSwiftMutableStateFlow<T>) -> ZhortechBase.SkieKotlinSharedFlow<T._ObjectiveCType> where T : Swift._ObjectiveCBridgeable
+extension ZhortechBase.SkieSwiftSharedFlow where T : AnyObject {
+  convenience public init(_ flow: ZhortechBase.SkieKotlinSharedFlow<T>)
+  convenience public init(_ flow: ZhortechBase.SkieKotlinMutableSharedFlow<T>)
+  convenience public init(_ flow: ZhortechBase.SkieKotlinStateFlow<T>)
+  convenience public init(_ flow: ZhortechBase.SkieKotlinMutableStateFlow<T>)
+  convenience public init(_ flow: ZhortechBase.SkieSwiftSharedFlow<T>)
+  convenience public init(_ flow: ZhortechBase.SkieSwiftMutableSharedFlow<T>)
+  convenience public init(_ flow: ZhortechBase.SkieSwiftStateFlow<T>)
+  convenience public init(_ flow: ZhortechBase.SkieSwiftMutableStateFlow<T>)
+}
+extension ZhortechBase.SkieSwiftSharedFlow where T : Swift._ObjectiveCBridgeable {
+  convenience public init(_ flow: ZhortechBase.SkieKotlinSharedFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: ZhortechBase.SkieKotlinMutableSharedFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: ZhortechBase.SkieKotlinStateFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: ZhortechBase.SkieKotlinMutableStateFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: ZhortechBase.SkieSwiftSharedFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: ZhortechBase.SkieSwiftMutableSharedFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: ZhortechBase.SkieSwiftStateFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: ZhortechBase.SkieSwiftMutableStateFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: ZhortechBase.SkieSwiftSharedFlow<T>)
+  convenience public init(_ flow: ZhortechBase.SkieSwiftMutableSharedFlow<T>)
+  convenience public init(_ flow: ZhortechBase.SkieSwiftStateFlow<T>)
+  convenience public init(_ flow: ZhortechBase.SkieSwiftMutableStateFlow<T>)
+}
+public func SkieKotlinOptionalSharedFlow<T>(_ flow: ZhortechBase.SkieSwiftSharedFlow<T>) -> ZhortechBase.SkieKotlinOptionalSharedFlow<T> where T : AnyObject
+public func SkieKotlinOptionalSharedFlow<T>(_ flow: ZhortechBase.SkieSwiftOptionalSharedFlow<T>) -> ZhortechBase.SkieKotlinOptionalSharedFlow<T> where T : AnyObject
+public func SkieKotlinOptionalSharedFlow<T>(_ flow: ZhortechBase.SkieSwiftMutableSharedFlow<T>) -> ZhortechBase.SkieKotlinOptionalSharedFlow<T> where T : AnyObject
+public func SkieKotlinOptionalSharedFlow<T>(_ flow: ZhortechBase.SkieSwiftOptionalMutableSharedFlow<T>) -> ZhortechBase.SkieKotlinOptionalSharedFlow<T> where T : AnyObject
+public func SkieKotlinOptionalSharedFlow<T>(_ flow: ZhortechBase.SkieSwiftStateFlow<T>) -> ZhortechBase.SkieKotlinOptionalSharedFlow<T> where T : AnyObject
+public func SkieKotlinOptionalSharedFlow<T>(_ flow: ZhortechBase.SkieSwiftOptionalStateFlow<T>) -> ZhortechBase.SkieKotlinOptionalSharedFlow<T> where T : AnyObject
+public func SkieKotlinOptionalSharedFlow<T>(_ flow: ZhortechBase.SkieSwiftMutableStateFlow<T>) -> ZhortechBase.SkieKotlinOptionalSharedFlow<T> where T : AnyObject
+public func SkieKotlinOptionalSharedFlow<T>(_ flow: ZhortechBase.SkieSwiftOptionalMutableStateFlow<T>) -> ZhortechBase.SkieKotlinOptionalSharedFlow<T> where T : AnyObject
+public func SkieKotlinOptionalSharedFlow<T>(_ flow: ZhortechBase.SkieSwiftSharedFlow<T>) -> ZhortechBase.SkieKotlinOptionalSharedFlow<T._ObjectiveCType> where T : Swift._ObjectiveCBridgeable
+public func SkieKotlinOptionalSharedFlow<T>(_ flow: ZhortechBase.SkieSwiftOptionalSharedFlow<T>) -> ZhortechBase.SkieKotlinOptionalSharedFlow<T._ObjectiveCType> where T : Swift._ObjectiveCBridgeable
+public func SkieKotlinOptionalSharedFlow<T>(_ flow: ZhortechBase.SkieSwiftMutableSharedFlow<T>) -> ZhortechBase.SkieKotlinOptionalSharedFlow<T._ObjectiveCType> where T : Swift._ObjectiveCBridgeable
+public func SkieKotlinOptionalSharedFlow<T>(_ flow: ZhortechBase.SkieSwiftOptionalMutableSharedFlow<T>) -> ZhortechBase.SkieKotlinOptionalSharedFlow<T._ObjectiveCType> where T : Swift._ObjectiveCBridgeable
+public func SkieKotlinOptionalSharedFlow<T>(_ flow: ZhortechBase.SkieSwiftStateFlow<T>) -> ZhortechBase.SkieKotlinOptionalSharedFlow<T._ObjectiveCType> where T : Swift._ObjectiveCBridgeable
+public func SkieKotlinOptionalSharedFlow<T>(_ flow: ZhortechBase.SkieSwiftOptionalStateFlow<T>) -> ZhortechBase.SkieKotlinOptionalSharedFlow<T._ObjectiveCType> where T : Swift._ObjectiveCBridgeable
+public func SkieKotlinOptionalSharedFlow<T>(_ flow: ZhortechBase.SkieSwiftMutableStateFlow<T>) -> ZhortechBase.SkieKotlinOptionalSharedFlow<T._ObjectiveCType> where T : Swift._ObjectiveCBridgeable
+public func SkieKotlinOptionalSharedFlow<T>(_ flow: ZhortechBase.SkieSwiftOptionalMutableStateFlow<T>) -> ZhortechBase.SkieKotlinOptionalSharedFlow<T._ObjectiveCType> where T : Swift._ObjectiveCBridgeable
+extension ZhortechBase.SkieSwiftOptionalSharedFlow where T : AnyObject {
+  convenience public init(_ flow: ZhortechBase.SkieKotlinSharedFlow<T>)
+  convenience public init(_ flow: ZhortechBase.SkieKotlinOptionalSharedFlow<T>)
+  convenience public init(_ flow: ZhortechBase.SkieKotlinMutableSharedFlow<T>)
+  convenience public init(_ flow: ZhortechBase.SkieKotlinOptionalMutableSharedFlow<T>)
+  convenience public init(_ flow: ZhortechBase.SkieKotlinStateFlow<T>)
+  convenience public init(_ flow: ZhortechBase.SkieKotlinOptionalStateFlow<T>)
+  convenience public init(_ flow: ZhortechBase.SkieKotlinMutableStateFlow<T>)
+  convenience public init(_ flow: ZhortechBase.SkieKotlinOptionalMutableStateFlow<T>)
+  convenience public init(_ flow: ZhortechBase.SkieSwiftSharedFlow<T>)
+  convenience public init(_ flow: ZhortechBase.SkieSwiftOptionalSharedFlow<T>)
+  convenience public init(_ flow: ZhortechBase.SkieSwiftMutableSharedFlow<T>)
+  convenience public init(_ flow: ZhortechBase.SkieSwiftOptionalMutableSharedFlow<T>)
+  convenience public init(_ flow: ZhortechBase.SkieSwiftStateFlow<T>)
+  convenience public init(_ flow: ZhortechBase.SkieSwiftOptionalStateFlow<T>)
+  convenience public init(_ flow: ZhortechBase.SkieSwiftMutableStateFlow<T>)
+  convenience public init(_ flow: ZhortechBase.SkieSwiftOptionalMutableStateFlow<T>)
+}
+extension ZhortechBase.SkieSwiftOptionalSharedFlow where T : Swift._ObjectiveCBridgeable {
+  convenience public init(_ flow: ZhortechBase.SkieKotlinSharedFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: ZhortechBase.SkieKotlinOptionalSharedFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: ZhortechBase.SkieKotlinMutableSharedFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: ZhortechBase.SkieKotlinOptionalMutableSharedFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: ZhortechBase.SkieKotlinStateFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: ZhortechBase.SkieKotlinOptionalStateFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: ZhortechBase.SkieKotlinMutableStateFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: ZhortechBase.SkieKotlinOptionalMutableStateFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: ZhortechBase.SkieSwiftSharedFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: ZhortechBase.SkieSwiftOptionalSharedFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: ZhortechBase.SkieSwiftMutableSharedFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: ZhortechBase.SkieSwiftOptionalMutableSharedFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: ZhortechBase.SkieSwiftStateFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: ZhortechBase.SkieSwiftOptionalStateFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: ZhortechBase.SkieSwiftMutableStateFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: ZhortechBase.SkieSwiftOptionalMutableStateFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: ZhortechBase.SkieSwiftSharedFlow<T>)
+  convenience public init(_ flow: ZhortechBase.SkieSwiftOptionalSharedFlow<T>)
+  convenience public init(_ flow: ZhortechBase.SkieSwiftMutableSharedFlow<T>)
+  convenience public init(_ flow: ZhortechBase.SkieSwiftOptionalMutableSharedFlow<T>)
+  convenience public init(_ flow: ZhortechBase.SkieSwiftStateFlow<T>)
+  convenience public init(_ flow: ZhortechBase.SkieSwiftOptionalStateFlow<T>)
+  convenience public init(_ flow: ZhortechBase.SkieSwiftMutableStateFlow<T>)
+  convenience public init(_ flow: ZhortechBase.SkieSwiftOptionalMutableStateFlow<T>)
+}
+public func SkieKotlinMutableSharedFlow<T>(_ flow: ZhortechBase.SkieSwiftMutableSharedFlow<T>) -> ZhortechBase.SkieKotlinMutableSharedFlow<T> where T : AnyObject
+public func SkieKotlinMutableSharedFlow<T>(_ flow: ZhortechBase.SkieSwiftMutableSharedFlow<T>) -> ZhortechBase.SkieKotlinMutableSharedFlow<T._ObjectiveCType> where T : Swift._ObjectiveCBridgeable
+extension ZhortechBase.SkieSwiftMutableSharedFlow where T : AnyObject {
+  convenience public init(_ flow: ZhortechBase.SkieKotlinMutableSharedFlow<T>)
+  convenience public init(_ flow: ZhortechBase.SkieSwiftMutableSharedFlow<T>)
+}
+extension ZhortechBase.SkieSwiftMutableSharedFlow where T : Swift._ObjectiveCBridgeable {
+  convenience public init(_ flow: ZhortechBase.SkieKotlinMutableSharedFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: ZhortechBase.SkieSwiftMutableSharedFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: ZhortechBase.SkieSwiftMutableSharedFlow<T>)
+}
+public func SkieKotlinOptionalMutableSharedFlow<T>(_ flow: ZhortechBase.SkieSwiftMutableSharedFlow<T>) -> ZhortechBase.SkieKotlinOptionalMutableSharedFlow<T> where T : AnyObject
+public func SkieKotlinOptionalMutableSharedFlow<T>(_ flow: ZhortechBase.SkieSwiftOptionalMutableSharedFlow<T>) -> ZhortechBase.SkieKotlinOptionalMutableSharedFlow<T> where T : AnyObject
+public func SkieKotlinOptionalMutableSharedFlow<T>(_ flow: ZhortechBase.SkieSwiftMutableSharedFlow<T>) -> ZhortechBase.SkieKotlinOptionalMutableSharedFlow<T._ObjectiveCType> where T : Swift._ObjectiveCBridgeable
+public func SkieKotlinOptionalMutableSharedFlow<T>(_ flow: ZhortechBase.SkieSwiftOptionalMutableSharedFlow<T>) -> ZhortechBase.SkieKotlinOptionalMutableSharedFlow<T._ObjectiveCType> where T : Swift._ObjectiveCBridgeable
+extension ZhortechBase.SkieSwiftOptionalMutableSharedFlow where T : AnyObject {
+  convenience public init(_ flow: ZhortechBase.SkieKotlinMutableSharedFlow<T>)
+  convenience public init(_ flow: ZhortechBase.SkieKotlinOptionalMutableSharedFlow<T>)
+  convenience public init(_ flow: ZhortechBase.SkieSwiftMutableSharedFlow<T>)
+  convenience public init(_ flow: ZhortechBase.SkieSwiftOptionalMutableSharedFlow<T>)
+}
+extension ZhortechBase.SkieSwiftOptionalMutableSharedFlow where T : Swift._ObjectiveCBridgeable {
+  convenience public init(_ flow: ZhortechBase.SkieKotlinMutableSharedFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: ZhortechBase.SkieKotlinOptionalMutableSharedFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: ZhortechBase.SkieSwiftMutableSharedFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: ZhortechBase.SkieSwiftOptionalMutableSharedFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: ZhortechBase.SkieSwiftMutableSharedFlow<T>)
+  convenience public init(_ flow: ZhortechBase.SkieSwiftOptionalMutableSharedFlow<T>)
+}
+public func SkieKotlinStateFlow<T>(_ flow: ZhortechBase.SkieSwiftStateFlow<T>) -> ZhortechBase.SkieKotlinStateFlow<T> where T : AnyObject
+public func SkieKotlinStateFlow<T>(_ flow: ZhortechBase.SkieSwiftMutableStateFlow<T>) -> ZhortechBase.SkieKotlinStateFlow<T> where T : AnyObject
+public func SkieKotlinStateFlow<T>(_ flow: ZhortechBase.SkieSwiftStateFlow<T>) -> ZhortechBase.SkieKotlinStateFlow<T._ObjectiveCType> where T : Swift._ObjectiveCBridgeable
+public func SkieKotlinStateFlow<T>(_ flow: ZhortechBase.SkieSwiftMutableStateFlow<T>) -> ZhortechBase.SkieKotlinStateFlow<T._ObjectiveCType> where T : Swift._ObjectiveCBridgeable
+extension ZhortechBase.SkieSwiftStateFlow where T : AnyObject {
+  convenience public init(_ flow: ZhortechBase.SkieKotlinStateFlow<T>)
+  convenience public init(_ flow: ZhortechBase.SkieKotlinMutableStateFlow<T>)
+  convenience public init(_ flow: ZhortechBase.SkieSwiftStateFlow<T>)
+  convenience public init(_ flow: ZhortechBase.SkieSwiftMutableStateFlow<T>)
+}
+extension ZhortechBase.SkieSwiftStateFlow where T : Swift._ObjectiveCBridgeable {
+  convenience public init(_ flow: ZhortechBase.SkieKotlinStateFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: ZhortechBase.SkieKotlinMutableStateFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: ZhortechBase.SkieSwiftStateFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: ZhortechBase.SkieSwiftMutableStateFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: ZhortechBase.SkieSwiftStateFlow<T>)
+  convenience public init(_ flow: ZhortechBase.SkieSwiftMutableStateFlow<T>)
+}
+public func SkieKotlinOptionalStateFlow<T>(_ flow: ZhortechBase.SkieSwiftStateFlow<T>) -> ZhortechBase.SkieKotlinOptionalStateFlow<T> where T : AnyObject
+public func SkieKotlinOptionalStateFlow<T>(_ flow: ZhortechBase.SkieSwiftOptionalStateFlow<T>) -> ZhortechBase.SkieKotlinOptionalStateFlow<T> where T : AnyObject
+public func SkieKotlinOptionalStateFlow<T>(_ flow: ZhortechBase.SkieSwiftMutableStateFlow<T>) -> ZhortechBase.SkieKotlinOptionalStateFlow<T> where T : AnyObject
+public func SkieKotlinOptionalStateFlow<T>(_ flow: ZhortechBase.SkieSwiftOptionalMutableStateFlow<T>) -> ZhortechBase.SkieKotlinOptionalStateFlow<T> where T : AnyObject
+public func SkieKotlinOptionalStateFlow<T>(_ flow: ZhortechBase.SkieSwiftStateFlow<T>) -> ZhortechBase.SkieKotlinOptionalStateFlow<T._ObjectiveCType> where T : Swift._ObjectiveCBridgeable
+public func SkieKotlinOptionalStateFlow<T>(_ flow: ZhortechBase.SkieSwiftOptionalStateFlow<T>) -> ZhortechBase.SkieKotlinOptionalStateFlow<T._ObjectiveCType> where T : Swift._ObjectiveCBridgeable
+public func SkieKotlinOptionalStateFlow<T>(_ flow: ZhortechBase.SkieSwiftMutableStateFlow<T>) -> ZhortechBase.SkieKotlinOptionalStateFlow<T._ObjectiveCType> where T : Swift._ObjectiveCBridgeable
+public func SkieKotlinOptionalStateFlow<T>(_ flow: ZhortechBase.SkieSwiftOptionalMutableStateFlow<T>) -> ZhortechBase.SkieKotlinOptionalStateFlow<T._ObjectiveCType> where T : Swift._ObjectiveCBridgeable
+extension ZhortechBase.SkieSwiftOptionalStateFlow where T : AnyObject {
+  convenience public init(_ flow: ZhortechBase.SkieKotlinStateFlow<T>)
+  convenience public init(_ flow: ZhortechBase.SkieKotlinOptionalStateFlow<T>)
+  convenience public init(_ flow: ZhortechBase.SkieKotlinMutableStateFlow<T>)
+  convenience public init(_ flow: ZhortechBase.SkieKotlinOptionalMutableStateFlow<T>)
+  convenience public init(_ flow: ZhortechBase.SkieSwiftStateFlow<T>)
+  convenience public init(_ flow: ZhortechBase.SkieSwiftOptionalStateFlow<T>)
+  convenience public init(_ flow: ZhortechBase.SkieSwiftMutableStateFlow<T>)
+  convenience public init(_ flow: ZhortechBase.SkieSwiftOptionalMutableStateFlow<T>)
+}
+extension ZhortechBase.SkieSwiftOptionalStateFlow where T : Swift._ObjectiveCBridgeable {
+  convenience public init(_ flow: ZhortechBase.SkieKotlinStateFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: ZhortechBase.SkieKotlinOptionalStateFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: ZhortechBase.SkieKotlinMutableStateFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: ZhortechBase.SkieKotlinOptionalMutableStateFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: ZhortechBase.SkieSwiftStateFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: ZhortechBase.SkieSwiftOptionalStateFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: ZhortechBase.SkieSwiftMutableStateFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: ZhortechBase.SkieSwiftOptionalMutableStateFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: ZhortechBase.SkieSwiftStateFlow<T>)
+  convenience public init(_ flow: ZhortechBase.SkieSwiftOptionalStateFlow<T>)
+  convenience public init(_ flow: ZhortechBase.SkieSwiftMutableStateFlow<T>)
+  convenience public init(_ flow: ZhortechBase.SkieSwiftOptionalMutableStateFlow<T>)
+}
+public func SkieKotlinMutableStateFlow<T>(_ flow: ZhortechBase.SkieSwiftMutableStateFlow<T>) -> ZhortechBase.SkieKotlinMutableStateFlow<T> where T : AnyObject
+public func SkieKotlinMutableStateFlow<T>(_ flow: ZhortechBase.SkieSwiftMutableStateFlow<T>) -> ZhortechBase.SkieKotlinMutableStateFlow<T._ObjectiveCType> where T : Swift._ObjectiveCBridgeable
+extension ZhortechBase.SkieSwiftMutableStateFlow where T : AnyObject {
+  convenience public init(_ flow: ZhortechBase.SkieKotlinMutableStateFlow<T>)
+  convenience public init(_ flow: ZhortechBase.SkieSwiftMutableStateFlow<T>)
+}
+extension ZhortechBase.SkieSwiftMutableStateFlow where T : Swift._ObjectiveCBridgeable {
+  convenience public init(_ flow: ZhortechBase.SkieKotlinMutableStateFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: ZhortechBase.SkieSwiftMutableStateFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: ZhortechBase.SkieSwiftMutableStateFlow<T>)
+}
+public func SkieKotlinOptionalMutableStateFlow<T>(_ flow: ZhortechBase.SkieSwiftMutableStateFlow<T>) -> ZhortechBase.SkieKotlinOptionalMutableStateFlow<T> where T : AnyObject
+public func SkieKotlinOptionalMutableStateFlow<T>(_ flow: ZhortechBase.SkieSwiftOptionalMutableStateFlow<T>) -> ZhortechBase.SkieKotlinOptionalMutableStateFlow<T> where T : AnyObject
+public func SkieKotlinOptionalMutableStateFlow<T>(_ flow: ZhortechBase.SkieSwiftMutableStateFlow<T>) -> ZhortechBase.SkieKotlinOptionalMutableStateFlow<T._ObjectiveCType> where T : Swift._ObjectiveCBridgeable
+public func SkieKotlinOptionalMutableStateFlow<T>(_ flow: ZhortechBase.SkieSwiftOptionalMutableStateFlow<T>) -> ZhortechBase.SkieKotlinOptionalMutableStateFlow<T._ObjectiveCType> where T : Swift._ObjectiveCBridgeable
+extension ZhortechBase.SkieSwiftOptionalMutableStateFlow where T : AnyObject {
+  convenience public init(_ flow: ZhortechBase.SkieKotlinMutableStateFlow<T>)
+  convenience public init(_ flow: ZhortechBase.SkieKotlinOptionalMutableStateFlow<T>)
+  convenience public init(_ flow: ZhortechBase.SkieSwiftMutableStateFlow<T>)
+  convenience public init(_ flow: ZhortechBase.SkieSwiftOptionalMutableStateFlow<T>)
+}
+extension ZhortechBase.SkieSwiftOptionalMutableStateFlow where T : Swift._ObjectiveCBridgeable {
+  convenience public init(_ flow: ZhortechBase.SkieKotlinMutableStateFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: ZhortechBase.SkieKotlinOptionalMutableStateFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: ZhortechBase.SkieSwiftMutableStateFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: ZhortechBase.SkieSwiftOptionalMutableStateFlow<T._ObjectiveCType>)
+  convenience public init(_ flow: ZhortechBase.SkieSwiftMutableStateFlow<T>)
+  convenience public init(_ flow: ZhortechBase.SkieSwiftOptionalMutableStateFlow<T>)
+}
+@frozen public enum MessageType : Swift.Hashable, Swift.CaseIterable, Swift._ObjectiveCBridgeable {
+  case batteryLevelMessage
+  case chunkDataMessage
+  case generalStateMessage
+  case hardwareMessage
+  case memsConfig
+  case metadataMessage
+  case rawDataFrameMessage
+  case rawDataHeaderMessage
+  case rawDataLookupMessage
+  case timeMessage
+  case unknownMessage
+  public var name: Swift.String {
+    get
+  }
+  public var ordinal: Swift.Int32 {
+    get
+  }
+  public static var companion: ZhortechBase.__MessageType.Companion {
+    get
+  }
+  public static func _forceBridgeFromObjectiveC(_ source: ZhortechBase.__MessageType, result: inout ZhortechBase.MessageType?)
+  public static func _conditionallyBridgeFromObjectiveC(_ source: ZhortechBase.__MessageType, result: inout ZhortechBase.MessageType?) -> Swift.Bool
+  public static func _unconditionallyBridgeFromObjectiveC(_ source: ZhortechBase.__MessageType?) -> ZhortechBase.MessageType
+  public func _bridgeToObjectiveC() -> ZhortechBase.__MessageType
+  public typealias _ObjectiveCType = ZhortechBase.__MessageType
+  public typealias Companion = ZhortechBase.__MessageType.Companion
+  public static func == (a: ZhortechBase.MessageType, b: ZhortechBase.MessageType) -> Swift.Bool
+  public typealias AllCases = [ZhortechBase.MessageType]
+  nonisolated public static var allCases: [ZhortechBase.MessageType] {
+    get
+  }
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension ZhortechBase.MessageType {
+  public func toKotlinEnum() -> ZhortechBase.__MessageType
+}
+extension ZhortechBase.__MessageType {
+  public func toSwiftEnum() -> ZhortechBase.MessageType
+}
+extension ZhortechBase.SensorConfig {
+  public typealias MagnetometerFlags = ZhortechBase.__Bridge__SensorConfig_MagnetometerFlags
+}
+extension ZhortechBase.__Bridge__SensorConfig_MagnetometerFlags {
+  public func toKotlinEnum() -> ZhortechBase.SensorConfig.__MagnetometerFlags
+}
+extension ZhortechBase.SensorConfig.__MagnetometerFlags {
+  public func toSwiftEnum() -> ZhortechBase.SensorConfig.MagnetometerFlags
+}
+@frozen public enum __Bridge__SensorConfig_MagnetometerFlags : Swift.Hashable, Swift.CaseIterable, Swift._ObjectiveCBridgeable {
+  case enable
+  case ctrl9XlSoftEn
+  case masterConfigIronEn
+  case lis2MdlCfgRegALp
+  case lis2MdlCfgRegACompTempEn
+  case lis2MdlCfgRegBOffCanc
+  case lis2MdlCfgRegBLpf
+  public var name: Swift.String {
+    get
+  }
+  public var ordinal: Swift.Int32 {
+    get
+  }
+  public static func _forceBridgeFromObjectiveC(_ source: ZhortechBase.SensorConfig.__MagnetometerFlags, result: inout ZhortechBase.SensorConfig.MagnetometerFlags?)
+  public static func _conditionallyBridgeFromObjectiveC(_ source: ZhortechBase.SensorConfig.__MagnetometerFlags, result: inout ZhortechBase.SensorConfig.MagnetometerFlags?) -> Swift.Bool
+  public static func _unconditionallyBridgeFromObjectiveC(_ source: ZhortechBase.SensorConfig.__MagnetometerFlags?) -> ZhortechBase.__Bridge__SensorConfig_MagnetometerFlags
+  public func _bridgeToObjectiveC() -> ZhortechBase.SensorConfig.__MagnetometerFlags
+  public typealias _ObjectiveCType = ZhortechBase.SensorConfig.__MagnetometerFlags
+  public static func == (a: ZhortechBase.__Bridge__SensorConfig_MagnetometerFlags, b: ZhortechBase.__Bridge__SensorConfig_MagnetometerFlags) -> Swift.Bool
+  public typealias AllCases = [ZhortechBase.__Bridge__SensorConfig_MagnetometerFlags]
+  nonisolated public static var allCases: [ZhortechBase.__Bridge__SensorConfig_MagnetometerFlags] {
+    get
+  }
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension ZhortechBase.SensorConfig {
+  public typealias AccelerometerFlags = ZhortechBase.__Bridge__SensorConfig_AccelerometerFlags
+}
+extension ZhortechBase.__Bridge__SensorConfig_AccelerometerFlags {
+  public func toKotlinEnum() -> ZhortechBase.SensorConfig.__AccelerometerFlags
+}
+extension ZhortechBase.SensorConfig.__AccelerometerFlags {
+  public func toSwiftEnum() -> ZhortechBase.SensorConfig.AccelerometerFlags
+}
+@frozen public enum __Bridge__SensorConfig_AccelerometerFlags : Swift.Hashable, Swift.CaseIterable, Swift._ObjectiveCBridgeable {
+  case enable
+  case ctrl6CHmMode
+  case ctrl1XlLpf1BwSel
+  case ctrl8XlLpf2XlEn
+  case ctrl8XlInputComposite
+  case ctrl8XlHpSlopeXlEn
+  case ctrl8XlHpcfXl
+  public var name: Swift.String {
+    get
+  }
+  public var ordinal: Swift.Int32 {
+    get
+  }
+  public static func _forceBridgeFromObjectiveC(_ source: ZhortechBase.SensorConfig.__AccelerometerFlags, result: inout ZhortechBase.SensorConfig.AccelerometerFlags?)
+  public static func _conditionallyBridgeFromObjectiveC(_ source: ZhortechBase.SensorConfig.__AccelerometerFlags, result: inout ZhortechBase.SensorConfig.AccelerometerFlags?) -> Swift.Bool
+  public static func _unconditionallyBridgeFromObjectiveC(_ source: ZhortechBase.SensorConfig.__AccelerometerFlags?) -> ZhortechBase.__Bridge__SensorConfig_AccelerometerFlags
+  public func _bridgeToObjectiveC() -> ZhortechBase.SensorConfig.__AccelerometerFlags
+  public typealias _ObjectiveCType = ZhortechBase.SensorConfig.__AccelerometerFlags
+  public static func == (a: ZhortechBase.__Bridge__SensorConfig_AccelerometerFlags, b: ZhortechBase.__Bridge__SensorConfig_AccelerometerFlags) -> Swift.Bool
+  public typealias AllCases = [ZhortechBase.__Bridge__SensorConfig_AccelerometerFlags]
+  nonisolated public static var allCases: [ZhortechBase.__Bridge__SensorConfig_AccelerometerFlags] {
+    get
+  }
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension ZhortechBase.SensorConfig {
+  public typealias GyroscopeFlags = ZhortechBase.__Bridge__SensorConfig_GyroscopeFlags
+}
+extension ZhortechBase.__Bridge__SensorConfig_GyroscopeFlags {
+  public func toKotlinEnum() -> ZhortechBase.SensorConfig.__GyroscopeFlags
+}
+extension ZhortechBase.SensorConfig.__GyroscopeFlags {
+  public func toSwiftEnum() -> ZhortechBase.SensorConfig.GyroscopeFlags
+}
+@frozen public enum __Bridge__SensorConfig_GyroscopeFlags : Swift.Hashable, Swift.CaseIterable, Swift._ObjectiveCBridgeable {
+  case enable
+  case ctrl7GHmMode
+  case ctrl7GHpEnG
+  case ctrl7GHpmG
+  case ctrl4CLpf1SelG
+  case ctrl6CFtype
+  public var name: Swift.String {
+    get
+  }
+  public var ordinal: Swift.Int32 {
+    get
+  }
+  public static func _forceBridgeFromObjectiveC(_ source: ZhortechBase.SensorConfig.__GyroscopeFlags, result: inout ZhortechBase.SensorConfig.GyroscopeFlags?)
+  public static func _conditionallyBridgeFromObjectiveC(_ source: ZhortechBase.SensorConfig.__GyroscopeFlags, result: inout ZhortechBase.SensorConfig.GyroscopeFlags?) -> Swift.Bool
+  public static func _unconditionallyBridgeFromObjectiveC(_ source: ZhortechBase.SensorConfig.__GyroscopeFlags?) -> ZhortechBase.__Bridge__SensorConfig_GyroscopeFlags
+  public func _bridgeToObjectiveC() -> ZhortechBase.SensorConfig.__GyroscopeFlags
+  public typealias _ObjectiveCType = ZhortechBase.SensorConfig.__GyroscopeFlags
+  public static func == (a: ZhortechBase.__Bridge__SensorConfig_GyroscopeFlags, b: ZhortechBase.__Bridge__SensorConfig_GyroscopeFlags) -> Swift.Bool
+  public typealias AllCases = [ZhortechBase.__Bridge__SensorConfig_GyroscopeFlags]
+  nonisolated public static var allCases: [ZhortechBase.__Bridge__SensorConfig_GyroscopeFlags] {
+    get
+  }
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension ZhortechBase.Skie.RuntimeKotlin.Skie_SuspendResult {
+  @frozen public enum __Sealed : Swift.Hashable {
+    case canceled(ZhortechBase.Skie_SuspendResult.Canceled)
+    case error(ZhortechBase.Skie_SuspendResult.Error)
+    case success(ZhortechBase.Skie_SuspendResult.Success)
+    public static func == (a: ZhortechBase.Skie.RuntimeKotlin.Skie_SuspendResult.__Sealed, b: ZhortechBase.Skie.RuntimeKotlin.Skie_SuspendResult.__Sealed) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+}
+public func onEnum<__Sealed>(of sealed: __Sealed) -> ZhortechBase.Skie.RuntimeKotlin.Skie_SuspendResult.__Sealed where __Sealed : ZhortechBase.Skie_SuspendResult
+@_disfavoredOverload public func onEnum<__Sealed>(of sealed: __Sealed?) -> ZhortechBase.Skie.RuntimeKotlin.Skie_SuspendResult.__Sealed? where __Sealed : ZhortechBase.Skie_SuspendResult
+extension ZhortechBase.Skie.KotlinxCoroutinesCore.SelectClause0 {
+  @frozen public enum __Sealed : Swift.Hashable {
+    case `else`
+    public static func == (a: ZhortechBase.Skie.KotlinxCoroutinesCore.SelectClause0.__Sealed, b: ZhortechBase.Skie.KotlinxCoroutinesCore.SelectClause0.__Sealed) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+}
+public func onEnum<__Sealed>(of sealed: __Sealed) -> ZhortechBase.Skie.KotlinxCoroutinesCore.SelectClause0.__Sealed where __Sealed : ZhortechBase.Kotlinx_coroutines_coreSelectClause0
+@_disfavoredOverload public func onEnum<__Sealed>(of sealed: __Sealed?) -> ZhortechBase.Skie.KotlinxCoroutinesCore.SelectClause0.__Sealed? where __Sealed : ZhortechBase.Kotlinx_coroutines_coreSelectClause0
+extension ZhortechBase.Skie.KotlinxCoroutinesCore.SelectClause {
+  @frozen public enum __Sealed {
+    case selectClause0(any ZhortechBase.Kotlinx_coroutines_coreSelectClause0)
+    case selectClause1(any ZhortechBase.Kotlinx_coroutines_coreSelectClause1)
+    case selectClause2(any ZhortechBase.Kotlinx_coroutines_coreSelectClause2)
+  }
+}
+public func onEnum<__Sealed>(of sealed: __Sealed) -> ZhortechBase.Skie.KotlinxCoroutinesCore.SelectClause.__Sealed where __Sealed : ZhortechBase.Kotlinx_coroutines_coreSelectClause
+@_disfavoredOverload public func onEnum<__Sealed>(of sealed: __Sealed?) -> ZhortechBase.Skie.KotlinxCoroutinesCore.SelectClause.__Sealed? where __Sealed : ZhortechBase.Kotlinx_coroutines_coreSelectClause
+extension ZhortechBase.Skie.KotlinxCoroutinesCore.SelectInstance {
+  @frozen public enum __Sealed : Swift.Hashable {
+    case `else`
+    public static func == (a: ZhortechBase.Skie.KotlinxCoroutinesCore.SelectInstance.__Sealed, b: ZhortechBase.Skie.KotlinxCoroutinesCore.SelectInstance.__Sealed) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+}
+public func onEnum<__Sealed>(of sealed: __Sealed) -> ZhortechBase.Skie.KotlinxCoroutinesCore.SelectInstance.__Sealed where __Sealed : ZhortechBase.Kotlinx_coroutines_coreSelectInstance
+@_disfavoredOverload public func onEnum<__Sealed>(of sealed: __Sealed?) -> ZhortechBase.Skie.KotlinxCoroutinesCore.SelectInstance.__Sealed? where __Sealed : ZhortechBase.Kotlinx_coroutines_coreSelectInstance
+extension ZhortechBase.Skie.KotlinxCoroutinesCore.SelectClause1 {
+  @frozen public enum __Sealed : Swift.Hashable {
+    case `else`
+    public static func == (a: ZhortechBase.Skie.KotlinxCoroutinesCore.SelectClause1.__Sealed, b: ZhortechBase.Skie.KotlinxCoroutinesCore.SelectClause1.__Sealed) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+}
+public func onEnum<__Sealed>(of sealed: __Sealed) -> ZhortechBase.Skie.KotlinxCoroutinesCore.SelectClause1.__Sealed where __Sealed : ZhortechBase.Kotlinx_coroutines_coreSelectClause1
+@_disfavoredOverload public func onEnum<__Sealed>(of sealed: __Sealed?) -> ZhortechBase.Skie.KotlinxCoroutinesCore.SelectClause1.__Sealed? where __Sealed : ZhortechBase.Kotlinx_coroutines_coreSelectClause1
+extension ZhortechBase.Skie.KotlinxCoroutinesCore.SelectClause2 {
+  @frozen public enum __Sealed : Swift.Hashable {
+    case `else`
+    public static func == (a: ZhortechBase.Skie.KotlinxCoroutinesCore.SelectClause2.__Sealed, b: ZhortechBase.Skie.KotlinxCoroutinesCore.SelectClause2.__Sealed) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+}
+public func onEnum<__Sealed>(of sealed: __Sealed) -> ZhortechBase.Skie.KotlinxCoroutinesCore.SelectClause2.__Sealed where __Sealed : ZhortechBase.Kotlinx_coroutines_coreSelectClause2
+@_disfavoredOverload public func onEnum<__Sealed>(of sealed: __Sealed?) -> ZhortechBase.Skie.KotlinxCoroutinesCore.SelectClause2.__Sealed? where __Sealed : ZhortechBase.Kotlinx_coroutines_coreSelectClause2
+extension ZhortechBase.Skie.zt_android_sdk__zhortech_base.BleConfig.Phy {
+  @frozen public enum __Sealed : Swift.Hashable {
+    case le1M(ZhortechBase.BleConfigPhyLe1M)
+    case le2M(ZhortechBase.BleConfigPhyLe2M)
+    case leCoded(ZhortechBase.BleConfigPhyLeCoded)
+    public static func == (a: ZhortechBase.Skie.zt_android_sdk__zhortech_base.BleConfig.Phy.__Sealed, b: ZhortechBase.Skie.zt_android_sdk__zhortech_base.BleConfig.Phy.__Sealed) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+}
+public func onEnum<__Sealed>(of sealed: __Sealed) -> ZhortechBase.Skie.zt_android_sdk__zhortech_base.BleConfig.Phy.__Sealed where __Sealed : ZhortechBase.BleConfigPhy
+@_disfavoredOverload public func onEnum<__Sealed>(of sealed: __Sealed?) -> ZhortechBase.Skie.zt_android_sdk__zhortech_base.BleConfig.Phy.__Sealed? where __Sealed : ZhortechBase.BleConfigPhy
+extension ZhortechBase.Skie.zt_android_sdk__zhortech_base.DeviceModel {
+  @frozen public enum __Sealed : Swift.Hashable {
+    case zT1SHV3B7(ZhortechBase.DeviceModel.ZT1SHV3B7)
+    case zT4INSV4B2(ZhortechBase.DeviceModel.ZT4INSV4B2)
+    case zT4INSV4B3(ZhortechBase.DeviceModel.ZT4INSV4B3)
+    case zT5LV5B2(ZhortechBase.DeviceModel.ZT5LV5B2)
+    case `else`
+    public static func == (a: ZhortechBase.Skie.zt_android_sdk__zhortech_base.DeviceModel.__Sealed, b: ZhortechBase.Skie.zt_android_sdk__zhortech_base.DeviceModel.__Sealed) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+}
+public func onEnum<__Sealed>(of sealed: __Sealed) -> ZhortechBase.Skie.zt_android_sdk__zhortech_base.DeviceModel.__Sealed where __Sealed : ZhortechBase.DeviceModel
+@_disfavoredOverload public func onEnum<__Sealed>(of sealed: __Sealed?) -> ZhortechBase.Skie.zt_android_sdk__zhortech_base.DeviceModel.__Sealed? where __Sealed : ZhortechBase.DeviceModel
+extension ZhortechBase.Skie.zt_android_sdk__zhortech_base.DeviceSide {
+  @frozen public enum __Sealed : Swift.Hashable {
+    case left(ZhortechBase.DeviceSide.Left)
+    case right(ZhortechBase.DeviceSide.Right)
+    public static func == (a: ZhortechBase.Skie.zt_android_sdk__zhortech_base.DeviceSide.__Sealed, b: ZhortechBase.Skie.zt_android_sdk__zhortech_base.DeviceSide.__Sealed) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+}
+public func onEnum<__Sealed>(of sealed: __Sealed) -> ZhortechBase.Skie.zt_android_sdk__zhortech_base.DeviceSide.__Sealed where __Sealed : ZhortechBase.DeviceSide
+@_disfavoredOverload public func onEnum<__Sealed>(of sealed: __Sealed?) -> ZhortechBase.Skie.zt_android_sdk__zhortech_base.DeviceSide.__Sealed? where __Sealed : ZhortechBase.DeviceSide
+extension ZhortechBase.Skie.zt_android_sdk__zhortech_base.ConnectionState {
+  @frozen public enum __Sealed : Swift.Hashable {
+    case connected(ZhortechBase.ConnectionState.Connected)
+    case connecting(ZhortechBase.ConnectionState.Connecting)
+    case disconnected(ZhortechBase.ConnectionState.Disconnected)
+    case disconnecting(ZhortechBase.ConnectionState.Disconnecting)
+    case reconnecting(ZhortechBase.ConnectionState.Reconnecting)
+    public static func == (a: ZhortechBase.Skie.zt_android_sdk__zhortech_base.ConnectionState.__Sealed, b: ZhortechBase.Skie.zt_android_sdk__zhortech_base.ConnectionState.__Sealed) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+}
+public func onEnum<__Sealed>(of sealed: __Sealed) -> ZhortechBase.Skie.zt_android_sdk__zhortech_base.ConnectionState.__Sealed where __Sealed : ZhortechBase.ConnectionState
+@_disfavoredOverload public func onEnum<__Sealed>(of sealed: __Sealed?) -> ZhortechBase.Skie.zt_android_sdk__zhortech_base.ConnectionState.__Sealed? where __Sealed : ZhortechBase.ConnectionState
+extension ZhortechBase.Skie.zt_android_sdk__zhortech_base.ConnectorIdentifier {
+  @frozen public enum __Sealed : Swift.Hashable {
+    case battery(ZhortechBase.ConnectorIdentifier.Battery)
+    case command(ZhortechBase.ConnectorIdentifier.Command)
+    case data(ZhortechBase.ConnectorIdentifier.Data)
+    case firmwareVersion(ZhortechBase.ConnectorIdentifier.FirmwareVersion)
+    case hardwareVersion(ZhortechBase.ConnectorIdentifier.HardwareVersion)
+    case indicateData(ZhortechBase.ConnectorIdentifier.IndicateData)
+    case message(ZhortechBase.ConnectorIdentifier.Message)
+    case pairedDevice(ZhortechBase.ConnectorIdentifier.PairedDevice)
+    case serialNumber(ZhortechBase.ConnectorIdentifier.SerialNumber)
+    case test(ZhortechBase.ConnectorIdentifier.Test)
+    public static func == (a: ZhortechBase.Skie.zt_android_sdk__zhortech_base.ConnectorIdentifier.__Sealed, b: ZhortechBase.Skie.zt_android_sdk__zhortech_base.ConnectorIdentifier.__Sealed) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+}
+public func onEnum<__Sealed>(of sealed: __Sealed) -> ZhortechBase.Skie.zt_android_sdk__zhortech_base.ConnectorIdentifier.__Sealed where __Sealed : ZhortechBase.ConnectorIdentifier
+@_disfavoredOverload public func onEnum<__Sealed>(of sealed: __Sealed?) -> ZhortechBase.Skie.zt_android_sdk__zhortech_base.ConnectorIdentifier.__Sealed? where __Sealed : ZhortechBase.ConnectorIdentifier
+extension ZhortechBase.Skie.zt_android_sdk__zhortech_base.DisconnectionReason {
+  @frozen public enum __Sealed : Swift.Hashable {
+    case connectionFailed(ZhortechBase.DisconnectionReason.ConnectionFailed)
+    case connectionLost(ZhortechBase.DisconnectionReason.ConnectionLost)
+    case connectionTimeout(ZhortechBase.DisconnectionReason.ConnectionTimeout)
+    case connectionUnknown(ZhortechBase.DisconnectionReason.ConnectionUnknown)
+    case explicitDisconnect(ZhortechBase.DisconnectionReason.ExplicitDisconnect)
+    case neverConnected(ZhortechBase.DisconnectionReason.NeverConnected)
+    public static func == (a: ZhortechBase.Skie.zt_android_sdk__zhortech_base.DisconnectionReason.__Sealed, b: ZhortechBase.Skie.zt_android_sdk__zhortech_base.DisconnectionReason.__Sealed) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+}
+public func onEnum<__Sealed>(of sealed: __Sealed) -> ZhortechBase.Skie.zt_android_sdk__zhortech_base.DisconnectionReason.__Sealed where __Sealed : ZhortechBase.DisconnectionReason
+@_disfavoredOverload public func onEnum<__Sealed>(of sealed: __Sealed?) -> ZhortechBase.Skie.zt_android_sdk__zhortech_base.DisconnectionReason.__Sealed? where __Sealed : ZhortechBase.DisconnectionReason
+extension ZhortechBase.Skie.zt_android_sdk__zhortech_base.ConnectingStage {
+  @frozen public enum __Sealed : Swift.Hashable {
+    case discoveringConnectors(ZhortechBase.ConnectingStage.DiscoveringConnectors)
+    case initiated(ZhortechBase.ConnectingStage.Initiated)
+    public static func == (a: ZhortechBase.Skie.zt_android_sdk__zhortech_base.ConnectingStage.__Sealed, b: ZhortechBase.Skie.zt_android_sdk__zhortech_base.ConnectingStage.__Sealed) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+}
+public func onEnum<__Sealed>(of sealed: __Sealed) -> ZhortechBase.Skie.zt_android_sdk__zhortech_base.ConnectingStage.__Sealed where __Sealed : ZhortechBase.ConnectingStage
+@_disfavoredOverload public func onEnum<__Sealed>(of sealed: __Sealed?) -> ZhortechBase.Skie.zt_android_sdk__zhortech_base.ConnectingStage.__Sealed? where __Sealed : ZhortechBase.ConnectingStage
+extension ZhortechBase.Skie.zt_android_sdk__zhortech_base.RawData.Sensor {
+  @frozen public enum __Sealed : Swift.Hashable {
+    case accelerometer(ZhortechBase.RawDataSensorAccelerometer)
+    case gyroscope(ZhortechBase.RawDataSensorGyroscope)
+    case magnetometer(ZhortechBase.RawDataSensorMagnetometer)
+    case timestamp(ZhortechBase.RawDataSensorTimestamp)
+    public static func == (a: ZhortechBase.Skie.zt_android_sdk__zhortech_base.RawData.Sensor.__Sealed, b: ZhortechBase.Skie.zt_android_sdk__zhortech_base.RawData.Sensor.__Sealed) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+}
+public func onEnum<__Sealed>(of sealed: __Sealed) -> ZhortechBase.Skie.zt_android_sdk__zhortech_base.RawData.Sensor.__Sealed where __Sealed : ZhortechBase.RawDataSensor
+@_disfavoredOverload public func onEnum<__Sealed>(of sealed: __Sealed?) -> ZhortechBase.Skie.zt_android_sdk__zhortech_base.RawData.Sensor.__Sealed? where __Sealed : ZhortechBase.RawDataSensor
+extension ZhortechBase.Skie.zt_android_sdk__zhortech_base.RawData.Format {
+  @frozen public enum __Sealed : Swift.Hashable {
+    case compressed(ZhortechBase.RawDataFormatCompressed)
+    case notCompressed(ZhortechBase.RawDataFormatNotCompressed)
+    public static func == (a: ZhortechBase.Skie.zt_android_sdk__zhortech_base.RawData.Format.__Sealed, b: ZhortechBase.Skie.zt_android_sdk__zhortech_base.RawData.Format.__Sealed) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+}
+public func onEnum<__Sealed>(of sealed: __Sealed) -> ZhortechBase.Skie.zt_android_sdk__zhortech_base.RawData.Format.__Sealed where __Sealed : ZhortechBase.RawDataFormat
+@_disfavoredOverload public func onEnum<__Sealed>(of sealed: __Sealed?) -> ZhortechBase.Skie.zt_android_sdk__zhortech_base.RawData.Format.__Sealed? where __Sealed : ZhortechBase.RawDataFormat
+extension ZhortechBase.Skie.zt_android_sdk__zhortech_base.SampleRate {
+  @frozen public enum __Sealed : Swift.Hashable {
+    case off(ZhortechBase.SampleRate.Off)
+    case rate100Hz(ZhortechBase.SampleRate.Rate100Hz)
+    case rate104Hz(ZhortechBase.SampleRate.Rate104Hz)
+    case rate12_5Hz(ZhortechBase.SampleRate.Rate12_5Hz)
+    case rate1660Hz(ZhortechBase.SampleRate.Rate1660Hz)
+    case rate1_6Hz(ZhortechBase.SampleRate.Rate1_6Hz)
+    case rate208Hz(ZhortechBase.SampleRate.Rate208Hz)
+    case rate26Hz(ZhortechBase.SampleRate.Rate26Hz)
+    case rate3330Hz(ZhortechBase.SampleRate.Rate3330Hz)
+    case rate416Hz(ZhortechBase.SampleRate.Rate416Hz)
+    case rate50Hz(ZhortechBase.SampleRate.Rate50Hz)
+    case rate52Hz(ZhortechBase.SampleRate.Rate52Hz)
+    case rate6660Hz(ZhortechBase.SampleRate.Rate6660Hz)
+    case rate833Hz(ZhortechBase.SampleRate.Rate833Hz)
+    public static func == (a: ZhortechBase.Skie.zt_android_sdk__zhortech_base.SampleRate.__Sealed, b: ZhortechBase.Skie.zt_android_sdk__zhortech_base.SampleRate.__Sealed) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+}
+public func onEnum<__Sealed>(of sealed: __Sealed) -> ZhortechBase.Skie.zt_android_sdk__zhortech_base.SampleRate.__Sealed where __Sealed : ZhortechBase.SampleRate
+@_disfavoredOverload public func onEnum<__Sealed>(of sealed: __Sealed?) -> ZhortechBase.Skie.zt_android_sdk__zhortech_base.SampleRate.__Sealed? where __Sealed : ZhortechBase.SampleRate
+extension ZhortechBase.Skie.zt_android_sdk__zhortech_base.GyroscopeResolution {
+  @frozen public enum __Sealed : Swift.Hashable {
+    case r1000(ZhortechBase.GyroscopeResolution.R1000)
+    case r125(ZhortechBase.GyroscopeResolution.R125)
+    case r2000(ZhortechBase.GyroscopeResolution.R2000)
+    case r250(ZhortechBase.GyroscopeResolution.R250)
+    case r500(ZhortechBase.GyroscopeResolution.R500)
+    public static func == (a: ZhortechBase.Skie.zt_android_sdk__zhortech_base.GyroscopeResolution.__Sealed, b: ZhortechBase.Skie.zt_android_sdk__zhortech_base.GyroscopeResolution.__Sealed) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+}
+public func onEnum<__Sealed>(of sealed: __Sealed) -> ZhortechBase.Skie.zt_android_sdk__zhortech_base.GyroscopeResolution.__Sealed where __Sealed : ZhortechBase.GyroscopeResolution
+@_disfavoredOverload public func onEnum<__Sealed>(of sealed: __Sealed?) -> ZhortechBase.Skie.zt_android_sdk__zhortech_base.GyroscopeResolution.__Sealed? where __Sealed : ZhortechBase.GyroscopeResolution
+extension ZhortechBase.Skie.zt_android_sdk__zhortech_base.AccelerometerResolution {
+  @frozen public enum __Sealed : Swift.Hashable {
+    case r16G(ZhortechBase.AccelerometerResolution.R16G)
+    case r2G(ZhortechBase.AccelerometerResolution.R2G)
+    case r4G(ZhortechBase.AccelerometerResolution.R4G)
+    case r8G(ZhortechBase.AccelerometerResolution.R8G)
+    public static func == (a: ZhortechBase.Skie.zt_android_sdk__zhortech_base.AccelerometerResolution.__Sealed, b: ZhortechBase.Skie.zt_android_sdk__zhortech_base.AccelerometerResolution.__Sealed) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+}
+public func onEnum<__Sealed>(of sealed: __Sealed) -> ZhortechBase.Skie.zt_android_sdk__zhortech_base.AccelerometerResolution.__Sealed where __Sealed : ZhortechBase.AccelerometerResolution
+@_disfavoredOverload public func onEnum<__Sealed>(of sealed: __Sealed?) -> ZhortechBase.Skie.zt_android_sdk__zhortech_base.AccelerometerResolution.__Sealed? where __Sealed : ZhortechBase.AccelerometerResolution
+extension ZhortechBase.Skie.zt_android_sdk__zhortech_base.TransferCacheType {
+  @frozen public enum __Sealed : Swift.Hashable {
+    case disk(ZhortechBase.TransferCacheTypeDisk)
+    case memory(ZhortechBase.TransferCacheTypeMemory)
+    case none(ZhortechBase.TransferCacheTypeNone)
+    public static func == (a: ZhortechBase.Skie.zt_android_sdk__zhortech_base.TransferCacheType.__Sealed, b: ZhortechBase.Skie.zt_android_sdk__zhortech_base.TransferCacheType.__Sealed) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+}
+public func onEnum<__Sealed>(of sealed: __Sealed) -> ZhortechBase.Skie.zt_android_sdk__zhortech_base.TransferCacheType.__Sealed where __Sealed : ZhortechBase.TransferCacheType
+@_disfavoredOverload public func onEnum<__Sealed>(of sealed: __Sealed?) -> ZhortechBase.Skie.zt_android_sdk__zhortech_base.TransferCacheType.__Sealed? where __Sealed : ZhortechBase.TransferCacheType
+extension ZhortechBase.Skie.zt_android_sdk__zhortech_base.DeviceRegistry.DeviceEvent {
+  @frozen public enum __Sealed : Swift.Hashable {
+    case attached(ZhortechBase.DeviceRegistryDeviceEvent.Attached)
+    case registered(ZhortechBase.DeviceRegistryDeviceEvent.Registered)
+    case unregistered(ZhortechBase.DeviceRegistryDeviceEvent.Unregistered)
+    public static func == (a: ZhortechBase.Skie.zt_android_sdk__zhortech_base.DeviceRegistry.DeviceEvent.__Sealed, b: ZhortechBase.Skie.zt_android_sdk__zhortech_base.DeviceRegistry.DeviceEvent.__Sealed) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+}
+public func onEnum<__Sealed>(of sealed: __Sealed) -> ZhortechBase.Skie.zt_android_sdk__zhortech_base.DeviceRegistry.DeviceEvent.__Sealed where __Sealed : ZhortechBase.DeviceRegistryDeviceEvent
+@_disfavoredOverload public func onEnum<__Sealed>(of sealed: __Sealed?) -> ZhortechBase.Skie.zt_android_sdk__zhortech_base.DeviceRegistry.DeviceEvent.__Sealed? where __Sealed : ZhortechBase.DeviceRegistryDeviceEvent
+extension ZhortechBase.Skie.zt_android_sdk__zhortech_base.MotionEvent.Motion {
+  @frozen public enum __Sealed : Swift.Hashable {
+    case error(ZhortechBase.MotionEvent.MotionError)
+    case stepBackward(ZhortechBase.MotionEvent.MotionStepBackward)
+    case stepDown(ZhortechBase.MotionEvent.MotionStepDown)
+    case stepForward(ZhortechBase.MotionEvent.MotionStepForward)
+    case stepSideLeft(ZhortechBase.MotionEvent.MotionStepSideLeft)
+    case stepSideRight(ZhortechBase.MotionEvent.MotionStepSideRight)
+    case stepUp(ZhortechBase.MotionEvent.MotionStepUp)
+    case unknown(ZhortechBase.MotionEvent.MotionUnknown)
+    public static func == (a: ZhortechBase.Skie.zt_android_sdk__zhortech_base.MotionEvent.Motion.__Sealed, b: ZhortechBase.Skie.zt_android_sdk__zhortech_base.MotionEvent.Motion.__Sealed) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+}
+public func onEnum<__Sealed>(of sealed: __Sealed) -> ZhortechBase.Skie.zt_android_sdk__zhortech_base.MotionEvent.Motion.__Sealed where __Sealed : ZhortechBase.MotionEvent.Motion
+@_disfavoredOverload public func onEnum<__Sealed>(of sealed: __Sealed?) -> ZhortechBase.Skie.zt_android_sdk__zhortech_base.MotionEvent.Motion.__Sealed? where __Sealed : ZhortechBase.MotionEvent.Motion
+extension ZhortechBase.Skie.zt_android_sdk__zhortech_base.Decimation {
+  @frozen public enum __Sealed : Swift.Hashable {
+    case disabled(ZhortechBase.Decimation.Disabled)
+    case every16Samples(ZhortechBase.Decimation.Every16Samples)
+    case every2Samples(ZhortechBase.Decimation.Every2Samples)
+    case every32Samples(ZhortechBase.Decimation.Every32Samples)
+    case every3Samples(ZhortechBase.Decimation.Every3Samples)
+    case every4Samples(ZhortechBase.Decimation.Every4Samples)
+    case every8Samples(ZhortechBase.Decimation.Every8Samples)
+    case noDecimation(ZhortechBase.Decimation.NoDecimation)
+    public static func == (a: ZhortechBase.Skie.zt_android_sdk__zhortech_base.Decimation.__Sealed, b: ZhortechBase.Skie.zt_android_sdk__zhortech_base.Decimation.__Sealed) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+}
+public func onEnum<__Sealed>(of sealed: __Sealed) -> ZhortechBase.Skie.zt_android_sdk__zhortech_base.Decimation.__Sealed where __Sealed : ZhortechBase.Decimation
+@_disfavoredOverload public func onEnum<__Sealed>(of sealed: __Sealed?) -> ZhortechBase.Skie.zt_android_sdk__zhortech_base.Decimation.__Sealed? where __Sealed : ZhortechBase.Decimation
+extension ZhortechBase.Skie.zt_android_sdk__zhortech_base.InternalRange {
+  @frozen public enum __Sealed : Swift.Hashable {
+    case processedData(ZhortechBase.InternalRangeProcessedData)
+    case rawDataPosition(ZhortechBase.InternalRangeRawDataPosition)
+    case rawDataTimeRange(ZhortechBase.InternalRangeRawDataTimeRange)
+    case testData(ZhortechBase.InternalRangeTestData)
+    public static func == (a: ZhortechBase.Skie.zt_android_sdk__zhortech_base.InternalRange.__Sealed, b: ZhortechBase.Skie.zt_android_sdk__zhortech_base.InternalRange.__Sealed) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+}
+public func onEnum<__Sealed>(of sealed: __Sealed) -> ZhortechBase.Skie.zt_android_sdk__zhortech_base.InternalRange.__Sealed where __Sealed : ZhortechBase.InternalRange
+@_disfavoredOverload public func onEnum<__Sealed>(of sealed: __Sealed?) -> ZhortechBase.Skie.zt_android_sdk__zhortech_base.InternalRange.__Sealed? where __Sealed : ZhortechBase.InternalRange
+extension ZhortechBase.Skie.zt_android_sdk__zhortech_base.InternalTransferType {
+  @frozen public enum __Sealed : Swift.Hashable {
+    case processedData(ZhortechBase.InternalTransferTypeProcessedData)
+    case rawData(ZhortechBase.InternalTransferTypeRawData)
+    case testData(ZhortechBase.InternalTransferTypeTestData)
+    public static func == (a: ZhortechBase.Skie.zt_android_sdk__zhortech_base.InternalTransferType.__Sealed, b: ZhortechBase.Skie.zt_android_sdk__zhortech_base.InternalTransferType.__Sealed) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+}
+public func onEnum<__Sealed>(of sealed: __Sealed) -> ZhortechBase.Skie.zt_android_sdk__zhortech_base.InternalTransferType.__Sealed where __Sealed : ZhortechBase.InternalTransferType
+@_disfavoredOverload public func onEnum<__Sealed>(of sealed: __Sealed?) -> ZhortechBase.Skie.zt_android_sdk__zhortech_base.InternalTransferType.__Sealed? where __Sealed : ZhortechBase.InternalTransferType
+extension ZhortechBase.Skie.zt_android_sdk__zhortech_base.Command {
+  @frozen public enum __Sealed : Swift.Hashable {
+    case calibrateStatic(ZhortechBase.Command.CalibrateStatic)
+    case cancelMemsCalib(ZhortechBase.Command.CancelMemsCalib)
+    case clearMemsCalib(ZhortechBase.Command.ClearMemsCalib)
+    case debugRawDataSend(ZhortechBase.Command.DebugRawDataSend)
+    case disconnect(ZhortechBase.Command.Disconnect)
+    case enablePeerConnection(ZhortechBase.Command.EnablePeerConnection)
+    case enableRawData(ZhortechBase.Command.EnableRawData)
+    case getActivityMetadata(ZhortechBase.Command.GetActivityMetadata)
+    case getBatteryLevel(ZhortechBase.Command.GetBatteryLevel)
+    case getBootloaderInfo(ZhortechBase.Command.GetBootloaderInfo)
+    case getDebugCpuState(ZhortechBase.Command.GetDebugCpuState)
+    case getFirmwareInfo(ZhortechBase.Command.GetFirmwareInfo)
+    case getHardwareInfo(ZhortechBase.Command.GetHardwareInfo)
+    case getHeatTimer(ZhortechBase.Command.GetHeatTimer)
+    case getMemsCalibData(ZhortechBase.Command.GetMemsCalibData)
+    case getMemsCalibState(ZhortechBase.Command.GetMemsCalibState)
+    case getRawData(ZhortechBase.Command.GetRawData)
+    case getTimestamp(ZhortechBase.Command.GetTimestamp)
+    case leftDfuStart(ZhortechBase.Command.LeftDfuStart)
+    case lookupRawData(ZhortechBase.Command.LookupRawData)
+    case memsConfig(ZhortechBase.Command.MemsConfig)
+    case rawCommand(ZhortechBase.Command.RawCommand)
+    case resendActivityData(ZhortechBase.Command.ResendActivityData)
+    case selfDfuStart(ZhortechBase.Command.SelfDfuStart)
+    case setChunkConfig(ZhortechBase.Command.SetChunkConfig)
+    case setDFUMode(ZhortechBase.Command.SetDFUMode)
+    case startActivity(ZhortechBase.Command.StartActivity)
+    case stopActivity(ZhortechBase.Command.StopActivity)
+    case testMemsCalib(ZhortechBase.Command.TestMemsCalib)
+    case updateConnParams(ZhortechBase.Command.UpdateConnParams)
+    case updateDataLen(ZhortechBase.Command.UpdateDataLen)
+    case updatePhy(ZhortechBase.Command.UpdatePhy)
+    case updateTxPower(ZhortechBase.Command.UpdateTxPower)
+    case `else`
+    public static func == (a: ZhortechBase.Skie.zt_android_sdk__zhortech_base.Command.__Sealed, b: ZhortechBase.Skie.zt_android_sdk__zhortech_base.Command.__Sealed) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+}
+public func onEnum<__Sealed>(of sealed: __Sealed) -> ZhortechBase.Skie.zt_android_sdk__zhortech_base.Command.__Sealed where __Sealed : ZhortechBase.Command
+@_disfavoredOverload public func onEnum<__Sealed>(of sealed: __Sealed?) -> ZhortechBase.Skie.zt_android_sdk__zhortech_base.Command.__Sealed? where __Sealed : ZhortechBase.Command
+extension ZhortechBase.Skie.zt_android_sdk__zhortech_base.Command.ResponseSource {
+  @frozen public enum __Sealed : Swift.Hashable {
+    case each(ZhortechBase.Command.ResponseSourceEach)
+    case mainModule(ZhortechBase.Command.ResponseSourceMainModule)
+    public static func == (a: ZhortechBase.Skie.zt_android_sdk__zhortech_base.Command.ResponseSource.__Sealed, b: ZhortechBase.Skie.zt_android_sdk__zhortech_base.Command.ResponseSource.__Sealed) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+}
+public func onEnum<__Sealed>(of sealed: __Sealed) -> ZhortechBase.Skie.zt_android_sdk__zhortech_base.Command.ResponseSource.__Sealed where __Sealed : ZhortechBase.Command.ResponseSource
+@_disfavoredOverload public func onEnum<__Sealed>(of sealed: __Sealed?) -> ZhortechBase.Skie.zt_android_sdk__zhortech_base.Command.ResponseSource.__Sealed? where __Sealed : ZhortechBase.Command.ResponseSource
+extension ZhortechBase.Skie.zt_android_sdk__zhortech_base.Command.Ack {
+  @frozen public enum __Sealed : Swift.Hashable {
+    case busy(ZhortechBase.Command.AckBusy)
+    case commandInProgress(ZhortechBase.Command.AckCommandInProgress)
+    case fwResForbidden(ZhortechBase.Command.AckFwResForbidden)
+    case invalidParam(ZhortechBase.Command.AckInvalidParam)
+    case invalidState(ZhortechBase.Command.AckInvalidState)
+    case noPeerResponse(ZhortechBase.Command.AckNoPeerResponse)
+    case notSupported(ZhortechBase.Command.AckNotSupported)
+    case success(ZhortechBase.Command.AckSuccess)
+    case unknownCommand(ZhortechBase.Command.AckUnknownCommand)
+    public static func == (a: ZhortechBase.Skie.zt_android_sdk__zhortech_base.Command.Ack.__Sealed, b: ZhortechBase.Skie.zt_android_sdk__zhortech_base.Command.Ack.__Sealed) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+}
+public func onEnum<__Sealed>(of sealed: __Sealed) -> ZhortechBase.Skie.zt_android_sdk__zhortech_base.Command.Ack.__Sealed where __Sealed : ZhortechBase.Command.Ack
+@_disfavoredOverload public func onEnum<__Sealed>(of sealed: __Sealed?) -> ZhortechBase.Skie.zt_android_sdk__zhortech_base.Command.Ack.__Sealed? where __Sealed : ZhortechBase.Command.Ack
+extension ZhortechBase.Skie.zt_android_sdk__zhortech_base.ByteOrder {
+  @frozen public enum __Sealed : Swift.Hashable {
+    case bigEndian(ZhortechBase.ByteOrder.BigEndian)
+    case littleEndian(ZhortechBase.ByteOrder.LittleEndian)
+    public static func == (a: ZhortechBase.Skie.zt_android_sdk__zhortech_base.ByteOrder.__Sealed, b: ZhortechBase.Skie.zt_android_sdk__zhortech_base.ByteOrder.__Sealed) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+}
+public func onEnum<__Sealed>(of sealed: __Sealed) -> ZhortechBase.Skie.zt_android_sdk__zhortech_base.ByteOrder.__Sealed where __Sealed : ZhortechBase.ByteOrder
+@_disfavoredOverload public func onEnum<__Sealed>(of sealed: __Sealed?) -> ZhortechBase.Skie.zt_android_sdk__zhortech_base.ByteOrder.__Sealed? where __Sealed : ZhortechBase.ByteOrder
+extension ZhortechBase.Skie.zt_android_sdk__zhortech_base.LogLevel {
+  @frozen public enum __Sealed : Swift.Hashable {
+    case data(ZhortechBase.LogLevel.Data)
+    case debug(ZhortechBase.LogLevel.Debug)
+    case dev(ZhortechBase.LogLevel.Dev)
+    case error(ZhortechBase.LogLevel.Error)
+    case info(ZhortechBase.LogLevel.Info)
+    case severe(ZhortechBase.LogLevel.Severe)
+    case warning(ZhortechBase.LogLevel.Warning)
+    public static func == (a: ZhortechBase.Skie.zt_android_sdk__zhortech_base.LogLevel.__Sealed, b: ZhortechBase.Skie.zt_android_sdk__zhortech_base.LogLevel.__Sealed) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+}
+public func onEnum<__Sealed>(of sealed: __Sealed) -> ZhortechBase.Skie.zt_android_sdk__zhortech_base.LogLevel.__Sealed where __Sealed : ZhortechBase.LogLevel
+@_disfavoredOverload public func onEnum<__Sealed>(of sealed: __Sealed?) -> ZhortechBase.Skie.zt_android_sdk__zhortech_base.LogLevel.__Sealed? where __Sealed : ZhortechBase.LogLevel
+extension ZhortechBase.Skie.zt_android_sdk__zhortech_base.AlgoEventChunkSegment.EventType {
+  @frozen public enum __Sealed : Swift.Hashable {
+    case cyclingStart(ZhortechBase.AlgoEventChunkSegmentEventTypeCyclingStart)
+    case cyclingStop(ZhortechBase.AlgoEventChunkSegmentEventTypeCyclingStop)
+    case runningStart(ZhortechBase.AlgoEventChunkSegmentEventTypeRunningStart)
+    case runningStop(ZhortechBase.AlgoEventChunkSegmentEventTypeRunningStop)
+    case shoesWearOff(ZhortechBase.AlgoEventChunkSegmentEventTypeShoesWearOff)
+    case shoesWearOn(ZhortechBase.AlgoEventChunkSegmentEventTypeShoesWearOn)
+    case transportStart(ZhortechBase.AlgoEventChunkSegmentEventTypeTransportStart)
+    case transportStop(ZhortechBase.AlgoEventChunkSegmentEventTypeTransportStop)
+    case walkingStart(ZhortechBase.AlgoEventChunkSegmentEventTypeWalkingStart)
+    case walkingStop(ZhortechBase.AlgoEventChunkSegmentEventTypeWalkingStop)
+    public static func == (a: ZhortechBase.Skie.zt_android_sdk__zhortech_base.AlgoEventChunkSegment.EventType.__Sealed, b: ZhortechBase.Skie.zt_android_sdk__zhortech_base.AlgoEventChunkSegment.EventType.__Sealed) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+}
+public func onEnum<__Sealed>(of sealed: __Sealed) -> ZhortechBase.Skie.zt_android_sdk__zhortech_base.AlgoEventChunkSegment.EventType.__Sealed where __Sealed : ZhortechBase.AlgoEventChunkSegmentEventType
+@_disfavoredOverload public func onEnum<__Sealed>(of sealed: __Sealed?) -> ZhortechBase.Skie.zt_android_sdk__zhortech_base.AlgoEventChunkSegment.EventType.__Sealed? where __Sealed : ZhortechBase.AlgoEventChunkSegmentEventType
+extension ZhortechBase.Skie.zt_android_sdk__zhortech_base.FirmwareEventChunkSegment.EventType {
+  @frozen public enum __Sealed : Swift.Hashable {
+    case pause(ZhortechBase.FirmwareEventChunkSegmentEventTypePause)
+    case reboot(ZhortechBase.FirmwareEventChunkSegmentEventTypeReboot)
+    case resume(ZhortechBase.FirmwareEventChunkSegmentEventTypeResume)
+    case start(ZhortechBase.FirmwareEventChunkSegmentEventTypeStart)
+    case stop(ZhortechBase.FirmwareEventChunkSegmentEventTypeStop)
+    public static func == (a: ZhortechBase.Skie.zt_android_sdk__zhortech_base.FirmwareEventChunkSegment.EventType.__Sealed, b: ZhortechBase.Skie.zt_android_sdk__zhortech_base.FirmwareEventChunkSegment.EventType.__Sealed) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+}
+public func onEnum<__Sealed>(of sealed: __Sealed) -> ZhortechBase.Skie.zt_android_sdk__zhortech_base.FirmwareEventChunkSegment.EventType.__Sealed where __Sealed : ZhortechBase.FirmwareEventChunkSegmentEventType
+@_disfavoredOverload public func onEnum<__Sealed>(of sealed: __Sealed?) -> ZhortechBase.Skie.zt_android_sdk__zhortech_base.FirmwareEventChunkSegment.EventType.__Sealed? where __Sealed : ZhortechBase.FirmwareEventChunkSegmentEventType
+extension ZhortechBase.Skie.zt_android_sdk__zhortech_base.ChunkDataMessage.Mode {
+  @frozen public enum __Sealed : Swift.Hashable {
+    case automaticSend(ZhortechBase.ChunkDataMessageModeAutomaticSend)
+    case manualRequest(ZhortechBase.ChunkDataMessageModeManualRequest)
+    public static func == (a: ZhortechBase.Skie.zt_android_sdk__zhortech_base.ChunkDataMessage.Mode.__Sealed, b: ZhortechBase.Skie.zt_android_sdk__zhortech_base.ChunkDataMessage.Mode.__Sealed) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+}
+public func onEnum<__Sealed>(of sealed: __Sealed) -> ZhortechBase.Skie.zt_android_sdk__zhortech_base.ChunkDataMessage.Mode.__Sealed where __Sealed : ZhortechBase.ChunkDataMessageMode
+@_disfavoredOverload public func onEnum<__Sealed>(of sealed: __Sealed?) -> ZhortechBase.Skie.zt_android_sdk__zhortech_base.ChunkDataMessage.Mode.__Sealed? where __Sealed : ZhortechBase.ChunkDataMessageMode
+extension ZhortechBase.Skie.zt_android_sdk__zhortech_base.GeneralStateMessage.State {
+  @frozen public enum __Sealed : Swift.Hashable {
+    case activityRunning(ZhortechBase.GeneralStateMessage.StateActivityRunning)
+    case activitySendData(ZhortechBase.GeneralStateMessage.StateActivitySendData)
+    case activityStopping(ZhortechBase.GeneralStateMessage.StateActivityStopping)
+    case bootUp(ZhortechBase.GeneralStateMessage.StateBootUp)
+    case idle(ZhortechBase.GeneralStateMessage.StateIdle)
+    case startingActivity(ZhortechBase.GeneralStateMessage.StateStartingActivity)
+    public static func == (a: ZhortechBase.Skie.zt_android_sdk__zhortech_base.GeneralStateMessage.State.__Sealed, b: ZhortechBase.Skie.zt_android_sdk__zhortech_base.GeneralStateMessage.State.__Sealed) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+}
+public func onEnum<__Sealed>(of sealed: __Sealed) -> ZhortechBase.Skie.zt_android_sdk__zhortech_base.GeneralStateMessage.State.__Sealed where __Sealed : ZhortechBase.GeneralStateMessage.State
+@_disfavoredOverload public func onEnum<__Sealed>(of sealed: __Sealed?) -> ZhortechBase.Skie.zt_android_sdk__zhortech_base.GeneralStateMessage.State.__Sealed? where __Sealed : ZhortechBase.GeneralStateMessage.State
+extension ZhortechBase.Skie.zt_android_sdk__zhortech_base.MetadataMessage.StopReason {
+  @frozen public enum __Sealed : Swift.Hashable {
+    case inactivity(ZhortechBase.MetadataMessage.StopReasonInactivity)
+    case memoryFull(ZhortechBase.MetadataMessage.StopReasonMemoryFull)
+    case undefined(ZhortechBase.MetadataMessage.StopReasonUndefined)
+    case userRequest(ZhortechBase.MetadataMessage.StopReasonUserRequest)
+    public static func == (a: ZhortechBase.Skie.zt_android_sdk__zhortech_base.MetadataMessage.StopReason.__Sealed, b: ZhortechBase.Skie.zt_android_sdk__zhortech_base.MetadataMessage.StopReason.__Sealed) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+}
+public func onEnum<__Sealed>(of sealed: __Sealed) -> ZhortechBase.Skie.zt_android_sdk__zhortech_base.MetadataMessage.StopReason.__Sealed where __Sealed : ZhortechBase.MetadataMessage.StopReason
+@_disfavoredOverload public func onEnum<__Sealed>(of sealed: __Sealed?) -> ZhortechBase.Skie.zt_android_sdk__zhortech_base.MetadataMessage.StopReason.__Sealed? where __Sealed : ZhortechBase.MetadataMessage.StopReason
+extension ZhortechBase.Skie.Runtime.TransacterBase {
+  @frozen public enum __Sealed {
+    case suspendingTransacter(any ZhortechBase.RuntimeSuspendingTransacter)
+    case transacter(any ZhortechBase.RuntimeTransacter)
+  }
+}
+public func onEnum<__Sealed>(of sealed: __Sealed) -> ZhortechBase.Skie.Runtime.TransacterBase.__Sealed where __Sealed : ZhortechBase.RuntimeTransacterBase
+@_disfavoredOverload public func onEnum<__Sealed>(of sealed: __Sealed?) -> ZhortechBase.Skie.Runtime.TransacterBase.__Sealed? where __Sealed : ZhortechBase.RuntimeTransacterBase
+public func bleScanFilter(builder: @escaping (ZhortechBase.BleScanFilter.Builder) -> Swift.Void) -> ZhortechBase.BleScanFilter
+public func createConnection(moduleDescriptor: ZhortechBase.ModuleDescriptor, config: any ZhortechBase.ConnectionConfig) -> ZhortechBase.Connection
+public func setupConnection(moduleDescriptor: ZhortechBase.ModuleDescriptor, connectionFactory: @escaping (ZhortechBase.ModuleDescriptor) -> ZhortechBase.Connection) -> ZhortechBase.Connection
+extension ZhortechBase.Kotlinx_coroutines_coreCoroutineScope {
+  public func launchOn(deviceSide: ZhortechBase.DeviceSide, coroutineContext: any ZhortechBase.KotlinCoroutineContext, block: any ZhortechBase.KotlinSuspendFunction0) -> any ZhortechBase.Kotlinx_coroutines_coreJob
+  public func launchOn(deviceSide: ZhortechBase.DeviceSide, block: any ZhortechBase.KotlinSuspendFunction0) -> any ZhortechBase.Kotlinx_coroutines_coreJob
+}
+public func dataOf(moduleData: ZhortechBase.KotlinArray<any ZhortechBase.ModuleData>) -> ZhortechBase.Data<any ZhortechBase.ModuleData>
+public func deviceRegistry() -> any ZhortechBase.DeviceRegistry
+extension Swift.String {
+  public func asMacAddress() -> ZhortechBase.KotlinByteArray
+  public func hexToBytes() -> ZhortechBase.KotlinByteArray
+}
+public func addLogger(logger: any ZhortechBase.Logger)
+public func registerZhortechLogger()
+public func rawCommand(data: Foundation.Data) -> ZhortechBase.Command
+extension ZhortechBase.Skie.Runtime.QueryResult.__Sealed : Swift.Sendable {}
+extension ZhortechBase.Skie.Runtime.QueryResult.__Sealed : Swift.BitwiseCopyable {}
+extension ZhortechBase.MessageType : Swift.Sendable {}
+extension ZhortechBase.MessageType : Swift.BitwiseCopyable {}
+extension ZhortechBase.__Bridge__SensorConfig_MagnetometerFlags : Swift.Sendable {}
+extension ZhortechBase.__Bridge__SensorConfig_MagnetometerFlags : Swift.BitwiseCopyable {}
+extension ZhortechBase.__Bridge__SensorConfig_AccelerometerFlags : Swift.Sendable {}
+extension ZhortechBase.__Bridge__SensorConfig_AccelerometerFlags : Swift.BitwiseCopyable {}
+extension ZhortechBase.__Bridge__SensorConfig_GyroscopeFlags : Swift.Sendable {}
+extension ZhortechBase.__Bridge__SensorConfig_GyroscopeFlags : Swift.BitwiseCopyable {}
+extension ZhortechBase.Skie.KotlinxCoroutinesCore.SelectClause0.__Sealed : Swift.Sendable {}
+extension ZhortechBase.Skie.KotlinxCoroutinesCore.SelectClause0.__Sealed : Swift.BitwiseCopyable {}
+extension ZhortechBase.Skie.KotlinxCoroutinesCore.SelectInstance.__Sealed : Swift.Sendable {}
+extension ZhortechBase.Skie.KotlinxCoroutinesCore.SelectInstance.__Sealed : Swift.BitwiseCopyable {}
+extension ZhortechBase.Skie.KotlinxCoroutinesCore.SelectClause1.__Sealed : Swift.Sendable {}
+extension ZhortechBase.Skie.KotlinxCoroutinesCore.SelectClause1.__Sealed : Swift.BitwiseCopyable {}
+extension ZhortechBase.Skie.KotlinxCoroutinesCore.SelectClause2.__Sealed : Swift.Sendable {}
+extension ZhortechBase.Skie.KotlinxCoroutinesCore.SelectClause2.__Sealed : Swift.BitwiseCopyable {}

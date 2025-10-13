@@ -30,11 +30,11 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		VAlYJYIXxJS7aBEVOaOkppGjxXw=
+		l1WF+h36g3AV+WZDn9ssvjjy6MQ=
 		</data>
 		<key>Modules/ZTCoreKit.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		4/MAQYJpv7+CL6l4bpS1u7OD+AU=
+		V/KhykbsTHUFf0VDg1BIsIWqvlc=
 		</data>
 		<key>Modules/ZTCoreKit.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -50,11 +50,11 @@
 		</data>
 		<key>Modules/ZTCoreKit.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		tzRmOx1/278Ud8zUWmAkf+g75xM=
+		CgMRFdPmZt/6Roeu4SI/V3H6c2Q=
 		</data>
 		<key>Modules/ZTCoreKit.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		4/MAQYJpv7+CL6l4bpS1u7OD+AU=
+		V/KhykbsTHUFf0VDg1BIsIWqvlc=
 		</data>
 		<key>Modules/ZTCoreKit.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -70,7 +70,7 @@
 		</data>
 		<key>Modules/ZTCoreKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		4KMNQmz09lG09yeSbzA3xudh8B0=
+		Fa2AxkZRY7ow1rMYVscRseHAVuY=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -121,7 +121,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Rc67utAGa0c2R89+EfNvgrU/nEK5zK3bCW6eRbC1VhE=
+			OJgF1AHJQ3MKj8tw3RSlxwtclj9T74lJXPAAGZZ553o=
 			</data>
 		</dict>
 		<key>Modules/ZTCoreKit.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
@@ -149,14 +149,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			rBA5I02FlAIzyUJLzQegFyFkZIP59KHsOkkzyvX/Lnw=
+			f9VAjlWX+TBbzLLO3oxb9k8IO03OXQPU5vNHPXETDOc=
 			</data>
 		</dict>
 		<key>Modules/ZTCoreKit.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Rc67utAGa0c2R89+EfNvgrU/nEK5zK3bCW6eRbC1VhE=
+			OJgF1AHJQ3MKj8tw3RSlxwtclj9T74lJXPAAGZZ553o=
 			</data>
 		</dict>
 		<key>Modules/ZTCoreKit.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
@@ -184,7 +184,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			hejrBgV9kgckr2TVlttNmtlCoY/StSkFSzq+jzhjPlw=
+			aKBMG/T7x3FJVVEfnpBggK5aoFKtYN/WUaCSBD17SXw=
 			</data>
 		</dict>
 	</dict>
