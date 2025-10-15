@@ -30,11 +30,11 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		zygFmaRekDEahHpWa4bK/iFp7es=
+		GmezaN2VTDVU3jrOJuxy2FGaWcI=
 		</data>
 		<key>Modules/ZTCoreKit.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		Xr0ex3M+qMhCKYRiiBIMj/1qQcY=
+		9D45GFiwUzfPA5psSOcGUZHLLfs=
 		</data>
 		<key>Modules/ZTCoreKit.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -50,11 +50,11 @@
 		</data>
 		<key>Modules/ZTCoreKit.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		ksFAKj93UoFuRTMYmeyM9yFPCnc=
+		NhUCyV6EbksAyQ5IqOknSOSiSCI=
 		</data>
 		<key>Modules/ZTCoreKit.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		Xr0ex3M+qMhCKYRiiBIMj/1qQcY=
+		9D45GFiwUzfPA5psSOcGUZHLLfs=
 		</data>
 		<key>Modules/ZTCoreKit.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -70,7 +70,7 @@
 		</data>
 		<key>Modules/ZTCoreKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		8FK5qpeZ8m3yqE/B5oR+R4xnvY8=
+		jzbP9LYxTF3I5RTmYnR1X6Ipg/M=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -121,7 +121,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			99sNUtoesIoww8bgWdTDgkuUshFOYJcp3qTlrc/p6X8=
+			PWbUjpHriY4KdLbklKg9acXEnkWWrh/fjQG80kvcpSo=
 			</data>
 		</dict>
 		<key>Modules/ZTCoreKit.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
@@ -149,14 +149,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Q+AtAAne3dO/alZr2QQUCkey99G0HSzoAHa7g69Dr4s=
+			+JvU+m+wQ8W2UoPUW2vWGaooanKTzhoRqWvzLWhsnYU=
 			</data>
 		</dict>
 		<key>Modules/ZTCoreKit.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			99sNUtoesIoww8bgWdTDgkuUshFOYJcp3qTlrc/p6X8=
+			PWbUjpHriY4KdLbklKg9acXEnkWWrh/fjQG80kvcpSo=
 			</data>
 		</dict>
 		<key>Modules/ZTCoreKit.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
@@ -184,7 +184,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			uaPqYFfXfGgPwn0QivGQP7YjzzZGNi2NhJkSflUj/7w=
+			1PfzXIZv3L6cDuk/xQ/bLYNsLYU/7UeMn+Bl0KJOg2A=
 			</data>
 		</dict>
 	</dict>
