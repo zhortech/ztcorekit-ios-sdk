@@ -30,11 +30,11 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		PDdr+ICw4snCUPc9qTNL3ore1mo=
+		S3avO+Lvs5nZsevJ1PWAZc82MD0=
 		</data>
 		<key>Modules/ZTCoreKit.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		j4TyQUH3httTVX62v2ORK1fOEAo=
+		ecvUufeux+okpEO8fahhC68SHQs=
 		</data>
 		<key>Modules/ZTCoreKit.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -50,11 +50,11 @@
 		</data>
 		<key>Modules/ZTCoreKit.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		VSDQsq31+9YV3ygijjknS9BXUcE=
+		5eCbBDsQG4V9ym1Dy2f1cgTKBlE=
 		</data>
 		<key>Modules/ZTCoreKit.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		j4TyQUH3httTVX62v2ORK1fOEAo=
+		ecvUufeux+okpEO8fahhC68SHQs=
 		</data>
 		<key>Modules/ZTCoreKit.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -70,7 +70,7 @@
 		</data>
 		<key>Modules/ZTCoreKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		HpuwwXYiSZVaSY29CnparF9toMo=
+		U1lz53ekF8SDFh64MvsacqCllVs=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -121,7 +121,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			XIhsn6Gtw7gsBSsroXqomXnW+Vcg2fTD+Y3zAMhBrlA=
+			t/5dpqaC2RK0OSyW0sDgqegxwSL2RWHc//k48GpZoIk=
 			</data>
 		</dict>
 		<key>Modules/ZTCoreKit.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
@@ -149,14 +149,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Bg3nUyZ7rc+wN0ZTg+dprxJGLmJmPVsL7J3p6sJFxzg=
+			+DQ99vH6DFmcYunUOqUknB98brDoNBp/2lWoLfgfRUo=
 			</data>
 		</dict>
 		<key>Modules/ZTCoreKit.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			XIhsn6Gtw7gsBSsroXqomXnW+Vcg2fTD+Y3zAMhBrlA=
+			t/5dpqaC2RK0OSyW0sDgqegxwSL2RWHc//k48GpZoIk=
 			</data>
 		</dict>
 		<key>Modules/ZTCoreKit.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
@@ -184,7 +184,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			QReRo8/T3C4xkdk2rikaMDgo63WfLj49TnkSq8Vxac8=
+			f3zlP0GTyjnnNtjDlrknt0fMS0xo2dMpD1S0BOXoNjA=
 			</data>
 		</dict>
 	</dict>
